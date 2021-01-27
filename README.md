@@ -57,6 +57,7 @@ Building a network of community volunteers.
 ### Sign-Up/Login
 
 #### Walkthrough of the following user stories:
-- [] User can log in using username, email, and password.
-- [] User can sign up using email, password and upload photo.
+  - [] User can log in using username, email, and password.
+  - [] User can sign up using email, password and upload photo.
+  
 [//]: <> (<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />)
