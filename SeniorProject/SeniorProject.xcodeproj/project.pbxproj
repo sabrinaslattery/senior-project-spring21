@@ -15,6 +15,12 @@
 		62330A7525B7F2C2007F7658 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62330A7325B7F2C2007F7658 /* LaunchScreen.storyboard */; };
 		62330A8025B7F2C2007F7658 /* SeniorProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62330A7F25B7F2C2007F7658 /* SeniorProjectTests.swift */; };
 		62330A8B25B7F2C2007F7658 /* SeniorProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62330A8A25B7F2C2007F7658 /* SeniorProjectUITests.swift */; };
+		B1B84C2525D6026100464FA2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B84C2425D6026100464FA2 /* MenuViewController.swift */; };
+		B1B84C2725D6033700464FA2 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B84C2625D6033700464FA2 /* HelperExtensions.swift */; };
+		B1B84C2925D6174F00464FA2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B84C2825D6174F00464FA2 /* LoginViewController.swift */; };
+		B1B84C2B25D6177E00464FA2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B84C2A25D6177E00464FA2 /* SignUpViewController.swift */; };
+		B1B84C2D25D6299500464FA2 /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B84C2C25D6299500464FA2 /* RoundedWhiteButton.swift */; };
+		B1B84C2F25D632A100464FA2 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B84C2E25D632A100464FA2 /* ImageService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +55,12 @@
 		62330A8625B7F2C2007F7658 /* SeniorProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeniorProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62330A8A25B7F2C2007F7658 /* SeniorProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorProjectUITests.swift; sourceTree = "<group>"; };
 		62330A8C25B7F2C2007F7658 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B1B84C2425D6026100464FA2 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B1B84C2625D6033700464FA2 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
+		B1B84C2825D6174F00464FA2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B1B84C2A25D6177E00464FA2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B1B84C2C25D6299500464FA2 /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
+		B1B84C2E25D632A100464FA2 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +91,7 @@
 		62330A5C25B7F2C0007F7658 = {
 			isa = PBXGroup;
 			children = (
+				B1B84C2325D6018100464FA2 /* LoginSignup */,
 				62330A6725B7F2C1007F7658 /* SeniorProject */,
 				62330A7E25B7F2C2007F7658 /* SeniorProjectTests */,
 				62330A8925B7F2C2007F7658 /* SeniorProjectUITests */,
@@ -126,6 +139,19 @@
 				62330A8C25B7F2C2007F7658 /* Info.plist */,
 			);
 			path = SeniorProjectUITests;
+			sourceTree = "<group>";
+		};
+		B1B84C2325D6018100464FA2 /* LoginSignup */ = {
+			isa = PBXGroup;
+			children = (
+				B1B84C2425D6026100464FA2 /* MenuViewController.swift */,
+				B1B84C2625D6033700464FA2 /* HelperExtensions.swift */,
+				B1B84C2825D6174F00464FA2 /* LoginViewController.swift */,
+				B1B84C2A25D6177E00464FA2 /* SignUpViewController.swift */,
+				B1B84C2C25D6299500464FA2 /* RoundedWhiteButton.swift */,
+				B1B84C2E25D632A100464FA2 /* ImageService.swift */,
+			);
+			path = LoginSignup;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1B84C2925D6174F00464FA2 /* LoginViewController.swift in Sources */,
+				B1B84C2D25D6299500464FA2 /* RoundedWhiteButton.swift in Sources */,
+				B1B84C2F25D632A100464FA2 /* ImageService.swift in Sources */,
+				B1B84C2B25D6177E00464FA2 /* SignUpViewController.swift in Sources */,
 				62330A6D25B7F2C1007F7658 /* ViewController.swift in Sources */,
+				B1B84C2525D6026100464FA2 /* MenuViewController.swift in Sources */,
+				B1B84C2725D6033700464FA2 /* HelperExtensions.swift in Sources */,
 				62330A6925B7F2C1007F7658 /* AppDelegate.swift in Sources */,
 				62330A6B25B7F2C1007F7658 /* SceneDelegate.swift in Sources */,
 			);
