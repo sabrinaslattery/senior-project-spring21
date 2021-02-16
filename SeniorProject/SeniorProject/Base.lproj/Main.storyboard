@@ -239,7 +239,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ghJ-nY-5fM" kind="custom" id="X6R-2z-fCj"/>
+                                    <segue destination="ghJ-nY-5fM" kind="show" id="X6R-2z-fCj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -264,7 +264,7 @@
         <!--Email Verification-->
         <scene sceneID="R7t-M5-xXD">
             <objects>
-                <viewController title="Email Verification" id="ghJ-nY-5fM" sceneMemberID="viewController">
+                <viewController title="Email Verification" modalPresentationStyle="fullScreen" id="ghJ-nY-5fM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kF6-vy-SLe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -309,7 +309,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="GC4-jh-ean" kind="custom" id="nMo-if-3vJ"/>
+                                    <segue destination="GC4-jh-ean" kind="show" id="nMo-if-3vJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c8P-82-Wpb">
@@ -335,7 +335,7 @@
         <!--SignUp Starting Point-->
         <scene sceneID="t5v-4I-X4e">
             <objects>
-                <viewController title="SignUp Starting Point" id="GC4-jh-ean" sceneMemberID="viewController">
+                <viewController title="SignUp Starting Point" modalPresentationStyle="fullScreen" id="GC4-jh-ean" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mhn-Op-uGJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -368,13 +368,14 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Rou-DC-NOi" kind="custom" id="9VP-T2-9qp"/>
+                                    <segue destination="Rou-DC-NOi" kind="show" id="9VP-T2-9qp"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y8j-yC-G4W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="N73-j6-IH9"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XQr-0V-USO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -383,7 +384,7 @@
         <!--Age Range Selection-->
         <scene sceneID="EJq-ZP-g2e">
             <objects>
-                <viewController title="Age Range Selection" id="Rou-DC-NOi" sceneMemberID="viewController">
+                <viewController title="Age Range Selection" modalPresentationStyle="fullScreen" id="Rou-DC-NOi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NVd-EV-zmP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -413,6 +414,9 @@
                                 <rect key="frame" x="57" y="437" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="12+ Icon"/>
+                                <connections>
+                                    <segue destination="eMu-JY-5p8" kind="show" id="WS7-sb-sGu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JsN-9s-aUE">
                                 <rect key="frame" x="172" y="437" width="70" height="70"/>
@@ -433,10 +437,27 @@
                         <viewLayoutGuide key="safeArea" id="FdV-I9-Zwa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="d36-uD-rPb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBe-7h-cBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4066.666666666667" y="497.54464285714283"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0xF-as-CqH">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="eMu-JY-5p8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HTu-sJ-Spb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="88j-Ig-NjH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CXS-2E-zWS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SXl-5X-aau" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5175" y="319"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="CCm-m1-Kdh">
