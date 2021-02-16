@@ -9,7 +9,6 @@ import UIKit
 
 class MenuViewController: UIViewController {
     
-    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
     

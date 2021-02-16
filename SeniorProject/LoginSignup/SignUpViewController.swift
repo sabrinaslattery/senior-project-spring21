@@ -40,7 +40,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         view.addSubview(continueButton)
         setContinueButton(enabled: false)
         
-        activityView = UIActivityIndicatorView(style: .gray)
+        activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
         activityView.color = secondaryColor
         activityView.frame = CGRect(x: 0, y: 0, width: 50.0, height: 50.0)
         activityView.center = continueButton.center
@@ -68,7 +68,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        imagePicker.delegate = (self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate)
     }
     
     @objc func openImagePicker(_ sender:Any) {
@@ -79,7 +79,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         firstnameField.becomeFirstResponder()
-        NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillAppear), name: NSNotification.Name.UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
         
     }
     
@@ -274,15 +274,16 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     }
 }
 */
+}
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+        if let pickedImage = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage {
             self.profileImageView.image = pickedImage
         }
         
@@ -290,6 +291,4 @@ extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationCon
     }
     
     
-}
-
 }
