@@ -6,8 +6,7 @@ target 'Senior Project' do
   use_frameworks!
 
   # Pods for Senior Project
-
-pod ‘SideMenu’
+  pod ‘SideMenu’
 
   target 'Senior ProjectTests' do
     inherit! :search_paths
@@ -25,6 +24,7 @@ target 'SeniorProject' do
   use_frameworks!
 
   # Pods for SeniorProject
+  pod ‘SideMenu’
 
   target 'SeniorProjectTests' do
     inherit! :search_paths

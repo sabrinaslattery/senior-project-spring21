@@ -902,7 +902,7 @@
         <!--Home Page-->
         <scene sceneID="cja-If-aNl">
             <objects>
-                <viewController title="Home Page" modalPresentationStyle="fullScreen" id="gfm-c6-m4r" sceneMemberID="viewController">
+                <viewController title="Home Page" modalPresentationStyle="fullScreen" id="gfm-c6-m4r" customClass="ViewController" customModule="SeniorProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3PV-ik-JGi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -917,19 +917,22 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="GaJ-n3-FX8">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="ZUR-5k-nPo">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Z5v-tg-9tl">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Z5v-tg-9tl">
                                 <rect key="frame" x="20" y="10.5" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="line.horizontal.3" catalog="system"/>
+                                <state key="normal" image="line.horizontal.3" catalog="system"/>
+                                <connections>
+                                    <action selector="menuButtonDidClick" destination="gfm-c6-m4r" eventType="touchUpInside" id="v5K-cu-IVW"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="lAu-gk-alJ">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Kvm-SL-V8T">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Kvm-SL-V8T">
                                 <rect key="frame" x="309" y="6" width="85" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <color key="tintColor" systemColor="labelColor"/>
-                                <state key="normal" title="Button">
+                                <state key="normal">
                                     <imageReference key="image" image="person.circle" catalog="system" symbolScale="large" renderingMode="template"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="thin"/>
                                 </state>
@@ -1101,8 +1104,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="E21-bU-6Qf"/>
-        <segue reference="zI4-bC-rb1"/>
-        <segue reference="Nz0-X8-qOw"/>
+        <segue reference="klT-fI-ApE"/>
+        <segue reference="Bnb-BM-FQO"/>
         <segue reference="CiO-wO-PI1"/>
         <segue reference="9Ec-JW-zTJ"/>
     </inferredMetricsTieBreakers>

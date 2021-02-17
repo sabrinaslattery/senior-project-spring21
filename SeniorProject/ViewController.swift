@@ -5,17 +5,73 @@
 //  Created by Roberto on 1/19/21.
 //
 
+import SideMenu
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, MenuControllerDelegate {
+    
+    private var sideMenu: SideMenuNavigationController?
+
+    private let settingsController = SettingsViewController()
+    private let infoController = InfoViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+        
+        let menu = MenuController(with: SideMenuItem.allCases)
 
-    @IBAction func clickMenu() {
+                menu.delegate = self
+
+                sideMenu = SideMenuNavigationController(rootViewController: menu)
+                sideMenu?.leftSide = true
+
+                SideMenuManager.default.leftMenuNavigationController = sideMenu
+                SideMenuManager.default.addPanGestureToPresent(toView: view)
+
+                addChildControllers()
+    }
+    
+    private func addChildControllers() {
+            addChild(settingsController)
+            addChild(infoController)
+
+            view.addSubview(settingsController.view)
+            view.addSubview(infoController.view)
+
+            settingsController.view.frame = view.bounds
+            infoController.view.frame = view.bounds
+
+            settingsController.didMove(toParent: self)
+            infoController.didMove(toParent: self)
+
+            settingsController.view.isHidden = true
+            infoController.view.isHidden = true
+    }
+    
+
+    @IBAction func menuButtonDidClick() {
+        present(sideMenu!, animated: true)
         
     }
+    
+    func didSelectMenuItem(named: SideMenuItem) {
+            sideMenu?.dismiss(animated: true, completion: nil)
+
+            title = named.rawValue
+            switch named {
+            case .home:
+                settingsController.view.isHidden = true
+                infoController.view.isHidden = true
+
+            case .info:
+                settingsController.view.isHidden = true
+                infoController.view.isHidden = false
+
+            case .settings:
+                settingsController.view.isHidden = false
+                infoController.view.isHidden = true
+            }
+
+        }
 }
 
