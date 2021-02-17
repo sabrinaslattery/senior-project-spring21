@@ -886,7 +886,7 @@
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gfm-c6-m4r" kind="show" id="vdk-nj-bVP"/>
+                                    <segue destination="HHB-IY-5HB" kind="show" id="vdk-nj-bVP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -904,20 +904,28 @@
             <objects>
                 <viewController title="Home Page" modalPresentationStyle="fullScreen" id="gfm-c6-m4r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3PV-ik-JGi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OutReachLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5uG-Ns-iXV">
                                 <rect key="frame" x="87" y="126" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5v-tg-9tl">
-                                <rect key="frame" x="16" y="44" width="60" height="35"/>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RX8-fR-GSq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="GaJ-n3-FX8">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="ZUR-5k-nPo">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Z5v-tg-9tl">
+                                <rect key="frame" x="20" y="10.5" width="75" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Button_Menu"/>
+                                <state key="normal" title="Button" image="line.horizontal.3" catalog="system"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kvm-SL-V8T">
-                                <rect key="frame" x="334" y="52" width="51" height="52"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="lAu-gk-alJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Kvm-SL-V8T">
+                                <rect key="frame" x="309" y="6" width="85" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <color key="tintColor" systemColor="labelColor"/>
@@ -926,15 +934,12 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="thin"/>
                                 </state>
                             </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="RX8-fR-GSq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="GaJ-n3-FX8"/>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZPh-2K-sat" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9533.3333333333339" y="497.54464285714283"/>
+            <point key="canvasLocation" x="10443.478260869566" y="497.54464285714283"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="CCm-m1-Kdh">
@@ -1074,6 +1079,25 @@
             </objects>
             <point key="canvasLocation" x="2070" y="-258"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rwz-Y5-SsK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HHB-IY-5HB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="6kG-Gu-DSq"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aDa-JW-0rF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gfm-c6-m4r" kind="relationship" relationship="rootViewController" id="kCL-0N-fHA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bjF-Km-kzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9533.3333333333339" y="497.54464285714283"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="E21-bU-6Qf"/>
@@ -1087,11 +1111,11 @@
         <image name="16+ Icon" width="676" height="674"/>
         <image name="18+ Icon" width="674" height="674"/>
         <image name="Button_Back" width="162" height="116"/>
-        <image name="Button_Menu" width="168" height="104"/>
         <image name="OutReachLogo" width="256" height="256"/>
         <image name="UserIcon" width="50" height="50"/>
         <image name="arrow.forward" catalog="system" width="128" height="98"/>
         <image name="iconfinder_user-alt_285645" width="64" height="64"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
