@@ -7,8 +7,8 @@
 
 import UIKit
 
-let primaryColor = UIColor(red: 210/255, green: 109/255, blue: 180/255, alpha: 1)
-let secondaryColor = UIColor(red: 52/255, green: 148/255, blue: 230/255, alpha: 1)
+let primaryColor = UIColor(red: 255/255, green: 254/255, blue: 253/255, alpha: 1)
+let secondaryColor = UIColor(red: 160/255, green: 200/255, blue: 234/255, alpha: 1)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
