@@ -255,6 +255,7 @@
                         <outlet property="firstnameField" destination="kkS-6h-0TJ" id="OpY-D2-L9y"/>
                         <outlet property="lastnameField" destination="4Xg-4E-GI3" id="PzP-zH-koN"/>
                         <outlet property="passwordField" destination="MOv-Fr-jMT" id="uPl-N5-mHl"/>
+                        <outlet property="profileImageView" destination="tQz-E8-q4h" id="0Ut-dA-8ET"/>
                         <outlet property="tapToChangeProfileButton" destination="xyR-Bk-ayV" id="9dq-Ga-lmk"/>
                     </connections>
                 </viewController>
@@ -944,12 +945,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="O40-zU-QYt"/>
+        <segue reference="X6R-2z-fCj"/>
         <segue reference="9Ph-To-a0c"/>
         <segue reference="zI4-bC-rb1"/>
         <segue reference="Nz0-X8-qOw"/>
         <segue reference="daw-fw-Qz3"/>
-        <segue reference="neP-ti-YsD"/>
+        <segue reference="9Ec-JW-zTJ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="12+ Icon" width="662" height="664"/>
