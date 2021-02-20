@@ -6,7 +6,6 @@ target 'Volunteer' do
   use_frameworks!
 
   # Pods for Volunteer
-  pod 'Parse'
 
   target 'VolunteerTests' do
     inherit! :search_paths
