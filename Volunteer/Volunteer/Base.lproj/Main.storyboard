@@ -495,7 +495,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8a-AP-GHT" customClass="RoundedWhiteButton" customModule="Volunteer" customModuleProvider="target">
                                 <rect key="frame" x="20" y="544" width="374" height="62"/>
-                                <state key="normal" title="Continue"/>
+                                <state key="normal" title="Skip"/>
                                 <connections>
                                     <segue destination="K6L-EE-RJc" kind="show" id="aLI-ae-bgN"/>
                                 </connections>
@@ -592,6 +592,9 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="K6L-EE-RJc" kind="show" id="cYa-yS-Gzk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="v5I-x1-uyB"/>
@@ -655,6 +658,9 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="K6L-EE-RJc" kind="show" id="P4W-qF-7EH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Osb-1H-2vp">
                                 <rect key="frame" x="172" y="394" width="70" height="70"/>
@@ -827,6 +833,9 @@
                                 <state key="normal" title="Continue">
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="K6L-EE-RJc" kind="show" id="SAt-Op-24a"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbG-ei-7xl">
                                 <rect key="frame" x="172" y="403.5" width="70" height="70"/>
@@ -1887,6 +1896,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yEY-z2-uJB"/>
+        <segue reference="cYa-yS-Gzk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="12+ Icon" width="662" height="664"/>
