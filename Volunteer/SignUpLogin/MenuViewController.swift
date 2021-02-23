@@ -1,17 +1,19 @@
 //
-//  File.swift
-//  SeniorProject
+//  MenuViewController.swift
+//  Volunteer
 //
-//  Created by William Ordaz on 2/11/21.
+//  Created by William Ordaz on 2/21/21.
 //
 
+import Foundation
 import UIKit
 
 class MenuViewController: UIViewController {
     
+    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signupButton: UIButton!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         

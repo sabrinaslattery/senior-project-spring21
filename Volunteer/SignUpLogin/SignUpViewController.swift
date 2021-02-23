@@ -1,8 +1,8 @@
 //
 //  SignUpViewController.swift
-//  SeniorProject
+//  Volunteer
 //
-//  Created by William Ordaz on 2/11/21.
+//  Created by William Ordaz on 2/21/21.
 //
 
 import Foundation
@@ -17,8 +17,23 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var tapToChangeProfileButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
     
-    var continueButton:RoundedWhiteButton!
+    @IBAction func signUp(_ sender: UIButton) {
+        let user = PFUser()
+        user.username = emailField.text!
+        user.password = passwordField.text!
+        
+//        user.signUpInBackground { (success, error) in
+//            if success{
+//
+//            }
+//            else{
+//
+//            }
+    }
+    
+    //var continueButton:RoundedWhiteButton!
     var activityView:UIActivityIndicatorView!
     
     var imagePicker:UIImagePickerController!
@@ -28,14 +43,15 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
-        continueButton = RoundedWhiteButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        /*continueButton = RoundedWhiteButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
         continueButton.setTitleColor(secondaryColor, for: .normal)
         continueButton.setTitle("Continue", for: .normal)
         continueButton.titleLabel?.font = UIFont.systemFont(ofSize: 18.0, weight: UIFont.Weight.bold)
         continueButton.center = CGPoint(x: view.center.x, y: view.frame.height - continueButton.frame.height - 24)
         continueButton.highlightedColor = UIColor(white: 1.0, alpha: 1.0)
         continueButton.defaultColor = UIColor.white
-       // continueButton.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        // continueButton.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        
         
         view.addSubview(continueButton)
         setContinueButton(enabled: false)
@@ -46,6 +62,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         activityView.center = continueButton.center
         
         view.addSubview(activityView)
+        */
         
         firstnameField.delegate = self
         lastnameField.delegate = self
@@ -127,7 +144,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-
+        
         switch textField {
         case firstnameField:
             firstnameField.resignFirstResponder()
@@ -162,56 +179,56 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     
     // This section will be used when we have a database. We will connect it to that!
     /* @objc func handleSignUp() {
-        guard let username = usernameField.text else { return }
-        guard let email = emailField.text else { return }
-        guard let pass = passwordField.text else { return }
-        guard let image = profileImageView.image else { return }
-        
-        setContinueButton(enabled: false)
-        continueButton.setTitle("", for: .normal)
-        activityView.startAnimating()
-        
-        Auth.auth().createUser(withEmail: email, password: pass) { user, error in
-            if error == nil && user != nil {
-                
-                print("User created!")
-                
-                // 1. Upload the profile image to Firebase Storage
-                
-                self.uploadProfileImage(image) { url in
-                    
-                    if url != nil {
-                        let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                        changeRequest?.displayName = username
-                        changeRequest?.photoURL = url
-                        
-                        changeRequest?.commitChanges { error in
-                            if error == nil {
-                                print("User display name changed!")
-                                
-                                self.saveProfile(username: username, email:email, profileImageURL: url!) { success in
-                                    if success {
-                                        self.dismiss(animated: true, completion: nil)
-                                    } else {
-                                        self.resetForm()
-                                    }
-                                }
-                                
-                            } else {
-                                print("Error: \(error!.localizedDescription)")
-                                self.resetForm()
-                            }
-                        }
-                    } else {
-                        self.resetForm()
-                    }
-                }
-            } else {
-                self.resetForm()
-            }
-        }
-    }
-    */
+     guard let username = usernameField.text else { return }
+     guard let email = emailField.text else { return }
+     guard let pass = passwordField.text else { return }
+     guard let image = profileImageView.image else { return }
+     
+     setContinueButton(enabled: false)
+     continueButton.setTitle("", for: .normal)
+     activityView.startAnimating()
+     
+     Auth.auth().createUser(withEmail: email, password: pass) { user, error in
+     if error == nil && user != nil {
+     
+     print("User created!")
+     
+     // 1. Upload the profile image to Firebase Storage
+     
+     self.uploadProfileImage(image) { url in
+     
+     if url != nil {
+     let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+     changeRequest?.displayName = username
+     changeRequest?.photoURL = url
+     
+     changeRequest?.commitChanges { error in
+     if error == nil {
+     print("User display name changed!")
+     
+     self.saveProfile(username: username, email:email, profileImageURL: url!) { success in
+     if success {
+     self.dismiss(animated: true, completion: nil)
+     } else {
+     self.resetForm()
+     }
+     }
+     
+     } else {
+     print("Error: \(error!.localizedDescription)")
+     self.resetForm()
+     }
+     }
+     } else {
+     self.resetForm()
+     }
+     }
+     } else {
+     self.resetForm()
+     }
+     }
+     }
+     */
     
     
     
@@ -230,50 +247,50 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     // This section will be used when we have a database. We will connect it to that!
     
     /* func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:URL?)->())) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        let storageRef = Storage.storage().reference().child("user/\(uid)")
-        
-        guard let imageData = UIImageJPEGRepresentation(image, 0.75) else { return }
-        
-        
-        let metaData = StorageMetadata()
-        metaData.contentType = "image/jpg"
-        
-        storageRef.putData(imageData, metadata: metaData) { metaData, error in
-            if error == nil, metaData != nil {
-                if let url = metaData?.downloadURL() {
-                    completion(url)
-                } else {
-                    completion(nil)
-                }
-                // success!
-            } else {
-                // failed
-                completion(nil)
-            }
-        }
-    }
-    */
+     guard let uid = Auth.auth().currentUser?.uid else { return }
+     let storageRef = Storage.storage().reference().child("user/\(uid)")
+     
+     guard let imageData = UIImageJPEGRepresentation(image, 0.75) else { return }
+     
+     
+     let metaData = StorageMetadata()
+     metaData.contentType = "image/jpg"
+     
+     storageRef.putData(imageData, metadata: metaData) { metaData, error in
+     if error == nil, metaData != nil {
+     if let url = metaData?.downloadURL() {
+     completion(url)
+     } else {
+     completion(nil)
+     }
+     // success!
+     } else {
+     // failed
+     completion(nil)
+     }
+     }
+     }
+     */
     
     
     // This section will be used when we have a database. We will connect it to that!
     
     /* func saveProfile(username:String, email:String, profileImageURL:URL, completion: @escaping ((_ success:Bool)->())) {
-        guard let uid = Auth.auth().currentUser?.uid else { return }
-        let databaseRef = Database.database().reference().child("users/profile/\(uid)")
-        
-        let userObject = [
-            "username": username,
-            "email": email,
-            "photoURL": profileImageURL.absoluteString
-        ] as [String:Any]
-        
-        databaseRef.setValue(userObject) { error, ref in
-            completion(error == nil)
-        }
-    }
-}
-*/
+     guard let uid = Auth.auth().currentUser?.uid else { return }
+     let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+     
+     let userObject = [
+     "username": username,
+     "email": email,
+     "photoURL": profileImageURL.absoluteString
+     ] as [String:Any]
+     
+     databaseRef.setValue(userObject) { error, ref in
+     completion(error == nil)
+     }
+     }
+     }
+     */
 }
 extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     

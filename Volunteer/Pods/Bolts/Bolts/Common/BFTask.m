@@ -14,8 +14,6 @@
 
 #import "Bolts.h"
 
-#import <stdatomic.h>
-
 NS_ASSUME_NONNULL_BEGIN
 
 __attribute__ ((noinline)) void warnBlockingOperationOnMainThread() {

@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		3172CA3F8203E80A15E3723B /* Pods_VolunteerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925FE17E549E5DEACAABA95C /* Pods_VolunteerTests.framework */; };
 		5F96A54866D548882CF2E6E7 /* Pods_Volunteer_VolunteerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13A518CCA7D53725E1CFA0C /* Pods_Volunteer_VolunteerUITests.framework */; };
-		98BBD0DF25DE33E100B7661B /* LoginSignUp in Resources */ = {isa = PBXBuildFile; fileRef = 98BBD0DE25DE33E100B7661B /* LoginSignUp */; };
-		98BBD0E325DE35E800B7661B /* LoginSignUp in Resources */ = {isa = PBXBuildFile; fileRef = 98BBD0DE25DE33E100B7661B /* LoginSignUp */; };
-		98BBD0E725DE35EA00B7661B /* LoginSignUp in Resources */ = {isa = PBXBuildFile; fileRef = 98BBD0DE25DE33E100B7661B /* LoginSignUp */; };
 		98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC89E725DCFCA4008E4A7B /* AppDelegate.swift */; };
 		98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC89E925DCFCA4008E4A7B /* SceneDelegate.swift */; };
 		98CC89EC25DCFCA4008E4A7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC89EB25DCFCA4008E4A7B /* ViewController.swift */; };
@@ -20,6 +17,27 @@
 		98CC89F425DCFCA5008E4A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98CC89F225DCFCA5008E4A7B /* LaunchScreen.storyboard */; };
 		98CC89FF25DCFCA6008E4A7B /* VolunteerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC89FE25DCFCA6008E4A7B /* VolunteerTests.swift */; };
 		98CC8A0A25DCFCA6008E4A7B /* VolunteerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC8A0925DCFCA6008E4A7B /* VolunteerUITests.swift */; };
+		B152DC0325E37C6B00A7DB17 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */; };
+		B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0725E37C7E00A7DB17 /* ImageService.swift */; };
+		B152DC0D25E37C9100A7DB17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0C25E37C9100A7DB17 /* LoginViewController.swift */; };
+		B152DC1225E37CAC00A7DB17 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC1125E37CAC00A7DB17 /* MenuViewController.swift */; };
+		B152DC1725E37CBE00A7DB17 /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC1625E37CBE00A7DB17 /* RoundedWhiteButton.swift */; };
+		B152DC1C25E37CCF00A7DB17 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC1B25E37CCF00A7DB17 /* SignUpViewController.swift */; };
+		B152DC2425E43EEA00A7DB17 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC2325E43EEA00A7DB17 /* ResetPassViewController.swift */; };
+		B152DC2925E43F6400A7DB17 /* CheckEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC2825E43F6400A7DB17 /* CheckEmailViewController.swift */; };
+		B152DC2E25E43F9A00A7DB17 /* ChangePassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC2D25E43F9A00A7DB17 /* ChangePassViewController.swift */; };
+		B152DC3325E4400800A7DB17 /* VerifyEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC3225E4400800A7DB17 /* VerifyEmailViewController.swift */; };
+		B152DC3825E4403100A7DB17 /* GreatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC3725E4403100A7DB17 /* GreatViewController.swift */; };
+		B152DC3D25E4404400A7DB17 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC3C25E4404400A7DB17 /* SelectAgeViewController.swift */; };
+		B152DC4225E4406300A7DB17 /* TwelveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC4125E4406300A7DB17 /* TwelveViewController.swift */; };
+		B152DC4725E440BC00A7DB17 /* SixteenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC4625E440BC00A7DB17 /* SixteenViewController.swift */; };
+		B152DC4C25E440D100A7DB17 /* EighteenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC4B25E440D100A7DB17 /* EighteenViewController.swift */; };
+		B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5025E440F800A7DB17 /* SetupProfileViewController.swift */; };
+		B152DC5625E4411200A7DB17 /* PrivacySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5525E4411200A7DB17 /* PrivacySettingViewController.swift */; };
+		B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5A25E4416000A7DB17 /* CreateProfileViewController.swift */; };
+		B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5F25E4417E00A7DB17 /* CreateProfileContinueViewController.swift */; };
+		B152DC6525E4419F00A7DB17 /* SelectSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */; };
+		B152DC6A25E441BC00A7DB17 /* SelectInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */; };
 		CF7A3EF23A061F84BE2DB847 /* Pods_Volunteer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7472CEAE76EF1A03265E59 /* Pods_Volunteer.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +66,6 @@
 		86369C264968F68EBBF8058C /* Pods-Volunteer-VolunteerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer-VolunteerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		924C0482176AF7C1832AC450 /* Pods-VolunteerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolunteerTests.debug.xcconfig"; path = "Target Support Files/Pods-VolunteerTests/Pods-VolunteerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		925FE17E549E5DEACAABA95C /* Pods_VolunteerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VolunteerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		98BBD0DE25DE33E100B7661B /* LoginSignUp */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LoginSignUp; sourceTree = "<group>"; };
 		98CC89E425DCFCA4008E4A7B /* Volunteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volunteer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98CC89E725DCFCA4008E4A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98CC89E925DCFCA4008E4A7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +82,27 @@
 		98CC8A0B25DCFCA6008E4A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E7472CEAE76EF1A03265E59 /* Pods_Volunteer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volunteer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B13A518CCA7D53725E1CFA0C /* Pods_Volunteer_VolunteerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volunteer_VolunteerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
+		B152DC0725E37C7E00A7DB17 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		B152DC0C25E37C9100A7DB17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B152DC1125E37CAC00A7DB17 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		B152DC1625E37CBE00A7DB17 /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
+		B152DC1B25E37CCF00A7DB17 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B152DC2325E43EEA00A7DB17 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
+		B152DC2825E43F6400A7DB17 /* CheckEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailViewController.swift; sourceTree = "<group>"; };
+		B152DC2D25E43F9A00A7DB17 /* ChangePassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePassViewController.swift; sourceTree = "<group>"; };
+		B152DC3225E4400800A7DB17 /* VerifyEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewController.swift; sourceTree = "<group>"; };
+		B152DC3725E4403100A7DB17 /* GreatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatViewController.swift; sourceTree = "<group>"; };
+		B152DC3C25E4404400A7DB17 /* SelectAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAgeViewController.swift; sourceTree = "<group>"; };
+		B152DC4125E4406300A7DB17 /* TwelveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelveViewController.swift; sourceTree = "<group>"; };
+		B152DC4625E440BC00A7DB17 /* SixteenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixteenViewController.swift; sourceTree = "<group>"; };
+		B152DC4B25E440D100A7DB17 /* EighteenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EighteenViewController.swift; sourceTree = "<group>"; };
+		B152DC5025E440F800A7DB17 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
+		B152DC5525E4411200A7DB17 /* PrivacySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySettingViewController.swift; sourceTree = "<group>"; };
+		B152DC5A25E4416000A7DB17 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
+		B152DC5F25E4417E00A7DB17 /* CreateProfileContinueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileContinueViewController.swift; sourceTree = "<group>"; };
+		B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillsViewController.swift; sourceTree = "<group>"; };
+		B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInterestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +136,7 @@
 		98CC89DB25DCFCA4008E4A7B = {
 			isa = PBXGroup;
 			children = (
-				98BBD0DE25DE33E100B7661B /* LoginSignUp */,
+				B152DBFE25E36FD300A7DB17 /* SignUpLogin */,
 				98CC89E625DCFCA4008E4A7B /* Volunteer */,
 				98CC89FD25DCFCA6008E4A7B /* VolunteerTests */,
 				98CC8A0825DCFCA6008E4A7B /* VolunteerUITests */,
@@ -150,6 +188,34 @@
 			path = VolunteerUITests;
 			sourceTree = "<group>";
 		};
+		B152DBFE25E36FD300A7DB17 /* SignUpLogin */ = {
+			isa = PBXGroup;
+			children = (
+				B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */,
+				B152DC0725E37C7E00A7DB17 /* ImageService.swift */,
+				B152DC0C25E37C9100A7DB17 /* LoginViewController.swift */,
+				B152DC1125E37CAC00A7DB17 /* MenuViewController.swift */,
+				B152DC1625E37CBE00A7DB17 /* RoundedWhiteButton.swift */,
+				B152DC1B25E37CCF00A7DB17 /* SignUpViewController.swift */,
+				B152DC2325E43EEA00A7DB17 /* ResetPassViewController.swift */,
+				B152DC2825E43F6400A7DB17 /* CheckEmailViewController.swift */,
+				B152DC2D25E43F9A00A7DB17 /* ChangePassViewController.swift */,
+				B152DC3225E4400800A7DB17 /* VerifyEmailViewController.swift */,
+				B152DC3725E4403100A7DB17 /* GreatViewController.swift */,
+				B152DC3C25E4404400A7DB17 /* SelectAgeViewController.swift */,
+				B152DC4125E4406300A7DB17 /* TwelveViewController.swift */,
+				B152DC4625E440BC00A7DB17 /* SixteenViewController.swift */,
+				B152DC4B25E440D100A7DB17 /* EighteenViewController.swift */,
+				B152DC5025E440F800A7DB17 /* SetupProfileViewController.swift */,
+				B152DC5525E4411200A7DB17 /* PrivacySettingViewController.swift */,
+				B152DC5A25E4416000A7DB17 /* CreateProfileViewController.swift */,
+				B152DC5F25E4417E00A7DB17 /* CreateProfileContinueViewController.swift */,
+				B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */,
+				B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */,
+			);
+			path = SignUpLogin;
+			sourceTree = "<group>";
+		};
 		DFFE09DD09581C2516445DF7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,7 +250,7 @@
 				98CC89E025DCFCA4008E4A7B /* Sources */,
 				98CC89E125DCFCA4008E4A7B /* Frameworks */,
 				98CC89E225DCFCA4008E4A7B /* Resources */,
-				BFBC9993D7DE4C15C4B2E129 /* [CP] Embed Pods Frameworks */,
+				8A5B52F74588AAFF0F21BC41 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -203,6 +269,7 @@
 				98CC89F625DCFCA6008E4A7B /* Sources */,
 				98CC89F725DCFCA6008E4A7B /* Frameworks */,
 				98CC89F825DCFCA6008E4A7B /* Resources */,
+				39956C2640F91BFD7CBB6D9B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,7 +289,7 @@
 				98CC8A0125DCFCA6008E4A7B /* Sources */,
 				98CC8A0225DCFCA6008E4A7B /* Frameworks */,
 				98CC8A0325DCFCA6008E4A7B /* Resources */,
-				567D4E182C7B95A64895B4C7 /* [CP] Embed Pods Frameworks */,
+				1EDA6D6276A4999EA9CE379E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,7 +350,6 @@
 			files = (
 				98CC89F425DCFCA5008E4A7B /* LaunchScreen.storyboard in Resources */,
 				98CC89F125DCFCA5008E4A7B /* Assets.xcassets in Resources */,
-				98BBD0DF25DE33E100B7661B /* LoginSignUp in Resources */,
 				98CC89EF25DCFCA4008E4A7B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,7 +358,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98BBD0E325DE35E800B7661B /* LoginSignUp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +365,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98BBD0E725DE35EA00B7661B /* LoginSignUp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +393,40 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1EDA6D6276A4999EA9CE379E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39956C2640F91BFD7CBB6D9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VolunteerTests/Pods-VolunteerTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VolunteerTests/Pods-VolunteerTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VolunteerTests/Pods-VolunteerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		434AC5CA439B4BDBA045F59F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -349,23 +447,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		567D4E182C7B95A64895B4C7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5E0ABB7C4E31051B748B90ED /* [CP] Check Pods Manifest.lock */ = {
@@ -390,7 +471,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BFBC9993D7DE4C15C4B2E129 /* [CP] Embed Pods Frameworks */ = {
+		8A5B52F74588AAFF0F21BC41 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -414,9 +495,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B152DC0D25E37C9100A7DB17 /* LoginViewController.swift in Sources */,
+				B152DC1725E37CBE00A7DB17 /* RoundedWhiteButton.swift in Sources */,
+				B152DC4725E440BC00A7DB17 /* SixteenViewController.swift in Sources */,
+				B152DC6525E4419F00A7DB17 /* SelectSkillsViewController.swift in Sources */,
+				B152DC3D25E4404400A7DB17 /* SelectAgeViewController.swift in Sources */,
+				B152DC5625E4411200A7DB17 /* PrivacySettingViewController.swift in Sources */,
 				98CC89EC25DCFCA4008E4A7B /* ViewController.swift in Sources */,
+				B152DC2925E43F6400A7DB17 /* CheckEmailViewController.swift in Sources */,
+				B152DC0325E37C6B00A7DB17 /* HelperExtensions.swift in Sources */,
+				B152DC1225E37CAC00A7DB17 /* MenuViewController.swift in Sources */,
+				B152DC3825E4403100A7DB17 /* GreatViewController.swift in Sources */,
 				98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */,
+				B152DC1C25E37CCF00A7DB17 /* SignUpViewController.swift in Sources */,
+				B152DC2425E43EEA00A7DB17 /* ResetPassViewController.swift in Sources */,
+				B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */,
+				B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */,
+				B152DC4225E4406300A7DB17 /* TwelveViewController.swift in Sources */,
+				B152DC2E25E43F9A00A7DB17 /* ChangePassViewController.swift in Sources */,
+				B152DC6A25E441BC00A7DB17 /* SelectInterestViewController.swift in Sources */,
+				B152DC3325E4400800A7DB17 /* VerifyEmailViewController.swift in Sources */,
+				B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */,
+				B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */,
 				98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */,
+				B152DC4C25E440D100A7DB17 /* EighteenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

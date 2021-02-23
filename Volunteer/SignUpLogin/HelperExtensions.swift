@@ -1,8 +1,8 @@
 //
 //  HelperExtensions.swift
-//  SeniorProject
+//  Volunteer
 //
-//  Created by William Ordaz on 2/11/21.
+//  Created by William Ordaz on 2/21/21.
 //
 
 import Foundation
@@ -89,3 +89,4 @@ extension UIImageView {
     }
     
 }
+
