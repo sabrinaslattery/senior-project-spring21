@@ -250,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="1095.6521739130435" y="497.54464285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="e2O-Bz-s6x">
             <objects>
-                <viewController storyboardIdentifier="SignUpViewController" modalPresentationStyle="fullScreen" id="Nm5-gT-ECX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" modalPresentationStyle="fullScreen" id="Nm5-gT-ECX" customClass="SignUpViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GOy-Mz-Ayl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2083,7 +2083,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yEY-z2-uJB"/>
-        <segue reference="cYa-yS-Gzk"/>
+        <segue reference="aLI-ae-bgN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="12+ Icon" width="662" height="664"/>
