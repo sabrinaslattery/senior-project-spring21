@@ -19,19 +19,19 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tapToChangeProfileButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
     
-    @IBAction func signUp(_ sender: UIButton) {
-        let user = PFUser()
-        user.username = emailField.text!
-        user.password = passwordField.text!
-        
-//        user.signUpInBackground { (success, error) in
-//            if success{
-//
-//            }
-//            else{
-//
-//            }
-    }
+//    @IBAction func signUp(_ sender: UIButton) {
+//        let user = PFUser()
+//        user.username = emailField.text!
+//        user.password = passwordField.text!
+//        
+////        user.signUpInBackground { (success, error) in
+////            if success{
+////
+////            }
+////            else{
+////
+////            }
+//    }
     
     //var continueButton:RoundedWhiteButton!
     var activityView:UIActivityIndicatorView!
@@ -85,7 +85,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         imagePicker = UIImagePickerController()
         imagePicker.allowsEditing = true
         imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = (self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate)
+        imagePicker.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
     }
     
     @objc func openImagePicker(_ sender:Any) {

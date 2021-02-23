@@ -14,8 +14,6 @@ let secondaryColor = UIColor(red: 150/255, green: 211/255, blue: 242/255, alpha:
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Settings to connect to the Back4App Servers
