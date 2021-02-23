@@ -1,8 +1,8 @@
 //
 //  SignUpViewController.swift
-//  SeniorProject
+//  Volunteer
 //
-//  Created by William Ordaz on 2/11/21.
+//  Created by William Ordaz on 2/21/21.
 //
 
 import Foundation
@@ -17,8 +17,9 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var tapToChangeProfileButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
     
-    var continueButton:RoundedWhiteButton!
+    //var continueButton:RoundedWhiteButton!
     var activityView:UIActivityIndicatorView!
     
     var imagePicker:UIImagePickerController!
@@ -28,7 +29,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
-        continueButton = RoundedWhiteButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
+        /*continueButton = RoundedWhiteButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
         continueButton.setTitleColor(secondaryColor, for: .normal)
         continueButton.setTitle("Continue", for: .normal)
         continueButton.titleLabel?.font = UIFont.systemFont(ofSize: 18.0, weight: UIFont.Weight.bold)
@@ -36,6 +37,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         continueButton.highlightedColor = UIColor(white: 1.0, alpha: 1.0)
         continueButton.defaultColor = UIColor.white
        // continueButton.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
+        
         
         view.addSubview(continueButton)
         setContinueButton(enabled: false)
@@ -46,6 +48,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         activityView.center = continueButton.center
         
         view.addSubview(activityView)
+        */
         
         firstnameField.delegate = self
         lastnameField.delegate = self

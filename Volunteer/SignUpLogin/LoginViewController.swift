@@ -1,8 +1,8 @@
 //
 //  LoginViewController.swift
-//  SeniorProject
+//  Volunteer
 //
-//  Created by William Ordaz on 2/11/21.
+//  Created by William Ordaz on 2/21/21.
 //
 
 import Foundation
@@ -13,6 +13,10 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var forgotPasswordButton: UIButton!
+    //@IBOutlet weak var emailField: UITextField!
+    //@IBOutlet weak var passwordField: UITextField!
+    //@IBOutlet weak var dismissButton: UIButton!
     
     var continueButton:RoundedWhiteButton!
     var activityView:UIActivityIndicatorView!
@@ -52,7 +56,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         emailField.becomeFirstResponder()
-//        NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillAppear), name: NSNotification.Name.UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
         
     }
     
