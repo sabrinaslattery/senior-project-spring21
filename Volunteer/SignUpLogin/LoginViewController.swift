@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Parse
 
 class LoginViewController:UIViewController, UITextFieldDelegate {
     
@@ -51,6 +52,23 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         emailField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         passwordField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
+    
+    // User Sign-in Validation
+    @IBAction func onSignIn(_ sender: Any) {
+        let username = emailField.text!
+        let password = passwordField.text!
+        
+        PFUser.logInWithUsername(inBackground: username, password: password)
+        { (user, error) in
+            if user != nil {
+                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+            }
+            else{
+                print("Error: \(error?.localizedDescription)")
+            }
+        }
+}
+       
     
     
     override func viewWillAppear(_ animated: Bool) {
