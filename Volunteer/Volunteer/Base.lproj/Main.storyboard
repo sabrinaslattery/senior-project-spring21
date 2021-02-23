@@ -20,8 +20,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="OutReachLogo" translatesAutoresizingMaskIntoConstraints="NO" id="TSs-dL-MEr">
                                 <rect key="frame" x="134" y="144" width="152" height="95"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-tB-KSp" customClass="RoundedWhiteButton" customModule="Volunteer" customModuleProvider="target">
-                                <rect key="frame" x="20" y="384" width="374" height="75"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OutReach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saY-UC-6OK">
+                                <rect key="frame" x="143" y="247" width="134" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-tB-KSp" customClass="RoundedWhiteButton" customModule="Volunteer" customModuleProvider="target">
+                                <rect key="frame" x="20" y="435" width="374" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="8iR-Bk-VJd"/>
                                 </constraints>
@@ -32,8 +38,8 @@
                                     <segue destination="9fr-RJ-Pme" kind="show" id="S5m-kQ-lJt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCI-Vi-SXA" customClass="RoundedWhiteButton" customModule="Volunteer" customModuleProvider="target">
-                                <rect key="frame" x="20" y="467" width="374" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCI-Vi-SXA" customClass="RoundedWhiteButton" customModule="Volunteer" customModuleProvider="target">
+                                <rect key="frame" x="23" y="494" width="374" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="9m0-4X-ABb"/>
                                 </constraints>
@@ -44,12 +50,6 @@
                                     <segue destination="Nm5-gT-ECX" kind="show" id="LMp-Hu-vgk"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OutReach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saY-UC-6OK">
-                                <rect key="frame" x="143" y="247" width="134" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="plI-fc-8c3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -231,9 +231,6 @@
                                 <rect key="frame" x="90" y="780" width="219" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign Up "/>
-                                <connections>
-                                    <action selector="signUp:" destination="VjU-Tg-cvk" eventType="touchUpInside" id="DfX-Fl-ytY"/>
-                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="OutReachLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5VO-fJ-peU">
                                 <rect key="frame" x="149" y="175" width="116" height="90"/>
@@ -346,6 +343,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="signUp:" destination="Nm5-gT-ECX" eventType="touchUpInside" id="yZ9-4M-osy"/>
                                     <segue destination="ghJ-nY-5fM" kind="show" id="1DD-vx-kjl"/>
                                 </connections>
                             </button>
@@ -1277,6 +1275,14 @@
                                     <action selector="handleDismissButton:" destination="9fr-RJ-Pme" eventType="touchUpInside" id="NS6-SV-JDd"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLg-Sg-dEz">
+                                <rect key="frame" x="98" y="683" width="219" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="onSignIn:" destination="9fr-RJ-Pme" eventType="touchUpInside" id="qup-SV-tWC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T7B-ua-34Z"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1316,7 +1322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mni-xy-bbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1070" y="-258"/>
+            <point key="canvasLocation" x="1069.5652173913045" y="-258.48214285714283"/>
         </scene>
         <!--Forgot Password-->
         <scene sceneID="Nt6-Tn-JJS">
