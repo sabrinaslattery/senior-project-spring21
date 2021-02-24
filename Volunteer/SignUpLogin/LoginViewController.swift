@@ -52,6 +52,26 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         passwordField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
+<<<<<<< Updated upstream
+=======
+    // User Sign-in Validation
+    @IBAction func onSignIn(_ sender: Any) {
+        let username = emailField.text!
+        let password = passwordField.text!
+        
+        PFUser.logInWithUsername(inBackground: username, password: password)
+        { (user, error) in
+            if user != nil {
+                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+            }
+            else{
+                print("Error: \(String(describing: error?.localizedDescription))")
+            }
+        }
+}
+       
+    
+>>>>>>> Stashed changes
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
