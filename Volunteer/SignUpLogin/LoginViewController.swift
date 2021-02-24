@@ -53,11 +53,6 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         passwordField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> main
     // User Sign-in Validation
     @IBAction func onSignIn(_ sender: Any) {
         let username = emailField.text!
@@ -69,20 +64,13 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
                 self.performSegue(withIdentifier: "LoginSegue", sender: nil)
             }
             else{
-<<<<<<< HEAD
+
                 print("Error: \(String(describing: error?.localizedDescription))")
-=======
-                print("Error: \(error?.localizedDescription)")
->>>>>>> main
+
             }
         }
 }
-       
-    
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> main
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

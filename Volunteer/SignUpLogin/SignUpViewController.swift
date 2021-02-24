@@ -76,11 +76,6 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         imagePicker.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
     }
     
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> main
     // Storing username and password in the database 
     @IBAction func signUp(_ sender: UIButton) {
         let user = PFUser()
@@ -92,20 +87,12 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
                 self.performSegue(withIdentifier: "LoginSegue", sender: nil)
             }
          else{
-<<<<<<< HEAD
             print("Error: \(String(describing: error?.localizedDescription))")
-=======
-            print("Error: \(error?.localizedDescription)")
->>>>>>> main
          }
         
     }
 }
     
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> main
     @objc func openImagePicker(_ sender:Any) {
         // Open Image Picker
         self.present(imagePicker, animated: true, completion: nil)
