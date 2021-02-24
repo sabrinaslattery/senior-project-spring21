@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Parse
 
 class SignUpViewController:UIViewController, UITextFieldDelegate {
     
@@ -19,19 +20,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet weak var tapToChangeProfileButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
     
-//    @IBAction func signUp(_ sender: UIButton) {
-//        let user = PFUser()
-//        user.username = emailField.text!
-//        user.password = passwordField.text!
-//        
-////        user.signUpInBackground { (success, error) in
-////            if success{
-////
-////            }
-////            else{
-////
-////            }
-//    }
+ 
     
     //var continueButton:RoundedWhiteButton!
     var activityView:UIActivityIndicatorView!
@@ -42,7 +31,6 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        
         /*continueButton = RoundedWhiteButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
         continueButton.setTitleColor(secondaryColor, for: .normal)
         continueButton.setTitle("Continue", for: .normal)
@@ -88,8 +76,11 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         imagePicker.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
     }
     
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
+=======
+>>>>>>> main
     // Storing username and password in the database 
     @IBAction func signUp(_ sender: UIButton) {
         let user = PFUser()
@@ -101,13 +92,20 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
                 self.performSegue(withIdentifier: "LoginSegue", sender: nil)
             }
          else{
+<<<<<<< HEAD
             print("Error: \(String(describing: error?.localizedDescription))")
+=======
+            print("Error: \(error?.localizedDescription)")
+>>>>>>> main
          }
         
     }
 }
     
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> main
     @objc func openImagePicker(_ sender:Any) {
         // Open Image Picker
         self.present(imagePicker, animated: true, completion: nil)
