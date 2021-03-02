@@ -1297,21 +1297,32 @@
                                     <action selector="handleDismissButton:" destination="9fr-RJ-Pme" eventType="touchUpInside" id="NS6-SV-JDd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By continuing, you agree to OutReach's Terms of Service and Privacy Policy:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKm-w0-T6S">
+                                <rect key="frame" x="34" y="545" width="347" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jnq-BB-UsY">
+                                <rect key="frame" x="160" y="672" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Privacy Policy"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLg-Sg-dEz">
-                                <rect key="frame" x="98" y="682" width="219" height="30"/>
+                                <rect key="frame" x="98" y="726" width="219" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="onSignIn:" destination="9fr-RJ-Pme" eventType="touchUpInside" id="qup-SV-tWC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By continuing, you agree to OutReach's Terms of Service and Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKm-w0-T6S">
-                                <rect key="frame" x="34" y="560" width="347" height="114"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfa-wi-1a1">
+                                <rect key="frame" x="150" y="634" width="115" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Terms of Service"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T7B-ua-34Z"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2222,267 +2233,6 @@
             </objects>
             <point key="canvasLocation" x="8008.6956521739139" y="-258.48214285714283"/>
         </scene>
-        <!--Privacy Policy View Controller-->
-        <scene sceneID="QqZ-hc-aPx">
-            <objects>
-                <viewController title="Privacy Policy View Controller" modalPresentationStyle="fullScreen" id="yLM-Et-DX4" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jBA-1D-hXA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bM4-gg-zOg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ivm-Xv-Ing">
-                                        <rect key="frame" x="40" y="66" width="334" height="1652"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <mutableString key="text">Privacy Policy
-Last updated: February 26, 2021
-
-This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
-
-We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Generator.
-
-Interpretation and Definitions
-Interpretation
-The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
-
-Definitions
-For the purposes of this Privacy Policy:
-
-Account means a unique account created for You to access our Service or parts of our Service.
-
-Affiliate means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
-
-Application means the software program provided by the Company downloaded by You on any electronic device, named OutReach
-
-Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to OutReach.
-
-Country refers to: California, United States
-
-Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.
-
-Personal Data is any information that relates to an identified or identifiable individual.
-
-Service refers to the Application.
-
-Service Provider means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.
-
-Third-party Social Media Service refers to any website or any social network website through which a User can log in or create an account to use the Service.
-
-Usage Data refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).
-
-You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
-
-Collecting and Using Your Personal Data
-Types of Data Collected
-Personal Data
-While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
-
-Email address
-
-First name and last name
-
-Phone number
-
-Address, State, Province, ZIP/Postal code, City
-
-Usage Data
-
-Usage Data
-Usage Data is collected automatically when using the Service.
-
-Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
-
-When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.
-
-We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
-
-Information from Third-Party Social Media Services
-The Company allows You to create an account and log in to use the Service through the following Third-party Social Media Services:
-
-Google
-Facebook
-Twitter
-If You decide to register through or otherwise grant us access to a Third-Party Social Media Service, We may collect Personal data that is already associated with Your Third-Party Social Media Service's account, such as Your name, Your email address, Your activities or Your contact list associated with that account.
-
-You may also have the option of sharing additional information with the Company through Your Third-Party Social Media Service's account. If You choose to provide such information and Personal Data, during registration or otherwise, You are giving the Company permission to use, share, and store it in a manner consistent with this Privacy Policy.
-
-Information Collected while Using the Application
-While using Our Application, in order to provide features of Our Application, We may collect, with Your prior permission:
-
-Information regarding your location
-
-Pictures and other information from your Device's camera and photo library
-
-We use this information to provide features of Our Service, to improve and customize Our Service. The information may be uploaded to the Company's servers and/or a Service Provider's server or it may be simply stored on Your device.
-
-You can enable or disable access to this information at any time, through Your Device settings.
-
-Use of Your Personal Data
-The Company may use Personal Data for the following purposes:
-
-To provide and maintain our Service, including to monitor the usage of our Service.
-
-To manage Your Account: to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.
-
-For the performance of a contract: the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.
-
-To contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.
-
-To provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.
-
-To manage Your requests: To attend and manage Your requests to Us.
-
-For business transfers: We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.
-
-For other purposes: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.
-
-We may share Your personal information in the following situations:
-
-With Service Providers: We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.
-For business transfers: We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.
-With Affiliates: We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.
-With business partners: We may share Your information with Our business partners to offer You certain products, services or promotions.
-With other users: when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside. If You interact with other users or register through a Third-Party Social Media Service, Your contacts on the Third-Party Social Media Service may see Your name, profile, pictures and description of Your activity. Similarly, other users will be able to view descriptions of Your activity, communicate with You and view Your profile.
-With Your consent: We may disclose Your personal information for any other purpose with Your consent.
-Retention of Your Personal Data
-The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
-
-The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
-
-Transfer of Your Personal Data
-Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
-
-Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.
-
-The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
-
-Disclosure of Your Personal Data
-Business Transactions
-If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.
-
-Law enforcement
-Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
-
-Other legal requirements
-The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
-
-Comply with a legal obligation
-Protect and defend the rights or property of the Company
-Prevent or investigate possible wrongdoing in connection with the Service
-Protect the personal safety of Users of the Service or the public
-Protect against legal liability
-Security of Your Personal Data
-The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
-
-Children's Privacy
-Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.
-
-If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.
-
-Links to Other Websites
-Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
-
-We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
-
-Changes to this Privacy Policy
-We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.
-
-We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.
-
-You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
-
-Contact Us
-If you have any questions about this Privacy Policy, You can contact us:
-
-By email: noreply_OutReach@gmail.com
-Privacy Policy for OutReach</mutableString>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="ABY-mn-JHj"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="8lV-6n-wRC"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="XW8-wJ-Pbv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BFE-ad-kbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-59.420289855072468" y="-608.03571428571422"/>
-        </scene>
-        <!--Terms of Service View Controller-->
-        <scene sceneID="SRF-dd-vJU">
-            <objects>
-                <viewController title="Terms of Service View Controller" modalPresentationStyle="fullScreen" id="5jd-iS-CgS" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="r18-4n-w55">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XhR-GX-tg3">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srL-2C-6iX">
-                                        <rect key="frame" x="8" y="52" width="398" height="1396"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <mutableString key="text">
-OutReach Terms and Conditions of Use
-1. Terms
-By accessing this mobile application, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.
-
-2. Use License
-Permission is granted to temporarily download one copy of the materials on OutReach's Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
-
-modify or copy the materials;
-use the materials for any commercial purpose or for any public display;
-attempt to reverse engineer any software contained on OutReach's Website;
-remove any copyright or other proprietary notations from the materials; or
-transferring the materials to another person or "mirror" the materials on any other server.
-This will let OutReach to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format. These Terms of Service has been created with the help of the Terms Of Service Generator and the Privacy Policy Generator.
-
-3. Disclaimer
-All the materials on OutReach’s Website are provided "as is". OutReach makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, OutReach does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.
-
-4. Limitations
-OutReach or its suppliers will not be hold accountable for any damages that will arise with the use or inability to use the materials on OutReach’s Website, even if OutReach or an authorize representative of this Website has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.
-
-5. Revisions and Errata
-The materials appearing on OutReach’s Website may include technical, typographical, or photographic errors. OutReach will not promise that any of the materials in this Website are accurate, complete, or current. OutReach may change the materials contained on its Website at any time without notice. OutReach does not make any commitment to update the materials.
-
-6. Links
-OutReach has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by OutReach of the site. The use of any linked website is at the user’s own risk.
-
-7. Site Terms of Use Modifications
-OutReach may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.
-
-8. Your Privacy
-Please read our Privacy Policy.
-
-9. Governing Law
-Any claim related to OutReach's Website shall be governed by the laws of us without regards to its conflict of law provisions.</mutableString>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="3LN-U8-Sf1"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="5b0-ol-DHQ"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="oWo-Jo-RX6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XZk-IE-ame" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="586.95652173913049" y="-721.20535714285711"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="sfc-In-X04">
             <objects>
@@ -2553,7 +2303,6 @@ Any claim related to OutReach's Website shall be governed by the laws of us with
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Sfg-ea-f5Y"/>
         <segue reference="TO6-Hg-CKv"/>
         <segue reference="NOy-Sg-1JV"/>
         <segue reference="aLI-ae-bgN"/>
