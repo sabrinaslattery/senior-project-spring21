@@ -1245,6 +1245,26 @@
             </objects>
             <point key="canvasLocation" x="6137.68115942029" y="874.55357142857144"/>
         </scene>
+        <!--Terms of Service-->
+        <scene sceneID="4kI-ES-bq5">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ToS_LegalDocs" storyboardName="LegalDocs" id="Lmi-iR-TzI" userLabel="Terms of Service" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DIK-Iz-ywc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x52-HN-KPE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="865" y="-737"/>
+        </scene>
+        <!--Privacy Policy-->
+        <scene sceneID="EhA-CA-HaQ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PrivacyPolicy_LegalDocs" storyboardName="LegalDocs" id="8QJ-ax-cQ1" userLabel="Privacy Policy" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Oq3-IU-U9s"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSC-fv-jHT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="-737"/>
+        </scene>
         <!--Login View Controller-->
         <scene sceneID="CCm-m1-Kdh">
             <objects>
@@ -1308,6 +1328,9 @@
                                 <rect key="frame" x="160" y="672" width="95" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Privacy Policy"/>
+                                <connections>
+                                    <segue destination="8QJ-ax-cQ1" kind="show" identifier="PrivacyPolicySegue" id="OO4-EW-jZf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLg-Sg-dEz">
                                 <rect key="frame" x="98" y="726" width="219" height="30"/>
@@ -1322,6 +1345,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Terms of Service"/>
+                                <connections>
+                                    <segue destination="Lmi-iR-TzI" kind="show" identifier="ToSSegue" id="FPU-fu-eVx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T7B-ua-34Z"/>
@@ -2303,7 +2329,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TO6-Hg-CKv"/>
+        <segue reference="S5m-kQ-lJt"/>
         <segue reference="NOy-Sg-1JV"/>
         <segue reference="aLI-ae-bgN"/>
     </inferredMetricsTieBreakers>

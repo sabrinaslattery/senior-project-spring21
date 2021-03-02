@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		03AE09C525EDFF0C0078134F /* LegalDocs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE09C425EDFF0C0078134F /* LegalDocs.storyboard */; };
 		03AE09CA25EDFF850078134F /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE09C925EDFF850078134F /* PrivacyPolicyViewController.swift */; };
+		03AE0DD025EE00550078134F /* Volunteer in Resources */ = {isa = PBXBuildFile; fileRef = 03AE0DCF25EE00550078134F /* Volunteer */; };
+		03AE0DD525EE00810078134F /* ToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE0DD425EE00810078134F /* ToSViewController.swift */; };
 		03BC13F625E5C6AD0001E2E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98CC89ED25DCFCA4008E4A7B /* Main.storyboard */; };
 		03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */; };
 		3172CA3F8203E80A15E3723B /* Pods_VolunteerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925FE17E549E5DEACAABA95C /* Pods_VolunteerTests.framework */; };
@@ -63,6 +65,8 @@
 /* Begin PBXFileReference section */
 		03AE09C425EDFF0C0078134F /* LegalDocs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LegalDocs.storyboard; sourceTree = "<group>"; };
 		03AE09C925EDFF850078134F /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = SOURCE_ROOT; };
+		03AE0DCF25EE00550078134F /* Volunteer */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Volunteer; sourceTree = "<group>"; };
+		03AE0DD425EE00810078134F /* ToSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToSViewController.swift; sourceTree = "<group>"; };
 		03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassResetController.swift; sourceTree = "<group>"; };
 		0465753C1758BAB82A3169F4 /* Pods-Volunteer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer.release.xcconfig"; path = "Target Support Files/Pods-Volunteer/Pods-Volunteer.release.xcconfig"; sourceTree = "<group>"; };
 		1C361E8663E17DB86252A39F /* Pods-Volunteer-VolunteerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer-VolunteerUITests.release.xcconfig"; path = "Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -137,11 +141,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03AE09D125EE00300078134F /* LegalDocs */ = {
+			isa = PBXGroup;
+			children = (
+				03AE09C925EDFF850078134F /* PrivacyPolicyViewController.swift */,
+				03AE0DD425EE00810078134F /* ToSViewController.swift */,
+			);
+			name = LegalDocs;
+			sourceTree = "<group>";
+		};
 		98CC89DB25DCFCA4008E4A7B = {
 			isa = PBXGroup;
 			children = (
+				03AE09D125EE00300078134F /* LegalDocs */,
 				B152DBFE25E36FD300A7DB17 /* SignUpLogin */,
 				98CC89E625DCFCA4008E4A7B /* Volunteer */,
+				03AE0DCF25EE00550078134F /* Volunteer */,
 				98CC89FD25DCFCA6008E4A7B /* VolunteerTests */,
 				98CC8A0825DCFCA6008E4A7B /* VolunteerUITests */,
 				98CC89E525DCFCA4008E4A7B /* Products */,
@@ -217,7 +232,6 @@
 				B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */,
 				B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */,
 				03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */,
-				03AE09C925EDFF850078134F /* PrivacyPolicyViewController.swift */,
 			);
 			path = SignUpLogin;
 			sourceTree = "<group>";
@@ -358,6 +372,7 @@
 				03AE09C525EDFF0C0078134F /* LegalDocs.storyboard in Resources */,
 				98CC89F425DCFCA5008E4A7B /* LaunchScreen.storyboard in Resources */,
 				98CC89F125DCFCA5008E4A7B /* Assets.xcassets in Resources */,
+				03AE0DD025EE00550078134F /* Volunteer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +540,7 @@
 				B152DC3325E4400800A7DB17 /* VerifyEmailViewController.swift in Sources */,
 				B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */,
 				B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */,
+				03AE0DD525EE00810078134F /* ToSViewController.swift in Sources */,
 				98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */,
 				B152DC4C25E440D100A7DB17 /* EighteenViewController.swift in Sources */,
 			);
@@ -699,7 +715,6 @@
 		};
 		98CC8A0F25DCFCA6008E4A7B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5BBF486254AF5EDB4FE84A37 /* Pods-Volunteer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -719,7 +734,6 @@
 		};
 		98CC8A1025DCFCA6008E4A7B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0465753C1758BAB82A3169F4 /* Pods-Volunteer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -739,7 +753,6 @@
 		};
 		98CC8A1225DCFCA6008E4A7B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 924C0482176AF7C1832AC450 /* Pods-VolunteerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -762,7 +775,6 @@
 		};
 		98CC8A1325DCFCA6008E4A7B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 66D23A9C3CF7DBB2AB963756 /* Pods-VolunteerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -785,7 +797,6 @@
 		};
 		98CC8A1525DCFCA6008E4A7B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86369C264968F68EBBF8058C /* Pods-Volunteer-VolunteerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -806,7 +817,6 @@
 		};
 		98CC8A1625DCFCA6008E4A7B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C361E8663E17DB86252A39F /* Pods-Volunteer-VolunteerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
