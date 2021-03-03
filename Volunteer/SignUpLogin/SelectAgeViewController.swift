@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import Parse
+
 
 class SelectAgeViewController:UIViewController {
     

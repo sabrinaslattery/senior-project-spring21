@@ -6,17 +6,20 @@ target 'Volunteer' do
   use_frameworks!
 
   # Pods for Volunteer
-   pod 'Parse'
+  pod 'Parse'
+  pod 'AlamofireImage'
 
   target 'VolunteerTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'Parse'
+    pod 'AlamofireImage'
   end
 
   target 'VolunteerUITests' do
     # Pods for testing
     pod 'Parse'
+    pod 'AlamofireImage'
   end
 
 end

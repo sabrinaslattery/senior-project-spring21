@@ -9,17 +9,13 @@ import Foundation
 import UIKit
 import Parse
 
+
 class LoginViewController:UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var signuphereButton: UIButton!
-    //@IBOutlet weak var emailField: UITextField!
-    //@IBOutlet weak var passwordField: UITextField!
-    //@IBOutlet weak var dismissButton: UIButton!
-    
     var continueButton:RoundedWhiteButton!
     var activityView:UIActivityIndicatorView!
     

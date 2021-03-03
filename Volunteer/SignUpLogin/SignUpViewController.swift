@@ -8,14 +8,15 @@
 import Foundation
 import UIKit
 import Parse
+import AlamofireImage
 
-class SignUpViewController:UIViewController, UITextFieldDelegate {
+class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var firstnameField: UITextField!
     @IBOutlet weak var lastnameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var dismissButton: UIButton!
+    @IBOutlet weak var phonenumberField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var tapToChangeProfileButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
@@ -61,29 +62,33 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
         lastnameField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         emailField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         passwordField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-        
-        
-        let imageTap = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
-        profileImageView.isUserInteractionEnabled = true
-        profileImageView.addGestureRecognizer(imageTap)
-        profileImageView.layer.cornerRadius = profileImageView.bounds.height / 2
-        profileImageView.clipsToBounds = true
-        //tapToChangeProfileButton.addTarget(self, action: #selector(openImagePicker), for: .touchUpInside)
-        
-        imagePicker = UIImagePickerController()
-        imagePicker.allowsEditing = true
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
     }
     
     // Storing username and password in the database 
-    @IBAction func signUp(_ sender: UIButton) {
+    @IBAction func signUp(_ sender: Any){
         let user = PFUser()
         user.username = emailField.text!
         user.password = passwordField.text!
         
+        // customizing password rules
+       
+       
+        
+        // adding objects to the user class
+        user ["firstname"] = firstnameField.text!
+        user ["lastname"] = lastnameField.text!
+        user ["phonenumber"] = phonenumberField.text!
+        
+        // saving the profile image
+        let profileImage = PFObject(className: "ProfileImage.png")
+        let imageData = profileImageView.image!.pngData()
+        let file = PFFileObject(data: imageData!)
+        
+        profileImage["image"] = file
+        
         user.signUpInBackground { (success, error) in
             if success{
+                self.dismiss(animated: true, completion: nil)
                 self.performSegue(withIdentifier: "LoginSegue", sender: nil)
             }
          else{
@@ -93,9 +98,33 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
     }
 }
     
-    @objc func openImagePicker(_ sender:Any) {
-        // Open Image Picker
-        self.present(imagePicker, animated: true, completion: nil)
+    // Launching the camera to add a profile picture from camera or photo library
+    @IBAction func onCameraButton(_sender: Any) {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+            picker.sourceType = .camera
+        }
+        
+        else{
+            picker.sourceType = .photoLibrary
+        }
+        
+        present(picker, animated: true, completion: nil)
+    }
+    
+    // resizing the image and
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.editedImage] as! UIImage
+        
+        let size = CGSize(width: 300, height: 300)
+        let scaledImage = image.af_imageScaled(to:size)
+        
+        profileImageView.image = scaledImage
+        
+        dismiss(animated: true, completion: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -120,11 +149,6 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
             return .lightContent
         }
     }
-    
-    @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
-    }
-    
     
     @objc func keyboardWillAppear(notification: NSNotification){
         
@@ -297,20 +321,20 @@ class SignUpViewController:UIViewController, UITextFieldDelegate {
      }
      */
 }
-extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+//extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
+    //func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        //picker.dismiss(animated: true, completion: nil)
+   // }
     
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    //private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        if let pickedImage = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage {
-            self.profileImageView.image = pickedImage
-        }
+       // if let pickedImage = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage {
+           // self.profileImageView.image = pickedImage
+       // }
         
-        picker.dismiss(animated: true, completion: nil)
-    }
+       // picker.dismiss(animated: true, completion: nil)
+   // }
     
     
-}
+//}
