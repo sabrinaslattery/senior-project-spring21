@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Parse
 
 class CreateProfileViewContinueController:UIViewController, UITextFieldDelegate {
     

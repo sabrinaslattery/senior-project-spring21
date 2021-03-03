@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import Parse
 
 class ChangePassViewController:UIViewController, UITextFieldDelegate {
     

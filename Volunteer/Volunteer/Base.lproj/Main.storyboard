@@ -94,6 +94,9 @@
                                 <state key="normal" title="Tap to Change">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onCameraButtonWith_sender:" destination="Nm5-gT-ECX" eventType="touchUpInside" id="Fbc-H6-A18"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEi-jd-yq7" customClass="RoundedWhiteButton" customModule="Volunteer" customModuleProvider="target">
                                 <rect key="frame" x="21" y="665" width="373" height="66"/>
@@ -111,9 +114,13 @@
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_user-alt_285645" translatesAutoresizingMaskIntoConstraints="NO" id="tQz-E8-q4h">
                                 <rect key="frame" x="168" y="79" width="78" height="100"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="O1E-Bd-xjY"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="3U4-zh-Gdr" appends="YES" id="8qM-ci-tfl"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="755" text="Join for free to see volunteering events near you!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UrU-OI-69g">
                                 <rect key="frame" x="21" y="225" width="373" height="21"/>
@@ -191,11 +198,13 @@
                         <outlet property="firstnameField" destination="kkS-6h-0TJ" id="xmU-la-AAI"/>
                         <outlet property="lastnameField" destination="4Xg-4E-GI3" id="bel-MX-0GZ"/>
                         <outlet property="passwordField" destination="MOv-Fr-jMT" id="Gw3-Jp-YOj"/>
+                        <outlet property="phonenumberField" destination="OTw-dl-f90" id="Wsw-rm-mWf"/>
                         <outlet property="profileImageView" destination="tQz-E8-q4h" id="1lR-AU-w07"/>
                         <outlet property="tapToChangeProfileButton" destination="xyR-Bk-ayV" id="grG-Lb-ew3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXd-Y0-Sk1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3U4-zh-Gdr"/>
             </objects>
             <point key="canvasLocation" x="1070" y="498"/>
         </scene>
@@ -408,7 +417,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="YhE-tK-7SX">
-                                <rect key="frame" x="182" y="295" width="126" height="73"/>
+                                <rect key="frame" x="181.5" y="294.5" width="126.5" height="73"/>
                             </datePicker>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="18+ Icon" translatesAutoresizingMaskIntoConstraints="NO" id="acc-IN-YF8">
                                 <rect key="frame" x="153" y="634.5" width="108" height="100"/>
