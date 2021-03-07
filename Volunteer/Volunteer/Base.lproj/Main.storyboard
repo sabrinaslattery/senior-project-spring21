@@ -904,6 +904,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="SendLinkBtnAction:" destination="opX-Z9-5p4" eventType="touchUpInside" id="1gz-p0-fOq"/>
                                     <segue destination="TJM-Yz-rkw" kind="show" id="aAe-6c-xff"/>
                                 </connections>
                             </button>
