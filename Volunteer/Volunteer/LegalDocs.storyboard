@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9xN-wj-GPO">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -135,6 +135,7 @@ Any claim related to OutReach's Website shall be governed by the laws of us with
                             <constraint firstItem="U9h-un-lxV" firstAttribute="trailing" secondItem="uBV-3V-kwo" secondAttribute="trailing" id="ucp-tN-lgl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Hjq-Hb-Y29"/>
                     <size key="freeformSize" width="414" height="2000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFe-z1-dp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -146,17 +147,26 @@ Any claim related to OutReach's Website shall be governed by the laws of us with
             <objects>
                 <viewController title="Terms of Service View Controller" modalPresentationStyle="fullScreen" id="7Dw-hb-yeJ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="owd-l0-uw5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="10000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="7500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7m-82-KtC">
-                                <rect key="frame" x="0.0" y="44" width="414" height="9956"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="7000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cd-HW-a7e">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="10000"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="8000"/>
                                         <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-hF-E98">
+                                                <rect key="frame" x="20" y="43" width="374" height="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="27" id="B68-5K-TIz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50b-kH-88e">
-                                                <rect key="frame" x="20" y="78" width="374" height="9914"/>
+                                                <rect key="frame" x="20" y="78" width="374" height="8000"/>
                                                 <string key="text">Last updated: February 26, 2021
 
 This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
@@ -323,30 +333,23 @@ Privacy Policy for OutReach
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-hF-E98">
-                                                <rect key="frame" x="20" y="43" width="374" height="27"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="50b-kH-88e" firstAttribute="top" secondItem="aYQ-hF-E98" secondAttribute="bottom" constant="8" symbolic="YES" id="3dU-mb-Iei"/>
                                             <constraint firstItem="50b-kH-88e" firstAttribute="leading" secondItem="0cd-HW-a7e" secondAttribute="leading" constant="20" id="3z4-El-3qm"/>
-                                            <constraint firstItem="aYQ-hF-E98" firstAttribute="top" secondItem="0cd-HW-a7e" secondAttribute="top" constant="43" id="AV4-ti-gLD"/>
-                                            <constraint firstItem="aYQ-hF-E98" firstAttribute="leading" secondItem="0cd-HW-a7e" secondAttribute="leading" constant="20" id="E57-fm-4s0"/>
-                                            <constraint firstAttribute="bottom" secondItem="50b-kH-88e" secondAttribute="bottom" constant="8" id="QxG-mZ-3a3"/>
-                                            <constraint firstAttribute="trailing" secondItem="aYQ-hF-E98" secondAttribute="trailing" constant="20" id="cS3-Xs-8Y7"/>
-                                            <constraint firstAttribute="height" constant="10000" id="d89-Io-Tpo"/>
-                                            <constraint firstItem="50b-kH-88e" firstAttribute="top" secondItem="aYQ-hF-E98" secondAttribute="bottom" constant="8" symbolic="YES" id="gAl-F8-eTZ"/>
+                                            <constraint firstItem="aYQ-hF-E98" firstAttribute="trailing" secondItem="50b-kH-88e" secondAttribute="trailing" id="7MH-8a-tE0"/>
+                                            <constraint firstItem="aYQ-hF-E98" firstAttribute="top" secondItem="0cd-HW-a7e" secondAttribute="top" constant="43" id="80C-o3-88r"/>
+                                            <constraint firstAttribute="bottom" secondItem="50b-kH-88e" secondAttribute="bottom" constant="-78" id="QxG-mZ-3a3"/>
+                                            <constraint firstAttribute="height" constant="8000" id="d89-Io-Tpo"/>
+                                            <constraint firstItem="aYQ-hF-E98" firstAttribute="leading" secondItem="50b-kH-88e" secondAttribute="leading" id="iqI-ft-fsq"/>
                                             <constraint firstAttribute="trailing" secondItem="50b-kH-88e" secondAttribute="trailing" constant="20" id="k4P-6N-8p0"/>
-                                            <constraint firstAttribute="bottom" secondItem="aYQ-hF-E98" secondAttribute="bottom" constant="9930" id="mkD-yp-Pf4"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="0cd-HW-a7e" firstAttribute="leading" secondItem="C7m-82-KtC" secondAttribute="leading" id="1E1-nl-XV8"/>
-                                    <constraint firstAttribute="bottom" secondItem="0cd-HW-a7e" secondAttribute="bottom" id="7AV-F6-V8h"/>
+                                    <constraint firstAttribute="bottom" secondItem="0cd-HW-a7e" secondAttribute="bottom" constant="-1000" id="7AV-F6-V8h"/>
                                     <constraint firstAttribute="trailing" secondItem="0cd-HW-a7e" secondAttribute="trailing" id="N3I-eV-Rcx"/>
                                     <constraint firstItem="0cd-HW-a7e" firstAttribute="top" secondItem="C7m-82-KtC" secondAttribute="top" id="dZr-H0-bF5"/>
                                 </constraints>
@@ -355,35 +358,35 @@ Privacy Policy for OutReach
                                 <rect key="frame" x="251" y="8" width="143" height="30"/>
                                 <state key="normal" title="Terms of Service"/>
                                 <connections>
-                                    <segue destination="7Dw-hb-yeJ" kind="show" id="TGx-KC-YvX"/>
+                                    <segue destination="9xN-wj-GPO" kind="show" id="sJ6-Zg-GNp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cc1-fU-7Ky">
                                 <rect key="frame" x="20" y="8" width="155" height="30"/>
                                 <state key="normal" title="Return to OutReach"/>
                                 <connections>
-                                    <segue destination="yxW-cp-z5K" kind="show" id="ruw-nA-Jff"/>
+                                    <segue destination="yxW-cp-z5K" kind="show" id="f1R-Tb-TzK"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Xjn-VR-YKG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="C7m-82-KtC" secondAttribute="bottom" id="2Ti-Ae-XgU"/>
+                            <constraint firstAttribute="bottom" secondItem="C7m-82-KtC" secondAttribute="bottom" constant="500" id="2Ti-Ae-XgU"/>
                             <constraint firstItem="YjA-To-heQ" firstAttribute="leading" secondItem="cc1-fU-7Ky" secondAttribute="trailing" constant="76" id="93O-PP-yej"/>
                             <constraint firstItem="0cd-HW-a7e" firstAttribute="width" secondItem="owd-l0-uw5" secondAttribute="width" id="AvH-pi-YbO"/>
                             <constraint firstItem="YjA-To-heQ" firstAttribute="top" secondItem="owd-l0-uw5" secondAttribute="top" constant="8" id="GSk-uW-tt8"/>
                             <constraint firstItem="YjA-To-heQ" firstAttribute="leading" secondItem="owd-l0-uw5" secondAttribute="leading" constant="251" id="JmB-h9-8P0"/>
                             <constraint firstItem="C7m-82-KtC" firstAttribute="trailing" secondItem="Xjn-VR-YKG" secondAttribute="trailing" id="Jsg-Vf-TxF"/>
                             <constraint firstItem="C7m-82-KtC" firstAttribute="leading" secondItem="Xjn-VR-YKG" secondAttribute="leading" id="Knn-1W-WGs"/>
-                            <constraint firstItem="C7m-82-KtC" firstAttribute="top" secondItem="cc1-fU-7Ky" secondAttribute="bottom" constant="6" id="NEE-3T-wiy"/>
+                            <constraint firstItem="C7m-82-KtC" firstAttribute="top" secondItem="cc1-fU-7Ky" secondAttribute="bottom" constant="-38" id="NEE-3T-wiy"/>
                             <constraint firstItem="cc1-fU-7Ky" firstAttribute="leading" secondItem="owd-l0-uw5" secondAttribute="leading" constant="20" symbolic="YES" id="QJQ-cz-M2m"/>
-                            <constraint firstItem="C7m-82-KtC" firstAttribute="top" secondItem="Xjn-VR-YKG" secondAttribute="top" id="f1U-lj-sZf"/>
+                            <constraint firstItem="C7m-82-KtC" firstAttribute="top" secondItem="Xjn-VR-YKG" secondAttribute="top" constant="-44" id="f1U-lj-sZf"/>
                             <constraint firstAttribute="trailing" secondItem="YjA-To-heQ" secondAttribute="trailing" constant="20" id="myO-IP-QG5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Tgo-Rq-bpQ"/>
-                    <size key="freeformSize" width="414" height="10000"/>
+                    <size key="freeformSize" width="414" height="7500"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gd4-im-55v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -391,7 +394,7 @@ Privacy Policy for OutReach
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QCk-5h-ebV"/>
+        <segue reference="f1R-Tb-TzK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
