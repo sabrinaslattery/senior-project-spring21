@@ -24,7 +24,6 @@
 		B152DC0325E37C6B00A7DB17 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */; };
 		B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0725E37C7E00A7DB17 /* ImageService.swift */; };
 		B152DC0D25E37C9100A7DB17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0C25E37C9100A7DB17 /* LoginViewController.swift */; };
-		B152DC1225E37CAC00A7DB17 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC1125E37CAC00A7DB17 /* MenuViewController.swift */; };
 		B152DC1725E37CBE00A7DB17 /* RoundedWhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC1625E37CBE00A7DB17 /* RoundedWhiteButton.swift */; };
 		B152DC1C25E37CCF00A7DB17 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC1B25E37CCF00A7DB17 /* SignUpViewController.swift */; };
 		B152DC2425E43EEA00A7DB17 /* ResetPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC2325E43EEA00A7DB17 /* ResetPassViewController.swift */; };
@@ -33,9 +32,6 @@
 		B152DC3325E4400800A7DB17 /* VerifyEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC3225E4400800A7DB17 /* VerifyEmailViewController.swift */; };
 		B152DC3825E4403100A7DB17 /* GreatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC3725E4403100A7DB17 /* GreatViewController.swift */; };
 		B152DC3D25E4404400A7DB17 /* SelectAgeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC3C25E4404400A7DB17 /* SelectAgeViewController.swift */; };
-		B152DC4225E4406300A7DB17 /* TwelveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC4125E4406300A7DB17 /* TwelveViewController.swift */; };
-		B152DC4725E440BC00A7DB17 /* SixteenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC4625E440BC00A7DB17 /* SixteenViewController.swift */; };
-		B152DC4C25E440D100A7DB17 /* EighteenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC4B25E440D100A7DB17 /* EighteenViewController.swift */; };
 		B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5025E440F800A7DB17 /* SetupProfileViewController.swift */; };
 		B152DC5625E4411200A7DB17 /* PrivacySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5525E4411200A7DB17 /* PrivacySettingViewController.swift */; };
 		B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5A25E4416000A7DB17 /* CreateProfileViewController.swift */; };
@@ -93,7 +89,6 @@
 		B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		B152DC0725E37C7E00A7DB17 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		B152DC0C25E37C9100A7DB17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		B152DC1125E37CAC00A7DB17 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		B152DC1625E37CBE00A7DB17 /* RoundedWhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedWhiteButton.swift; sourceTree = "<group>"; };
 		B152DC1B25E37CCF00A7DB17 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B152DC2325E43EEA00A7DB17 /* ResetPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassViewController.swift; sourceTree = "<group>"; };
@@ -102,9 +97,6 @@
 		B152DC3225E4400800A7DB17 /* VerifyEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyEmailViewController.swift; sourceTree = "<group>"; };
 		B152DC3725E4403100A7DB17 /* GreatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreatViewController.swift; sourceTree = "<group>"; };
 		B152DC3C25E4404400A7DB17 /* SelectAgeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectAgeViewController.swift; sourceTree = "<group>"; };
-		B152DC4125E4406300A7DB17 /* TwelveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwelveViewController.swift; sourceTree = "<group>"; };
-		B152DC4625E440BC00A7DB17 /* SixteenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixteenViewController.swift; sourceTree = "<group>"; };
-		B152DC4B25E440D100A7DB17 /* EighteenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EighteenViewController.swift; sourceTree = "<group>"; };
 		B152DC5025E440F800A7DB17 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		B152DC5525E4411200A7DB17 /* PrivacySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacySettingViewController.swift; sourceTree = "<group>"; };
 		B152DC5A25E4416000A7DB17 /* CreateProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileViewController.swift; sourceTree = "<group>"; };
@@ -213,7 +205,6 @@
 				B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */,
 				B152DC0725E37C7E00A7DB17 /* ImageService.swift */,
 				B152DC0C25E37C9100A7DB17 /* LoginViewController.swift */,
-				B152DC1125E37CAC00A7DB17 /* MenuViewController.swift */,
 				B152DC1625E37CBE00A7DB17 /* RoundedWhiteButton.swift */,
 				B152DC1B25E37CCF00A7DB17 /* SignUpViewController.swift */,
 				B152DC2325E43EEA00A7DB17 /* ResetPassViewController.swift */,
@@ -222,9 +213,6 @@
 				B152DC3225E4400800A7DB17 /* VerifyEmailViewController.swift */,
 				B152DC3725E4403100A7DB17 /* GreatViewController.swift */,
 				B152DC3C25E4404400A7DB17 /* SelectAgeViewController.swift */,
-				B152DC4125E4406300A7DB17 /* TwelveViewController.swift */,
-				B152DC4625E440BC00A7DB17 /* SixteenViewController.swift */,
-				B152DC4B25E440D100A7DB17 /* EighteenViewController.swift */,
 				B152DC5025E440F800A7DB17 /* SetupProfileViewController.swift */,
 				B152DC5525E4411200A7DB17 /* PrivacySettingViewController.swift */,
 				B152DC5A25E4416000A7DB17 /* CreateProfileViewController.swift */,
@@ -519,14 +507,12 @@
 			files = (
 				B152DC0D25E37C9100A7DB17 /* LoginViewController.swift in Sources */,
 				B152DC1725E37CBE00A7DB17 /* RoundedWhiteButton.swift in Sources */,
-				B152DC4725E440BC00A7DB17 /* SixteenViewController.swift in Sources */,
 				B152DC6525E4419F00A7DB17 /* SelectSkillsViewController.swift in Sources */,
 				B152DC3D25E4404400A7DB17 /* SelectAgeViewController.swift in Sources */,
 				03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */,
 				B152DC5625E4411200A7DB17 /* PrivacySettingViewController.swift in Sources */,
 				B152DC2925E43F6400A7DB17 /* CheckEmailViewController.swift in Sources */,
 				B152DC0325E37C6B00A7DB17 /* HelperExtensions.swift in Sources */,
-				B152DC1225E37CAC00A7DB17 /* MenuViewController.swift in Sources */,
 				B152DC3825E4403100A7DB17 /* GreatViewController.swift in Sources */,
 				98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */,
 				B152DC1C25E37CCF00A7DB17 /* SignUpViewController.swift in Sources */,
@@ -542,7 +528,6 @@
 				B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */,
 				03AE0DD525EE00810078134F /* ToSViewController.swift in Sources */,
 				98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */,
-				B152DC4C25E440D100A7DB17 /* EighteenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
