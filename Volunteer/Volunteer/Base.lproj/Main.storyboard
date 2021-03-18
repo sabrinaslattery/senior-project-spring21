@@ -805,8 +805,9 @@
                                     <segue destination="opX-Z9-5p4" kind="show" id="Sfg-ea-f5Y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql6-h9-j7g">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql6-h9-j7g">
                                 <rect key="frame" x="0.0" y="44" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Button_Back"/>
                                 <connections>
                                     <action selector="handleDismissButton:" destination="9fr-RJ-Pme" eventType="touchUpInside" id="NS6-SV-JDd"/>
@@ -819,9 +820,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLg-Sg-dEz">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NLg-Sg-dEz">
                                 <rect key="frame" x="98" y="726" width="219" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="onSignIn:" destination="9fr-RJ-Pme" eventType="touchUpInside" id="qup-SV-tWC"/>
@@ -1569,7 +1569,7 @@
         <!--View Controller-->
         <scene sceneID="Dks-AM-b1i">
             <objects>
-                <viewController id="DlA-0d-swM" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="DlA-0d-swM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ny2-8R-uUJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1620,7 +1620,7 @@
         <!--Profile-->
         <scene sceneID="aNN-te-UN2">
             <objects>
-                <viewController id="ykc-mF-IrT" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ykc-mF-IrT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YIo-cb-iqc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1657,7 +1657,7 @@
         <!--About Us-->
         <scene sceneID="Rjk-if-og6">
             <objects>
-                <viewController id="h1M-Sw-3os" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="h1M-Sw-3os" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Hv-4X-QdV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1679,7 +1679,7 @@
         <!--Search-->
         <scene sceneID="XLb-yh-ixH">
             <objects>
-                <viewController id="ZMk-9a-FUu" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="ZMk-9a-FUu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zhh-vm-wnN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
