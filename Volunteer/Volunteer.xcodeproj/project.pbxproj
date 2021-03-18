@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		03AE09C525EDFF0C0078134F /* LegalDocs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03AE09C425EDFF0C0078134F /* LegalDocs.storyboard */; };
 		03AE09CA25EDFF850078134F /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE09C925EDFF850078134F /* PrivacyPolicyViewController.swift */; };
-		03AE0DD025EE00550078134F /* Volunteer in Resources */ = {isa = PBXBuildFile; fileRef = 03AE0DCF25EE00550078134F /* Volunteer */; };
 		03AE0DD525EE00810078134F /* ToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03AE0DD425EE00810078134F /* ToSViewController.swift */; };
 		03BC13F625E5C6AD0001E2E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98CC89ED25DCFCA4008E4A7B /* Main.storyboard */; };
 		03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */; };
@@ -61,7 +60,6 @@
 /* Begin PBXFileReference section */
 		03AE09C425EDFF0C0078134F /* LegalDocs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LegalDocs.storyboard; sourceTree = "<group>"; };
 		03AE09C925EDFF850078134F /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = SOURCE_ROOT; };
-		03AE0DCF25EE00550078134F /* Volunteer */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Volunteer; sourceTree = "<group>"; };
 		03AE0DD425EE00810078134F /* ToSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToSViewController.swift; sourceTree = "<group>"; };
 		03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassResetController.swift; sourceTree = "<group>"; };
 		0465753C1758BAB82A3169F4 /* Pods-Volunteer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer.release.xcconfig"; path = "Target Support Files/Pods-Volunteer/Pods-Volunteer.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				03AE09D125EE00300078134F /* LegalDocs */,
 				B152DBFE25E36FD300A7DB17 /* SignUpLogin */,
 				98CC89E625DCFCA4008E4A7B /* Volunteer */,
-				03AE0DCF25EE00550078134F /* Volunteer */,
 				98CC89FD25DCFCA6008E4A7B /* VolunteerTests */,
 				98CC8A0825DCFCA6008E4A7B /* VolunteerUITests */,
 				98CC89E525DCFCA4008E4A7B /* Products */,
@@ -360,7 +357,6 @@
 				03AE09C525EDFF0C0078134F /* LegalDocs.storyboard in Resources */,
 				98CC89F425DCFCA5008E4A7B /* LaunchScreen.storyboard in Resources */,
 				98CC89F125DCFCA5008E4A7B /* Assets.xcassets in Resources */,
-				03AE0DD025EE00550078134F /* Volunteer in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,7 +516,6 @@
 				B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */,
 				B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */,
 				03AE09CA25EDFF850078134F /* PrivacyPolicyViewController.swift in Sources */,
-				B152DC4225E4406300A7DB17 /* TwelveViewController.swift in Sources */,
 				B152DC2E25E43F9A00A7DB17 /* ChangePassViewController.swift in Sources */,
 				B152DC6A25E441BC00A7DB17 /* SelectInterestViewController.swift in Sources */,
 				B152DC3325E4400800A7DB17 /* VerifyEmailViewController.swift in Sources */,
