@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9xN-wj-GPO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main-->
+        <scene sceneID="Woc-no-IJq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="yxW-cp-z5K" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Cim-yl-xiD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x68-tK-QIM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="-790"/>
+        </scene>
+        <!--Privacy Policy View Controller-->
+        <scene sceneID="EZu-LX-JaH">
+            <objects>
+                <viewController title="Privacy Policy View Controller" modalPresentationStyle="fullScreen" id="9xN-wj-GPO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uOb-h2-DDk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U9h-un-lxV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="2000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Yu-ft-ydV">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="2000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OutReach Terms and Conditions of Use" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4WN-8M-lez">
+                                                <rect key="frame" x="20" y="27" width="374" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ad-z7-Mwz">
+                                                <rect key="frame" x="20" y="46" width="374" height="1908"/>
+                                                <string key="text">1. Terms
+By accessing this mobile application, you are agreeing to be bound by these Website Terms and Conditions of Use and agree that you are responsible for the agreement with any applicable local laws. If you disagree with any of these terms, you are prohibited from accessing this site. The materials contained in this Website are protected by copyright and trade mark law.
+
+2. Use License
+Permission is granted to temporarily download one copy of the materials on OutReach's Website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+
+modify or copy the materials;
+use the materials for any commercial purpose or for any public display;
+attempt to reverse engineer any software contained on OutReach's Website;
+remove any copyright or other proprietary notations from the materials; or
+transferring the materials to another person or "mirror" the materials on any other server.
+This will let OutReach to terminate upon violations of any of these restrictions. Upon termination, your viewing right will also be terminated and you should destroy any downloaded materials in your possession whether it is printed or electronic format. These Terms of Service has been created with the help of the Terms Of Service Generator and the Privacy Policy Generator.
+
+3. Disclaimer
+All the materials on OutReach’s Website are provided "as is". OutReach makes no warranties, may it be expressed or implied, therefore negates all other warranties. Furthermore, OutReach does not make any representations concerning the accuracy or reliability of the use of the materials on its Website or otherwise relating to such materials or any sites linked to this Website.
+
+4. Limitations
+OutReach or its suppliers will not be hold accountable for any damages that will arise with the use or inability to use the materials on OutReach’s Website, even if OutReach or an authorize representative of this Website has been notified, orally or written, of the possibility of such damage. Some jurisdiction does not allow limitations on implied warranties or limitations of liability for incidental damages, these limitations may not apply to you.
+
+5. Revisions and Errata
+The materials appearing on OutReach’s Website may include technical, typographical, or photographic errors. OutReach will not promise that any of the materials in this Website are accurate, complete, or current. OutReach may change the materials contained on its Website at any time without notice. OutReach does not make any commitment to update the materials.
+
+6. Links
+OutReach has not reviewed all of the sites linked to its Website and is not responsible for the contents of any such linked site. The presence of any link does not imply endorsement by OutReach of the site. The use of any linked website is at the user’s own risk.
+
+7. Site Terms of Use Modifications
+OutReach may revise these Terms of Use for its Website at any time without prior notice. By using this Website, you are agreeing to be bound by the current version of these Terms and Conditions of Use.
+
+8. Your Privacy
+Please read our Privacy Policy.
+
+9. Governing Law
+Any claim related to OutReach's Website shall be governed by the laws of us without regards to its conflict of law provisions.
+</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1B-n5-Dcw">
+                                                <rect key="frame" x="20" y="0.0" width="159" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Return to OutReach"/>
+                                                <connections>
+                                                    <segue destination="yxW-cp-z5K" kind="show" id="QCk-5h-ebV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNk-hg-Wvh">
+                                                <rect key="frame" x="270" y="0.0" width="124" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Privacy Policy"/>
+                                                <connections>
+                                                    <segue destination="7Dw-hb-yeJ" kind="showDetail" id="jBW-EW-VtH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="6ad-z7-Mwz" secondAttribute="bottom" constant="46" id="0mV-0x-njC"/>
+                                            <constraint firstItem="6ad-z7-Mwz" firstAttribute="leading" secondItem="2Yu-ft-ydV" secondAttribute="leading" constant="20" symbolic="YES" id="1Tk-JU-nls"/>
+                                            <constraint firstAttribute="bottom" secondItem="6ad-z7-Mwz" secondAttribute="bottom" constant="46" id="4Y4-CK-Dhp"/>
+                                            <constraint firstItem="6ad-z7-Mwz" firstAttribute="top" secondItem="4WN-8M-lez" secondAttribute="bottom" constant="-15" id="5hN-eK-Ihw"/>
+                                            <constraint firstAttribute="bottom" secondItem="6ad-z7-Mwz" secondAttribute="bottom" constant="46" id="9WU-dJ-x7c"/>
+                                            <constraint firstItem="4WN-8M-lez" firstAttribute="leading" secondItem="2Yu-ft-ydV" secondAttribute="leading" constant="20" id="H83-OB-m0H"/>
+                                            <constraint firstAttribute="height" constant="2000" id="Tz9-VC-aMI"/>
+                                            <constraint firstAttribute="trailing" secondItem="6ad-z7-Mwz" secondAttribute="trailing" constant="20" symbolic="YES" id="UGU-1k-C7v"/>
+                                            <constraint firstItem="4WN-8M-lez" firstAttribute="top" secondItem="2Yu-ft-ydV" secondAttribute="top" constant="27" id="aVz-rR-DPQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="6ad-z7-Mwz" secondAttribute="trailing" constant="20" symbolic="YES" id="cLz-Cv-pea"/>
+                                            <constraint firstAttribute="trailing" secondItem="6ad-z7-Mwz" secondAttribute="trailing" constant="20" symbolic="YES" id="ocS-Fz-NZc"/>
+                                            <constraint firstItem="6ad-z7-Mwz" firstAttribute="leading" secondItem="2Yu-ft-ydV" secondAttribute="leading" constant="20" symbolic="YES" id="ot9-pC-hGU"/>
+                                            <constraint firstItem="6ad-z7-Mwz" firstAttribute="top" secondItem="4WN-8M-lez" secondAttribute="bottom" constant="-15" id="ou8-Ws-SMO"/>
+                                            <constraint firstAttribute="bottom" secondItem="4WN-8M-lez" secondAttribute="bottom" constant="1939" id="pFx-0M-1ZZ"/>
+                                            <constraint firstItem="6ad-z7-Mwz" firstAttribute="top" secondItem="4WN-8M-lez" secondAttribute="bottom" constant="-15" id="pPa-PL-T7x"/>
+                                            <constraint firstItem="6ad-z7-Mwz" firstAttribute="leading" secondItem="2Yu-ft-ydV" secondAttribute="leading" constant="20" symbolic="YES" id="xob-p2-laP"/>
+                                            <constraint firstAttribute="trailing" secondItem="4WN-8M-lez" secondAttribute="trailing" constant="20" id="yy9-px-6Fh"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="2Yu-ft-ydV" secondAttribute="bottom" id="OFx-4I-6xL"/>
+                                    <constraint firstItem="2Yu-ft-ydV" firstAttribute="top" secondItem="U9h-un-lxV" secondAttribute="top" id="fMZ-Ba-DvU"/>
+                                    <constraint firstItem="2Yu-ft-ydV" firstAttribute="leading" secondItem="U9h-un-lxV" secondAttribute="leading" id="ia5-Ho-p0g"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Yu-ft-ydV" secondAttribute="trailing" id="xgg-4l-Sjp"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uBV-3V-kwo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="U9h-un-lxV" firstAttribute="leading" secondItem="uBV-3V-kwo" secondAttribute="leading" id="5NC-Os-Nte"/>
+                            <constraint firstItem="U9h-un-lxV" firstAttribute="top" secondItem="uBV-3V-kwo" secondAttribute="top" id="ESM-wu-UKb"/>
+                            <constraint firstAttribute="bottom" secondItem="U9h-un-lxV" secondAttribute="bottom" constant="-44" id="Ggw-SE-JyT"/>
+                            <constraint firstItem="2Yu-ft-ydV" firstAttribute="width" secondItem="uOb-h2-DDk" secondAttribute="width" id="isG-83-Rvx"/>
+                            <constraint firstItem="U9h-un-lxV" firstAttribute="trailing" secondItem="uBV-3V-kwo" secondAttribute="trailing" id="ucp-tN-lgl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hjq-Hb-Y29"/>
+                    <size key="freeformSize" width="414" height="2000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFe-z1-dp7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="69.642857142857139"/>
+        </scene>
+        <!--Terms of Service View Controller-->
+        <scene sceneID="bO6-V5-1Nw">
+            <objects>
+                <viewController title="Terms of Service View Controller" modalPresentationStyle="fullScreen" id="7Dw-hb-yeJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="owd-l0-uw5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="7500"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7m-82-KtC">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="7000"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0cd-HW-a7e">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="8000"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-hF-E98">
+                                                <rect key="frame" x="20" y="43" width="374" height="27"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="27" id="B68-5K-TIz"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50b-kH-88e">
+                                                <rect key="frame" x="20" y="78" width="374" height="8000"/>
+                                                <string key="text">Last updated: February 26, 2021
+
+This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+
+We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Privacy Policy Generator.
+
+Interpretation and Definitions
+Interpretation
+The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+
+Definitions
+For the purposes of this Privacy Policy:
+
+Account means a unique account created for You to access our Service or parts of our Service.
+
+Affiliate means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
+
+Application means the software program provided by the Company downloaded by You on any electronic device, named OutReach
+
+Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to OutReach.
+
+Country refers to: California, United States
+
+Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.
+
+Personal Data is any information that relates to an identified or identifiable individual.
+
+Service refers to the Application.
+
+Service Provider means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.
+
+Third-party Social Media Service refers to any website or any social network website through which a User can log in or create an account to use the Service.
+
+Usage Data refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).
+
+You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+
+Collecting and Using Your Personal Data
+Types of Data Collected
+Personal Data
+While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
+
+Email address
+
+First name and last name
+
+Phone number
+
+Address, State, Province, ZIP/Postal code, City
+
+Usage Data
+
+Usage Data
+Usage Data is collected automatically when using the Service.
+
+Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
+
+When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.
+
+We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
+
+Information from Third-Party Social Media Services
+The Company allows You to create an account and log in to use the Service through the following Third-party Social Media Services:
+
+Google
+Facebook
+Twitter
+If You decide to register through or otherwise grant us access to a Third-Party Social Media Service, We may collect Personal data that is already associated with Your Third-Party Social Media Service's account, such as Your name, Your email address, Your activities or Your contact list associated with that account.
+
+You may also have the option of sharing additional information with the Company through Your Third-Party Social Media Service's account. If You choose to provide such information and Personal Data, during registration or otherwise, You are giving the Company permission to use, share, and store it in a manner consistent with this Privacy Policy.
+
+Information Collected while Using the Application
+While using Our Application, in order to provide features of Our Application, We may collect, with Your prior permission:
+
+Information regarding your location
+
+Pictures and other information from your Device's camera and photo library
+
+We use this information to provide features of Our Service, to improve and customize Our Service. The information may be uploaded to the Company's servers and/or a Service Provider's server or it may be simply stored on Your device.
+
+You can enable or disable access to this information at any time, through Your Device settings.
+
+Use of Your Personal Data
+The Company may use Personal Data for the following purposes:
+
+To provide and maintain our Service, including to monitor the usage of our Service.
+
+To manage Your Account: to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.
+
+For the performance of a contract: the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.
+
+To contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.
+
+To provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.
+
+To manage Your requests: To attend and manage Your requests to Us.
+
+For business transfers: We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.
+
+For other purposes: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.
+
+We may share Your personal information in the following situations:
+
+With Service Providers: We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.
+For business transfers: We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.
+With Affiliates: We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.
+With business partners: We may share Your information with Our business partners to offer You certain products, services or promotions.
+With other users: when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside. If You interact with other users or register through a Third-Party Social Media Service, Your contacts on the Third-Party Social Media Service may see Your name, profile, pictures and description of Your activity. Similarly, other users will be able to view descriptions of Your activity, communicate with You and view Your profile.
+With Your consent: We may disclose Your personal information for any other purpose with Your consent.
+Retention of Your Personal Data
+The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
+
+The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
+
+Transfer of Your Personal Data
+Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
+
+Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.
+
+The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
+
+Disclosure of Your Personal Data
+Business Transactions
+If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.
+
+Law enforcement
+Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
+
+Other legal requirements
+The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
+
+Comply with a legal obligation
+Protect and defend the rights or property of the Company
+Prevent or investigate possible wrongdoing in connection with the Service
+Protect the personal safety of Users of the Service or the public
+Protect against legal liability
+Security of Your Personal Data
+The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
+
+Children's Privacy
+Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.
+
+If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.
+
+Links to Other Websites
+Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
+
+We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
+
+Changes to this Privacy Policy
+We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.
+
+We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.
+
+You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
+
+Contact Us
+If you have any questions about this Privacy Policy, You can contact us:
+
+By email: noreply_OutReach@gmail.com
+Privacy Policy for OutReach
+</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="50b-kH-88e" firstAttribute="top" secondItem="aYQ-hF-E98" secondAttribute="bottom" constant="8" symbolic="YES" id="3dU-mb-Iei"/>
+                                            <constraint firstItem="50b-kH-88e" firstAttribute="leading" secondItem="0cd-HW-a7e" secondAttribute="leading" constant="20" id="3z4-El-3qm"/>
+                                            <constraint firstItem="aYQ-hF-E98" firstAttribute="trailing" secondItem="50b-kH-88e" secondAttribute="trailing" id="7MH-8a-tE0"/>
+                                            <constraint firstItem="aYQ-hF-E98" firstAttribute="top" secondItem="0cd-HW-a7e" secondAttribute="top" constant="43" id="80C-o3-88r"/>
+                                            <constraint firstAttribute="bottom" secondItem="50b-kH-88e" secondAttribute="bottom" constant="-78" id="QxG-mZ-3a3"/>
+                                            <constraint firstAttribute="height" constant="8000" id="d89-Io-Tpo"/>
+                                            <constraint firstItem="aYQ-hF-E98" firstAttribute="leading" secondItem="50b-kH-88e" secondAttribute="leading" id="iqI-ft-fsq"/>
+                                            <constraint firstAttribute="trailing" secondItem="50b-kH-88e" secondAttribute="trailing" constant="20" id="k4P-6N-8p0"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0cd-HW-a7e" firstAttribute="leading" secondItem="C7m-82-KtC" secondAttribute="leading" id="1E1-nl-XV8"/>
+                                    <constraint firstAttribute="bottom" secondItem="0cd-HW-a7e" secondAttribute="bottom" constant="-1000" id="7AV-F6-V8h"/>
+                                    <constraint firstAttribute="trailing" secondItem="0cd-HW-a7e" secondAttribute="trailing" id="N3I-eV-Rcx"/>
+                                    <constraint firstItem="0cd-HW-a7e" firstAttribute="top" secondItem="C7m-82-KtC" secondAttribute="top" id="dZr-H0-bF5"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YjA-To-heQ">
+                                <rect key="frame" x="251" y="8" width="143" height="30"/>
+                                <state key="normal" title="Terms of Service"/>
+                                <connections>
+                                    <segue destination="9xN-wj-GPO" kind="show" id="sJ6-Zg-GNp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cc1-fU-7Ky">
+                                <rect key="frame" x="20" y="8" width="155" height="30"/>
+                                <state key="normal" title="Return to OutReach"/>
+                                <connections>
+                                    <segue destination="yxW-cp-z5K" kind="show" id="f1R-Tb-TzK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xjn-VR-YKG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="C7m-82-KtC" secondAttribute="bottom" constant="500" id="2Ti-Ae-XgU"/>
+                            <constraint firstItem="YjA-To-heQ" firstAttribute="leading" secondItem="cc1-fU-7Ky" secondAttribute="trailing" constant="76" id="93O-PP-yej"/>
+                            <constraint firstItem="0cd-HW-a7e" firstAttribute="width" secondItem="owd-l0-uw5" secondAttribute="width" id="AvH-pi-YbO"/>
+                            <constraint firstItem="YjA-To-heQ" firstAttribute="top" secondItem="owd-l0-uw5" secondAttribute="top" constant="8" id="GSk-uW-tt8"/>
+                            <constraint firstItem="YjA-To-heQ" firstAttribute="leading" secondItem="owd-l0-uw5" secondAttribute="leading" constant="251" id="JmB-h9-8P0"/>
+                            <constraint firstItem="C7m-82-KtC" firstAttribute="trailing" secondItem="Xjn-VR-YKG" secondAttribute="trailing" id="Jsg-Vf-TxF"/>
+                            <constraint firstItem="C7m-82-KtC" firstAttribute="leading" secondItem="Xjn-VR-YKG" secondAttribute="leading" id="Knn-1W-WGs"/>
+                            <constraint firstItem="C7m-82-KtC" firstAttribute="top" secondItem="cc1-fU-7Ky" secondAttribute="bottom" constant="-38" id="NEE-3T-wiy"/>
+                            <constraint firstItem="cc1-fU-7Ky" firstAttribute="leading" secondItem="owd-l0-uw5" secondAttribute="leading" constant="20" symbolic="YES" id="QJQ-cz-M2m"/>
+                            <constraint firstItem="C7m-82-KtC" firstAttribute="top" secondItem="Xjn-VR-YKG" secondAttribute="top" constant="-44" id="f1U-lj-sZf"/>
+                            <constraint firstAttribute="trailing" secondItem="YjA-To-heQ" secondAttribute="trailing" constant="20" id="myO-IP-QG5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Tgo-Rq-bpQ"/>
+                    <size key="freeformSize" width="414" height="7500"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gd4-im-55v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="982.60869565217399" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="f1R-Tb-TzK"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
