@@ -40,6 +40,7 @@
 		B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5F25E4417E00A7DB17 /* CreateProfileContinueViewController.swift */; };
 		B152DC6525E4419F00A7DB17 /* SelectSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */; };
 		B152DC6A25E441BC00A7DB17 /* SelectInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */; };
+		B1E4955F26090CF500F10A9E /* CreateNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4955E26090CF500F10A9E /* CreateNewEventViewController.swift */; };
 		CF7A3EF23A061F84BE2DB847 /* Pods_Volunteer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7472CEAE76EF1A03265E59 /* Pods_Volunteer.framework */; };
 /* End PBXBuildFile section */
 
@@ -107,6 +108,7 @@
 		B152DC5F25E4417E00A7DB17 /* CreateProfileContinueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileContinueViewController.swift; sourceTree = "<group>"; };
 		B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillsViewController.swift; sourceTree = "<group>"; };
 		B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInterestViewController.swift; sourceTree = "<group>"; };
+		B1E4955E26090CF500F10A9E /* CreateNewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				03F2FBE02603055E008748E1 /* EventsHomeViewController.swift */,
+				B1E4955E26090CF500F10A9E /* CreateNewEventViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				B152DC0325E37C6B00A7DB17 /* HelperExtensions.swift in Sources */,
 				B152DC3825E4403100A7DB17 /* GreatViewController.swift in Sources */,
 				98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */,
+				B1E4955F26090CF500F10A9E /* CreateNewEventViewController.swift in Sources */,
 				B152DC1C25E37CCF00A7DB17 /* SignUpViewController.swift in Sources */,
 				B152DC2425E43EEA00A7DB17 /* ResetPassViewController.swift in Sources */,
 				B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */,
