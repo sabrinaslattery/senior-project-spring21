@@ -50,6 +50,21 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         passwordField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
     }
     
+    @IBAction func loginTapped(_ sender: Any) {
+        navigateToMainInterface()
+    }
+    
+    private func navigateToMainInterface(){
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let mainNavigationVC = mainStoryboard.instantiateViewController(identifier: "MainNavigationController") as?
+                MainNavigationController else {
+            return
+        }
+        
+        present(mainNavigationVC, animated: true, completion: nil)
+    }
+    
     // User Sign-in Validation
     @IBAction func onSignIn(_ sender: Any) {
         let username = emailField.text!

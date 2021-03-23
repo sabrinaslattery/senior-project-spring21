@@ -11,6 +11,7 @@
 		03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */; };
 		3172CA3F8203E80A15E3723B /* Pods_VolunteerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925FE17E549E5DEACAABA95C /* Pods_VolunteerTests.framework */; };
 		5F96A54866D548882CF2E6E7 /* Pods_Volunteer_VolunteerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13A518CCA7D53725E1CFA0C /* Pods_Volunteer_VolunteerUITests.framework */; };
+		627AB2DC2609DD2300A0C7D4 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627AB2DB2609DD2300A0C7D4 /* MainNavigationController.swift */; };
 		98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC89E725DCFCA4008E4A7B /* AppDelegate.swift */; };
 		98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC89E925DCFCA4008E4A7B /* SceneDelegate.swift */; };
 		98CC89EC25DCFCA4008E4A7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC89EB25DCFCA4008E4A7B /* ViewController.swift */; };
@@ -60,6 +61,7 @@
 		0465753C1758BAB82A3169F4 /* Pods-Volunteer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer.release.xcconfig"; path = "Target Support Files/Pods-Volunteer/Pods-Volunteer.release.xcconfig"; sourceTree = "<group>"; };
 		1C361E8663E17DB86252A39F /* Pods-Volunteer-VolunteerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer-VolunteerUITests.release.xcconfig"; path = "Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5BBF486254AF5EDB4FE84A37 /* Pods-Volunteer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer.debug.xcconfig"; path = "Target Support Files/Pods-Volunteer/Pods-Volunteer.debug.xcconfig"; sourceTree = "<group>"; };
+		627AB2DB2609DD2300A0C7D4 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		66D23A9C3CF7DBB2AB963756 /* Pods-VolunteerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolunteerTests.release.xcconfig"; path = "Target Support Files/Pods-VolunteerTests/Pods-VolunteerTests.release.xcconfig"; sourceTree = "<group>"; };
 		86369C264968F68EBBF8058C /* Pods-Volunteer-VolunteerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer-VolunteerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		924C0482176AF7C1832AC450 /* Pods-VolunteerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolunteerTests.debug.xcconfig"; path = "Target Support Files/Pods-VolunteerTests/Pods-VolunteerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				98CC89F025DCFCA5008E4A7B /* Assets.xcassets */,
 				98CC89F225DCFCA5008E4A7B /* LaunchScreen.storyboard */,
 				98CC89F525DCFCA6008E4A7B /* Info.plist */,
+				627AB2DB2609DD2300A0C7D4 /* MainNavigationController.swift */,
 			);
 			path = Volunteer;
 			sourceTree = "<group>";
@@ -506,6 +509,11 @@
 				B152DC3325E4400800A7DB17 /* VerifyEmailViewController.swift in Sources */,
 				B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */,
 				B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */,
+<<<<<<< Updated upstream
+=======
+				03F2FBE12603055E008748E1 /* EventsHomeViewController.swift in Sources */,
+				627AB2DC2609DD2300A0C7D4 /* MainNavigationController.swift in Sources */,
+>>>>>>> Stashed changes
 				98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

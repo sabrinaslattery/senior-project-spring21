@@ -799,8 +799,8 @@
                                 <rect key="frame" x="98" y="682" width="219" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
+                                    <action selector="loginTapped:" destination="9fr-RJ-Pme" eventType="touchUpInside" id="Z7c-VZ-9CJ"/>
                                     <action selector="onSignIn:" destination="9fr-RJ-Pme" eventType="touchUpInside" id="qup-SV-tWC"/>
-                                    <segue destination="5tl-Fd-RLg" kind="show" id="wsc-dG-y5D"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkq-MQ-LR1">
@@ -1456,6 +1456,7 @@
             </objects>
             <point key="canvasLocation" x="7089.8550724637689" y="134.59821428571428"/>
         </scene>
+<<<<<<< Updated upstream
         <!--Select Your Interest-->
         <scene sceneID="CS7-oK-YUo">
             <objects>
@@ -1533,15 +1534,18 @@
             <point key="canvasLocation" x="8008.6956521739139" y="468.75"/>
         </scene>
         <!--View Controller-->
+=======
+        <!--Menu-->
+>>>>>>> Stashed changes
         <scene sceneID="Dks-AM-b1i">
             <objects>
                 <viewController id="DlA-0d-swM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ny2-8R-uUJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVH-xO-Uen">
-                                <rect key="frame" x="23" y="368" width="41" height="30"/>
+                                <rect key="frame" x="24.354309165526502" y="368" width="41" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
@@ -1549,7 +1553,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cT-b0-sU4">
-                                <rect key="frame" x="23" y="421" width="48" height="30"/>
+                                <rect key="frame" x="21.645690834473498" y="421" width="48.000000000000114" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
@@ -1557,7 +1561,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AN4-j1-EMS">
-                                <rect key="frame" x="25" y="471" width="44" height="30"/>
+                                <rect key="frame" x="23.645690834473498" y="471" width="43.999999999999886" height="29.999999999999773"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Profile"/>
                                 <connections>
@@ -1565,19 +1569,18 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VZp-Tw-9Du">
-                                <rect key="frame" x="0.0" y="34" width="414" height="261"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="261"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
                                 <connections>
                                     <segue destination="CPa-Kf-rKI" kind="embed" id="79j-TH-Zqt"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U7N-1X-W3T"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="N8T-aq-yef">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="iPd-iP-3Aa"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Menu" id="N8T-aq-yef"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLk-xW-W6F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1588,15 +1591,15 @@
             <objects>
                 <viewController id="ykc-mF-IrT" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YIo-cb-iqc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fMZ-m0-Y5h">
-                                <rect key="frame" x="0.0" y="34" width="414" height="261"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="261"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             </containerView>
                             <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mEq-95-ZXL">
-                                <rect key="frame" x="0.0" y="295" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="349" width="414" height="49"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <items>
@@ -1620,12 +1623,12 @@
             </objects>
             <point key="canvasLocation" x="2071" y="1645"/>
         </scene>
-        <!--About Us-->
+        <!--Home-->
         <scene sceneID="Rjk-if-og6">
             <objects>
                 <viewController id="h1M-Sw-3os" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Hv-4X-QdV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="OutReachLogo" translatesAutoresizingMaskIntoConstraints="NO" id="T9Z-e1-sVe">
@@ -1636,7 +1639,7 @@
                         <viewLayoutGuide key="safeArea" id="mA5-eB-UcY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About Us" id="P82-04-d9B"/>
+                    <navigationItem key="navigationItem" title="Home" id="P82-04-d9B"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pfc-HA-uYv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1647,7 +1650,7 @@
             <objects>
                 <viewController id="ZMk-9a-FUu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zhh-vm-wnN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MNT-xA-8Z9">
@@ -1673,6 +1676,7 @@
             </objects>
             <point key="canvasLocation" x="3791" y="1645"/>
         </scene>
+<<<<<<< Updated upstream
         <!--Select Your Skills-->
         <scene sceneID="h2F-mN-2Ml">
             <objects>
@@ -1749,13 +1753,16 @@
             <point key="canvasLocation" x="8008.6956521739139" y="-258.48214285714283"/>
         </scene>
         <!--Navigation Controller-->
+=======
+        <!--Main Navigation Controller-->
+>>>>>>> Stashed changes
         <scene sceneID="sfc-In-X04">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5tl-Fd-RLg" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5tl-Fd-RLg" customClass="MainNavigationController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ryD-Bw-35R"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vKZ-dP-P1D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1861,6 +1868,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
