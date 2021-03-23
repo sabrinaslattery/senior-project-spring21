@@ -937,6 +937,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="SendLinkBtnAction:" destination="opX-Z9-5p4" eventType="touchUpInside" id="Vja-MI-ytT"/>
                                     <segue destination="TJM-Yz-rkw" kind="show" id="aAe-6c-xff"/>
                                 </connections>
                             </button>
