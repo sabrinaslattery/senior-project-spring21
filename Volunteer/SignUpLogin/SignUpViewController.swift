@@ -89,7 +89,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         user.signUpInBackground { (success, error) in
             if success{
                 self.dismiss(animated: true, completion: nil)
-                self.performSegue(withIdentifier: "EmailVerification", sender: nil)
+                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
             }
          else{
             print("Error: \(String(describing: error?.localizedDescription))")
