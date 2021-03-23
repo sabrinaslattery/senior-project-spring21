@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Jy-FF-56J">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,12 +30,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="191"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNp-Pb-hSY">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DNp-Pb-hSY" userLabel="Event Image">
                                                     <rect key="frame" x="20" y="11" width="374" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="Event Image"/>
                                                 </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFp-XX-e6p">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFp-XX-e6p" userLabel="Event Difficulty">
                                                     <rect key="frame" x="253" y="147" width="141" height="40"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="Event Difficulty"/>
@@ -48,13 +47,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V6T-HQ-q9k">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V6T-HQ-q9k" userLabel="Event Date">
                                                     <rect key="frame" x="20" y="11" width="54" height="54"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <accessibility key="accessibilityConfiguration" identifier="Event Date"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventDate" destination="V6T-HQ-q9k" id="bvF-mg-uY1"/>
+                                            <outlet property="eventDifficulty" destination="YFp-XX-e6p" id="jTh-iR-IeU"/>
+                                            <outlet property="eventImage" destination="DNp-Pb-hSY" id="e0B-1e-Nq1"/>
+                                            <outlet property="eventName" destination="xpT-tT-fzh" id="EpP-ZP-sol"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -131,10 +136,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="eventDate" destination="d2H-LZ-aRc" id="srR-Vn-o1v"/>
-                                            <outlet property="eventDifficulty" destination="ShR-0g-sub" id="YyN-oV-HD4"/>
-                                            <outlet property="eventImage" destination="NHE-Lc-LzW" id="b8q-57-UyI"/>
-                                            <outlet property="eventName" destination="EWe-5b-Jid" id="SGl-rM-OUU"/>
+                                            <outlet property="eventDate" destination="izf-Az-dio" id="aGs-Er-Beh"/>
+                                            <outlet property="eventDifficulty" destination="ShR-0g-sub" id="6tG-NY-SSx"/>
+                                            <outlet property="eventImage" destination="NHE-Lc-LzW" id="Pbb-un-rjw"/>
+                                            <outlet property="eventName" destination="EWe-5b-Jid" id="NDa-fR-Myd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -149,24 +154,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40x-Jb-hAY" userLabel="Create Event Button">
-                                <rect key="frame" x="327" y="46" width="75" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="A6R-Xa-gBv"/>
-                                    <constraint firstAttribute="height" constant="41" id="sqC-9d-O1G"/>
-                                </constraints>
-                                <state key="normal" title="Button">
-                                    <imageReference key="image" image="Button_Edit" symbolScale="large"/>
-                                </state>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ikz-pm-Se3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="984-z2-xZP" firstAttribute="centerX" secondItem="dNR-ig-Q8d" secondAttribute="centerX" id="C8M-ZI-CcG"/>
                             <constraint firstItem="984-z2-xZP" firstAttribute="centerX" secondItem="EeX-kd-qMs" secondAttribute="centerX" id="K6e-o4-f25"/>
-                            <constraint firstItem="ikz-pm-Se3" firstAttribute="trailing" secondItem="40x-Jb-hAY" secondAttribute="trailing" constant="12" id="OOy-rb-2WF"/>
-                            <constraint firstItem="40x-Jb-hAY" firstAttribute="top" secondItem="ikz-pm-Se3" secondAttribute="top" constant="2" id="SJR-aG-Q4H"/>
                             <constraint firstItem="984-z2-xZP" firstAttribute="leading" secondItem="ikz-pm-Se3" secondAttribute="leading" id="VlH-O3-Qqq"/>
                             <constraint firstItem="984-z2-xZP" firstAttribute="top" secondItem="dNR-ig-Q8d" secondAttribute="bottom" constant="8" id="eBF-Kx-yCp"/>
                             <constraint firstItem="dNR-ig-Q8d" firstAttribute="top" secondItem="ikz-pm-Se3" secondAttribute="top" id="gFQ-Iz-RJP"/>
@@ -175,9 +168,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Current Events" id="6M6-HH-S08"/>
                     <navigationItem key="navigationItem" id="0BP-jA-xjM"/>
-                    <connections>
-                        <outlet property="createEventButton" destination="40x-Jb-hAY" id="DCx-WR-fcS"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agp-DN-pDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -323,12 +313,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrn-Kh-HPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-586" y="404"/>
+            <point key="canvasLocation" x="-1513" y="-1033"/>
         </scene>
-        <!--Past Events - View Controller-->
+        <!--Past Events Template View Controller-->
         <scene sceneID="CZb-KR-3bh">
             <objects>
-                <viewController title="Past Events - View Controller" modalPresentationStyle="fullScreen" id="qjn-ju-Ybe" customClass="EventsHomeViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Past Events Template View Controller" modalPresentationStyle="fullScreen" id="qjn-ju-Ybe" customClass="EventsHomeViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s6j-SP-KJ3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -384,7 +374,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6v-mX-qr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-587" y="-333"/>
+            <point key="canvasLocation" x="-1512" y="-263"/>
         </scene>
         <!--Create Event-->
         <scene sceneID="ZGc-Ji-ffH">
@@ -761,7 +751,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Button_Edit" width="196" height="112"/>
         <image name="Button_Menu" width="168" height="104"/>
         <image name="Difficulty_Easy" width="282" height="120"/>
         <image name="Difficulty_Hard" width="302" height="134"/>
