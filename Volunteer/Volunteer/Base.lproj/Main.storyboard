@@ -109,7 +109,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="Nm5-gT-ECX" eventType="touchUpInside" id="yZ9-4M-osy"/>
-                                    <segue destination="ghJ-nY-5fM" kind="show" id="1DD-vx-kjl"/>
+                                    <segue destination="ghJ-nY-5fM" kind="show" identifier="EmailVerification" id="1DD-vx-kjl"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconfinder_user-alt_285645" translatesAutoresizingMaskIntoConstraints="NO" id="tQz-E8-q4h">
@@ -193,7 +193,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fkz-fH-osL"/>
                     <connections>
-                        <outlet property="continueButton" destination="SEi-jd-yq7" id="93G-S0-9fc"/>
+                        <outlet property="continueButton" destination="SEi-jd-yq7" id="jYb-1P-ayR"/>
                         <outlet property="emailField" destination="OTw-dl-f90" id="q4Q-g9-PkD"/>
                         <outlet property="firstnameField" destination="kkS-6h-0TJ" id="xmU-la-AAI"/>
                         <outlet property="lastnameField" destination="4Xg-4E-GI3" id="bel-MX-0GZ"/>
