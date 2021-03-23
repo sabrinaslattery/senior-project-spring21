@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -182,7 +183,7 @@
             </objects>
             <point key="canvasLocation" x="1245" y="-607"/>
         </scene>
-      <!--Events Feed Tab Bar Controller-->
+        <!--Events Feed Tab Bar Controller-->
         <scene sceneID="oZi-gg-RXC">
             <objects>
                 <tabBarController title="Events Feed Tab Bar Controller" modalPresentationStyle="fullScreen" id="4Jy-FF-56J" sceneMemberID="viewController">
@@ -322,7 +323,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qrn-Kh-HPb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101" y="97"/>
+            <point key="canvasLocation" x="-586" y="404"/>
         </scene>
         <!--Past Events - View Controller-->
         <scene sceneID="CZb-KR-3bh">
@@ -383,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6v-mX-qr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1149" y="69"/>
+            <point key="canvasLocation" x="-587" y="-333"/>
         </scene>
         <!--Create Event-->
         <scene sceneID="ZGc-Ji-ffH">
@@ -765,7 +766,12 @@
         <image name="Difficulty_Easy" width="282" height="120"/>
         <image name="Difficulty_Hard" width="302" height="134"/>
         <image name="Difficulty_Medium" width="330" height="146"/>
+        <image name="Food Drive" width="128" height="128"/>
         <image name="OutReachLogo" width="256" height="256"/>
+        <image name="Volunteer Trash Clean up" width="128" height="128"/>
+        <image name="We run your errands" width="128" height="128"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
