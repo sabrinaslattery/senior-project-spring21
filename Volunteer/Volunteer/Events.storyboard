@@ -54,6 +54,12 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventDate" destination="V6T-HQ-q9k" id="bvF-mg-uY1"/>
+                                            <outlet property="eventDifficulty" destination="YFp-XX-e6p" id="jTh-iR-IeU"/>
+                                            <outlet property="eventImage" destination="DNp-Pb-hSY" id="e0B-1e-Nq1"/>
+                                            <outlet property="eventName" destination="xpT-tT-fzh" id="EpP-ZP-sol"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

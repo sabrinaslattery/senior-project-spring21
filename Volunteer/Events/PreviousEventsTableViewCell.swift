@@ -7,8 +7,13 @@
 
 import UIKit
 
-class PreivousEventsTableViewCell: UITableViewCell {
+class PreviousEventsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var eventDate: UIImageView!
+    @IBOutlet weak var eventName: UILabel!
+    @IBOutlet weak var eventDifficulty: UIImageView!
+    @IBOutlet weak var eventImage: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
