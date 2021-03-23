@@ -1474,7 +1474,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVH-xO-Uen">
-                                <rect key="frame" x="23" y="368" width="41" height="30"/>
+                                <rect key="frame" x="24.354309165526502" y="368" width="41.000000000000114" height="30.000000000000455"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
@@ -1482,7 +1482,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cT-b0-sU4">
-                                <rect key="frame" x="23" y="421" width="48" height="30"/>
+                                <rect key="frame" x="21.645690834473498" y="421" width="47.999999999999773" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
@@ -1490,7 +1490,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AN4-j1-EMS">
-                                <rect key="frame" x="25" y="471" width="44" height="30"/>
+                                <rect key="frame" x="23.645690834473498" y="471" width="43.999999999999773" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Profile"/>
                                 <connections>
@@ -1506,7 +1506,7 @@
                             </containerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="U7N-1X-W3T"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <navigationItem key="navigationItem" id="N8T-aq-yef">
                         <barButtonItem key="leftBarButtonItem" title="Menu" id="iPd-iP-3Aa"/>
