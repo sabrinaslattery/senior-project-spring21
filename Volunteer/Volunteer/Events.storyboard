@@ -12,7 +12,7 @@
         <!--Previous Events View Controller-->
         <scene sceneID="j0Q-45-Ali">
             <objects>
-                <viewController title="Previous Events View Controller" id="gbB-Pc-3p4" customClass="PreviousEventsViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Previous Events View Controller" id="gbB-Pc-3p4" customClass="PreviousEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sgh-Ld-5pd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="800" id="rkC-GS-05O"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="191" id="uzh-1Q-HpH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreviousEventsCell" rowHeight="191" id="uzh-1Q-HpH" customClass="PreviousEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="191"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uzh-1Q-HpH" id="GHA-cb-cAs">
@@ -90,7 +90,7 @@
         <!--Current Events View Controller-->
         <scene sceneID="fef-5J-Yaf">
             <objects>
-                <viewController title="Current Events View Controller" modalPresentationStyle="fullScreen" id="bxU-GJ-Dpb" customClass="CurrentEventsViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Current Events View Controller" modalPresentationStyle="fullScreen" id="bxU-GJ-Dpb" customClass="CurrentEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EeX-kd-qMs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -99,7 +99,7 @@
                                 <rect key="frame" x="0.0" y="96" width="414" height="751"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="191" id="fEX-dq-5A3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrentEventsCell" rowHeight="191" id="fEX-dq-5A3" customClass="CurrentEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="191"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fEX-dq-5A3" id="d2H-LZ-aRc">
@@ -130,6 +130,12 @@
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventDate" destination="d2H-LZ-aRc" id="srR-Vn-o1v"/>
+                                            <outlet property="eventDifficulty" destination="ShR-0g-sub" id="YyN-oV-HD4"/>
+                                            <outlet property="eventImage" destination="NHE-Lc-LzW" id="b8q-57-UyI"/>
+                                            <outlet property="eventName" destination="EWe-5b-Jid" id="SGl-rM-OUU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
