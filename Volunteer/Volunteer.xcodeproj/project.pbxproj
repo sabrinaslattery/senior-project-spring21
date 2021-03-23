@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03409E412609518A00528CD3 /* CurrentEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03409E402609518900528CD3 /* CurrentEventsViewController.swift */; };
+		03409E46260951AC00528CD3 /* PreviousEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03409E45260951AC00528CD3 /* PreviousEventsViewController.swift */; };
 		03BC13F625E5C6AD0001E2E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98CC89ED25DCFCA4008E4A7B /* Main.storyboard */; };
 		03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */; };
 		03F2FBAF2602FD13008748E1 /* LegalDocs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F2FBAE2602FD13008748E1 /* LegalDocs.storyboard */; };
 		03F2FBC52602FD7A008748E1 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC32602FD7A008748E1 /* PrivacyPolicyViewController.swift */; };
 		03F2FBC62602FD7A008748E1 /* ToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC42602FD7A008748E1 /* ToSViewController.swift */; };
 		03F2FBD826030447008748E1 /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F2FBD726030447008748E1 /* Events.storyboard */; };
-		03F2FBE12603055E008748E1 /* EventsHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBE02603055E008748E1 /* EventsHomeViewController.swift */; };
 		3172CA3F8203E80A15E3723B /* Pods_VolunteerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925FE17E549E5DEACAABA95C /* Pods_VolunteerTests.framework */; };
 		5F96A54866D548882CF2E6E7 /* Pods_Volunteer_VolunteerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13A518CCA7D53725E1CFA0C /* Pods_Volunteer_VolunteerUITests.framework */; };
 		98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC89E725DCFCA4008E4A7B /* AppDelegate.swift */; };
@@ -62,12 +63,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03409E402609518900528CD3 /* CurrentEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEventsViewController.swift; sourceTree = "<group>"; };
+		03409E45260951AC00528CD3 /* PreviousEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousEventsViewController.swift; sourceTree = "<group>"; };
 		03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassResetController.swift; sourceTree = "<group>"; };
 		03F2FBAE2602FD13008748E1 /* LegalDocs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LegalDocs.storyboard; sourceTree = "<group>"; };
 		03F2FBC32602FD7A008748E1 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		03F2FBC42602FD7A008748E1 /* ToSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToSViewController.swift; sourceTree = "<group>"; };
 		03F2FBD726030447008748E1 /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
-		03F2FBE02603055E008748E1 /* EventsHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsHomeViewController.swift; sourceTree = "<group>"; };
 		0465753C1758BAB82A3169F4 /* Pods-Volunteer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer.release.xcconfig"; path = "Target Support Files/Pods-Volunteer/Pods-Volunteer.release.xcconfig"; sourceTree = "<group>"; };
 		1C361E8663E17DB86252A39F /* Pods-Volunteer-VolunteerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer-VolunteerUITests.release.xcconfig"; path = "Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5BBF486254AF5EDB4FE84A37 /* Pods-Volunteer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer.debug.xcconfig"; path = "Target Support Files/Pods-Volunteer/Pods-Volunteer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -151,8 +153,9 @@
 		03F2FBDF260304AB008748E1 /* Events */ = {
 			isa = PBXGroup;
 			children = (
-				03F2FBE02603055E008748E1 /* EventsHomeViewController.swift */,
 				B1E4955E26090CF500F10A9E /* CreateNewEventViewController.swift */,
+				03409E402609518900528CD3 /* CurrentEventsViewController.swift */,
+				03409E45260951AC00528CD3 /* PreviousEventsViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				B152DC0D25E37C9100A7DB17 /* LoginViewController.swift in Sources */,
 				03F2FBC52602FD7A008748E1 /* PrivacyPolicyViewController.swift in Sources */,
 				B152DC1725E37CBE00A7DB17 /* RoundedWhiteButton.swift in Sources */,
+				03409E46260951AC00528CD3 /* PreviousEventsViewController.swift in Sources */,
 				B152DC6525E4419F00A7DB17 /* SelectSkillsViewController.swift in Sources */,
 				B152DC3D25E4404400A7DB17 /* SelectAgeViewController.swift in Sources */,
 				03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */,
@@ -537,6 +541,7 @@
 				98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */,
 				B1E4955F26090CF500F10A9E /* CreateNewEventViewController.swift in Sources */,
 				B152DC1C25E37CCF00A7DB17 /* SignUpViewController.swift in Sources */,
+				03409E412609518A00528CD3 /* CurrentEventsViewController.swift in Sources */,
 				B152DC2425E43EEA00A7DB17 /* ResetPassViewController.swift in Sources */,
 				B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */,
 				B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */,
@@ -545,7 +550,6 @@
 				B152DC3325E4400800A7DB17 /* VerifyEmailViewController.swift in Sources */,
 				B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */,
 				B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */,
-				03F2FBE12603055E008748E1 /* EventsHomeViewController.swift in Sources */,
 				98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
