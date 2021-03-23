@@ -58,8 +58,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Past Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efE-yc-9C0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efE-yc-9C0">
                                 <rect key="frame" x="70.5" y="44" width="273" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cLA-st-bEn"/>
+                                    <constraint firstAttribute="width" constant="273" id="zd7-zs-t3n"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -72,16 +76,12 @@
                             <constraint firstItem="aYZ-QK-VTY" firstAttribute="top" secondItem="efE-yc-9C0" secondAttribute="bottom" constant="8" id="LkM-Sz-s4k"/>
                             <constraint firstAttribute="bottomMargin" secondItem="aYZ-QK-VTY" secondAttribute="bottom" constant="-83" id="b8B-Ij-P9s"/>
                             <constraint firstItem="aYZ-QK-VTY" firstAttribute="centerX" secondItem="efE-yc-9C0" secondAttribute="centerX" id="f3S-11-ROk"/>
+                            <constraint firstItem="efE-yc-9C0" firstAttribute="top" secondItem="jDP-er-6S9" secondAttribute="top" id="l8C-6q-SUq"/>
+                            <constraint firstItem="aYZ-QK-VTY" firstAttribute="top" secondItem="efE-yc-9C0" secondAttribute="bottom" constant="8" symbolic="YES" id="rb8-lD-qk3"/>
                             <constraint firstItem="aYZ-QK-VTY" firstAttribute="leading" secondItem="jDP-er-6S9" secondAttribute="leading" id="u3j-o3-qRI"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Previous Events" id="Zua-f5-EK0"/>
-                    <connections>
-                        <outlet property="eventDate" destination="V6T-HQ-q9k" id="YBB-Eb-5sv"/>
-                        <outlet property="eventDifficulty" destination="YFp-XX-e6p" id="aAv-nD-ZNv"/>
-                        <outlet property="eventImage" destination="DNp-Pb-hSY" id="TAE-MR-CMq"/>
-                        <outlet property="eventName" destination="xpT-tT-fzh" id="FJv-sQ-QXq"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ey-1J-udH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -171,10 +171,6 @@
                     <navigationItem key="navigationItem" id="0BP-jA-xjM"/>
                     <connections>
                         <outlet property="createEventButton" destination="40x-Jb-hAY" id="DCx-WR-fcS"/>
-                        <outlet property="eventDate" destination="izf-Az-dio" id="s5x-5X-hqG"/>
-                        <outlet property="eventDifficulty" destination="ShR-0g-sub" id="joY-dI-fIo"/>
-                        <outlet property="eventImage" destination="NHE-Lc-LzW" id="ukR-Px-BAd"/>
-                        <outlet property="eventName" destination="EWe-5b-Jid" id="Fn6-6W-FCw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agp-DN-pDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

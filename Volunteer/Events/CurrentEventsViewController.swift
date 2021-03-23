@@ -11,10 +11,7 @@ class CurrentEventsViewController: UIViewController {
 
     @IBOutlet weak var createEventButton: UIButton!
     
-    @IBOutlet weak var eventDate: UIImageView!
-    @IBOutlet weak var eventImage: UIImageView!
-    @IBOutlet weak var eventName: UILabel!
-    @IBOutlet weak var eventDifficulty: UIImageView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

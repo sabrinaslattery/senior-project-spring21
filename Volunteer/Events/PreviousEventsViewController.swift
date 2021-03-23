@@ -9,11 +9,7 @@ import UIKit
 
 class PreviousEventsViewController: UIViewController {
 
-    @IBOutlet weak var eventDate: UIImageView!
-    @IBOutlet weak var eventImage: UIImageView!
-    @IBOutlet weak var eventName: UILabel!
-    @IBOutlet weak var eventDifficulty: UIImageView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
