@@ -11,7 +11,6 @@ import Parse
 
 class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    @IBOutlet weak var dismissButton: UIButton!
     @IBOutlet weak var coverPhotoImageView: UIImageView!
     @IBOutlet weak var eventTitleField: UITextField!
     @IBOutlet weak var easyButton: UIButton!
