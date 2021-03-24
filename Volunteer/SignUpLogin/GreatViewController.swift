@@ -16,6 +16,8 @@ class GreatViewController:UIViewController {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
 		var user = PFUser.current()
 		user!["newUser"] = false
+		user?.saveInBackground()
+		print(user!["newUser"] as! Bool)
         
     }
     

@@ -57,7 +57,12 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
 		
 		PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
 			if user != nil && error == nil {
-				self.performSegue(withIdentifier: "LoginSegue", sender: self)
+				print(user!["newUser"] as! Bool)
+				if user!["newUser"] as! Bool == true {
+					self.performSegue(withIdentifier: "GetStarted", sender: self)
+				} else {
+					self.performSegue(withIdentifier: "LoginSegue", sender: self)
+				}
 			} else {
 				let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
 				alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in

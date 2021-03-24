@@ -21,14 +21,11 @@ class VerifyEmailViewController:UIViewController, UITextFieldDelegate {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
     }
-	@IBAction func onEnter(_ sender: Any) {
+	@IBAction func onLogIn(_ sender: Any) {
 		PFUser.logOutInBackground()
 		performSegue(withIdentifier: "BackToLogin", sender: self)
 	}
 	
-	@IBAction func resendCode(_ sender: Any) {
-		
-	}
 	@IBAction func handleDismissButton(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }

@@ -78,6 +78,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         // adding objects to the user class
         user ["firstname"] = firstnameField.text!
         user ["lastname"] = lastnameField.text!
+		user["newUser"] = true
         
         // saving the profile image
         let profileImage = PFObject(className: "ProfileImage.png")
@@ -88,11 +89,15 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         
         user.signUpInBackground { (success, error) in
             if success{
-				user["newUser"] = true
 				self.performSegue(withIdentifier: "EmailVerification", sender: nil)
             }
          else{
-            print("Error: \(String(describing: error?.localizedDescription))")
+			let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
+			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+				print(error.debugDescription)
+			}))
+			self.present(alert, animated: true)
+			print("Error: \(String(describing: error.debugDescription))")
          }
         
     }
