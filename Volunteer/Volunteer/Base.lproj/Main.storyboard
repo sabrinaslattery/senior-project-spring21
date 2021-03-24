@@ -998,68 +998,56 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Check Your Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqb-ci-168">
                                 <rect key="frame" x="36" y="165" width="342" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="342" id="ngD-59-OS8"/>
+                                    <constraint firstAttribute="height" constant="41" id="zuk-5h-SWc"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="We have sent password recover instrustions to the email that you provided." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTK-lK-N7H">
-                                <rect key="frame" x="17" y="263" width="381" height="71"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="We have sent password recover instructions to the email that you provided." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTK-lK-N7H">
+                                <rect key="frame" x="66" y="359" width="292" height="178"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="178" id="CUN-fh-TAm"/>
+                                    <constraint firstAttribute="height" constant="178" id="DeN-5t-pfh"/>
+                                    <constraint firstAttribute="width" constant="292" id="OSv-Rp-M7X"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="292" id="bvJ-xI-fet"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Did not receive the email? Check your spam folder, or try another email address." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSb-ee-12z">
-                                <rect key="frame" x="24" y="752.5" width="366" height="48"/>
+                                <rect key="frame" x="24" y="566" width="366" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="3cT-GA-SS4"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="6cA-Wk-KgC"/>
+                                    <constraint firstAttribute="width" constant="366" id="wTO-zG-6aG"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Dl-g2-Vrc">
-                                <rect key="frame" x="96" y="544" width="223" height="30"/>
-                                <state key="normal" title="Skip, I will confirm later!">
-                                    <color key="titleColor" systemColor="linkColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="HWC-Ek-91s" kind="show" id="AEH-6Q-fgb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1f-Mb-2JD" customClass="RoundedWhiteButton" customModule="Volunteer" customModuleProvider="target">
-                                <rect key="frame" x="65" y="502" width="284" height="21.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Open Email App">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="abf-eJ-jFq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HSb-ee-12z" firstAttribute="leading" secondItem="abf-eJ-jFq" secondAttribute="leading" constant="24" id="1AA-4p-LYo"/>
-                            <constraint firstItem="9Dl-g2-Vrc" firstAttribute="top" secondItem="w1f-Mb-2JD" secondAttribute="bottom" constant="20.5" id="3m2-Pb-VdW"/>
-                            <constraint firstItem="9Dl-g2-Vrc" firstAttribute="leading" secondItem="abf-eJ-jFq" secondAttribute="leading" constant="96" id="7dc-XT-gtz"/>
-                            <constraint firstItem="abf-eJ-jFq" firstAttribute="trailing" secondItem="w1f-Mb-2JD" secondAttribute="trailing" constant="65" id="D4F-9b-zI5"/>
-                            <constraint firstItem="lqb-ci-168" firstAttribute="top" secondItem="abf-eJ-jFq" secondAttribute="top" constant="121" id="KDA-C4-B9y"/>
-                            <constraint firstItem="w1f-Mb-2JD" firstAttribute="top" secondItem="JTK-lK-N7H" secondAttribute="bottom" constant="168" id="PoD-r6-H7P"/>
-                            <constraint firstItem="w1f-Mb-2JD" firstAttribute="leading" secondItem="abf-eJ-jFq" secondAttribute="leading" constant="65" id="QwC-bl-lj8"/>
-                            <constraint firstItem="lqb-ci-168" firstAttribute="leading" secondItem="abf-eJ-jFq" secondAttribute="leading" constant="36" id="ZgU-Gn-7UB"/>
+                            <constraint firstItem="abf-eJ-jFq" firstAttribute="trailing" secondItem="JTK-lK-N7H" secondAttribute="trailing" constant="56" id="3Ni-fR-Qhg"/>
+                            <constraint firstItem="abf-eJ-jFq" firstAttribute="trailing" secondItem="lqb-ci-168" secondAttribute="trailing" constant="36" id="3fg-or-ghi"/>
+                            <constraint firstItem="lqb-ci-168" firstAttribute="leading" secondItem="abf-eJ-jFq" secondAttribute="leading" constant="36" id="6cu-NE-0rB"/>
+                            <constraint firstItem="lqb-ci-168" firstAttribute="top" secondItem="abf-eJ-jFq" secondAttribute="top" constant="121" id="7G5-NM-lVb"/>
+                            <constraint firstItem="HSb-ee-12z" firstAttribute="top" secondItem="JTK-lK-N7H" secondAttribute="bottom" constant="29" id="AGb-IU-2H8"/>
+                            <constraint firstItem="JTK-lK-N7H" firstAttribute="top" secondItem="lqb-ci-168" secondAttribute="bottom" constant="153" id="B6v-uE-tvW"/>
+                            <constraint firstItem="JTK-lK-N7H" firstAttribute="top" secondItem="lqb-ci-168" secondAttribute="bottom" constant="153" id="bCP-zD-qeA"/>
                             <constraint firstItem="abf-eJ-jFq" firstAttribute="trailing" secondItem="HSb-ee-12z" secondAttribute="trailing" constant="24" id="cQz-5D-eCn"/>
-                            <constraint firstItem="abf-eJ-jFq" firstAttribute="trailing" secondItem="lqb-ci-168" secondAttribute="trailing" constant="36" id="dYb-tE-UKz"/>
                             <constraint firstItem="abf-eJ-jFq" firstAttribute="bottom" secondItem="HSb-ee-12z" secondAttribute="bottom" constant="61.5" id="f2V-k5-41B"/>
-                            <constraint firstItem="HSb-ee-12z" firstAttribute="top" secondItem="9Dl-g2-Vrc" secondAttribute="bottom" constant="178.5" id="kxU-A3-4Ft"/>
-                            <constraint firstItem="abf-eJ-jFq" firstAttribute="trailing" secondItem="9Dl-g2-Vrc" secondAttribute="trailing" constant="95" id="oD3-L5-GoX"/>
-                            <constraint firstItem="JTK-lK-N7H" firstAttribute="leading" secondItem="abf-eJ-jFq" secondAttribute="leading" constant="17" id="uad-8N-vf3"/>
-                            <constraint firstItem="JTK-lK-N7H" firstAttribute="top" secondItem="lqb-ci-168" secondAttribute="bottom" constant="57" id="uo6-p2-Xc8"/>
-                            <constraint firstItem="abf-eJ-jFq" firstAttribute="trailing" secondItem="JTK-lK-N7H" secondAttribute="trailing" constant="16" id="yUA-4h-40a"/>
+                            <constraint firstItem="HSb-ee-12z" firstAttribute="top" secondItem="JTK-lK-N7H" secondAttribute="bottom" constant="29" id="klL-mi-XAy"/>
+                            <constraint firstItem="JTK-lK-N7H" firstAttribute="leading" secondItem="abf-eJ-jFq" secondAttribute="leading" constant="66" id="q4P-0V-Rnx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="XVd-fN-h9r"/>
-                    <connections>
-                        <outlet property="openEmailButton" destination="w1f-Mb-2JD" id="hVl-zf-sVx"/>
-                        <outlet property="skipButton" destination="9Dl-g2-Vrc" id="TI1-OO-01i"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dVf-iv-b8b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1508,6 +1496,9 @@
                                 <rect key="frame" x="12.93707250342004" y="494" width="82" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=" Events" image="calendar.badge.plus" catalog="system"/>
+                                <connections>
+                                    <segue destination="79h-Wf-mHN" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="1c2-KP-80j"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qlx-0E-Sa5">
                                 <rect key="frame" x="13.93707250342004" y="532" width="152" height="22"/>
@@ -1535,6 +1526,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLk-xW-W6F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1170" y="1182"/>
+        </scene>
+        <!--EventsTabBarController-->
+        <scene sceneID="tpt-7Q-yt5">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Events" referencedIdentifier="EventsTabBarController" id="79h-Wf-mHN" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7rn-18-9HW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B58-R6-vhR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859" y="1587"/>
         </scene>
         <!--Profile-->
         <scene sceneID="aNN-te-UN2">

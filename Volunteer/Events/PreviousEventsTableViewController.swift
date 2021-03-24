@@ -24,6 +24,11 @@ class PreviousEventsTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 150
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.loadEvents()
+    }
+    
     @objc func loadEvents() {
         
     }
