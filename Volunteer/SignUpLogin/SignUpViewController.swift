@@ -69,6 +69,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         let user = PFUser()
         user.username = emailField.text!
         user.password = passwordField.text!
+		user.email = emailField.text!
         
         // customizing password rules
        
@@ -77,7 +78,6 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         // adding objects to the user class
         user ["firstname"] = firstnameField.text!
         user ["lastname"] = lastnameField.text!
-        user ["phonenumber"] = phonenumberField.text!
         
         // saving the profile image
         let profileImage = PFObject(className: "ProfileImage.png")
@@ -88,8 +88,8 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         
         user.signUpInBackground { (success, error) in
             if success{
-                self.dismiss(animated: true, completion: nil)
-                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
+				user["newUser"] = true
+				self.performSegue(withIdentifier: "EmailVerification", sender: nil)
             }
          else{
             print("Error: \(String(describing: error?.localizedDescription))")

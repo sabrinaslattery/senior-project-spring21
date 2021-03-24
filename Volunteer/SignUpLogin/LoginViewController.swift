@@ -52,23 +52,24 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
     
     // User Sign-in Validation
     @IBAction func onSignIn(_ sender: Any) {
-        let username = emailField.text!
-        let password = passwordField.text!
-        
-        PFUser.logInWithUsername(inBackground: username, password: password)
-        { (user, error) in
-            if user != nil {
-                self.performSegue(withIdentifier: "LoginSegue", sender: nil)
-            }
-            else{
-
-                print("Error: \(String(describing: error?.localizedDescription))")
-
-            }
-        }
+		let username = emailField.text!
+		let password = passwordField.text!
+		
+		PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
+			if user != nil && error == nil {
+				self.performSegue(withIdentifier: "LoginSegue", sender: self)
+			} else {
+				let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+					print(error.debugDescription)
+				}))
+				self.present(alert, animated: true)
+			}
+		}
 }
-
+	
     
+	
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         emailField.becomeFirstResponder()
