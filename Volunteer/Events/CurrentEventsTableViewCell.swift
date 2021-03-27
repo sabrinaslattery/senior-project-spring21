@@ -9,8 +9,10 @@ import UIKit
 
 class CurrentEventsTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var eventDate: UIImageView!
-    @IBOutlet weak var eventDifficulty: UIImageView!
+    @IBOutlet weak var eventDate: UIDatePicker!
+    @IBOutlet weak var eventTags: UIPickerView!
+    @IBOutlet weak var eventDifficulty: UIPickerView!
+    
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     
