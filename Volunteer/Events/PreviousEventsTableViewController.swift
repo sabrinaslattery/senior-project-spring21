@@ -55,7 +55,7 @@ class PreviousEventsTableViewController: UITableViewController {
         super.viewDidAppear(true)
         
         let query = PFQuery(className:"Events")
-        query.includeKeys(["name"])
+        query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
         query.limit = 20
         
         query.findObjectsInBackground { (posts, error) in
@@ -68,16 +68,16 @@ class PreviousEventsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let post = Events[indexPath.section]
+        let event = Events[indexPath.section]
         
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousEventsTableViewCell") as! PreviousEventsTableViewCell
         
-            _ = post["eventName"] as! PFUser
-            cell.eventName.text = post["eventTitle"] as? String
+            let post = event["eventName"] as! PFUser
+            cell.eventName.text = post["eventName"] as? String
         
         
-            let imageFile = post["eventImage"] as! PFFileObject
+            let imageFile = event["eventImage"] as! PFFileObject
             let urlString = imageFile.url!
             let url = URL(string: urlString)!
         
@@ -86,7 +86,7 @@ class PreviousEventsTableViewController: UITableViewController {
             let dateOnPicker = cell.eventDate.date
             let dateFormatter = DateFormatter()
             
-            dateFormatter.timeStyle = DateFormatter.Style.short
+            dateFormatter.dateStyle = DateFormatter.Style.short
             let timeAsString = dateFormatter.string(from: dateOnPicker)
             UserDefaults.standard.set(timeAsString, forKey: "eventDate")
             

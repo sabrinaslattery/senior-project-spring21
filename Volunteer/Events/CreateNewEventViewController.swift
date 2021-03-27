@@ -85,7 +85,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     
     @IBAction func CompletedButton(_ sender: Any) {
         
-        let event = PFUser()
+        let event = PFObject(className: "Events")
        
         event ["eventName"] = eventTitleField.text!
         event ["dateFrom"] = fromField.text!
@@ -96,6 +96,10 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         event ["volWear"] = volunteerShouldWearField.text!
         event ["contactEmail"] = emailField.text!
         event ["contactNumber"] = phoneNumberField.text!
+        
+        event ["eventDiff"] = difficultyPicker
+        event ["eventTag"] = tagsPicker
+        event ["eventDate"] = datePicker
         
         
         let coverPhoto = PFObject(className: "CoverImage.png")
