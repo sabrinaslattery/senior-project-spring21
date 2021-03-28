@@ -11,6 +11,7 @@
         <!--Past Events Nav-->
         <scene sceneID="ZDd-5c-JAE">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgH-yO-fZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController title="Past Events Nav" modalPresentationStyle="fullScreen" id="UHz-wp-0eW" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Past Events" id="nBZ-6N-AP0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" restorationIdentifier="Past Events" id="psp-oJ-cCz">
@@ -18,16 +19,16 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="gbB-Pc-3p4" kind="show" id="Qp1-fs-yn6"/>
+                        <segue destination="gbB-Pc-3p4" kind="relationship" relationship="rootViewController" id="Vxi-xR-GFa"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LgH-yO-fZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="422" y="88"/>
         </scene>
         <!--Create Event Nav-->
         <scene sceneID="yW5-f6-GL7">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07I-j6-8ID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController title="Create Event Nav" modalPresentationStyle="fullScreen" id="bzl-61-68n" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Create an Event" id="5i5-SG-Tey"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MCQ-wG-I5W">
@@ -38,7 +39,6 @@
                         <segue destination="cx2-4H-WCh" kind="show" id="gAn-Hb-Fhm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="07I-j6-8ID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="422" y="859"/>
         </scene>
@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aYZ-QK-VTY">
-                                <rect key="frame" x="0.0" y="96" width="414" height="729"/>
+                                <rect key="frame" x="0.0" y="47" width="414" height="729"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -118,7 +118,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Previous Events" id="Zua-f5-EK0"/>
-                    <navigationItem key="navigationItem" id="paa-mH-eSy"/>
+                    <navigationItem key="navigationItem" title="Past Events" id="paa-mH-eSy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ey-1J-udH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,6 +127,7 @@
         <!--Current Events Nav-->
         <scene sceneID="twb-2a-3pj">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92B-KL-NxB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController title="Current Events Nav" modalPresentationStyle="fullScreen" id="vwx-nO-d4N" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Current Events" id="84K-N8-Ei9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="24R-Jl-Eap">
@@ -134,10 +135,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="bxU-GJ-Dpb" kind="show" id="8nn-Q4-TM6"/>
+                        <segue destination="bxU-GJ-Dpb" kind="relationship" relationship="rootViewController" id="CDy-ui-Lhk"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="92B-KL-NxB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="423" y="-607"/>
         </scene>
@@ -214,7 +214,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Current Events" id="6M6-HH-S08"/>
-                    <navigationItem key="navigationItem" id="0BP-jA-xjM"/>
+                    <navigationItem key="navigationItem" title="Current Events" id="0BP-jA-xjM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agp-DN-pDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,7 +223,7 @@
         <!--Events Feed Tab Bar Controller-->
         <scene sceneID="oZi-gg-RXC">
             <objects>
-                <tabBarController storyboardIdentifier="EventsTabBarController" title="Events Feed Tab Bar Controller" modalPresentationStyle="fullScreen" id="4Jy-FF-56J" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="EventsInitialView" title="Events Feed Tab Bar Controller" modalPresentationStyle="fullScreen" id="4Jy-FF-56J" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Nj0-r2-U60"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="OCq-3a-aHk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

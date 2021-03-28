@@ -170,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="2749" y="2011"/>
         </scene>
-        <!--Events-->
+        <!--EventsInitialView-->
         <scene sceneID="cZj-Zb-bcP">
             <objects>
-                <viewControllerPlaceholder storyboardName="Events" id="Ths-VJ-A0U" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Events" referencedIdentifier="EventsInitialView" id="Ths-VJ-A0U" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="eWj-Cl-Uoh"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9n-eV-94k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -330,7 +330,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ths-VJ-A0U" kind="show" id="dYh-Ci-4ov"/>
+                                    <segue destination="Ths-VJ-A0U" kind="presentation" modalPresentationStyle="fullScreen" id="dYh-Ci-4ov"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OutReach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-tM-MZS">
@@ -357,7 +357,7 @@ To learn more about advocacy for colorblind-friendly design through education an
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qwA-8C-8RJ"/>
+        <segue reference="fFa-ax-Fv5"/>
         <segue reference="3if-Pw-otu"/>
     </inferredMetricsTieBreakers>
     <resources>

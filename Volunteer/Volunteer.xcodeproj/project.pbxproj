@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030E5C87261111FC00B928D8 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030E5C86261111FC00B928D8 /* SideMenu.storyboard */; };
+		030E5C8D261112D400B928D8 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E5C8C261112D400B928D8 /* SideMenuViewController.swift */; };
 		0381BCF1260A8DA900168C48 /* CurrentEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCF0260A8DA900168C48 /* CurrentEventsTableViewCell.swift */; };
 		0381BCF9260A8E3600168C48 /* PreviousEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */; };
 		0381BCFE260A8E4800168C48 /* PreviousEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */; };
@@ -69,6 +71,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		030E5C86261111FC00B928D8 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		030E5C8C261112D400B928D8 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		0381BCF0260A8DA900168C48 /* CurrentEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEventsTableViewCell.swift; sourceTree = "<group>"; };
 		0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousEventsTableViewCell.swift; sourceTree = "<group>"; };
 		0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousEventsTableViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +157,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		030E5C8B261112C400B928D8 /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				030E5C8C261112D400B928D8 /* SideMenuViewController.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
 		03A37409260AEA7F0011DC21 /* Search */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +218,7 @@
 		98CC89DB25DCFCA4008E4A7B = {
 			isa = PBXGroup;
 			children = (
+				030E5C8B261112C400B928D8 /* SideMenu */,
 				B152DBFE25E36FD300A7DB17 /* SignUpLogin */,
 				03A3740A260AEA860011DC21 /* Home */,
 				03F2FBDF260304AB008748E1 /* Events */,
@@ -241,6 +254,7 @@
 				98CC89F225DCFCA5008E4A7B /* LaunchScreen.storyboard */,
 				98CC89F025DCFCA5008E4A7B /* Assets.xcassets */,
 				03A373FF260AE9430011DC21 /* Home.storyboard */,
+				030E5C86261111FC00B928D8 /* SideMenu.storyboard */,
 				03F2FBD726030447008748E1 /* Events.storyboard */,
 				03A37411260AED200011DC21 /* Profile.storyboard */,
 				03A37404260AEA720011DC21 /* Search.storyboard */,
@@ -432,6 +446,7 @@
 				98CC89F425DCFCA5008E4A7B /* LaunchScreen.storyboard in Resources */,
 				03A37400260AE9430011DC21 /* Home.storyboard in Resources */,
 				03A37405260AEA720011DC21 /* Search.storyboard in Resources */,
+				030E5C87261111FC00B928D8 /* SideMenu.storyboard in Resources */,
 				03A3741A260AEDA30011DC21 /* Settings.storyboard in Resources */,
 				98CC89F125DCFCA5008E4A7B /* Assets.xcassets in Resources */,
 				03F2FBD826030447008748E1 /* Events.storyboard in Resources */,
@@ -585,6 +600,7 @@
 				03F2FBC52602FD7A008748E1 /* PrivacyPolicyViewController.swift in Sources */,
 				B152DC1725E37CBE00A7DB17 /* RoundedWhiteButton.swift in Sources */,
 				B152DC6525E4419F00A7DB17 /* SelectSkillsViewController.swift in Sources */,
+				030E5C8D261112D400B928D8 /* SideMenuViewController.swift in Sources */,
 				B152DC3D25E4404400A7DB17 /* SelectAgeViewController.swift in Sources */,
 				03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */,
 				B152DC5625E4411200A7DB17 /* PrivacySettingViewController.swift in Sources */,
