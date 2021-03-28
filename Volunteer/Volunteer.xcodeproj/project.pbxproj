@@ -196,9 +196,9 @@
 			children = (
 				B1E4955E26090CF500F10A9E /* CreateNewEventViewController.swift */,
 				0381BCF0260A8DA900168C48 /* CurrentEventsTableViewCell.swift */,
+				0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */,
 				0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */,
 				0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */,
-				0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
