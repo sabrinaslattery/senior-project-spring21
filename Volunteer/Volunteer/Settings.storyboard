@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Notifications View Controller-->
         <scene sceneID="xjJ-at-tnk">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yUc-8g-jCB" sceneMemberID="viewController">
+                <viewController title="Notifications View Controller" modalPresentationStyle="fullScreen" id="yUc-8g-jCB" customClass="NotificationsViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="exZ-4o-qUj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,10 +107,10 @@
             </objects>
             <point key="canvasLocation" x="-1042.0289855072465" y="-536.38392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Accessibility View Controller-->
         <scene sceneID="Ea1-0D-rw8">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="qbF-dl-Rp6" sceneMemberID="viewController">
+                <viewController title="Accessibility View Controller" modalPresentationStyle="fullScreen" id="qbF-dl-Rp6" customClass="AccessibilityViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aiR-94-YJ9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -204,12 +204,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwZ-C5-Yez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1033" y="220"/>
+            <point key="canvasLocation" x="-1042" y="180"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="jXe-fL-B4f">
             <objects>
-                <viewController id="emc-HI-zXm" sceneMemberID="viewController">
+                <viewController title="Settings View Controller" id="emc-HI-zXm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zfz-Eh-X2K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,12 +328,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zaF-tP-9c7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-271" y="129"/>
+            <point key="canvasLocation" x="-239" y="-14"/>
         </scene>
-        <!--View Controller-->
+        <!--Phone Number View Controller-->
         <scene sceneID="dOZ-nV-0h3">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="37Z-R8-bMG" sceneMemberID="viewController">
+                <viewController title="Phone Number View Controller" modalPresentationStyle="fullScreen" id="37Z-R8-bMG" customClass="PhoneNumberViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Mv-Ju-UPC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -417,10 +417,10 @@
             </objects>
             <point key="canvasLocation" x="598.55072463768124" y="-536.38392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Email View Controller-->
         <scene sceneID="YqM-Yb-gRx">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="sKX-3c-1Na" sceneMemberID="viewController">
+                <viewController title="Email View Controller" modalPresentationStyle="fullScreen" id="sKX-3c-1Na" customClass="EmailViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2y-3Z-lD4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -502,7 +502,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0m2-hc-x38" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="-156"/>
+            <point key="canvasLocation" x="599" y="180"/>
         </scene>
     </scenes>
     <resources>
