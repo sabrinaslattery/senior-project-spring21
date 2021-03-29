@@ -158,16 +158,6 @@
             </objects>
             <point key="canvasLocation" x="887" y="927"/>
         </scene>
-        <!--SideMenuNav-->
-        <scene sceneID="DRc-bV-Ych">
-            <objects>
-                <viewControllerPlaceholder storyboardName="SideMenu" referencedIdentifier="SideMenuNav" id="2hX-5r-W7V" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Hj4-zO-QIF"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tTv-Ge-2zv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2063" y="1108"/>
-        </scene>
         <!--Search-->
         <scene sceneID="vcF-db-b2t">
             <objects>
@@ -176,7 +166,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jik-br-2L6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2749" y="2011"/>
+            <point key="canvasLocation" x="3658.6956521739135" y="2010.9375"/>
         </scene>
         <!--EventsInitialView-->
         <scene sceneID="cZj-Zb-bcP">
@@ -186,7 +176,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9n-eV-94k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2063" y="2001"/>
+            <point key="canvasLocation" x="2926" y="2312"/>
         </scene>
         <!--About Us-->
         <scene sceneID="lfo-1z-cCk">
@@ -261,7 +251,7 @@ To learn more about advocacy for colorblind-friendly design through education an
         <!--Home Page View Controller-->
         <scene sceneID="BMA-j9-5tF">
             <objects>
-                <viewController title="Home Page View Controller" modalPresentationStyle="fullScreen" id="O0d-5z-Fxm" sceneMemberID="viewController">
+                <viewController title="Home Page View Controller" modalPresentationStyle="fullScreen" id="O0d-5z-Fxm" customClass="SideMenuViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oFR-DI-4Vc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -326,7 +316,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ths-VJ-A0U" kind="presentation" modalPresentationStyle="fullScreen" id="dYh-Ci-4ov"/>
+                                    <segue destination="Myn-Dy-r2Z" kind="presentation" modalPresentationStyle="fullScreen" id="dYh-Ci-4ov"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OutReach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-tM-MZS">
@@ -364,9 +354,12 @@ To learn more about advocacy for colorblind-friendly design through education an
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="MXh-db-dM8">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="vnZ-3F-se0">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="vnZ-3F-se0" userLabel="SideMenu">
                             <imageReference key="image" image="line.horizontal.3.circle" catalog="system" symbolScale="large"/>
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="didTapMenu" destination="O0d-5z-Fxm" id="Ynx-Jo-cfh"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="9rv-Eq-6nM">
                             <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large"/>
@@ -382,7 +375,7 @@ To learn more about advocacy for colorblind-friendly design through education an
         <!--Navigation Controller-->
         <scene sceneID="R9z-zV-K7S">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lht-fm-eeJ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="lht-fm-eeJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="r3z-sc-hhZ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fxD-D0-DCV">
@@ -396,7 +389,25 @@ To learn more about advocacy for colorblind-friendly design through education an
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A0n-XX-PN6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1428" y="1566"/>
+            <point key="canvasLocation" x="1370" y="1578"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aAH-yk-0tz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Myn-Dy-r2Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3sh-wm-2rc">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ths-VJ-A0U" kind="relationship" relationship="rootViewController" id="UMp-bI-QZO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mxf-cw-1bc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2280" y="2367"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

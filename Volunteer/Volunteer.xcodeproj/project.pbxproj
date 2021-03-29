@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		030E5C87261111FC00B928D8 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030E5C86261111FC00B928D8 /* SideMenu.storyboard */; };
 		030E5C8D261112D400B928D8 /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E5C8C261112D400B928D8 /* SideMenuViewController.swift */; };
+		030E5CB82611594F00B928D8 /* AccessibilityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E5CB72611594F00B928D8 /* AccessibilityViewController.swift */; };
 		0381BCF1260A8DA900168C48 /* CurrentEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCF0260A8DA900168C48 /* CurrentEventsTableViewCell.swift */; };
 		0381BCF9260A8E3600168C48 /* PreviousEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */; };
 		0381BCFE260A8E4800168C48 /* PreviousEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		030E5C86261111FC00B928D8 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		030E5C8C261112D400B928D8 /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		030E5CB72611594F00B928D8 /* AccessibilityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityViewController.swift; sourceTree = "<group>"; };
 		0381BCF0260A8DA900168C48 /* CurrentEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEventsTableViewCell.swift; sourceTree = "<group>"; };
 		0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousEventsTableViewCell.swift; sourceTree = "<group>"; };
 		0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousEventsTableViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		03A3742A260AEF960011DC21 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				030E5CB72611594F00B928D8 /* AccessibilityViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -617,6 +620,7 @@
 				0381BD03260A8E5500168C48 /* CurrentEventsTableViewController.swift in Sources */,
 				B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */,
 				B152DC2E25E43F9A00A7DB17 /* ChangePassViewController.swift in Sources */,
+				030E5CB82611594F00B928D8 /* AccessibilityViewController.swift in Sources */,
 				03A37425260AEF750011DC21 /* SearchViewController.swift in Sources */,
 				B152DC6A25E441BC00A7DB17 /* SelectInterestViewController.swift in Sources */,
 				B152DC3325E4400800A7DB17 /* VerifyEmailViewController.swift in Sources */,

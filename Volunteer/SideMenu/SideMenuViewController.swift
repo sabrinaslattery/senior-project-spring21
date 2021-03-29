@@ -28,7 +28,6 @@ class SideMenuViewController: UISearchController {
     }
 }
 
-
 class MenuListController: UITableViewController {
     
     var itemsArray = ["User's Name", "", "Home", "My Profile", "Events", "Create an Event", "Search", "Settings", "", "Sign Out"]
@@ -53,5 +52,9 @@ class MenuListController: UITableViewController {
         cell.backgroundColor = sideBarColor
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
