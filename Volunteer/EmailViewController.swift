@@ -8,6 +8,21 @@
 import UIKit
 
 class EmailViewController: UIViewController {
+    
+    @IBOutlet weak var currEmailField: UITextField!
+    
+    @IBOutlet weak var newEmailField: UITextField!
+    
+    @IBOutlet weak var cofirNewEmailField: UITextField!
+    
+    @IBOutlet weak var confirPassField: UITextField!
+    
+    @IBOutlet weak var resetEmailButton: UIButton!
+    
+    
+    
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,14 +31,5 @@ class EmailViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

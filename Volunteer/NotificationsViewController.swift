@@ -8,7 +8,19 @@
 import UIKit
 
 class NotificationsViewController: UIViewController {
-
+    
+    
+    
+    @IBOutlet weak var newEventNotifSelect: UISwitch!
+    
+    @IBOutlet weak var volunRoleAccepSelect: UISwitch!
+    
+    @IBOutlet weak var emailAlertSelect: UISwitch!
+    
+    @IBOutlet weak var textAlertSelect: UISwitch!
+    
+    @IBOutlet weak var pushAlertSelect: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,14 +28,6 @@ class NotificationsViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
