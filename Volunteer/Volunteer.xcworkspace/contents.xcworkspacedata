@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../../../Main.storyboard">
+      location = "container:Volunteer/Base.lproj/Main.storyboard">
    </FileRef>
    <FileRef
       location = "group:Volunteer.xcodeproj">
