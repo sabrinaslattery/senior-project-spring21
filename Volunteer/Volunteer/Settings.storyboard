@@ -102,6 +102,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="ppT-iy-eF4"/>
+                    <connections>
+                        <outlet property="emailAlert" destination="j4h-UA-Ivn" id="Omx-hM-8jT"/>
+                        <outlet property="newEventNotif" destination="Lub-0e-eJd" id="9fa-hy-zsY"/>
+                        <outlet property="pushAlert" destination="RnS-ry-zyg" id="QDu-Pw-nd4"/>
+                        <outlet property="textAlert" destination="wod-05-5hz" id="0qm-jy-ll4"/>
+                        <outlet property="volunRoleAccep" destination="cBO-0r-Jkp" id="w1U-2B-u9K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACt-un-q7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,6 +208,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="wGH-Ca-oLa"/>
+                    <connections>
+                        <outlet property="fontLarge" destination="DH0-Fg-os0" id="HTq-2m-srm"/>
+                        <outlet property="fontMedi" destination="JeQ-9a-hsd" id="gE8-QC-DOT"/>
+                        <outlet property="fontSmall" destination="rAc-X7-ItE" id="GND-Pp-mOm"/>
+                        <outlet property="langEng" destination="cez-rU-f52" id="YD2-d0-ld5"/>
+                        <outlet property="langSpan" destination="gFV-3k-Gxo" id="zXz-iy-HJl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwZ-C5-Yez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -229,6 +243,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
+                                    <action selector="gotoEmail:" destination="Ymr-NZ-SR0" eventType="touchUpInside" id="bku-ZW-gsY"/>
                                     <segue destination="sKX-3c-1Na" kind="show" id="25x-49-zdg"/>
                                 </connections>
                             </button>
@@ -247,6 +262,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
+                                    <action selector="gotoPhone:" destination="Ymr-NZ-SR0" eventType="touchUpInside" id="RNW-0I-YN6"/>
                                     <segue destination="37Z-R8-bMG" kind="show" id="8Vl-xq-U7k"/>
                                 </connections>
                             </button>
@@ -264,6 +280,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="changePassword:" destination="Ymr-NZ-SR0" eventType="touchUpInside" id="ShR-76-ZDy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jdw-yo-vVV">
                                 <rect key="frame" x="41" y="300" width="234" height="22"/>
@@ -278,6 +297,9 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
+                                <connections>
+                                    <action selector="twoFactAuth:" destination="Ymr-NZ-SR0" eventType="touchUpInside" id="h9N-R6-rU2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPs-s2-5cV">
                                 <rect key="frame" x="33" y="50" width="20" height="22"/>
@@ -289,6 +311,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Notifications"/>
                                 <connections>
+                                    <action selector="notifButton:" destination="Ymr-NZ-SR0" eventType="touchUpInside" id="Yoi-7I-kg0"/>
                                     <segue destination="yUc-8g-jCB" kind="show" id="hRE-dO-K8h"/>
                                 </connections>
                             </button>
@@ -297,6 +320,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Accessibility"/>
                                 <connections>
+                                    <action selector="accessiButton:" destination="Ymr-NZ-SR0" eventType="touchUpInside" id="0kC-bW-7Yi"/>
                                     <segue destination="qbF-dl-Rp6" kind="show" id="RHb-OK-wv9"/>
                                 </connections>
                             </button>
@@ -327,6 +351,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zaF-tP-9c7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ymr-NZ-SR0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-239" y="-14"/>
         </scene>
@@ -412,6 +437,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="6y4-Dc-KB9"/>
+                    <connections>
+                        <outlet property="confirNewNumField" destination="jLP-IF-2Ff" id="MPP-6v-Ptw"/>
+                        <outlet property="confirPassField" destination="yyq-xj-RLZ" id="6kr-Hh-xSZ"/>
+                        <outlet property="currNum" destination="nXt-LE-ZTA" id="P65-7J-hPm"/>
+                        <outlet property="newNumField" destination="Eku-ME-bca" id="8z5-IM-Szg"/>
+                        <outlet property="resetPhoneButton" destination="sua-99-wKh" id="iiX-KW-TZU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMT-W9-iIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -499,6 +531,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="KBU-by-fOG"/>
+                    <connections>
+                        <outlet property="cofirNewEmailField" destination="lkb-NT-7kA" id="GPn-dE-v1p"/>
+                        <outlet property="confirPassField" destination="SdZ-ZP-Zwh" id="9HB-Sw-yBr"/>
+                        <outlet property="currEmailField" destination="Ym2-6y-UDU" id="tsV-Bs-46h"/>
+                        <outlet property="newEmailField" destination="wmp-Uk-Ahb" id="LfT-0G-FGw"/>
+                        <outlet property="resetEmailButton" destination="YNg-dl-ues" id="UZD-nN-HPg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0m2-hc-x38" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
