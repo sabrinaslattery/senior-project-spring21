@@ -25,7 +25,23 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var volunteerShouldWearField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
+
+    
+    @IBOutlet weak var difficultyField: UITextField!
+    @IBOutlet weak var tagField: UITextField!
+    
+    
+    var difficultyPicker = UIPickerView()
+    var tagsPicker = UIPickerView()
+    
+    let difficulty = ["Easy/Facil", "Medium/Mediano", "Hard/Deficil"]
+    let tags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
+        
+        
+        //"Animal Rescue Shelters", "Food Pantries", "Habitat for Humanity", "Local Libraries", "Museums", "YMCA", "Retirement Homes", "Red Cross", "Volunteering Abroad", "Church/Volunteers of America", "National Parks", "Hospital", "Homeless Shelter", "Park Clean Up/Preservation Efforts", "After School Tutoring"
+
     @IBOutlet weak var completeButton: UIButton!
+
     
     
     var activityView:UIActivityIndicatorView!

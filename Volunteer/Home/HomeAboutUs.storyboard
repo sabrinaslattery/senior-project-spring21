@@ -91,10 +91,10 @@
             </objects>
             <point key="canvasLocation" x="1170" y="1182"/>
         </scene>
-        <!--MainProfile-->
+        <!--Profile-->
         <scene sceneID="iOE-OU-Mob">
             <objects>
-                <viewControllerPlaceholder storyboardName="Profile" referencedIdentifier="MainProfile" id="e3Y-WD-uhB" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Profile" id="e3Y-WD-uhB" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWl-ej-xq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="700" y="1603"/>
@@ -360,7 +360,7 @@ To learn more about advocacy for colorblind-friendly design through education an
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="fFa-ax-Fv5"/>
+        <segue reference="qwA-8C-8RJ"/>
         <segue reference="3if-Pw-otu"/>
     </inferredMetricsTieBreakers>
     <resources>
