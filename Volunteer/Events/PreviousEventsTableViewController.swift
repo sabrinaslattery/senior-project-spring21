@@ -25,7 +25,7 @@ class PreviousEventsTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+        super.viewDidAppear(true)
         self.loadEvents()
     }
     
