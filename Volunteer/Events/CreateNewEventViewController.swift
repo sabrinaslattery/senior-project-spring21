@@ -1,5 +1,3 @@
-
-
 //
 //  CreateNewEventViewController.swift
 //  Volunteer
@@ -189,7 +187,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         let number = phoneNumberField.text
         
         
-        _ = title != nil && title != "" && from != nil && from != "" && to != nil && to != "" && total != nil && total != "" && about != nil && about != "" && expectation != nil && expectation != "" && email != nil && email != "" && number != nil && number != ""
+        _ = title != nil && title != "" && from != nil && from != "" && to != nil && to != "" && total != nil && total != "" && about != nil && about != "" && expectation != nil && expectation != "" && email != nil && email != "" && number != nil && number != "" 
     }
     
 }
