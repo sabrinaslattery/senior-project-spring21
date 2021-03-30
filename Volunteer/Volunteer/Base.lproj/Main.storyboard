@@ -794,7 +794,7 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="21l-4o-lK8" userLabel="Email">
                                 <rect key="frame" x="68" y="334" width="279" height="31"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.96076517813119289" green="1" blue="0.93601283105747624" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                             </textField>
@@ -804,9 +804,9 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m2O-w1-94p">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m2O-w1-94p">
                                 <rect key="frame" x="68" y="416" width="279" height="30"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
                             </textField>
@@ -1075,6 +1075,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Date of Birth:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mDh-DY-Jh8">
+                                <rect key="frame" x="21" y="310" width="133" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pN-bL-OaB">
                                 <rect key="frame" x="23" y="476" width="195" height="26.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1126,6 +1131,12 @@
                                     <segue destination="beD-hg-rlc" kind="show" id="PLm-Hi-M0Q"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="GbR-kW-jUr">
+                                <rect key="frame" x="142" y="289" width="130" height="80"/>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1164884400">
+                                    <!--2037-11-30 11:00:00 +0000-->
+                                </date>
+                            </datePicker>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="iconfinder_user-alt_285645" translatesAutoresizingMaskIntoConstraints="NO" id="YNy-8M-ftj">
                                 <rect key="frame" x="139" y="125" width="130" height="130"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -1153,8 +1164,10 @@
                             <constraint firstItem="bVc-gp-FIu" firstAttribute="trailing" secondItem="vKs-JP-cI6" secondAttribute="trailing" constant="111" id="D6V-yw-Fxb"/>
                             <constraint firstItem="bVc-gp-FIu" firstAttribute="trailing" secondItem="YNy-8M-ftj" secondAttribute="trailing" constant="142" id="DUY-TN-9QC"/>
                             <constraint firstItem="W0E-uS-JDt" firstAttribute="leading" secondItem="bVc-gp-FIu" secondAttribute="leading" constant="26" id="FlX-6X-Pqq"/>
+                            <constraint firstItem="bVc-gp-FIu" firstAttribute="trailing" secondItem="GbR-kW-jUr" secondAttribute="trailing" constant="139" id="GsZ-0U-jSO"/>
                             <constraint firstItem="vKs-JP-cI6" firstAttribute="leading" secondItem="bVc-gp-FIu" secondAttribute="leading" constant="111" id="JTG-oB-W0H"/>
                             <constraint firstItem="0Bo-wD-Pna" firstAttribute="leading" secondItem="bVc-gp-FIu" secondAttribute="leading" constant="26" id="LKl-cR-hwq"/>
+                            <constraint firstItem="mDh-DY-Jh8" firstAttribute="leading" secondItem="bVc-gp-FIu" secondAttribute="leading" constant="26" id="OMK-2D-FbO"/>
                             <constraint firstItem="bVc-gp-FIu" firstAttribute="trailing" secondItem="W0E-uS-JDt" secondAttribute="trailing" constant="224" id="OrT-k0-W7X"/>
                             <constraint firstItem="W0E-uS-JDt" firstAttribute="top" secondItem="77t-Mq-dxa" secondAttribute="bottom" constant="14" id="SCY-32-6rX"/>
                             <constraint firstItem="bVc-gp-FIu" firstAttribute="trailing" secondItem="d90-g8-lbA" secondAttribute="trailing" constant="23" id="SF0-M3-YoX"/>
@@ -1166,6 +1179,8 @@
                             <constraint firstItem="ebc-Oj-kSu" firstAttribute="top" secondItem="URD-wV-Xw8" secondAttribute="bottom" constant="15.5" id="blx-cx-v5H"/>
                             <constraint firstItem="0Bo-wD-Pna" firstAttribute="top" secondItem="6pN-bL-OaB" secondAttribute="bottom" constant="14" id="fPd-sD-GFp"/>
                             <constraint firstItem="bVc-gp-FIu" firstAttribute="trailing" secondItem="ebc-Oj-kSu" secondAttribute="trailing" constant="278" id="goZ-iD-iP9"/>
+                            <constraint firstItem="mDh-DY-Jh8" firstAttribute="top" secondItem="YNy-8M-ftj" secondAttribute="bottom" constant="68" id="gvI-LP-ERw"/>
+                            <constraint firstItem="GbR-kW-jUr" firstAttribute="leading" secondItem="mDh-DY-Jh8" secondAttribute="trailing" constant="3" id="hVe-5K-XcZ"/>
                             <constraint firstItem="URD-wV-Xw8" firstAttribute="leading" secondItem="bVc-gp-FIu" secondAttribute="leading" constant="26" id="iAe-jL-iN5"/>
                             <constraint firstItem="bVc-gp-FIu" firstAttribute="trailing" secondItem="0Bo-wD-Pna" secondAttribute="trailing" constant="278" id="ihw-tC-5t5"/>
                             <constraint firstItem="bVc-gp-FIu" firstAttribute="trailing" secondItem="6pN-bL-OaB" secondAttribute="trailing" constant="193" id="j9p-4H-UGL"/>
@@ -1183,6 +1198,7 @@
                     <connections>
                         <outlet property="cityTextField" destination="6pN-bL-OaB" id="WpE-mn-5iU"/>
                         <outlet property="continueButton" destination="d90-g8-lbA" id="gLW-I2-HhL"/>
+                        <outlet property="datePicker" destination="GbR-kW-jUr" id="q6x-h9-3lY"/>
                         <outlet property="educationLevelTextField" destination="qWi-bD-beW" id="A3U-9g-8yH"/>
                         <outlet property="jobTitleTextField" destination="URD-wV-Xw8" id="6st-Ly-uY0"/>
                         <outlet property="profileImageView" destination="YNy-8M-ftj" id="nLg-jK-aIR"/>
