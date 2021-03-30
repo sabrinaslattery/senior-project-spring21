@@ -11,6 +11,9 @@
 		0381BCF9260A8E3600168C48 /* PreviousEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */; };
 		0381BCFE260A8E4800168C48 /* PreviousEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */; };
 		0381BD03260A8E5500168C48 /* CurrentEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */; };
+		0394BECC2612E54D008C5023 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0394BECB2612E54D008C5023 /* AboutUsViewController.swift */; };
+		0394BEEA2612FE8E008C5023 /* MainProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0394BEE92612FE8E008C5023 /* MainProfileViewController.swift */; };
+		0394BEFA261309B9008C5023 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0394BEF9261309B9008C5023 /* EditProfileViewController.swift */; };
 		03A37400260AE9430011DC21 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A373FF260AE9430011DC21 /* Home.storyboard */; };
 		03A37405260AEA720011DC21 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37404260AEA720011DC21 /* Search.storyboard */; };
 		03A37412260AED200011DC21 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37411260AED200011DC21 /* Profile.storyboard */; };
@@ -78,6 +81,9 @@
 		0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousEventsTableViewCell.swift; sourceTree = "<group>"; };
 		0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousEventsTableViewController.swift; sourceTree = "<group>"; };
 		0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEventsTableViewController.swift; sourceTree = "<group>"; };
+		0394BECB2612E54D008C5023 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		0394BEE92612FE8E008C5023 /* MainProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewController.swift; sourceTree = SOURCE_ROOT; };
+		0394BEF9261309B9008C5023 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		03A373FF260AE9430011DC21 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		03A37404260AEA720011DC21 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		03A37411260AED200011DC21 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -174,6 +180,7 @@
 		03A3740A260AEA860011DC21 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				0394BECB2612E54D008C5023 /* AboutUsViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -181,6 +188,8 @@
 		03A37429260AEF870011DC21 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				0394BEE92612FE8E008C5023 /* MainProfileViewController.swift */,
+				0394BEF9261309B9008C5023 /* EditProfileViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -602,14 +611,17 @@
 				B152DC1725E37CBE00A7DB17 /* RoundedWhiteButton.swift in Sources */,
 				B152DC6525E4419F00A7DB17 /* SelectSkillsViewController.swift in Sources */,
 				B152DC3D25E4404400A7DB17 /* SelectAgeViewController.swift in Sources */,
+				0394BEFA261309B9008C5023 /* EditProfileViewController.swift in Sources */,
 				03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */,
 				B152DC5625E4411200A7DB17 /* PrivacySettingViewController.swift in Sources */,
 				B152DC2925E43F6400A7DB17 /* CheckEmailViewController.swift in Sources */,
 				B152DC0325E37C6B00A7DB17 /* HelperExtensions.swift in Sources */,
+				0394BECC2612E54D008C5023 /* AboutUsViewController.swift in Sources */,
 				B152DC3825E4403100A7DB17 /* GreatViewController.swift in Sources */,
 				98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */,
 				0381BCF9260A8E3600168C48 /* PreviousEventsTableViewCell.swift in Sources */,
 				B1E4955F26090CF500F10A9E /* CreateNewEventViewController.swift in Sources */,
+				0394BEEA2612FE8E008C5023 /* MainProfileViewController.swift in Sources */,
 				B152DC1C25E37CCF00A7DB17 /* SignUpViewController.swift in Sources */,
 				B152DC2425E43EEA00A7DB17 /* ResetPassViewController.swift in Sources */,
 				0381BCF1260A8DA900168C48 /* CurrentEventsTableViewCell.swift in Sources */,
