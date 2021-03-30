@@ -8,8 +8,9 @@
 import UIKit
 import Parse
 
-class PreviousEventsTableViewController: UITableViewController {
+class PreviousEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
     //var eventsArray = [NSDictionary]()
     
     let myRefreshControl = UIRefreshControl()
@@ -35,16 +36,15 @@ class PreviousEventsTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 150
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-        self.loadEvents()
-    }
-    
     @objc func loadEvents() {
         
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return Events.count
     }
@@ -72,11 +72,11 @@ class PreviousEventsTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = Events[indexPath.section]
         
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousEventsTableViewCell") as! PreviousEventsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousEventsCell") as! PreviousEventsTableViewCell
         
             let post = event["eventName"] as! PFUser
             cell.eventName.text = post["eventName"] as? String
@@ -105,7 +105,7 @@ class PreviousEventsTableViewController: UITableViewController {
             
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousEventsTableViewCell")!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PreviousEventsCell")!
             return cell
         }
         

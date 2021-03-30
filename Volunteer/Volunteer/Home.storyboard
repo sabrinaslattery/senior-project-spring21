@@ -180,6 +180,14 @@
             </objects>
             <point key="canvasLocation" x="2063" y="2001"/>
         </scene>
+        <!--Create Events Page-->
+        <scene sceneID="fzc-bt-xDT">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Events" referencedIdentifier="Create Events Page" id="BJQ-5m-jMQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSM-di-ztf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2388" y="2011"/>
+        </scene>
         <!--About Us-->
         <scene sceneID="lfo-1z-cCk">
             <objects>
@@ -330,7 +338,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Ths-VJ-A0U" kind="show" id="dYh-Ci-4ov"/>
+                                    <segue destination="Ths-VJ-A0U" kind="show" id="Diw-iR-XBn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OutReach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-tM-MZS">

@@ -88,6 +88,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="ex6-kO-hfJ" secondAttribute="bottom" constant="10" id="wyt-gW-ZLz"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="PreviousEventsCell"/>
                                         <connections>
                                             <outlet property="eventDate" destination="Io6-iN-RHX" id="lzg-t3-S8b"/>
                                             <outlet property="eventDifficulty" destination="ex6-kO-hfJ" id="5LX-R6-RDQ"/>
@@ -122,10 +123,13 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Previous Events" id="Zua-f5-EK0"/>
+                    <connections>
+                        <outlet property="tableView" destination="aYZ-QK-VTY" id="2M6-n1-quy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ey-1J-udH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1244.9275362318842" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1112" y="92"/>
         </scene>
         <!--Current Events View Controller-->
         <scene sceneID="fef-5J-Yaf">
@@ -187,7 +191,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="9fb-dn-Icw">
-                                                    <rect key="frame" x="20" y="11" width="122" height="35"/>
+                                                    <rect key="frame" x="20" y="11" width="122" height="34.5"/>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -209,6 +213,7 @@
                                                 <constraint firstItem="EWe-5b-Jid" firstAttribute="leading" secondItem="d2H-LZ-aRc" secondAttribute="leadingMargin" id="vgm-Rt-M0U"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="CurrentEventsCell"/>
                                         <connections>
                                             <outlet property="eventDate" destination="9fb-dn-Icw" id="HH9-6f-bcE"/>
                                             <outlet property="eventDifficulty" destination="jbA-Az-c7z" id="syf-Bw-Fwm"/>
@@ -233,10 +238,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Current Events" id="6M6-HH-S08"/>
                     <navigationItem key="navigationItem" id="0BP-jA-xjM"/>
+                    <connections>
+                        <outlet property="tableView" destination="984-z2-xZP" id="b4S-ym-KmP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agp-DN-pDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1244.9275362318842" y="-607.36607142857144"/>
+            <point key="canvasLocation" x="1113" y="-603"/>
         </scene>
         <!--Events Feed Tab Bar Controller-->
         <scene sceneID="oZi-gg-RXC">
@@ -258,7 +266,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4J-QQ-GTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="357" y="33"/>
+            <point key="canvasLocation" x="-213" y="44"/>
         </scene>
         <!--Upcoming Events - View Controller-->
         <scene sceneID="TDS-cv-F4v">
@@ -444,7 +452,7 @@
         <!--Create Event-->
         <scene sceneID="ZGc-Ji-ffH">
             <objects>
-                <viewController storyboardIdentifier="CreateNewEventViewController" modalPresentationStyle="fullScreen" id="cx2-4H-WCh" customClass="CreateNewEventViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Create Events Page" modalPresentationStyle="fullScreen" id="cx2-4H-WCh" customClass="CreateNewEventViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L2z-Re-Q5V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -812,7 +820,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wZ-a1-0dJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1244.9275362318842" y="1127.6785714285713"/>
+            <point key="canvasLocation" x="1112" y="1118"/>
         </scene>
     </scenes>
     <resources>

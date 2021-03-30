@@ -8,8 +8,10 @@
 import UIKit
 import Parse
 
-class CurrentEventsTableViewController: UITableViewController {
+class CurrentEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     //var eventsArray = [NSDictionary]()
     
     let myRefreshControl = UIRefreshControl()
@@ -21,36 +23,35 @@ class CurrentEventsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadEvents()
+//        loadEvents()
         
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.keyboardDismissMode = .interactive
         
-        myRefreshControl.addTarget(self, action: #selector(loadEvents), for: .valueChanged)
+//        myRefreshControl.addTarget(self, action: #selector(loadEvents), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
         
-        
     }
     
-    @objc func loadEvents() {
-        
-    }
+//    @objc func loadEvents() {
+//
+//    }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return Events.count
     }
 
-    /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //let post = posts[section]
         
         return 3
-    }*/
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         //numberOfPosts = 20
@@ -69,11 +70,11 @@ class CurrentEventsTableViewController: UITableViewController {
         }
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = Events[indexPath.section]
         
         if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentEventsTableViewCell") as! CurrentEventsTableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentEventsCell") as! CurrentEventsTableViewCell
         
             let post = event["eventName"] as! PFUser
             cell.eventName.text = post["eventName"] as? String
@@ -102,7 +103,7 @@ class CurrentEventsTableViewController: UITableViewController {
             
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentEventsTableViewCell")!
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentEventsCell")!
             return cell
         }
         
