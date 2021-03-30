@@ -35,7 +35,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         imagePicker.sourceType = .photoLibrary
         imagePicker.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
 
-        let intersetTags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
+        //let intersetTags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
     }
     
 
