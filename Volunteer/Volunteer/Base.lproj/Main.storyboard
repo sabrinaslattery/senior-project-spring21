@@ -755,9 +755,7 @@
         <!--Home-->
         <scene sceneID="eeB-yt-uXj">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="0RQ-LD-Xp2" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="LEo-Vq-lYA"/>
-                </viewControllerPlaceholder>
+                <viewControllerPlaceholder storyboardName="Home" id="0RQ-LD-Xp2" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3u-o3-QSf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1229" y="176"/>
@@ -822,6 +820,7 @@
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="onSignIn:" destination="9fr-RJ-Pme" eventType="touchUpInside" id="qup-SV-tWC"/>
+                                    <segue destination="0RQ-LD-Xp2" kind="showDetail" identifier="LoginSegue" id="cyC-j3-J5l"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkq-MQ-LR1">
@@ -905,7 +904,6 @@
                         <outlet property="passwordField" destination="m2O-w1-94p" id="cco-v8-hH8"/>
                         <outlet property="signuphereButton" destination="9cP-QE-34g" id="cz4-Yg-N1R"/>
                         <segue destination="GC4-jh-ean" kind="show" identifier="GetStarted" id="pZa-Wz-LrR"/>
-                        <segue destination="0RQ-LD-Xp2" kind="show" identifier="LoginSegue" id="1nB-qq-pfv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mni-xy-bbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
