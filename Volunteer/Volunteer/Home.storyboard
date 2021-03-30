@@ -191,7 +191,7 @@
         <!--About Us-->
         <scene sceneID="lfo-1z-cCk">
             <objects>
-                <viewController title="About Us" modalPresentationStyle="fullScreen" id="YQ1-Sg-dKO" sceneMemberID="viewController">
+                <viewController title="About Us" modalPresentationStyle="fullScreen" id="YQ1-Sg-dKO" customClass="AboutUsViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="14V-B9-r8W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,6 +242,9 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 <rect key="frame" x="169" y="781" width="196" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="https://wearecolorblind.com/"/>
+                                <connections>
+                                    <action selector="buttonTapped" destination="YQ1-Sg-dKO" eventType="touchUpInside" id="Qm2-dL-IhE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jwm-Ze-cRx"/>
@@ -303,7 +306,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="YQ1-Sg-dKO" kind="show" id="X0p-Zu-f1D"/>
+                                    <segue destination="YQ1-Sg-dKO" kind="show" id="6uI-2H-byG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTO-u2-47z">
