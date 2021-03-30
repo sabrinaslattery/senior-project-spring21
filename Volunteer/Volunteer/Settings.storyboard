@@ -11,9 +11,9 @@
         <!--View Controller-->
         <scene sceneID="xjJ-at-tnk">
             <objects>
-                <viewController id="yUc-8g-jCB" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yUc-8g-jCB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="exZ-4o-qUj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Notifications" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SlL-jg-3Yc">
@@ -27,12 +27,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="arrow.backward.circle" catalog="system"/>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Notifications" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uje-eS-8pE">
-                                <rect key="frame" x="20" y="114" width="110" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Events" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7BY-dl-dCR">
                                 <rect key="frame" x="43" y="156" width="104" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -89,6 +83,13 @@
                                 <rect key="frame" x="345" y="463" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G74-FO-GeF">
+                                <rect key="frame" x="20" y="127" width="88" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZNs-Et-nfl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -97,14 +98,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACt-un-q7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1042" y="-536"/>
+            <point key="canvasLocation" x="-525" y="-759"/>
         </scene>
-        <!--View Controller-->
+        <!--Accessbility View Controller-->
         <scene sceneID="Ea1-0D-rw8">
             <objects>
-                <viewController id="qbF-dl-Rp6" sceneMemberID="viewController">
+                <viewController title="Accessbility View Controller" modalPresentationStyle="fullScreen" id="qbF-dl-Rp6" customClass="AccessibilityViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aiR-94-YJ9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Accessibility" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-mf-4P8">
@@ -185,10 +186,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="wGH-Ca-oLa"/>
+                    <connections>
+                        <outlet property="langEngSwitch" destination="cez-rU-f52" id="udD-na-r6K"/>
+                        <outlet property="langSpanSwitch" destination="gFV-3k-Gxo" id="1jR-14-JF5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwZ-C5-Yez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1033" y="220"/>
+            <point key="canvasLocation" x="-1068" y="571"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jXe-fL-B4f">
@@ -317,14 +322,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zaF-tP-9c7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-271" y="129"/>
+            <point key="canvasLocation" x="-1890" y="-238"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="dOZ-nV-0h3">
             <objects>
-                <viewController id="37Z-R8-bMG" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="37Z-R8-bMG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Mv-Ju-UPC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Change Phone Number" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQn-lb-sDD">
@@ -399,14 +404,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMT-W9-iIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598.55072463768124" y="-536.38392857142856"/>
+            <point key="canvasLocation" x="159" y="-328"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YqM-Yb-gRx">
             <objects>
-                <viewController id="sKX-3c-1Na" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="sKX-3c-1Na" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2y-3Z-lD4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="niy-BZ-QQ3">
@@ -489,7 +494,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0m2-hc-x38" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="-156"/>
+            <point key="canvasLocation" x="181" y="320"/>
         </scene>
     </scenes>
     <resources>

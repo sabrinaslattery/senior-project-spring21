@@ -34,7 +34,6 @@ class CurrentEventsTableViewController: UITableViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
         
-        
     }
     
     @objc func loadEvents() {

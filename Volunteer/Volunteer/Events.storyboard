@@ -8,6 +8,40 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Past Events Nav-->
+        <scene sceneID="ZDd-5c-JAE">
+            <objects>
+                <navigationController title="Past Events Nav" modalPresentationStyle="fullScreen" id="UHz-wp-0eW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Past Events" id="nBZ-6N-AP0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" restorationIdentifier="Past Events" id="psp-oJ-cCz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gbB-Pc-3p4" kind="relationship" relationship="rootViewController" id="Vxi-xR-GFa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgH-yO-fZO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="422" y="88"/>
+        </scene>
+        <!--Create Event Nav-->
+        <scene sceneID="yW5-f6-GL7">
+            <objects>
+                <navigationController title="Create Event Nav" modalPresentationStyle="fullScreen" id="bzl-61-68n" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Create an Event" id="5i5-SG-Tey"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MCQ-wG-I5W">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cx2-4H-WCh" kind="show" id="gAn-Hb-Fhm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07I-j6-8ID" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="422" y="859"/>
+        </scene>
         <!--Previous Events View Controller-->
         <scene sceneID="j0Q-45-Ali">
             <objects>
@@ -18,7 +52,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aYZ-QK-VTY">
                                 <rect key="frame" x="0.0" y="96" width="414" height="800"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="800" id="rkC-GS-05O"/>
                                 </constraints>
@@ -122,10 +157,28 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Previous Events" id="Zua-f5-EK0"/>
+                    <navigationItem key="navigationItem" title="Past Events" id="paa-mH-eSy"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ey-1J-udH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1244.9275362318842" y="87.723214285714278"/>
+            <point key="canvasLocation" x="1615.9420289855075" y="87.723214285714278"/>
+        </scene>
+        <!--Current Events Nav-->
+        <scene sceneID="twb-2a-3pj">
+            <objects>
+                <navigationController title="Current Events Nav" modalPresentationStyle="fullScreen" id="vwx-nO-d4N" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Current Events" id="84K-N8-Ei9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="24R-Jl-Eap">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bxU-GJ-Dpb" kind="relationship" relationship="rootViewController" id="CDy-ui-Lhk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92B-KL-NxB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="423" y="-607"/>
         </scene>
         <!--Current Events View Controller-->
         <scene sceneID="fef-5J-Yaf">
@@ -187,7 +240,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="9fb-dn-Icw">
-                                                    <rect key="frame" x="20" y="11" width="122" height="35"/>
+                                                    <rect key="frame" x="20" y="11" width="122" height="34.5"/>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
@@ -232,7 +285,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Current Events" id="6M6-HH-S08"/>
-                    <navigationItem key="navigationItem" id="0BP-jA-xjM"/>
+                    <navigationItem key="navigationItem" title="Current Events" id="0BP-jA-xjM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agp-DN-pDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -241,7 +294,8 @@
         <!--Events Feed Tab Bar Controller-->
         <scene sceneID="oZi-gg-RXC">
             <objects>
-                <tabBarController title="Events Feed Tab Bar Controller" modalPresentationStyle="fullScreen" id="4Jy-FF-56J" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="EventsInitialView" title="Events Feed Tab Bar Controller" modalPresentationStyle="fullScreen" id="4Jy-FF-56J" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Nj0-r2-U60"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="OCq-3a-aHk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -258,7 +312,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4J-QQ-GTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="357" y="33"/>
+            <point key="canvasLocation" x="-568" y="88"/>
         </scene>
         <!--Upcoming Events - View Controller-->
         <scene sceneID="TDS-cv-F4v">
@@ -815,6 +869,11 @@
             <point key="canvasLocation" x="1244.9275362318842" y="1127.6785714285713"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="JJQ-X0-O31"/>
+        <segue reference="1nP-ft-2a5"/>
+        <segue reference="bUZ-2E-NJJ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Button_Menu" width="168" height="104"/>
         <image name="Difficulty_Easy" width="282" height="120"/>

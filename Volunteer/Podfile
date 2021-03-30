@@ -8,18 +8,21 @@ target 'Volunteer' do
   # Pods for Volunteer
   pod 'Parse'
   pod 'AlamofireImage'
+  pod 'SideMenu'
 
   target 'VolunteerTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'Parse'
     pod 'AlamofireImage'
+    pod 'SideMenu'
   end
 
   target 'VolunteerUITests' do
     # Pods for testing
     pod 'Parse'
     pod 'AlamofireImage'
+    pod 'SideMenu'
   end
 
 end
