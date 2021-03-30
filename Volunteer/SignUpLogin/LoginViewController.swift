@@ -57,7 +57,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
 		
 		PFUser.logInWithUsername(inBackground: username, password: password) { (user, error) in
 			if user != nil && error == nil {
-				print(user!["newUser"] as! Bool)
+				print(user?.description)
 				if user!["newUser"] as! Bool == true {
 					self.performSegue(withIdentifier: "GetStarted", sender: self)
 				} else {
