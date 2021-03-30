@@ -262,6 +262,15 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LqU-Ku-E8D">
+                                <rect key="frame" x="186" y="556" width="44" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Skip"/>
+                                <connections>
+                                    <segue destination="GC4-jh-ean" kind="show" id="oCY-JN-jJG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Z5A-EI-Nwc"/>
                         <color key="backgroundColor" red="0.61131318082514496" green="0.61131318082514496" blue="0.61131318082514496" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -300,7 +309,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aY5-Me-62a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2190" y="574"/>
+            <point key="canvasLocation" x="2189.8550724637685" y="573.88392857142856"/>
         </scene>
         <!--SignUp Starting Point-->
         <scene sceneID="t5v-4I-X4e">
@@ -1527,6 +1536,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Qis-NK-ray"/>
         <segue reference="yEY-z2-uJB"/>
+        <segue reference="pZa-Wz-LrR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="18+ Icon" width="674" height="674"/>
