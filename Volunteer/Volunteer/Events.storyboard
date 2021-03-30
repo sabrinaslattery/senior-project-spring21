@@ -187,7 +187,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="9fb-dn-Icw">
-                                                    <rect key="frame" x="20" y="11" width="122" height="35"/>
+                                                    <rect key="frame" x="20" y="11" width="122" height="34.5"/>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>
