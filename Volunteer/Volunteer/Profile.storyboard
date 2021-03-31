@@ -231,9 +231,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="u6c-QC-LDv"/>
                     <size key="freeformSize" width="414" height="1250"/>
-                    <connections>
-                        <outlet property="userEmail" destination="Fz9-HZ-h35" id="Gc4-gh-HEX"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CB-FX-Buw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
