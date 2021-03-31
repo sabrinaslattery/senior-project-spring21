@@ -11,9 +11,9 @@
         <!--View Controller-->
         <scene sceneID="xjJ-at-tnk">
             <objects>
-                <viewController id="yUc-8g-jCB" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="yUc-8g-jCB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="exZ-4o-qUj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Notifications" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SlL-jg-3Yc">
@@ -97,14 +97,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ACt-un-q7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1042" y="-536"/>
+            <point key="canvasLocation" x="1822" y="558"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ea1-0D-rw8">
             <objects>
-                <viewController id="qbF-dl-Rp6" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="qbF-dl-Rp6" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aiR-94-YJ9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Accessibility" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-mf-4P8">
@@ -188,12 +188,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwZ-C5-Yez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1033" y="220"/>
+            <point key="canvasLocation" x="729" y="848"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="jXe-fL-B4f">
             <objects>
-                <viewController id="emc-HI-zXm" sceneMemberID="viewController">
+                <viewController title="Settings View Controller" modalPresentationStyle="fullScreen" id="emc-HI-zXm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zfz-Eh-X2K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -322,9 +322,9 @@
         <!--View Controller-->
         <scene sceneID="dOZ-nV-0h3">
             <objects>
-                <viewController id="37Z-R8-bMG" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="37Z-R8-bMG" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Mv-Ju-UPC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Change Phone Number" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rQn-lb-sDD">
@@ -399,14 +399,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMT-W9-iIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="598.55072463768124" y="-536.38392857142856"/>
+            <point key="canvasLocation" x="1823" y="-161"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="YqM-Yb-gRx">
             <objects>
-                <viewController id="sKX-3c-1Na" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="sKX-3c-1Na" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F2y-3Z-lD4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="niy-BZ-QQ3">
@@ -489,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0m2-hc-x38" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1409" y="-156"/>
+            <point key="canvasLocation" x="729" y="-469"/>
         </scene>
     </scenes>
     <resources>
