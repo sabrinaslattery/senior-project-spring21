@@ -7,68 +7,74 @@
 
 import Foundation
 import UIKit
+import Parse
 
 class CreateProfileViewController:UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var tapToChangeProfileButton: UIButton!
-    @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var usernameTextField: UITextField!
+   
+   
     @IBOutlet weak var jobTitleTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var zipCodeTextField: UITextField!
     @IBOutlet weak var educationLevelTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
     
-    var imagePicker:UIImagePickerController!
+
     
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
-        
-        let imageTap = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
-        profileImageView.isUserInteractionEnabled = true
-        profileImageView.addGestureRecognizer(imageTap)
-        profileImageView.layer.cornerRadius = profileImageView.bounds.height / 2
-        profileImageView.clipsToBounds = true
-        //tapToChangeProfileButton.addTarget(self, action: #selector(openImagePicker), for: .touchUpInside)
-        
-        imagePicker = UIImagePickerController()
-        imagePicker.allowsEditing = true
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
-
-        
+      
     }
     
-
-@objc func openImagePicker(_ sender:Any) {
-    // Open Image Picker
-    self.present(imagePicker, animated: true, completion: nil)
+    @IBAction func createProfile(_ sender: Any){
+        let user = PFObject(className:"Profile")
+        user ["jobTitle"] = jobTitleTextField.text!
+        user ["city"] = cityTextField.text!
+        user["zipCode"] = zipCodeTextField.text!
+        user["educationLevel"] = educationLevelTextField.text!
     
-    }
-    
-}
-
-
-
-
-
-extension CreateProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: true, completion: nil)
-    }
-    
-    private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        if let pickedImage = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage {
-            self.profileImageView.image = pickedImage
+        user.saveInBackground {
+            (success: Bool, error: Error?) in
+            if (success) {
+                // The object has been saved.
+            } else {
+                // There was a problem, check error.description
+            }
         }
-        
-        picker.dismiss(animated: true, completion: nil)
     }
     
     
+    func setContinueButton(enabled:Bool) {
+        if enabled {
+            continueButton.alpha = 1.0
+            continueButton.isEnabled = true
+        } else {
+            continueButton.alpha = 0.5
+            continueButton.isEnabled = false
+        }
+    }
+    
+    
+    func resetForm() {
+        let alert = UIAlertController(title: "Error signing up", message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        setContinueButton(enabled: true)
+        continueButton.setTitle("Continue", for: .normal)
+    }
+    
+    
+    
+
+
+
 }
+
+
+
+
+    
+

@@ -407,6 +407,7 @@
                                 </constraints>
                                 <state key="normal" title="Continue"/>
                                 <connections>
+                                    <action selector="dateOfBirthProfile:" destination="Rou-DC-NOi" eventType="touchUpInside" id="P04-wV-y58"/>
                                     <segue destination="K6L-EE-RJc" kind="show" id="aLI-ae-bgN"/>
                                 </connections>
                             </button>
@@ -455,7 +456,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="d36-uD-rPb"/>
                     <connections>
-                        <outlet property="continueButton" destination="Q8a-AP-GHT" id="0hw-FU-rZp"/>
+                        <outlet property="continueButton" destination="Q8a-AP-GHT" id="uti-j3-dvF"/>
+                        <outlet property="datePicker" destination="YhE-tK-7SX" id="wPy-g2-L0Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBe-7h-cBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -518,7 +520,7 @@
                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="WKa-xg-URu" kind="show" id="TMq-CR-UEW"/>
+                                    <segue destination="WKa-xg-URu" kind="show" id="MIx-b2-PbS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -549,7 +551,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="4Gi-Y2-9hx"/>
                     <connections>
-                        <outlet property="continueButton" destination="ACq-wl-BgS" id="2Ib-53-f4j"/>
+                        <outlet property="continueButton" destination="ACq-wl-BgS" id="7tK-Ec-vJz"/>
                         <outlet property="dismissButton" destination="0Ms-XC-fVc" id="qhf-86-tKJ"/>
                         <outlet property="skipButton" destination="nZQ-w9-Zw5" id="SZr-gK-Ob4"/>
                     </connections>
@@ -1132,6 +1134,7 @@
                                 <rect key="frame" x="20" y="684" width="368" height="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
+                                    <action selector="createProfile:" destination="WKa-xg-URu" eventType="touchUpInside" id="KEh-fY-2p6"/>
                                     <segue destination="beD-hg-rlc" kind="show" id="PLm-Hi-M0Q"/>
                                 </connections>
                             </button>
@@ -1194,7 +1197,6 @@
                         <outlet property="continueButton" destination="d90-g8-lbA" id="gLW-I2-HhL"/>
                         <outlet property="educationLevelTextField" destination="qWi-bD-beW" id="A3U-9g-8yH"/>
                         <outlet property="jobTitleTextField" destination="URD-wV-Xw8" id="6st-Ly-uY0"/>
-                        <outlet property="profileImageView" destination="YNy-8M-ftj" id="nLg-jK-aIR"/>
                         <outlet property="zipCodeTextField" destination="77t-Mq-dxa" id="TPc-cT-o4p"/>
                     </connections>
                 </viewController>
@@ -1244,6 +1246,7 @@
                                 <rect key="frame" x="20" y="746" width="374" height="30"/>
                                 <state key="normal" title="Continue to Privacy Settings"/>
                                 <connections>
+                                    <action selector="createProfile:" destination="beD-hg-rlc" eventType="touchUpInside" id="sOI-8U-LKq"/>
                                     <segue destination="AIj-sH-TFF" kind="show" id="yEY-z2-uJB"/>
                                 </connections>
                             </button>
@@ -1535,7 +1538,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Qis-NK-ray"/>
-        <segue reference="yEY-z2-uJB"/>
+        <segue reference="NOy-Sg-1JV"/>
         <segue reference="pZa-Wz-LrR"/>
     </inferredMetricsTieBreakers>
     <resources>
