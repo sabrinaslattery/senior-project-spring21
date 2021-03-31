@@ -81,7 +81,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
 		user["newUser"] = true
         
         // saving the profile image
-        let profileImage = PFObject(className: "ProfileImage.png")
+        let profileImage = PFObject(className: "User")
         let imageData = profileImageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
         
