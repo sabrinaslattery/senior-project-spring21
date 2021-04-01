@@ -48,7 +48,21 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         
         emailField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         passwordField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+
     }
+	
+	
+	override func viewDidAppear(_ animated: Bool) {
+		//Check the user is already logged in
+		let currentUser = PFUser.current()
+		if currentUser != nil {
+		  // Do stuff with the user
+			print("\(currentUser?.username)Already logged in")
+			self.performSegue(withIdentifier: "LoginSegue", sender: self)
+		} else {
+			print("not logged in")
+		}
+	}
     
     // User Sign-in Validation
     @IBAction func onSignIn(_ sender: Any) {

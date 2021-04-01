@@ -62,6 +62,8 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         lastnameField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         emailField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
         passwordField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+		
+		
     }
     
     // Storing username and password in the database 
