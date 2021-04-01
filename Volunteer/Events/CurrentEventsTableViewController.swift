@@ -50,7 +50,7 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //let post = posts[section]
         
-        return 3
+		return Events.count
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -62,51 +62,57 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
         query.limit = 20
         
         query.findObjectsInBackground { (posts, error) in
-            if posts != nil {
-                self.Events = posts!
-                self.tableView.reloadData()
-                self.myRefreshControl.endRefreshing()
+            if let posts = posts {
+				for post in posts {
+					self.Events.append(post)
+				}
+				self.tableView.reloadData()
+				self.myRefreshControl.endRefreshing()
+				print(self.Events)
             }
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let event = Events[indexPath.section]
+        let event = Events[indexPath.section] as! PFObject
         
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentEventsCell") as! CurrentEventsTableViewCell
-        
-            let post = event["eventName"] as! PFUser
-            cell.eventName.text = post["eventName"] as? String
-        
-        
-            let imageFile = event["eventImage"] as! PFFileObject
-            let urlString = imageFile.url!
-            let url = URL(string: urlString)!
-        
-            cell.eventImage.af.setImage(withURL: url)
-            
-            let dateOnPicker = cell.eventDate.date
-            let dateFormatter = DateFormatter()
-            
-            dateFormatter.dateStyle = DateFormatter.Style.short
-            let timeAsString = dateFormatter.string(from: dateOnPicker)
-            UserDefaults.standard.set(timeAsString, forKey: "eventDate")
-            
-            let diffPicker = cell.eventDifficulty
-            PFUser.current()?["eventDiff"] = diffPicker
-            PFUser.current()?.saveInBackground()
-            
-            let tagPicker = cell.eventTags
-            PFUser.current()?["eventTag"] = tagPicker
-            PFUser.current()?.saveInBackground()
-            
-            return cell
-        } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CurrentEventsCell")!
-            return cell
-        }
-        
+		let cell = self.tableView.dequeueReusableCell(withIdentifier: "CurrentEventsCell", for: indexPath) as! CurrentEventsTableViewCell
+		
+		cell.eventName.text = event["title"] as! String
+		
+		//Setting the date/time of the event
+		let date = event["date"] as! Date
+		let formatter = DateFormatter()
+		let eventDate = formatter.string(from: date) as! String
+		cell.eventDate.date = date
+		
+		//Setting the event's image
+		
+		let parseImage = event["image"] as! PFFileObject
+		parseImage.getDataInBackground { (imageData, error) in
+			if let error = error {
+				print(error.localizedDescription)
+			} else if let imageData = imageData {
+				let image = UIImage(data: imageData)
+				cell.eventImage.image = image
+			}
+		}
+		
+		//Setting the difficulty image
+		switch event["difficulty"] as! String {
+		case "easy":
+			cell.difficultyImage.image = UIImage(named: "Difficulty_Easy")
+		case "medium":
+			cell.difficultyImage.image = UIImage(named: "Difficulty_Medium")
+		case "hard":
+			cell.difficultyImage.image = UIImage(named: "Difficulty_Hard")
+		default:
+			break
+		}
+		
+		
+		
+		return cell
     }
     
 }
