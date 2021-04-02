@@ -1314,56 +1314,6 @@
             </objects>
             <point key="canvasLocation" x="7730" y="135"/>
         </scene>
-        <!--Pass Reset Controller-->
-        <scene sceneID="xIV-fd-GiU">
-            <objects>
-                <viewController title="Pass Reset Controller" modalPresentationStyle="fullScreen" id="pYB-C0-QmJ" customClass="PassResetController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ro8-gD-493">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password Reset" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ck-hA-o35">
-                                <rect key="frame" x="90.171789565827567" y="214.99999999999977" width="231.99999999999909" height="41.000000000000114"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your password has been reset!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apu-3Z-TzP">
-                                <rect key="frame" x="57" y="425" width="300" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="OutReachLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qHp-3T-l9k">
-                                <rect key="frame" x="86" y="279" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuD-Df-tij" customClass="RoundedWhiteButton" customModule="Volunteer" customModuleProvider="target">
-                                <rect key="frame" x="92" y="537" width="230" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Return to Login">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="9fr-RJ-Pme" kind="show" id="TO6-Hg-CKv"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="MJ4-Zb-a67"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="mrR-WC-b1e"/>
-                    <connections>
-                        <outlet property="loginReturn" destination="kuD-Df-tij" id="Xk3-dt-PSR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DBD-yF-bPq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4361" y="-258"/>
-        </scene>
         <!--Select Your Interest-->
         <scene sceneID="PS6-nC-ekz">
             <objects>
@@ -1537,7 +1487,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qis-NK-ray"/>
         <segue reference="NOy-Sg-1JV"/>
         <segue reference="pZa-Wz-LrR"/>
     </inferredMetricsTieBreakers>
