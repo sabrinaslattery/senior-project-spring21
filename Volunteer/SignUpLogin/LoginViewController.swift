@@ -73,7 +73,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
 			if user != nil && error == nil {
 				print(user?.description)
 				if user!["newUser"] as! Bool == true {
-					self.performSegue(withIdentifier: "GetStarted", sender: self)
+					
 				} else {
 					self.performSegue(withIdentifier: "LoginSegue", sender: self)
 				}
