@@ -103,6 +103,9 @@ To learn more about advocacy for colorblind-friendly design through education an
                     <navigationItem key="navigationItem" title="About Us" id="WMI-wV-Ct8">
                         <barButtonItem key="leftBarButtonItem" image="chevron.backward.circle" catalog="system" id="5le-FB-nl8">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="O0d-5z-Fxm" kind="show" id="fJI-xi-7Zd"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
@@ -273,6 +276,7 @@ To learn more about advocacy for colorblind-friendly design through education an
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="fJI-xi-7Zd"/>
         <segue reference="0wH-Im-OXc"/>
         <segue reference="DRL-VA-Kcp"/>
         <segue reference="7eY-7L-Lq8"/>
