@@ -36,7 +36,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlM-Oz-8bk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3514" y="1981"/>
+            <point key="canvasLocation" x="3365" y="1770"/>
         </scene>
         <!--Create Events Page-->
         <scene sceneID="fzc-bt-xDT">
@@ -259,7 +259,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                 <viewControllerPlaceholder storyboardName="Home" id="Qw9-qL-BJx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1B-sq-JZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3983" y="1723"/>
+            <point key="canvasLocation" x="3957" y="1823"/>
         </scene>
         <!--Main-->
         <scene sceneID="3in-Iy-VtO">
@@ -269,7 +269,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMI-37-M20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3849" y="1770"/>
+            <point key="canvasLocation" x="3733" y="1770"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
