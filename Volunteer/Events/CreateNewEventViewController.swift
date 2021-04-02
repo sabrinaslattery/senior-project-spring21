@@ -90,17 +90,17 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         
         let event = PFObject(className: "Events")
        
-        event ["eventName"] = eventTitleField.text!
-        event ["dateFrom"] = fromField.text!
-        event ["dateTo"] = toField.text!
-        event ["spots"] = totalSpotsField.text!
+        event["title"] = eventTitleField.text!
+        event["date"] = fromField.text!
+       // event ["date"] = toField.text!
+        event["spots"] = totalSpotsField.text!
         event ["aboutEvent"] = aboutEventField.text!
         event ["volExpectation"] = volunteerExpectationField.text!
         event ["volWear"] = volunteerShouldWearField.text!
-        event ["contactEmail"] = emailField.text!
+        event["contactEmail"] = emailField.text!
         event ["contactNumber"] = phoneNumberField.text!
         
-        event ["eventDiff"] = difficultyPicker
+		event ["eventDiff"] = difficultyPicker
         event ["eventTag"] = tagsPicker
         event ["eventDate"] = datePicker
         

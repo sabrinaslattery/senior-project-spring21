@@ -58,13 +58,16 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
         super.viewDidAppear(true)
         
         let query = PFQuery(className:"Events")
+		query.whereKey("date", greaterThan: Date())
         query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
         query.limit = 20
         
         query.findObjectsInBackground { (posts, error) in
             if let posts = posts {
 				for post in posts {
-					self.Events.append(post)
+					if self.Events.contains(post) != true {
+						self.Events.append(post)
+					}
 				}
 				self.tableView.reloadData()
 				self.myRefreshControl.endRefreshing()
@@ -78,7 +81,10 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
         
 		let cell = self.tableView.dequeueReusableCell(withIdentifier: "CurrentEventsCell", for: indexPath) as! CurrentEventsTableViewCell
 		
+		
+		//Setting name and tag
 		cell.eventName.text = event["title"] as! String
+		cell.eventTags.text = event["tag"] as! String
 		
 		//Setting the date/time of the event
 		let date = event["date"] as! Date
