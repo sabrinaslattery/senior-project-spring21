@@ -32,6 +32,10 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         super.viewDidLoad()
         
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+//        let user = PFUser.current()
+//        user!["newUser"] = false
+//        user?.saveInBackground()
+//        print(user!["newUser"] as! Bool)
         /*continueButton = RoundedWhiteButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
         continueButton.setTitleColor(secondaryColor, for: .normal)
         continueButton.setTitle("Continue", for: .normal)
@@ -80,7 +84,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         // adding objects to the user class
         user ["firstname"] = firstnameField.text!
         user ["lastname"] = lastnameField.text!
-		user["newUser"] = true
+		//user["newUser"] = true
         
         // saving the profile image
         let profileImage = PFObject(className: "User")
@@ -91,7 +95,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         
         user.signUpInBackground { (success, error) in
             if success{
-				self.performSegue(withIdentifier: "EmailVerification", sender: nil)
+				self.performSegue(withIdentifier: "Profile Setup Dialogue", sender: nil)
             }
          else{
 			let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
