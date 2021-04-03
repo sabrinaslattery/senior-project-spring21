@@ -110,8 +110,6 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
 			break
 		}
 		
-		
-		
 		return cell
     }
     

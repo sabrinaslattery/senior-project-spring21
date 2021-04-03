@@ -60,6 +60,12 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
         present(sideMenu!, animated: true)
     }
     
+    func loadLoginScreen(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier: "LoginViewController")
+        self.present(viewController, animated: true, completion: nil)
+    }
+    
     func didSelectMenuItem(named: SideMenuItem) {
         sideMenu?.dismiss(animated: true, completion: nil)
             
@@ -88,8 +94,19 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
                 performSegue(withIdentifier: "settingsSegue", sender: nil)
                 
             case .logOut:
-                performSegue(withIdentifier: "logOutSegue", sender: nil)
-                //will need to add log out functionality
+                PFUser.logOutInBackground { (error: Error?) in
+                    if (error == nil){
+                        self.loadLoginScreen()
+                    }else{
+                       let alert = UIAlertController(title: "Error Logging Out", message: error?.localizedDescription, preferredStyle: .alert)
+                       alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                           print(error.debugDescription)
+                       }))
+                       self.present(alert, animated: true)
+                   }
+
+               }
+                loadLoginScreen()
         }
     }
 }
