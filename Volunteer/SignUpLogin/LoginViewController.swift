@@ -57,7 +57,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
 		let currentUser = PFUser.current()
 		if currentUser != nil {
 		  // Do stuff with the user
-			print("\(currentUser?.username)Already logged in")
+            print("\(String(describing: currentUser!.username))Already logged in")
 			self.performSegue(withIdentifier: "LoginSegue", sender: self)
 		} else {
 			print("not logged in")
@@ -73,7 +73,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
 			if user != nil && error == nil {
 				print(user?.description)
 				if user!["newUser"] as! Bool == true {
-					self.performSegue(withIdentifier: "GetStarted", sender: self)
+					
 				} else {
 					self.performSegue(withIdentifier: "LoginSegue", sender: self)
 				}

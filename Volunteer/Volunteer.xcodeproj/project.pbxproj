@@ -23,6 +23,7 @@
 		03A37425260AEF750011DC21 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A37424260AEF750011DC21 /* SearchViewController.swift */; };
 		03BC13F625E5C6AD0001E2E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98CC89ED25DCFCA4008E4A7B /* Main.storyboard */; };
 		03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */; };
+		03E08B3E2616B9BE0051779C /* EditTagsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03E08B3D2616B9BE0051779C /* EditTagsViewController.swift */; };
 		03F2FBAF2602FD13008748E1 /* LegalDocs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F2FBAE2602FD13008748E1 /* LegalDocs.storyboard */; };
 		03F2FBC52602FD7A008748E1 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC32602FD7A008748E1 /* PrivacyPolicyViewController.swift */; };
 		03F2FBC62602FD7A008748E1 /* ToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC42602FD7A008748E1 /* ToSViewController.swift */; };
@@ -52,6 +53,7 @@
 		B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5F25E4417E00A7DB17 /* CreateProfileContinueViewController.swift */; };
 		B152DC6525E4419F00A7DB17 /* SelectSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */; };
 		B152DC6A25E441BC00A7DB17 /* SelectInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */; };
+		B1B328AC2617EB32003BCF34 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B328AB2617EB32003BCF34 /* EventViewController.swift */; };
 		B1E4955F26090CF500F10A9E /* CreateNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4955E26090CF500F10A9E /* CreateNewEventViewController.swift */; };
 		CF7A3EF23A061F84BE2DB847 /* Pods_Volunteer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7472CEAE76EF1A03265E59 /* Pods_Volunteer.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +91,7 @@
 		03A37419260AEDA30011DC21 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		03A37424260AEF750011DC21 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassResetController.swift; sourceTree = "<group>"; };
+		03E08B3D2616B9BE0051779C /* EditTagsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTagsViewController.swift; sourceTree = "<group>"; };
 		03F2FBAE2602FD13008748E1 /* LegalDocs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LegalDocs.storyboard; sourceTree = "<group>"; };
 		03F2FBC32602FD7A008748E1 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		03F2FBC42602FD7A008748E1 /* ToSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToSViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +135,7 @@
 		B152DC5F25E4417E00A7DB17 /* CreateProfileContinueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileContinueViewController.swift; sourceTree = "<group>"; };
 		B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillsViewController.swift; sourceTree = "<group>"; };
 		B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInterestViewController.swift; sourceTree = "<group>"; };
+		B1B328AB2617EB32003BCF34 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		B1E4955E26090CF500F10A9E /* CreateNewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +189,7 @@
 			children = (
 				035BEE672613D58100015ADC /* EditProfileViewController.swift */,
 				035BEE6C2613D59800015ADC /* MainProfileViewController.swift */,
+				03E08B3D2616B9BE0051779C /* EditTagsViewController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */,
 				0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */,
 				0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */,
+				B1B328AB2617EB32003BCF34 /* EventViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03E08B3E2616B9BE0051779C /* EditTagsViewController.swift in Sources */,
 				03F2FBC62602FD7A008748E1 /* ToSViewController.swift in Sources */,
 				0381BCFE260A8E4800168C48 /* PreviousEventsTableViewController.swift in Sources */,
 				B152DC0D25E37C9100A7DB17 /* LoginViewController.swift in Sources */,
@@ -627,6 +634,7 @@
 				B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */,
 				B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */,
 				98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */,
+				B1B328AC2617EB32003BCF34 /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
