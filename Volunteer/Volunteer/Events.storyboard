@@ -99,7 +99,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Past Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efE-yc-9C0">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efE-yc-9C0">
                                 <rect key="frame" x="70.5" y="44" width="273" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="cLA-st-bEn"/>
@@ -139,7 +139,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-ig-Q8d">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Events" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-ig-Q8d">
                                 <rect key="frame" x="70.5" y="44" width="273" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="273" id="1gg-2z-zwO"/>
@@ -648,7 +648,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4J-QQ-GTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-213" y="44"/>
+            <point key="canvasLocation" x="-291" y="14"/>
         </scene>
         <!--Upcoming Events - View Controller-->
         <scene sceneID="TDS-cv-F4v">
