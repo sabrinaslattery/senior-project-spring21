@@ -53,6 +53,7 @@
 		B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC5F25E4417E00A7DB17 /* CreateProfileContinueViewController.swift */; };
 		B152DC6525E4419F00A7DB17 /* SelectSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */; };
 		B152DC6A25E441BC00A7DB17 /* SelectInterestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */; };
+		B1B328AC2617EB32003BCF34 /* EventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1B328AB2617EB32003BCF34 /* EventViewController.swift */; };
 		B1E4955F26090CF500F10A9E /* CreateNewEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E4955E26090CF500F10A9E /* CreateNewEventViewController.swift */; };
 		CF7A3EF23A061F84BE2DB847 /* Pods_Volunteer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E7472CEAE76EF1A03265E59 /* Pods_Volunteer.framework */; };
 /* End PBXBuildFile section */
@@ -134,6 +135,7 @@
 		B152DC5F25E4417E00A7DB17 /* CreateProfileContinueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileContinueViewController.swift; sourceTree = "<group>"; };
 		B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSkillsViewController.swift; sourceTree = "<group>"; };
 		B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectInterestViewController.swift; sourceTree = "<group>"; };
+		B1B328AB2617EB32003BCF34 /* EventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewController.swift; sourceTree = "<group>"; };
 		B1E4955E26090CF500F10A9E /* CreateNewEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewEventViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,6 +218,7 @@
 				0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */,
 				0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */,
 				0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */,
+				B1B328AB2617EB32003BCF34 /* EventViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -631,6 +634,7 @@
 				B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */,
 				B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */,
 				98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */,
+				B1B328AC2617EB32003BCF34 /* EventViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
