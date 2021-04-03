@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,17 +40,6 @@
                                                     <constraint firstAttribute="width" constant="60" id="l0E-dq-6Gf"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Button_Menu"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5w-oy-4as">
-                                                <rect key="frame" x="351" y="13" width="63" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="63" id="fOa-41-jXl"/>
-                                                    <constraint firstAttribute="height" constant="43" id="pVx-8r-pXx"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Button_Edit"/>
-                                                <connections>
-                                                    <segue destination="rxe-cD-cEb" kind="show" id="ciV-N1-miH"/>
-                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="firstname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oH4-O5-TSa">
                                                 <rect key="frame" x="133" y="94" width="72" height="21"/>
@@ -181,13 +169,24 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a6o-ws-t3c">
+                                                <rect key="frame" x="325" y="73" width="60" height="42"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="peT-aU-ygK"/>
+                                                    <constraint firstAttribute="height" constant="42" id="qeZ-8v-X1a"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Button_Edit"/>
+                                                <connections>
+                                                    <segue destination="rxe-cD-cEb" kind="show" id="koB-j5-jWd"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="d5w-oy-4as" firstAttribute="top" secondItem="WHM-d3-d2s" secondAttribute="top" constant="13" id="6fj-Kv-6hE"/>
                                             <constraint firstItem="aYi-ah-8eo" firstAttribute="leading" secondItem="WHM-d3-d2s" secondAttribute="leading" constant="8" id="ZYX-A6-KZv"/>
                                             <constraint firstItem="aYi-ah-8eo" firstAttribute="top" secondItem="WHM-d3-d2s" secondAttribute="top" constant="13" id="cc1-iQ-FXL"/>
-                                            <constraint firstAttribute="trailing" secondItem="d5w-oy-4as" secondAttribute="trailing" id="hlL-gv-5xF"/>
+                                            <constraint firstItem="a6o-ws-t3c" firstAttribute="top" secondItem="WHM-d3-d2s" secondAttribute="top" constant="73" id="gKD-nH-bVm"/>
+                                            <constraint firstAttribute="trailing" secondItem="a6o-ws-t3c" secondAttribute="trailing" constant="29" id="jLY-6x-lft"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -357,187 +356,179 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fCU-Yg-EzF">
-                                                <rect key="frame" x="18" y="840" width="121" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="" image="checkmark" catalog="system" enabled="NO"/>
-                                                    <segment title="Childcare"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="didChangeSegment:" destination="rxe-cD-cEb" eventType="valueChanged" id="nH1-hw-b4N"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fLY-ef-4rx">
-                                                <rect key="frame" x="187" y="795" width="213" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="" image="checkmark" catalog="system" enabled="NO"/>
-                                                    <segment title="Community Development"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="didChangeSegment:" destination="rxe-cD-cEb" eventType="valueChanged" id="AUO-wP-GRX"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TxH-wT-D7z">
-                                                <rect key="frame" x="18" y="795" width="153" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="" image="checkmark" catalog="system" enabled="NO"/>
-                                                    <segment title="Animal Welfare"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="didChangeSegment:" destination="rxe-cD-cEb" eventType="valueChanged" id="dy1-aQ-iII"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZKo-Xb-CD9">
-                                                <rect key="frame" x="157" y="840" width="132" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="" image="checkmark" catalog="system" enabled="NO"/>
-                                                    <segment title="Elderly Care"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="didChangeSegment:" destination="rxe-cD-cEb" eventType="valueChanged" id="NuY-eb-g5r"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SbX-lg-okn">
-                                                <rect key="frame" x="306" y="840" width="94" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="" image="checkmark" catalog="system" enabled="NO"/>
-                                                    <segment title="Other"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="didChangeSegment:" destination="rxe-cD-cEb" eventType="valueChanged" id="JKP-H1-Lvb"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cLv-PM-Qrl">
-                                                <rect key="frame" x="17" y="885" width="153" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="" image="checkmark" catalog="system" enabled="NO"/>
-                                                    <segment title="Health/Welness"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="didChangeSegment:" destination="rxe-cD-cEb" eventType="valueChanged" id="SMS-oc-maJ"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Eti-Ih-GPj">
-                                                <rect key="frame" x="157" y="932" width="178" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="" image="checkmark" catalog="system" enabled="NO"/>
-                                                    <segment title="Home Improvement"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="didChangeSegment:" destination="rxe-cD-cEb" eventType="valueChanged" id="tgX-Z1-AlG"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZvL-LG-080">
-                                                <rect key="frame" x="18" y="932" width="121" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="" image="checkmark" catalog="system" enabled="NO"/>
-                                                    <segment title="Education"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="didChangeSegment:" destination="rxe-cD-cEb" eventType="valueChanged" id="lVu-le-gZA"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zlQ-0l-ma1">
-                                                <rect key="frame" x="18" y="979" width="106" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="" image="checkmark" catalog="system" enabled="NO"/>
-                                                    <segment title="Religion"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="didChangeSegment:" destination="rxe-cD-cEb" eventType="valueChanged" id="9yQ-Hu-WTX"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="C0c-z4-ovM">
-                                                <rect key="frame" x="187" y="885" width="153" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="" image="checkmark" catalog="system" enabled="NO"/>
-                                                    <segment title="Poverty/Hunger"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="didChangeSegment:" destination="rxe-cD-cEb" eventType="valueChanged" id="df3-r7-kqh"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SZP-sT-4Nr">
-                                                <rect key="frame" x="145" y="979" width="128" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <segments>
-                                                    <segment title="" image="checkmark" catalog="system" enabled="NO"/>
-                                                    <segment title="Technology"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="didChangeSegment:" destination="rxe-cD-cEb" eventType="valueChanged" id="GkV-F3-5eH"/>
-                                                </connections>
-                                            </segmentedControl>
-                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dWw-7H-1oS">
-                                                <rect key="frame" x="178" y="402" width="206" height="34"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JS-5Q-Bag">
-                                                        <rect key="frame" x="0.0" y="0.0" width="206" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <state key="normal" title="Select an Education Level">
-                                                            <color key="titleColor" name="AccentColor"/>
-                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="bold"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="handleSelection:" destination="rxe-cD-cEb" eventType="touchUpInside" id="MTD-G5-2bl"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCu-RQ-Eyw">
-                                                        <rect key="frame" x="27.5" y="0.0" width="151" height="0.0"/>
-                                                        <state key="normal" title="High School Graduate">
-                                                            <color key="titleColor" systemColor="labelColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="educationTapped:" destination="rxe-cD-cEb" eventType="touchUpInside" id="NvX-dz-aoA"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sCe-Fp-kS9">
-                                                        <rect key="frame" x="32.5" y="0.0" width="141" height="0.0"/>
-                                                        <state key="normal" title="Some College Credit">
-                                                            <color key="titleColor" systemColor="labelColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="educationTapped:" destination="rxe-cD-cEb" eventType="touchUpInside" id="Jcf-zu-E7j"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLg-Kk-qge">
-                                                        <rect key="frame" x="42.5" y="0.0" width="121" height="0.0"/>
-                                                        <state key="normal" title="Associate Degree">
-                                                            <color key="titleColor" systemColor="labelColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="educationTapped:" destination="rxe-cD-cEb" eventType="touchUpInside" id="KQ3-dR-E47"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJ9-lI-qRB">
-                                                        <rect key="frame" x="39.5" y="0.0" width="127" height="0.0"/>
-                                                        <state key="normal" title="Bachelor's Degree">
-                                                            <color key="titleColor" systemColor="labelColor"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="educationTapped:" destination="rxe-cD-cEb" eventType="touchUpInside" id="z4M-yW-NEW"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8j-ch-b14">
-                                                <rect key="frame" x="256" y="1052" width="136" height="30"/>
+                                                <rect key="frame" x="248" y="749" width="136" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 <state key="normal" title="Select All Interests">
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwp-qg-ClZ">
+                                                <rect key="frame" x="17" y="793" width="28" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="animalCheckboxButton:" destination="rxe-cD-cEb" eventType="touchUpInside" id="j0R-bc-vQ3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nss-nf-KoX">
+                                                <rect key="frame" x="17" y="830" width="28" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="childCheckboxButton:" destination="rxe-cD-cEb" eventType="touchUpInside" id="5b5-KJ-NgB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HrX-sL-qAp">
+                                                <rect key="frame" x="17" y="867" width="28" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="communityCheckboxButton:" destination="rxe-cD-cEb" eventType="touchUpInside" id="VSe-h5-jvX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbM-fk-hX4">
+                                                <rect key="frame" x="17" y="978" width="28" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="healthCheckboxButton:" destination="rxe-cD-cEb" eventType="touchUpInside" id="GdA-Pw-KHh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWA-Lk-uFN">
+                                                <rect key="frame" x="17" y="904" width="28" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="educationCheckboxButton:" destination="rxe-cD-cEb" eventType="touchUpInside" id="ZPp-6Q-oMz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFJ-5f-DZm">
+                                                <rect key="frame" x="17" y="1015" width="28" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="homeCheckboxButton:" destination="rxe-cD-cEb" eventType="touchUpInside" id="YyS-yR-ltA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rja-WX-ZNE">
+                                                <rect key="frame" x="17" y="1163" width="28" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="technologyCheckboxButton:" destination="rxe-cD-cEb" eventType="touchUpInside" id="e8h-KB-JNV"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCa-PN-woW">
+                                                <rect key="frame" x="17" y="941" width="28" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="elderlyCheckboxButton:" destination="rxe-cD-cEb" eventType="touchUpInside" id="5G4-3R-Rjt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDP-Oz-QGt">
+                                                <rect key="frame" x="17" y="1052" width="28" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="otherCheckboxButton:" destination="rxe-cD-cEb" eventType="touchUpInside" id="Psy-uS-Qk6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QX6-Lh-kBR">
+                                                <rect key="frame" x="17" y="1089" width="28" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="poveryCheckboxButton:" destination="rxe-cD-cEb" eventType="touchUpInside" id="neb-yb-Z3c"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7J1-3N-1JI">
+                                                <rect key="frame" x="17" y="1126" width="28" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <connections>
+                                                    <action selector="religionCheckboxButton:" destination="rxe-cD-cEb" eventType="touchUpInside" id="zsV-ef-eca"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Animal Welfare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClX-OX-zeC">
+                                                <rect key="frame" x="53" y="797" width="114" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Child Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62p-8J-Zzg">
+                                                <rect key="frame" x="54" y="834" width="80" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Elederly Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awv-ij-Z7o">
+                                                <rect key="frame" x="53" y="945" width="101" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home Improvement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wS-tx-cG1">
+                                                <rect key="frame" x="53" y="1019" width="150" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Health/Welness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7f7-2I-j2n">
+                                                <rect key="frame" x="53" y="982" width="119" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rag-LU-cT9">
+                                                <rect key="frame" x="53" y="1056" width="44" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Proverty/Hunger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LY8-Ir-46M">
+                                                <rect key="frame" x="54" y="1093" width="125" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Religion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ge3-xZ-pQK">
+                                                <rect key="frame" x="54" y="1130" width="61" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Technology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jG-qL-0d3">
+                                                <rect key="frame" x="53" y="1167" width="88" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Education" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfN-6j-3Dn">
+                                                <rect key="frame" x="54" y="908" width="76" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Community Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4G-sb-drj">
+                                                <rect key="frame" x="53" y="871" width="193" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -573,39 +564,28 @@
                     <navigationItem key="navigationItem" id="mFF-QV-lVo"/>
                     <size key="freeformSize" width="414" height="1250"/>
                     <connections>
+                        <outlet property="animalWelfareCheckbox" destination="Zwp-qg-ClZ" id="qrc-5g-eUs"/>
+                        <outlet property="childCareCheckbox" destination="nss-nf-KoX" id="5iy-Kj-3tX"/>
                         <outlet property="cityTextField" destination="XYl-vW-ijN" id="Ri3-uB-kma"/>
+                        <outlet property="commDevCheckbox" destination="HrX-sL-qAp" id="eGc-su-boU"/>
+                        <outlet property="educationCheckbox" destination="dWA-Lk-uFN" id="9AJ-yc-lms"/>
+                        <outlet property="elderlyCareCheckbox" destination="rCa-PN-woW" id="nAE-iB-gzg"/>
+                        <outlet property="healthCheckbox" destination="bbM-fk-hX4" id="j69-sJ-1Sm"/>
+                        <outlet property="homeImproveCheckbox" destination="tFJ-5f-DZm" id="ISx-7y-8hc"/>
                         <outlet property="jobTitleTextField" destination="0tI-GT-jGQ" id="w6c-nc-UPv"/>
+                        <outlet property="otherCheckbox" destination="JDP-Oz-QGt" id="jlI-Ul-a4p"/>
+                        <outlet property="povertyCheckbox" destination="QX6-Lh-kBR" id="o8f-z5-ADe"/>
                         <outlet property="profileImageView" destination="Arl-sE-hwk" id="11Q-If-FYO"/>
+                        <outlet property="religionCheckbox" destination="7J1-3N-1JI" id="e5i-qg-2Rn"/>
                         <outlet property="tapToChangeProfileButton" destination="cDK-ro-Hqf" id="Xmh-lk-tpr"/>
+                        <outlet property="technologyCheckbox" destination="rja-WX-ZNE" id="hnF-mh-bMg"/>
                         <outlet property="userEmail" destination="GFo-zu-JbP" id="4c8-Xs-7rO"/>
                         <outlet property="zipCodeTextField" destination="CAb-1x-FgQ" id="2qM-qS-IXv"/>
-                        <outletCollection property="educationLevels" destination="sCe-Fp-kS9" collectionClass="NSMutableArray" id="wEZ-ke-Nua"/>
-                        <outletCollection property="educationLevels" destination="CLg-Kk-qge" collectionClass="NSMutableArray" id="MF5-YN-nxG"/>
-                        <outletCollection property="educationLevels" destination="jJ9-lI-qRB" collectionClass="NSMutableArray" id="L3z-QI-Vy2"/>
-                        <outletCollection property="educationButtons" destination="GCu-RQ-Eyw" collectionClass="NSMutableArray" id="HI2-6N-DOo"/>
-                        <outletCollection property="educationButtons" destination="sCe-Fp-kS9" collectionClass="NSMutableArray" id="j5V-ou-HlI"/>
-                        <outletCollection property="educationButtons" destination="CLg-Kk-qge" collectionClass="NSMutableArray" id="Hei-Em-qeJ"/>
-                        <outletCollection property="educationButtons" destination="jJ9-lI-qRB" collectionClass="NSMutableArray" id="KLx-mz-LBf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbf-eM-HAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4452.1739130434789" y="1715.625"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Jco-SJ-BWE">
-            <objects>
-                <viewController id="or3-BX-51N" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PMs-8e-p0k">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="m8B-sJ-9nf"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VrX-xU-teT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5560" y="1639"/>
         </scene>
     </scenes>
     <resources>
@@ -613,13 +593,10 @@
         <image name="Button_Confirm" width="174" height="120"/>
         <image name="Button_Edit" width="196" height="112"/>
         <image name="Button_Menu" width="168" height="104"/>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="checkbox_unchecked" width="202" height="206"/>
         <image name="email icon" width="140" height="135"/>
         <image name="iconfinder_user-alt_285645" width="64" height="64"/>
         <image name="phone" catalog="system" width="128" height="115"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

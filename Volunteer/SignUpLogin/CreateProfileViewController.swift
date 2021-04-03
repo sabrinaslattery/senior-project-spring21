@@ -65,12 +65,6 @@ class CreateProfileViewController:UIViewController, UITextFieldDelegate {
         setContinueButton(enabled: true)
         continueButton.setTitle("Continue", for: .normal)
     }
-    
-    
-    
-
-
-
 }
 
 
