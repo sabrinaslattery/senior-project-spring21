@@ -5,18 +5,23 @@
 //  Created by Joshua Freedman on 3/30/21.
 //
 
-
 import Foundation
 import UIKit
 
+
+
 class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
  
-    //need to continue finishing this part
+    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var tapToChangeProfileButton: UIButton!
     @IBOutlet weak var jobTitleTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var zipCodeTextField: UITextField!
+    @IBOutlet weak var introTextField: UITextField!
+    @IBOutlet weak var workExperienceTextField: UITextField!
+    
+    
     @IBOutlet var control: UISegmentedControl!
     var imagePicker:UIImagePickerController!
     
@@ -45,6 +50,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     var flag10 = false
     var flag11 = false
     
+   var buttonEducationLevel = dropDownBtn()
+    
     override func viewDidLoad() {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
@@ -61,7 +68,18 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         imagePicker.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
 
         //let intersetTags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
+        
+        buttonEducationLevel = dropDownBtn.init(frame: CGRect(x: 0, y: 0, width:0, height: 0))
+        buttonEducationLevel.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.view.addSubview(buttonEducationLevel)
+        
+        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+        
     }
+    
+    
     
 
     @objc func openImagePicker(_ sender:Any) {
@@ -69,6 +87,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     self.present(imagePicker, animated: true, completion: nil)
 
     }
+
 
     //interest tag buttons
     @IBAction func animalCheckboxButton(_ sender: UIButton) {
@@ -204,5 +223,16 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     }
     
     
-    
 }
+
+//class dropDownBtn: UIButton {
+//    override init(frame: CGRect) {
+//        super.init(frame: frame)
+//
+//    }
+//
+//    required init?(coder: NSCoder) {
+//        fatalError("init(coder:) has not been implemented")
+//    }
+//}
+
