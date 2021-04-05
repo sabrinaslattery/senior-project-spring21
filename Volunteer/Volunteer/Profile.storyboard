@@ -218,6 +218,19 @@
                     </view>
                     <navigationItem key="navigationItem" id="u6c-QC-LDv"/>
                     <size key="freeformSize" width="414" height="1250"/>
+                    <connections>
+                        <outlet property="educationLevel" destination="BGy-cc-vPO" id="0ps-Cr-9ey"/>
+                        <outlet property="emailAddress" destination="Fz9-HZ-h35" id="oit-5D-e7V"/>
+                        <outlet property="firstName" destination="oH4-O5-TSa" id="kx9-7n-Y13"/>
+                        <outlet property="interests" destination="iSK-8X-ahX" id="Ulw-JK-JEJ"/>
+                        <outlet property="intro" destination="hWG-3c-VXq" id="v1D-Ey-gkm"/>
+                        <outlet property="jobTitle" destination="37f-Vv-7Eo" id="mHG-VS-gbo"/>
+                        <outlet property="lastName" destination="MvE-We-dC0" id="Dte-wi-tqb"/>
+                        <outlet property="phoneNumber" destination="a6p-6l-ddt" id="Eks-bk-5kQ"/>
+                        <outlet property="profileImage" destination="iu8-bn-mTS" id="kGt-Eg-0ze"/>
+                        <outlet property="workExperience" destination="gfG-sb-BIL" id="aOH-t3-k5g"/>
+                        <outlet property="zipCode" destination="hOO-XD-HkD" id="T27-eb-FnF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CB-FX-Buw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
