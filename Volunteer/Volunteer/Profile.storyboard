@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mE2-fo-aXh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Rak-js-hi0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -21,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHM-d3-d2s">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1162"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="05i-eQ-hGn">
                                                 <rect key="frame" x="166" y="52" width="82" height="36"/>
@@ -34,25 +35,6 @@
                                                 <rect key="frame" x="142" y="125" width="131" height="128"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYi-ah-8eo">
-                                                <rect key="frame" x="8" y="13" width="60" height="42"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="42" id="IzH-Bu-kSj"/>
-                                                    <constraint firstAttribute="width" constant="60" id="l0E-dq-6Gf"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Button_Menu"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5w-oy-4as">
-                                                <rect key="frame" x="351" y="13" width="63" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="63" id="fOa-41-jXl"/>
-                                                    <constraint firstAttribute="height" constant="43" id="pVx-8r-pXx"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Button_Edit"/>
-                                                <connections>
-                                                    <segue destination="rxe-cD-cEb" kind="show" id="ciV-N1-miH"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="firstname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oH4-O5-TSa">
                                                 <rect key="frame" x="133" y="94" width="72" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -183,16 +165,10 @@
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="d5w-oy-4as" firstAttribute="top" secondItem="WHM-d3-d2s" secondAttribute="top" constant="13" id="6fj-Kv-6hE"/>
-                                            <constraint firstItem="aYi-ah-8eo" firstAttribute="leading" secondItem="WHM-d3-d2s" secondAttribute="leading" constant="8" id="ZYX-A6-KZv"/>
-                                            <constraint firstItem="aYi-ah-8eo" firstAttribute="top" secondItem="WHM-d3-d2s" secondAttribute="top" constant="13" id="cc1-iQ-FXL"/>
-                                            <constraint firstAttribute="trailing" secondItem="d5w-oy-4as" secondAttribute="trailing" id="hlL-gv-5xF"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="WHM-d3-d2s" firstAttribute="top" secondItem="TDl-qw-T8x" secondAttribute="top" id="5Ni-r3-vzT"/>
+                                    <constraint firstItem="WHM-d3-d2s" firstAttribute="top" secondItem="TDl-qw-T8x" secondAttribute="top" constant="88" id="5Ni-r3-vzT"/>
                                     <constraint firstAttribute="height" constant="1250" id="DrG-5d-7QG"/>
                                     <constraint firstItem="WHM-d3-d2s" firstAttribute="trailing" secondItem="TDl-qw-T8x" secondAttribute="trailing" id="L8j-jK-cZW"/>
                                     <constraint firstAttribute="trailing" secondItem="WHM-d3-d2s" secondAttribute="trailing" id="PqE-d9-i3s"/>
@@ -215,12 +191,23 @@
                             <constraint firstItem="p3g-s0-SNU" firstAttribute="top" secondItem="JnT-gp-xLc" secondAttribute="top" id="xGM-F5-OXC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="u6c-QC-LDv"/>
+                    <navigationItem key="navigationItem" id="u6c-QC-LDv">
+                        <barButtonItem key="leftBarButtonItem" id="UAz-cH-aO7">
+                            <imageReference key="image" image="line.horizontal.3.circle" catalog="system" symbolScale="large"/>
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil.circle" catalog="system" id="xdz-sP-dvh">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="rxe-cD-cEb" kind="show" id="jI5-tQ-M0a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="414" height="1250"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4CB-FX-Buw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3366.666666666667" y="1724.3303571428571"/>
+            <point key="canvasLocation" x="4276.811594202899" y="1724.3303571428571"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="Xxm-FN-ZiP">
@@ -234,7 +221,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Got-1p-qe2">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1162"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34k-H1-e57">
                                                 <rect key="frame" x="138" y="62" width="138" height="36"/>
@@ -287,25 +274,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZm-bK-ect">
-                                                <rect key="frame" x="8" y="13" width="60" height="42"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="42" id="YcV-XK-B1M"/>
-                                                    <constraint firstAttribute="width" constant="60" id="poc-V8-9g0"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Button_Back"/>
-                                                <connections>
-                                                    <segue destination="mE2-fo-aXh" kind="show" id="uTy-I9-BPp"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeN-9X-z4u">
-                                                <rect key="frame" x="351" y="13" width="63" height="43"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="43" id="4uA-QU-2YQ"/>
-                                                    <constraint firstAttribute="width" constant="63" id="U8q-xy-6Br"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Button_Confirm"/>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFo-zu-JbP">
                                                 <rect key="frame" x="166" y="450" width="0.0" height="0.0"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -540,19 +508,13 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="BeN-9X-z4u" secondAttribute="trailing" id="DGe-k3-YFp"/>
-                                            <constraint firstItem="BeN-9X-z4u" firstAttribute="top" secondItem="Got-1p-qe2" secondAttribute="top" constant="13" id="Yiy-fs-zeV"/>
-                                            <constraint firstItem="fZm-bK-ect" firstAttribute="top" secondItem="Got-1p-qe2" secondAttribute="top" constant="13" id="t6B-CD-CiN"/>
-                                            <constraint firstItem="fZm-bK-ect" firstAttribute="leading" secondItem="Got-1p-qe2" secondAttribute="leading" constant="8" id="zaU-tv-cvy"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="Got-1p-qe2" secondAttribute="bottom" id="6fi-2c-tIB"/>
                                     <constraint firstAttribute="trailing" secondItem="Got-1p-qe2" secondAttribute="trailing" id="7pU-2L-GLC"/>
                                     <constraint firstItem="Got-1p-qe2" firstAttribute="trailing" secondItem="QB5-su-3k6" secondAttribute="trailing" id="CaK-CP-RLF"/>
-                                    <constraint firstItem="Got-1p-qe2" firstAttribute="top" secondItem="QB5-su-3k6" secondAttribute="top" id="UVI-VC-sKO"/>
+                                    <constraint firstItem="Got-1p-qe2" firstAttribute="top" secondItem="QB5-su-3k6" secondAttribute="top" constant="88" id="UVI-VC-sKO"/>
                                     <constraint firstItem="Got-1p-qe2" firstAttribute="leading" secondItem="QB5-su-3k6" secondAttribute="leading" id="bhG-dw-0Uu"/>
                                     <constraint firstItem="Got-1p-qe2" firstAttribute="bottom" secondItem="QB5-su-3k6" secondAttribute="bottom" id="l0T-af-mme"/>
                                 </constraints>
@@ -570,7 +532,14 @@
                             <constraint firstItem="jpX-Qs-tVz" firstAttribute="leading" secondItem="Q9F-23-0rB" secondAttribute="leading" id="vxQ-BT-o8D"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mFF-QV-lVo"/>
+                    <navigationItem key="navigationItem" id="mFF-QV-lVo">
+                        <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="H0t-Xh-iX7">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="checkmark.circle" catalog="system" id="W25-hc-UCx">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="414" height="1250"/>
                     <connections>
                         <outlet property="cityTextField" destination="XYl-vW-ijN" id="Ri3-uB-kma"/>
@@ -590,7 +559,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbf-eM-HAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4452.1739130434789" y="1715.625"/>
+            <point key="canvasLocation" x="5362.3188405797109" y="1715.625"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Jco-SJ-BWE">
@@ -605,17 +574,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrX-xU-teT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5560" y="1639"/>
+            <point key="canvasLocation" x="6469.5652173913049" y="1638.6160714285713"/>
+        </scene>
+        <!--Profile Navigation Controller-->
+        <scene sceneID="hXd-zw-ZUO">
+            <objects>
+                <navigationController title="Profile Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Rak-js-hi0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="20L-US-lTx"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2cF-BI-SUV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mE2-fo-aXh" kind="relationship" relationship="rootViewController" id="vgP-Kc-6kU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TLL-Fl-okP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3366.666666666667" y="1724.3303571428571"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Button_Back" width="162" height="116"/>
-        <image name="Button_Confirm" width="174" height="120"/>
-        <image name="Button_Edit" width="196" height="112"/>
-        <image name="Button_Menu" width="168" height="104"/>
+        <image name="arrow.left.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="email icon" width="140" height="135"/>
         <image name="iconfinder_user-alt_285645" width="64" height="64"/>
+        <image name="line.horizontal.3.circle" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="phone" catalog="system" width="128" height="115"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
