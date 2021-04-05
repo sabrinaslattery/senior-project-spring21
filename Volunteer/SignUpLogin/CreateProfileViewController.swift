@@ -16,6 +16,7 @@ class CreateProfileViewController:UIViewController, UITextFieldDelegate {
     @IBOutlet weak var zipCodeTextField: UITextField!
     @IBOutlet weak var continueButton: UIButton!
     
+    
     var buttonEducationLevel = dropDownBtn()
     
     override func viewDidLoad() {
@@ -42,6 +43,7 @@ class CreateProfileViewController:UIViewController, UITextFieldDelegate {
         user ["jobTitle"] = jobTitleTextField.text!
         user ["city"] = cityTextField.text!
         user["zipCode"] = zipCodeTextField.text!
+        
         
         user.saveInBackground {
             (success: Bool, error: Error?) in
@@ -194,6 +196,7 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource{
         tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -218,5 +221,7 @@ class dropDownView: UIView, UITableViewDelegate, UITableViewDataSource{
         //call the delegate and pass along the data of the string value
         self.delegate.dropDownPressed(string: dropDownOptions[indexPath.row])
         self.tableView.deselectRow(at: indexPath, animated: true)
+        print(dropDownOptions[indexPath.row])
     }
+    
 }

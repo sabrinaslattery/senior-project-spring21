@@ -1040,6 +1040,7 @@
                                 <state key="normal" title="Continue"/>
                                 <connections>
                                     <action selector="createProfile:" destination="WKa-xg-URu" eventType="touchUpInside" id="KEh-fY-2p6"/>
+                                    <action selector="createProfle:" destination="hKr-ug-zky" eventType="touchUpInside" id="ZIJ-Fe-1JM"/>
                                     <segue destination="beD-hg-rlc" kind="show" id="PLm-Hi-M0Q"/>
                                 </connections>
                             </button>
@@ -1164,6 +1165,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yl8-sa-Uwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hKr-ug-zky" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4398.5507246376819" y="158.70535714285714"/>
         </scene>
@@ -1538,7 +1540,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PLm-Hi-M0Q"/>
+        <segue reference="T7D-CG-zgw"/>
         <segue reference="xyj-rW-Qgl"/>
         <segue reference="QXO-lG-BiZ"/>
         <segue reference="POg-4C-8Be"/>
