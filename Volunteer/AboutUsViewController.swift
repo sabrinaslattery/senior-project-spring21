@@ -9,7 +9,7 @@ import UIKit
 import SafariServices
 
 class AboutUsViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +21,10 @@ class AboutUsViewController: UIViewController {
         let vc = SFSafariViewController(url: URL(string: "https://wearecolorblind.com/")!)
         
         present(vc, animated:true)
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
  
 }
