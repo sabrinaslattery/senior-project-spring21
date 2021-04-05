@@ -14,14 +14,14 @@ protocol MenuControllerDelegate {
 }
 
 enum SideMenuItem: String, CaseIterable {
-    case user = "*userName*"
+    case user = ""
     case home = "Home"
     case profile = "My Profile"
     case events = "Events"
     case create = "Create an Event"
     case search = "Search"
     case settings = "Settings"
-    case logOut = "Sign Out"
+    case logOut = "Log Out"
 }
 
 class HomeViewController: UIViewController, MenuControllerDelegate {
@@ -112,6 +112,7 @@ class HomeViewController: UIViewController, MenuControllerDelegate {
 }
 
 class SideMenuListController: UITableViewController {
+    var Users = [PFObject]()
     
     public var delegate: MenuControllerDelegate?
     private let menuItems: [SideMenuItem]
@@ -135,6 +136,22 @@ class SideMenuListController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuItems.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        100
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 100))
+        view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        let userProfileImage = UIImageView(frame: CGRect(x: 40,y: 5,width: 60,height: 60))
+        userProfileImage.image = UIImage(named:"image var name from database")
+        view.addSubview(userProfileImage)
+        
+        return view
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

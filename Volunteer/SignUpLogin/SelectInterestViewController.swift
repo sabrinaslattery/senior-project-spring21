@@ -42,6 +42,12 @@ class SelectInterestViewController:UIViewController, UITextFieldDelegate {
         
     }
     
+//    @IBAction func createProfile(_ sender: Any){
+//        let user = PFObject(className:"Profile")
+//        user ["interestTags"] = animalWelfareCheckbox.UIButton!
+        
+    //}
+    
     @IBAction func handleDismissButton(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
@@ -51,6 +57,7 @@ class SelectInterestViewController:UIViewController, UITextFieldDelegate {
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag1 = true
+            
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)

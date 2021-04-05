@@ -38,6 +38,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var religionCheckbox: UIButton!
     @IBOutlet weak var technologyCheckbox: UIButton!
     
+    
     var flag1 = false
     var flag2 = false
     var flag3 = false

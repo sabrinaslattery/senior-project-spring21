@@ -30,7 +30,7 @@ class EventViewController:UIViewController {
     }
     
     @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func signMeUpButton(_ sender: Any) {

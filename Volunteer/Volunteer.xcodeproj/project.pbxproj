@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		030E5D2F2613E3A900B928D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E5D2E2613E3A900B928D8 /* HomeViewController.swift */; };
-		030E5D392613EE5700B928D8 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 030E5D382613EE5700B928D8 /* SideMenu.storyboard */; };
 		035BEE632613D3D400015ADC /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE622613D3D400015ADC /* AboutUsViewController.swift */; };
 		035BEE682613D58100015ADC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE672613D58100015ADC /* EditProfileViewController.swift */; };
 		035BEE6D2613D59800015ADC /* MainProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE6C2613D59800015ADC /* MainProfileViewController.swift */; };
@@ -76,7 +75,6 @@
 
 /* Begin PBXFileReference section */
 		030E5D2E2613E3A900B928D8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		030E5D382613EE5700B928D8 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		035BEE622613D3D400015ADC /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = SOURCE_ROOT; };
 		035BEE672613D58100015ADC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		035BEE6C2613D59800015ADC /* MainProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -262,7 +260,6 @@
 				03A37411260AED200011DC21 /* Profile.storyboard */,
 				03A37404260AEA720011DC21 /* Search.storyboard */,
 				03A37419260AEDA30011DC21 /* Settings.storyboard */,
-				030E5D382613EE5700B928D8 /* SideMenu.storyboard */,
 				03F2FBAE2602FD13008748E1 /* LegalDocs.storyboard */,
 				98CC89F525DCFCA6008E4A7B /* Info.plist */,
 			);
@@ -453,7 +450,6 @@
 				03A3741A260AEDA30011DC21 /* Settings.storyboard in Resources */,
 				98CC89F125DCFCA5008E4A7B /* Assets.xcassets in Resources */,
 				03F2FBD826030447008748E1 /* Events.storyboard in Resources */,
-				030E5D392613EE5700B928D8 /* SideMenu.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
