@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import Parse
 
 
 class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -222,6 +222,27 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         }
     }
     
+    @IBAction func updateUser(_ sender: Any) {
+        let currentUser = PFUser.current()
+        let user = PFObject(className:"Profile")
+        user ["jobTitle"] = jobTitleTextField.text!
+        user ["city"] = cityTextField.text!
+        user["zipCode"] = zipCodeTextField.text!
+//        user["educationLevel"] =
+        user ["userBio"] = introTextField.text!
+        user ["workExperience"] = workExperienceTextField.text!
+//        user ["interests"] =
+        user["user"] = currentUser
+        
+        user.saveInBackground {
+            (success: Bool, error: Error?) in
+            if (success) {
+                // The object has been saved.
+            } else {
+                // There was a problem, check error.description
+            }
+        }
+    }
     
 }
 
