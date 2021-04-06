@@ -23,7 +23,8 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        loadEvents()
+		loadEvents()
+		
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -35,35 +36,21 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
+		
+		
         
     }
+	
+	
     
-//    @objc func loadEvents() {
-//
-//    }
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return Events.count
-    }
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //let post = posts[section]
-        
-		return Events.count
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        //numberOfPosts = 20
-        super.viewDidAppear(true)
-        
-        let query = PFQuery(className:"Events")
+     func loadEvents() {
+		let query = PFQuery(className:"Events")
 		query.whereKey("date", greaterThan: Date())
-        query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
-        query.limit = 20
-        
-        query.findObjectsInBackground { (posts, error) in
-            if let posts = posts {
+		query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
+		query.limit = 20
+		
+		query.findObjectsInBackground { (posts, error) in
+			if let posts = posts {
 				for post in posts {
 					if self.Events.contains(post) != true {
 						self.Events.append(post)
@@ -72,12 +59,24 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
 				self.tableView.reloadData()
 				self.myRefreshControl.endRefreshing()
 				print(self.Events)
-            }
-        }
+			}
+		}
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        //let post = posts[section]
+        
+		return Events.count
     }
     
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let event = Events[indexPath.section] as! PFObject
+		let event = Events[indexPath.row] as! PFObject
         
 		let cell = self.tableView.dequeueReusableCell(withIdentifier: "CurrentEventsCell", for: indexPath) as! CurrentEventsTableViewCell
 		

@@ -22,7 +22,7 @@ class PreviousEventsTableViewController: UIViewController, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loadEvents()
+        loadEvents()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -41,12 +41,28 @@ class PreviousEventsTableViewController: UIViewController, UITableViewDataSource
 //        self.loadEvents()
 //    }
     
-    @objc func loadEvents() {
-        
-    }
+	func loadEvents() {
+	   let query = PFQuery(className:"Events")
+	   query.whereKey("date", lessThan: Date())
+	   query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
+	   query.limit = 20
+	   
+	   query.findObjectsInBackground { (posts, error) in
+		   if let posts = posts {
+			   for post in posts {
+				   if self.Events.contains(post) != true {
+					   self.Events.append(post)
+				   }
+			   }
+			   self.tableView.reloadData()
+			   self.myRefreshControl.endRefreshing()
+			   print(self.Events)
+		   }
+	   }
+   }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return Events.count
+		return 1
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,13 +70,8 @@ class PreviousEventsTableViewController: UIViewController, UITableViewDataSource
         return Events.count
     }
 
-    /*override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //let post = posts[section]
-        
-        return 3
-    }*/
     
-    override func viewDidAppear(_ animated: Bool) {
+   /* override func viewDidAppear(_ animated: Bool) {
         //numberOfPosts = 20
         super.viewDidAppear(true)
         
@@ -80,7 +91,7 @@ class PreviousEventsTableViewController: UIViewController, UITableViewDataSource
 				print(self.Events)
 			}
 		}
-    }
+    }*/
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let event = Events[indexPath.section] as! PFObject
