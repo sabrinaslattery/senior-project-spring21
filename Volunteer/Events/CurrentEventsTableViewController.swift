@@ -128,15 +128,6 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
 		let eventViewController = segue.destination as! EventViewController
 		
 		eventViewController.event = event
-		event.addUniqueObject(PFUser.current(), forKey: "attendees")
-		event.saveInBackground { (success, error) in
-			if success {
-				self.tableView.deselectRow(at: indexPath!, animated: true)
-				
-			} else {
-				print(error?.localizedDescription)
-			}
-		}
 		
 		
 		
