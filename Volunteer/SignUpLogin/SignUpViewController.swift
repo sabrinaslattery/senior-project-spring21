@@ -83,16 +83,15 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         
         // adding objects to the user class
 
-        user ["firstname"] = firstnameField.text!
-        user ["lastname"] = lastnameField.text!
+        user["firstname"] = firstnameField.text!
+        user["lastname"] = lastnameField.text!
 		//user["newUser"] = true
         
         // saving the profile image
-        let profileImage = PFObject(className: "User")
         let imageData = profileImageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
         
-        profileImage["image"] = file
+        user["image"] = file
         
         user.signUpInBackground { (success, error) in
             if success{

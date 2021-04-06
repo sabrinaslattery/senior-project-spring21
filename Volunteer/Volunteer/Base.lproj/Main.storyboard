@@ -1041,7 +1041,6 @@
                                 <connections>
                                     <action selector="createProfile:" destination="WKa-xg-URu" eventType="touchUpInside" id="KEh-fY-2p6"/>
                                     <action selector="createProfle:" destination="hKr-ug-zky" eventType="touchUpInside" id="ZIJ-Fe-1JM"/>
-                                    <segue destination="beD-hg-rlc" kind="show" id="PLm-Hi-M0Q"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Create Profile" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="vKs-JP-cI6">
@@ -1169,6 +1168,7 @@
                         <outlet property="continueButton" destination="d90-g8-lbA" id="gLW-I2-HhL"/>
                         <outlet property="jobTitleTextField" destination="URD-wV-Xw8" id="6st-Ly-uY0"/>
                         <outlet property="zipCodeTextField" destination="77t-Mq-dxa" id="TPc-cT-o4p"/>
+                        <segue destination="beD-hg-rlc" kind="show" identifier="CreateEvents2" id="9e3-Vm-1QW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yl8-sa-Uwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1551,7 +1551,7 @@
         <segue reference="xyj-rW-Qgl"/>
         <segue reference="TO6-Hg-CKv"/>
         <segue reference="POg-4C-8Be"/>
-        <segue reference="xYL-oc-d57"/>
+        <segue reference="JST-Lb-N3u"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="18+ Icon" width="674" height="674"/>
