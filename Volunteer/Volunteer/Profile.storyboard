@@ -405,8 +405,16 @@
                     </view>
                     <navigationItem key="navigationItem" id="ohE-vY-a2h"/>
                     <connections>
-
-
+                        <outlet property="city" destination="0hT-wb-dzo" id="5gr-Vq-Zpw"/>
+                        <outlet property="educationLevel" destination="PRC-Kt-EyA" id="EZ0-DJ-nVq"/>
+                        <outlet property="emailAddress" destination="fJj-Oo-umD" id="yvH-8b-pYL"/>
+                        <outlet property="firstName" destination="IEy-f1-7J1" id="8PS-Zf-zzk"/>
+                        <outlet property="intro" destination="A9p-Qe-9pw" id="yZR-Zz-vfy"/>
+                        <outlet property="jobTitle" destination="kDX-XI-nid" id="tT0-cp-Tex"/>
+                        <outlet property="lastName" destination="7Wb-ww-H25" id="Jff-R3-Xwy"/>
+                        <outlet property="profileImage" destination="Ybj-X8-XeV" id="hLj-wx-dJL"/>
+                        <outlet property="workExperience" destination="gkn-la-So9" id="2b3-XN-XUc"/>
+                        <outlet property="zipCode" destination="8vi-g1-of5" id="VdH-CO-kKB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apG-XI-zaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

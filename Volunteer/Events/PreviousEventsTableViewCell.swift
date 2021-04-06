@@ -7,11 +7,10 @@
 
 import UIKit
 
-class MyEventsTableViewCell: UITableViewCell {
+class PreviousEventsTableViewCell: UITableViewCell {
 
     
-	@IBOutlet weak var difficultyImage: UIImageView!
-	@IBOutlet weak var eventDate: UIDatePicker!
+    @IBOutlet weak var eventDate: UIDatePicker!
     //@IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var eventTags: UILabel!
     @IBOutlet weak var eventDifficulty: UILabel!

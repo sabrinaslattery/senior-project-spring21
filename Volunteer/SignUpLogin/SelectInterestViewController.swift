@@ -63,7 +63,6 @@ class SelectInterestViewController:UIViewController, UITextFieldDelegate {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag1 = false
         }
-		
     }
     
     @IBAction func childCheckboxButton(_ sender: UIButton) {
