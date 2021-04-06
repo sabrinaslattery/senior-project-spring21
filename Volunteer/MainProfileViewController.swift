@@ -11,7 +11,6 @@ import Parse
 
 class MainProfileViewController: UIViewController {
     
-
             @IBOutlet var firstName: UILabel?
             @IBOutlet var lastName: UILabel?
             @IBOutlet var profileImage: UIImageView!
@@ -83,7 +82,6 @@ class MainProfileViewController: UIViewController {
 
                     let output = list["city"] as? String
                     self.city?.text = output
-
 
                     print(output!)
                 }

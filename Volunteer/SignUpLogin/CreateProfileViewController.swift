@@ -58,12 +58,10 @@ class CreateProfileViewController:UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func createProfile(_ sender: Any){
-
         let currentUser = PFUser.current()
         let user = PFObject(className:"Profile")
         user ["jobTitle"] = jobTitleTextField.text!
         user ["city"] = cityTextField.text!
-
         user["zipCode"] = zipCodeTextField.text!
         user["user"] = currentUser
         
@@ -71,11 +69,8 @@ class CreateProfileViewController:UIViewController, UITextFieldDelegate {
             (success: Bool, error: Error?) in
             if (success) {
                 // The object has been saved.
-				print("User saved")
-				self.performSegue(withIdentifier: "CreateEvents2", sender: self)
             } else {
                 // There was a problem, check error.description
-				self.resetForm(error: error!.localizedDescription)
             }
         }
     }
@@ -92,8 +87,8 @@ class CreateProfileViewController:UIViewController, UITextFieldDelegate {
     }
     
     
-	func resetForm( error:String ) {
-        let alert = UIAlertController(title: "Error signing up", message: error, preferredStyle: .alert)
+    func resetForm() {
+        let alert = UIAlertController(title: "Error signing up", message: nil, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         

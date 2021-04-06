@@ -1003,8 +1003,8 @@
                                 <rect key="frame" x="23" y="684" width="368" height="30"/>
                                 <state key="normal" title="Continue"/>
                                 <connections>
-
-
+                                    <action selector="createProfile:" destination="WKa-xg-URu" eventType="touchUpInside" id="gV8-NR-joF"/>
+                                    <segue destination="beD-hg-rlc" kind="show" id="PLm-Hi-M0Q"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Create Profile" textAlignment="center" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="vKs-JP-cI6">
@@ -1124,8 +1124,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="Eff-ii-eQA"/>
                     <connections>
-
- 
+                        <outlet property="cityTextField" destination="6pN-bL-OaB" id="C45-n0-8Ha"/>
+                        <outlet property="continueButton" destination="d90-g8-lbA" id="lVa-Bf-tMd"/>
+                        <outlet property="educationLevelField" destination="KCu-qN-Qou" id="5SY-S8-0E4"/>
+                        <outlet property="jobTitleTextField" destination="URD-wV-Xw8" id="Fgv-Xc-pV3"/>
+                        <outlet property="zipCodeTextField" destination="77t-Mq-dxa" id="W7x-sZ-A2l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yl8-sa-Uwc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1517,7 +1520,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="PLm-Hi-M0Q"/>
         <segue reference="xyj-rW-Qgl"/>
-        <segue reference="TO6-Hg-CKv"/>
+        <segue reference="QXO-lG-BiZ"/>
         <segue reference="POg-4C-8Be"/>
         <segue reference="JST-Lb-N3u"/>
     </inferredMetricsTieBreakers>
