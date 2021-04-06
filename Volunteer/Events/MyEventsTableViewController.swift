@@ -40,7 +40,6 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
     }
         
     @objc func loadEvents() {
-        print("Loading events, Events count: \(self.Events.count)")
             
         let user = PFUser.current()
         let query = PFQuery(className:"Events")
@@ -55,13 +54,9 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
                 }
                 self.tableView.reloadData()
                 self.tableView.refreshControl?.endRefreshing()
-                
             }
         }
         //self.tableView.reloadData()
-        DispatchQueue.main.async {
-                self.tableView.refreshControl?.endRefreshing()
-        }
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

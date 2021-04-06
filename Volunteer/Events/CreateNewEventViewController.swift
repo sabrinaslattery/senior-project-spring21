@@ -91,8 +91,6 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         
        
         self.event["title"] = eventTitleField.text!
-        self.event["startTime"] = fromPicker.date
-        self.event["endTime"] = toPicker.date
         self.event["totalSpots"] = Int(totalSpotsField.text!)
         self.event["description"] = aboutEventField.text!
         self.event["expectations"] = volunteerExpectationField.text!
@@ -106,6 +104,8 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         toPicker.locale = .current
         fromPicker.locale = .current
         self.event["date"] = datePicker.date
+		self.event["startTime"] = fromPicker.date
+		self.event["endTime"] = toPicker.date
         self.event["attendees"] = NSArray()
         
         
