@@ -58,10 +58,12 @@ class CreateProfileViewController:UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func createProfile(_ sender: Any){
+
         let currentUser = PFUser.current()
         let user = PFObject(className:"Profile")
         user ["jobTitle"] = jobTitleTextField.text!
         user ["city"] = cityTextField.text!
+
         user["zipCode"] = zipCodeTextField.text!
         user["user"] = currentUser
         
