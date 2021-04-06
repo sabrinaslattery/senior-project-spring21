@@ -1,5 +1,5 @@
 //
-//  CurrentEventsTableViewController.swift
+//  PreviousEventsTableViewController.swift
 //  Volunteer
 //
 //  Created by Sabrina Slattery on 3/23/21.
@@ -8,13 +8,9 @@
 import UIKit
 import Parse
 
-class CurrentEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    
-    //var eventsArray = [NSDictionary]()
-    
-    let myRefreshControl = UIRefreshControl()
     
     var Events = [PFObject]()
     var selectedEvent: PFObject!
@@ -23,32 +19,35 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-		loadEvents()
+        loadEvents()
 		
         
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.keyboardDismissMode = .interactive
-        
-        tableView.refreshControl = UIRefreshControl()
+		
+		tableView.refreshControl = UIRefreshControl()
 		tableView.refreshControl?.addTarget(self, action: #selector(loadEvents), for: .valueChanged)
+       
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
-		
-		
-        
     }
-	
-	
+    
+   override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+			loadEvents()
+		}
     
 	@objc func loadEvents() {
-		let query = PFQuery(className:"Events")
-		query.whereKey("date", greaterThanOrEqualTo: Date())
-		query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
-		query.limit = 20
+		print("Loading events, Events count: \(self.Events.count)")
 		
+		let user = PFUser.current()
+	   let query = PFQuery(className:"Events")
+		query.whereKey("attendees", equalTo: user)
+		//query.includeKey("attendees")
+	   
 		query.findObjectsInBackground { (posts, error) in
 			self.Events.removeAll()
 			if let posts = posts {
@@ -60,27 +59,49 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
 				
 			}
 		}
-    }
+		//self.tableView.reloadData()
+		DispatchQueue.main.async {
+			  self.tableView.refreshControl?.endRefreshing()
+	   }
+   }
 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return Events.count
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //let post = posts[section]
-        
-		return Events.count
-    }
     
+   /* override func viewDidAppear(_ animated: Bool) {
+        //numberOfPosts = 20
+        super.viewDidAppear(true)
+        
+        let query = PFQuery(className:"Events")
+        query.whereKey("date", lessThan: Date())
+        query.limit = 20
+        
+		query.findObjectsInBackground { (posts, error) in
+			if let posts = posts {
+				for post in posts {
+					if self.Events.contains(post) != true {
+						self.Events.append(post)
+					}
+				}
+				self.tableView.reloadData()
+				self.myRefreshControl.endRefreshing()
+				print(self.Events)
+			}
+		}
+    }*/
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let event = Events[indexPath.row] as! PFObject
-        
-		let cell = self.tableView.dequeueReusableCell(withIdentifier: "CurrentEventsCell", for: indexPath) as! CurrentEventsTableViewCell
 		
+		let cell = self.tableView.dequeueReusableCell(withIdentifier: "MyEventsCell", for: indexPath) as! MyEventsTableViewCell
 		
-		//Setting name and tag
 		cell.eventName.text = event["title"] as! String
 		cell.eventTags.text = event["tag"] as! String
 		
@@ -103,8 +124,8 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
 		}
 		
 		//Setting the difficulty image
-		let difficulty = event["difficulty"] as! String
-		switch difficulty.lowercased() {
+		
+		switch event["difficulty"] as! String {
 		case "easy":
 			cell.difficultyImage.image = UIImage(named: "Difficulty_Easy")
 		case "medium":
@@ -113,7 +134,9 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
 			cell.difficultyImage.image = UIImage(named: "Difficulty_Hard")
 		default:
 			break
-		}
+		} 
+		
+		
 		
 		return cell
     }
@@ -128,6 +151,7 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
 		let eventViewController = segue.destination as! EventViewController
 		
 		eventViewController.event = event
+		
 		
 		
 		
