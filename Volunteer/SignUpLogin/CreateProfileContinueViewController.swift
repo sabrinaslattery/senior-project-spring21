@@ -23,11 +23,14 @@ class CreateProfileViewContinueController:UIViewController, UITextFieldDelegate 
     }
     
     @IBAction func createProfile(_ sender: Any){
+        let currentUser = PFUser.current()
         let user = PFObject(className:"Profile")
         
         // adding objects to the user class
         user ["userBio"] = introTextField.text!
         user ["workExperience"] = workExperienceTextField.text!
+        user["user"] = currentUser
+
         
         user.saveInBackground {
         (success: Bool, error: Error?) in

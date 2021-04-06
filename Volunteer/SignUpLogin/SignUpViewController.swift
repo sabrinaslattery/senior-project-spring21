@@ -85,6 +85,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
 
         user ["firstname"] = firstnameField.text!
         user ["lastname"] = lastnameField.text!
+
 		//user["newUser"] = true
         
         // saving the profile image
