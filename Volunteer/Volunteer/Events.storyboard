@@ -604,6 +604,7 @@
                         <outlet property="phoneNumberLabel" destination="0X4-F2-pe1" id="FAI-Sf-USz"/>
                         <outlet property="shouldWearLabel" destination="ZJc-cc-z0Z" id="quf-Ie-uGQ"/>
                         <outlet property="spotsFilledLabel" destination="Ldp-n2-6e2" id="sDO-ka-3um"/>
+                        <segue destination="gbB-Pc-3p4" kind="show" identifier="ToMyEvents" id="9qo-UP-o7i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHr-7h-0HY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1239,6 +1240,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="vvY-bt-hBg"/>
+        <segue reference="Aro-qz-6fd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="18+ Icon" width="674" height="674"/>

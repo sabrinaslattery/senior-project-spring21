@@ -276,6 +276,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ohE-vY-a2h"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="fJj-Oo-umD" id="TcI-21-piG"/>
+                        <outlet property="firstnameLabel" destination="IEy-f1-7J1" id="jJz-21-vyz"/>
+                        <outlet property="lastnameLabel" destination="7Wb-ww-H25" id="wt1-yG-uJG"/>
+                        <outlet property="profilePicture" destination="Ybj-X8-XeV" id="SW1-SL-50N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apG-XI-zaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

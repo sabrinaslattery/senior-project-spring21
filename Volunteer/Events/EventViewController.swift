@@ -105,7 +105,15 @@ class EventViewController:UIViewController {
 		
 		if attendees.count < totalSpots {
 			self.event.addUniqueObject(PFUser.current(), forKey: "attendees")
-		}else {
+			self.event.saveInBackground { (ok, error) in
+				if ok{
+					print("Signed up for an event")
+					self.performSegue(withIdentifier: "ToMyEvents", sender: self)
+				} else {
+					print(error?.localizedDescription)
+					}
+			}
+		} else {
 			print("Event is full")
 		}
         
