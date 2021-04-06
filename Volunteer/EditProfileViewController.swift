@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+import Parse
 
 
 class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -20,10 +20,14 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var zipCodeTextField: UITextField!
     @IBOutlet weak var introTextField: UITextField!
     @IBOutlet weak var workExperienceTextField: UITextField!
+    @IBOutlet weak var educationLevelField: UITextField!
     
+    //@IBOutlet var control: UISegmentedControl!
+    //var imagePicker:UIImagePickerController!
     
-    @IBOutlet var control: UISegmentedControl!
-    var imagePicker:UIImagePickerController!
+    var educationLevelPicker = UIPickerView()
+    
+    let educationLevel = ["High School Graduate", "Some College", "Associate Degree", "Bachelor's Degree", "Master's Degree", "Higher Degree"]
     
     //Interest Checkboxes
     @IBOutlet weak var animalWelfareCheckbox: UIButton!
@@ -51,43 +55,74 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     var flag10 = false
     var flag11 = false
     
-   var buttonEducationLevel = dropDownBtn()
+   //var buttonEducationLevel = dropDownBtn()
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
+        educationLevelField.inputView = educationLevelPicker
+                
+        educationLevelPicker.dataSource = self
+        educationLevelPicker.delegate = self
         
-        let imageTap = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
-        profileImageView.isUserInteractionEnabled = true
-        profileImageView.addGestureRecognizer(imageTap)
-        profileImageView.layer.cornerRadius = profileImageView.bounds.height / 2
-        profileImageView.clipsToBounds = true
+        educationLevelPicker.tag = 1
+        
+        educationLevelField.placeholder = "Select Education Level"
+        
+        educationLevelField.textAlignment = .center
+        
+        
+//        let imageTap = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
+//        profileImageView.isUserInteractionEnabled = true
+//        profileImageView.addGestureRecognizer(imageTap)
+//        profileImageView.layer.cornerRadius = profileImageView.bounds.height / 2
+//        profileImageView.clipsToBounds = true
 
-        imagePicker = UIImagePickerController()
-        imagePicker.allowsEditing = true
-        imagePicker.sourceType = .photoLibrary
-        imagePicker.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
+//        imagePicker = UIImagePickerController()
+//        imagePicker.allowsEditing = true
+//        imagePicker.sourceType = .photoLibrary
+//        imagePicker.delegate = (self as UIImagePickerControllerDelegate & UINavigationControllerDelegate)
 
         //let intersetTags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
         
-        buttonEducationLevel = dropDownBtn.init(frame: CGRect(x: 0, y: 0, width:0, height: 0))
-        buttonEducationLevel.translatesAutoresizingMaskIntoConstraints = false
-        
-        self.view.addSubview(buttonEducationLevel)
-        
-        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        buttonEducationLevel = dropDownBtn.init(frame: CGRect(x: 0, y: 0, width:0, height: 0))
+//        buttonEducationLevel.translatesAutoresizingMaskIntoConstraints = false
+//        
+//        self.view.addSubview(buttonEducationLevel)
+//        
+//        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
+//        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         
     }
     
     
-    
-
-    @objc func openImagePicker(_ sender:Any) {
-    // Open Image Picker
-    self.present(imagePicker, animated: true, completion: nil)
-
+    @IBAction func updateUser(_ sender: Any) {
+        let currentUser = PFUser.current()
+        let user = PFObject(className:"Profile")
+        user ["jobTitle"] = jobTitleTextField.text!
+        user ["city"] = cityTextField.text!
+        user["zipCode"] = zipCodeTextField.text!
+//        user["educationLevel"] =
+        user ["userBio"] = introTextField.text!
+        user ["workExperience"] = workExperienceTextField.text!
+//        user ["interests"] =
+        user["user"] = currentUser
+        
+        user.saveInBackground {
+            (success: Bool, error: Error?) in
+            if (success) {
+                // The object has been saved.
+            } else {
+                // There was a problem, check error.description
+            }
+        }
     }
+
+//    @objc func openImagePicker(_ sender:Any) {
+//    // Open Image Picker
+//    self.present(imagePicker, animated: true, completion: nil)
+//
+//    }
 
 
     //interest tag buttons
@@ -225,7 +260,39 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     
 }
-
+extension EditProfileViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        switch pickerView.tag {
+        case 1:
+            return educationLevel.count
+        default:
+            return 1
+        }
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        switch pickerView.tag {
+        case 1:
+            return educationLevel[row]
+        default:
+            return "Data not found"
+        }
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        switch pickerView.tag {
+        case 1:
+            PFUser.current()?["educationLevel"] = self.educationLevel[row];
+            PFUser.current()?.saveInBackground()
+            educationLevelField.text = educationLevel[row]
+            educationLevelField.resignFirstResponder()
+        default:
+            return
+        }
+    }
+}
 //class dropDownBtn: UIButton {
 //    override init(frame: CGRect) {
 //        super.init(frame: frame)

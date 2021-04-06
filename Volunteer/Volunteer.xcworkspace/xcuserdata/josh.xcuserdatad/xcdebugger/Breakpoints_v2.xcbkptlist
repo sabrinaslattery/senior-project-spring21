@@ -14,8 +14,8 @@
             filePath = "SignUpLogin/CreateProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "resetForm()"
             landmarkType = "7">
          </BreakpointContent>
