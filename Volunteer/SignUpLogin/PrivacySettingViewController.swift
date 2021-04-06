@@ -16,6 +16,9 @@ class PrivacySettingViewController:UIViewController {
     @IBOutlet weak var completeButton: UIButton!
     @IBOutlet weak var dismissButton: UIButton!
     
+    var flag1 = false
+    var flag2 = false
+    var flag3 = false
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
@@ -24,6 +27,43 @@ class PrivacySettingViewController:UIViewController {
     
     @IBAction func handleDismissButton(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
+    }
+    
+    @IBAction func defaultButton(_ sender: UIButton) {
+        if (flag1 == false)
+        {
+            sender.setBackgroundImage((UIImage(named: "privacy_selected")), for: UIControl.State.normal)
+            flag1 = true
+        }
+        else {
+            sender.setBackgroundImage((UIImage(named: "privacy_unselected")), for: UIControl.State.normal)
+            flag1 = false
+        }
+    }
+    
+    
+    @IBAction func organizerButton(_ sender: UIButton) {
+        if (flag2 == false)
+        {
+            sender.setBackgroundImage((UIImage(named: "privacy_selected")), for: UIControl.State.normal)
+            flag2 = true
+        }
+        else {
+            sender.setBackgroundImage((UIImage(named: "privacy_unselected")), for: UIControl.State.normal)
+            flag2 = false
+        }
+    }
+    
+    @IBAction func privateButton(_ sender: UIButton) {
+        if (flag3 == false)
+        {
+            sender.setBackgroundImage((UIImage(named: "privacy_selected")), for: UIControl.State.normal)
+            flag3 = true
+        }
+        else {
+            sender.setBackgroundImage((UIImage(named: "privacy_unselected")), for: UIControl.State.normal)
+            flag3 = false
+        }
     }
     
 }
