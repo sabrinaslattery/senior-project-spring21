@@ -13,7 +13,7 @@
 		035BEE6D2613D59800015ADC /* MainProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE6C2613D59800015ADC /* MainProfileViewController.swift */; };
 		0381BCF1260A8DA900168C48 /* CurrentEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCF0260A8DA900168C48 /* CurrentEventsTableViewCell.swift */; };
 		0381BCF9260A8E3600168C48 /* PreviousEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */; };
-		0381BCFE260A8E4800168C48 /* PreviousEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */; };
+		0381BCFE260A8E4800168C48 /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCFD260A8E4800168C48 /* MyEventsTableViewController.swift */; };
 		0381BD03260A8E5500168C48 /* CurrentEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */; };
 		03A37400260AE9430011DC21 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A373FF260AE9430011DC21 /* Home.storyboard */; };
 		03A37405260AEA720011DC21 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37404260AEA720011DC21 /* Search.storyboard */; };
@@ -80,7 +80,7 @@
 		035BEE6C2613D59800015ADC /* MainProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		0381BCF0260A8DA900168C48 /* CurrentEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEventsTableViewCell.swift; sourceTree = "<group>"; };
 		0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousEventsTableViewCell.swift; sourceTree = "<group>"; };
-		0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousEventsTableViewController.swift; sourceTree = "<group>"; };
+		0381BCFD260A8E4800168C48 /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
 		0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEventsTableViewController.swift; sourceTree = "<group>"; };
 		03A373FF260AE9430011DC21 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		03A37404260AEA720011DC21 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -211,7 +211,7 @@
 				B1E4955E26090CF500F10A9E /* CreateNewEventViewController.swift */,
 				0381BCF0260A8DA900168C48 /* CurrentEventsTableViewCell.swift */,
 				0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */,
-				0381BCFD260A8E4800168C48 /* PreviousEventsTableViewController.swift */,
+				0381BCFD260A8E4800168C48 /* MyEventsTableViewController.swift */,
 				0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */,
 				B1B328AB2617EB32003BCF34 /* EventViewController.swift */,
 			);
@@ -595,7 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03F2FBC62602FD7A008748E1 /* ToSViewController.swift in Sources */,
-				0381BCFE260A8E4800168C48 /* PreviousEventsTableViewController.swift in Sources */,
+				0381BCFE260A8E4800168C48 /* MyEventsTableViewController.swift in Sources */,
 				B152DC0D25E37C9100A7DB17 /* LoginViewController.swift in Sources */,
 				03F2FBC52602FD7A008748E1 /* PrivacyPolicyViewController.swift in Sources */,
 				B152DC1725E37CBE00A7DB17 /* RoundedWhiteButton.swift in Sources */,

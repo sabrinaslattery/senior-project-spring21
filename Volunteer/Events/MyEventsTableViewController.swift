@@ -8,12 +8,9 @@
 import UIKit
 import Parse
 
-class PreviousEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    //var eventsArray = [NSDictionary]()
-    
-    let myRefreshControl = UIRefreshControl()
     
     var Events = [PFObject]()
     var selectedEvent: PFObject!
@@ -23,51 +20,58 @@ class PreviousEventsTableViewController: UIViewController, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         loadEvents()
+		
         
         tableView.delegate = self
         tableView.dataSource = self
         
         tableView.keyboardDismissMode = .interactive
-        
-       // myRefreshControl.addTarget(self, action: #selector(loadEvents), for: .valueChanged)
-        tableView.refreshControl = myRefreshControl
+		
+		tableView.refreshControl = UIRefreshControl()
+		tableView.refreshControl?.addTarget(self, action: #selector(loadEvents), for: .valueChanged)
+       
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(true)
-//        self.loadEvents()
-//    }
+   override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+			loadEvents()
+		}
     
-	func loadEvents() {
+	@objc func loadEvents() {
+		print("Loading events, Events count: \(self.Events.count)")
+		
+		let user = PFUser.current()
 	   let query = PFQuery(className:"Events")
-	   query.whereKey("date", lessThan: Date())
-	   query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
-	   query.limit = 20
+		query.whereKey("attendees", equalTo: user)
+		//query.includeKey("attendees")
 	   
-	   query.findObjectsInBackground { (posts, error) in
-		   if let posts = posts {
-			   for post in posts {
-				   if self.Events.contains(post) != true {
-					   self.Events.append(post)
-				   }
-			   }
-			   self.tableView.reloadData()
-			   self.myRefreshControl.endRefreshing()
-			   print(self.Events)
-		   }
+		query.findObjectsInBackground { (posts, error) in
+			self.Events.removeAll()
+			if let posts = posts {
+				for post in posts {
+					self.Events.append(post)
+				}
+				self.tableView.reloadData()
+				self.tableView.refreshControl?.endRefreshing()
+				
+			}
+		}
+		//self.tableView.reloadData()
+		DispatchQueue.main.async {
+			  self.tableView.refreshControl?.endRefreshing()
 	   }
    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 1
+		return Events.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return Events.count
+        return 1
     }
 
     
@@ -94,9 +98,9 @@ class PreviousEventsTableViewController: UIViewController, UITableViewDataSource
     }*/
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let event = Events[indexPath.section] as! PFObject
+		let event = Events[indexPath.row] as! PFObject
 		
-		let cell = self.tableView.dequeueReusableCell(withIdentifier: "PreviousEventsCell", for: indexPath) as! PreviousEventsTableViewCell
+		let cell = self.tableView.dequeueReusableCell(withIdentifier: "MyEventsCell", for: indexPath) as! PreviousEventsTableViewCell
 		
 		cell.eventName.text = event["title"] as! String
 		cell.eventTags.text = event["tag"] as! String

@@ -11,7 +11,7 @@
         <!--Previous Events View Controller-->
         <scene sceneID="j0Q-45-Ali">
             <objects>
-                <viewController title="Previous Events View Controller" id="gbB-Pc-3p4" customClass="PreviousEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Previous Events View Controller" id="gbB-Pc-3p4" customClass="MyEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sgh-Ld-5pd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="896" id="rkC-GS-05O"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreviousEventsCell" rowHeight="191" id="uzh-1Q-HpH" customClass="PreviousEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyEventsCell" rowHeight="191" id="uzh-1Q-HpH" customClass="PreviousEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="191"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uzh-1Q-HpH" id="GHA-cb-cAs">
@@ -207,7 +207,7 @@
                                             <outlet property="eventImage" destination="NHE-Lc-LzW" id="Pbb-un-rjw"/>
                                             <outlet property="eventName" destination="EWe-5b-Jid" id="NDa-fR-Myd"/>
                                             <outlet property="eventTags" destination="ZC6-B9-ETY" id="JZz-yw-Hya"/>
-                                            <segue destination="Wb0-3w-IQa" kind="show" id="ZPh-c5-aop"/>
+                                            <segue destination="Wb0-3w-IQa" kind="show" identifier="EventDetail" id="ZPh-c5-aop"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -249,7 +249,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QhC-Ia-Wzq">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1303"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3T9-YI-kqe">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Event" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3T9-YI-kqe">
                                                 <rect key="frame" x="124" y="36" width="167" height="36"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <nil key="textColor"/>
@@ -295,8 +295,8 @@
                                                     <constraint firstAttribute="width" constant="29" id="Rh7-Tt-n4o"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZL-gv-adg">
-                                                <rect key="frame" x="84" y="342" width="36" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZL-gv-adg">
+                                                <rect key="frame" x="84" y="342" width="159" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -441,24 +441,22 @@
                                                     <action selector="signMeUpButton:" destination="Wb0-3w-IQa" eventType="touchUpInside" id="Yxw-Ra-Jug"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILi-AA-LkA">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILi-AA-LkA">
                                                 <rect key="frame" x="47" y="699" width="317" height="119"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="119" id="JlW-4T-j6f"/>
                                                     <constraint firstAttribute="width" constant="317" id="kGk-PE-hJH"/>
                                                 </constraints>
-                                                <string key="text">Volunteers are expected to show up at 9:00am to prep the food stations and boxes. Once people arrive at 10:00am they will hand devilver food to people who are waiting in their cars. Also....</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJc-cc-z0Z">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZJc-cc-z0Z">
                                                 <rect key="frame" x="47" y="900" width="321" height="93"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="321" id="EaG-bQ-wSC"/>
                                                     <constraint firstAttribute="height" constant="93" id="Sgv-jI-Y9y"/>
                                                 </constraints>
-                                                <string key="text">Pants (No Shorts allowed) Gloves (will be provide if you don’t have any) Mask (For Covid-19 precautions) Dress appropriately for the weather.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -604,7 +602,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oHr-7h-0HY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3025" y="-603"/>
+            <point key="canvasLocation" x="3020" y="-603"/>
         </scene>
         <!--Events Feed Tab Bar Controller-->
         <scene sceneID="oZi-gg-RXC">

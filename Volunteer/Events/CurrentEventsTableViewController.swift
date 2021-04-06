@@ -31,8 +31,8 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
         
         tableView.keyboardDismissMode = .interactive
         
-//        myRefreshControl.addTarget(self, action: #selector(loadEvents), for: .valueChanged)
-        tableView.refreshControl = myRefreshControl
+        tableView.refreshControl = UIRefreshControl()
+		tableView.refreshControl?.addTarget(self, action: #selector(loadEvents), for: .valueChanged)
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
@@ -43,22 +43,21 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
 	
 	
     
-     func loadEvents() {
+	@objc func loadEvents() {
 		let query = PFQuery(className:"Events")
 		query.whereKey("date", greaterThan: Date())
 		query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
 		query.limit = 20
 		
 		query.findObjectsInBackground { (posts, error) in
+			self.Events.removeAll()
 			if let posts = posts {
 				for post in posts {
-					if self.Events.contains(post) != true {
-						self.Events.append(post)
-					}
+					self.Events.append(post)
 				}
 				self.tableView.reloadData()
-				self.myRefreshControl.endRefreshing()
-				print(self.Events)
+				self.tableView.refreshControl?.endRefreshing()
+				
 			}
 		}
     }
@@ -117,5 +116,29 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
 		
 		return cell
     }
+	
+	//Pass the selected event to the details page
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		
+		let cell = sender as! UITableViewCell
+		let indexPath = tableView.indexPath(for: cell)
+		let event = Events[indexPath!.row]
+		
+		let eventViewController = segue.destination as! EventViewController
+		
+		eventViewController.event = event
+		event.addUniqueObject(PFUser.current(), forKey: "attendees")
+		event.saveInBackground { (success, error) in
+			if success {
+				self.tableView.deselectRow(at: indexPath!, animated: true)
+				
+			} else {
+				print(error?.localizedDescription)
+			}
+		}
+		
+		
+		
+	}
     
 }
