@@ -44,7 +44,8 @@ class EventViewController:UIViewController {
 		}
 		
 		//Setting the difficulty image
-		switch event["difficulty"] as! String {
+		let difficulty =  event["difficulty"] as! String
+		switch difficulty.lowercased() {
 		case "easy":
 			difficultyImage.image = UIImage(named: "Difficulty_Easy")
 		case "medium":
@@ -69,6 +70,12 @@ class EventViewController:UIViewController {
 		let totalSpots = event["totalSpots"] as! Int
 		spotsFilledLabel.text =  "\(attendees.count)/\(totalSpots)"
 		//Set time from and time to
+		let dateFrom = event["startTime"] as! Date
+		let dateTo = event["endTime"] as! Date
+		formatter.dateStyle = .none
+		formatter.timeStyle = .short
+		dateFromLabel.text = formatter.string(from: dateFrom)
+		dateToLabel.text = formatter.string(from: dateTo)
 		
 		//Set "About This Event", "Volunteers expectations", and appropriate clothing
 		aboutEventLabel.text = event["description"] as! String
@@ -93,6 +100,14 @@ class EventViewController:UIViewController {
     
     @IBAction func signMeUpButton(_ sender: Any) {
 		
+		let attendees = self.event["attendees"] as! NSArray
+		let totalSpots = self.event["totalSpots"] as! Int
+		
+		if attendees.count < totalSpots {
+			self.event.addUniqueObject(PFUser.current(), forKey: "attendees")
+		}else {
+			print("Event is full")
+		}
         
     }
     

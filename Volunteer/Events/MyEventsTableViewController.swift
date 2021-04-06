@@ -100,7 +100,7 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let event = Events[indexPath.row] as! PFObject
 		
-		let cell = self.tableView.dequeueReusableCell(withIdentifier: "MyEventsCell", for: indexPath) as! PreviousEventsTableViewCell
+		let cell = self.tableView.dequeueReusableCell(withIdentifier: "MyEventsCell", for: indexPath) as! MyEventsTableViewCell
 		
 		cell.eventName.text = event["title"] as! String
 		cell.eventTags.text = event["tag"] as! String
@@ -124,7 +124,7 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
 		}
 		
 		//Setting the difficulty image
-		/*
+		
 		switch event["difficulty"] as! String {
 		case "easy":
 			cell.difficultyImage.image = UIImage(named: "Difficulty_Easy")
@@ -134,11 +134,27 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
 			cell.difficultyImage.image = UIImage(named: "Difficulty_Hard")
 		default:
 			break
-		} */
+		} 
 		
 		
 		
 		return cell
     }
+	
+	//Pass the selected event to the details page
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		
+		let cell = sender as! UITableViewCell
+		let indexPath = tableView.indexPath(for: cell)
+		let event = Events[indexPath!.row]
+		
+		let eventViewController = segue.destination as! EventViewController
+		
+		eventViewController.event = event
+		
+		
+		
+		
+	}
     
 }

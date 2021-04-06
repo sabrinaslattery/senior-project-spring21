@@ -45,7 +45,7 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
     
 	@objc func loadEvents() {
 		let query = PFQuery(className:"Events")
-		query.whereKey("date", greaterThan: Date())
+		query.whereKey("date", greaterThanOrEqualTo: Date())
 		query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
 		query.limit = 20
 		
@@ -103,7 +103,8 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
 		}
 		
 		//Setting the difficulty image
-		switch event["difficulty"] as! String {
+		let difficulty = event["difficulty"] as! String
+		switch difficulty.lowercased() {
 		case "easy":
 			cell.difficultyImage.image = UIImage(named: "Difficulty_Easy")
 		case "medium":

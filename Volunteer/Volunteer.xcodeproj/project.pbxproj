@@ -12,7 +12,7 @@
 		035BEE682613D58100015ADC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE672613D58100015ADC /* EditProfileViewController.swift */; };
 		035BEE6D2613D59800015ADC /* MainProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE6C2613D59800015ADC /* MainProfileViewController.swift */; };
 		0381BCF1260A8DA900168C48 /* CurrentEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCF0260A8DA900168C48 /* CurrentEventsTableViewCell.swift */; };
-		0381BCF9260A8E3600168C48 /* PreviousEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */; };
+		0381BCF9260A8E3600168C48 /* MyEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCF8260A8E3600168C48 /* MyEventsTableViewCell.swift */; };
 		0381BCFE260A8E4800168C48 /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCFD260A8E4800168C48 /* MyEventsTableViewController.swift */; };
 		0381BD03260A8E5500168C48 /* CurrentEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */; };
 		03A37400260AE9430011DC21 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A373FF260AE9430011DC21 /* Home.storyboard */; };
@@ -79,7 +79,7 @@
 		035BEE672613D58100015ADC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		035BEE6C2613D59800015ADC /* MainProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		0381BCF0260A8DA900168C48 /* CurrentEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEventsTableViewCell.swift; sourceTree = "<group>"; };
-		0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousEventsTableViewCell.swift; sourceTree = "<group>"; };
+		0381BCF8260A8E3600168C48 /* MyEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewCell.swift; sourceTree = "<group>"; };
 		0381BCFD260A8E4800168C48 /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
 		0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentEventsTableViewController.swift; sourceTree = "<group>"; };
 		03A373FF260AE9430011DC21 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 			children = (
 				B1E4955E26090CF500F10A9E /* CreateNewEventViewController.swift */,
 				0381BCF0260A8DA900168C48 /* CurrentEventsTableViewCell.swift */,
-				0381BCF8260A8E3600168C48 /* PreviousEventsTableViewCell.swift */,
+				0381BCF8260A8E3600168C48 /* MyEventsTableViewCell.swift */,
 				0381BCFD260A8E4800168C48 /* MyEventsTableViewController.swift */,
 				0381BD02260A8E5500168C48 /* CurrentEventsTableViewController.swift */,
 				B1B328AB2617EB32003BCF34 /* EventViewController.swift */,
@@ -608,7 +608,7 @@
 				B152DC0325E37C6B00A7DB17 /* HelperExtensions.swift in Sources */,
 				B152DC3825E4403100A7DB17 /* GreatViewController.swift in Sources */,
 				98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */,
-				0381BCF9260A8E3600168C48 /* PreviousEventsTableViewCell.swift in Sources */,
+				0381BCF9260A8E3600168C48 /* MyEventsTableViewCell.swift in Sources */,
 				B1E4955F26090CF500F10A9E /* CreateNewEventViewController.swift in Sources */,
 				B152DC1C25E37CCF00A7DB17 /* SignUpViewController.swift in Sources */,
 				B152DC2425E43EEA00A7DB17 /* ResetPassViewController.swift in Sources */,
