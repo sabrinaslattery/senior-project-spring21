@@ -14,7 +14,7 @@ class CreateProfileViewContinueController:UIViewController, UITextFieldDelegate 
     @IBOutlet weak var introTextField: UITextField!
     @IBOutlet weak var workExperienceTextField: UITextField!
     @IBOutlet weak var interestsButton: UIButton!
-    @IBOutlet weak var continueToPrivacyButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -23,11 +23,14 @@ class CreateProfileViewContinueController:UIViewController, UITextFieldDelegate 
     }
     
     @IBAction func createProfile(_ sender: Any){
-		let user = PFUser.current() as! PFUser
-        
+
+        let currentUser = PFUser.current()
+        let user = PFObject(className:"Profile")
         // adding objects to the user class
-        user["userBio"] = introTextField.text!
-        user["workExperience"] = workExperienceTextField.text!
+        user ["userBio"] = introTextField.text!
+        user ["workExperience"] = workExperienceTextField.text!
+        user["user"] = currentUser
+
         
         user.saveInBackground {
         (success: Bool, error: Error?) in
