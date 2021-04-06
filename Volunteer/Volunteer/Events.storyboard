@@ -11,7 +11,7 @@
         <!--Previous Events View Controller-->
         <scene sceneID="j0Q-45-Ali">
             <objects>
-                <viewController title="Previous Events View Controller" id="gbB-Pc-3p4" customClass="PreviousEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Previous Events View Controller" id="gbB-Pc-3p4" customClass="MyEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sgh-Ld-5pd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="height" constant="896" id="rkC-GS-05O"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreviousEventsCell" rowHeight="191" id="uzh-1Q-HpH" customClass="PreviousEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PreviousEventsCell" rowHeight="191" id="uzh-1Q-HpH" customClass="MyEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="191"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uzh-1Q-HpH" id="GHA-cb-cAs">
@@ -127,7 +127,7 @@
         <!--Current Events View Controller-->
         <scene sceneID="fef-5J-Yaf">
             <objects>
-                <viewController title="Current Events View Controller" modalPresentationStyle="fullScreen" id="bxU-GJ-Dpb" customClass="CurrentEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Current Events View Controller" modalPresentationStyle="fullScreen" id="bxU-GJ-Dpb" customClass="AllEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EeX-kd-qMs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,7 +136,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrentEventsCell" rowHeight="251" id="fEX-dq-5A3" customClass="CurrentEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CurrentEventsCell" rowHeight="251" id="fEX-dq-5A3" userLabel="AllEventsCell" customClass="AllEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="251"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fEX-dq-5A3" id="d2H-LZ-aRc">
@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="2021.7391304347827" y="-603.34821428571422"/>
         </scene>
-        <!--Event View Controller-->
+        <!--Event Details View Controller-->
         <scene sceneID="OEm-8h-3xo">
             <objects>
-                <viewController storyboardIdentifier="EventViewController" id="Wb0-3w-IQa" customClass="EventViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventViewController" id="Wb0-3w-IQa" customClass="EventDetailsViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WDy-mA-K8f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1175,7 +1175,7 @@
                         <barButtonItem key="leftBarButtonItem" image="line.horizontal.3.circle" catalog="system" id="sWh-QN-S2R">
                             <color key="tintColor" systemColor="labelColor"/>
                             <connections>
-                                <action selector="menuSideButton" destination="cx2-4H-WCh" id="R9c-9Z-5rL"/>
+                                <action selector="handleDismissButton:" destination="cx2-4H-WCh" id="akN-Ge-jJO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
