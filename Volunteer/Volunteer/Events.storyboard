@@ -111,6 +111,9 @@
                     <navigationItem key="navigationItem" id="Ktb-PI-vg6">
                         <barButtonItem key="leftBarButtonItem" image="line.horizontal.3.circle" catalog="system" id="OPw-pF-gkC">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="menuSideButton" destination="gbB-Pc-3p4" id="dC2-rh-rQI"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -225,6 +228,9 @@
                     <navigationItem key="navigationItem" id="0BP-jA-xjM">
                         <barButtonItem key="leftBarButtonItem" image="line.horizontal.3.circle" catalog="system" id="DfW-CP-3k9">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="menuSideButton" destination="bxU-GJ-Dpb" id="Xco-U1-b5p"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -1168,6 +1174,9 @@
                     <navigationItem key="navigationItem" id="zSj-Px-3ab">
                         <barButtonItem key="leftBarButtonItem" image="line.horizontal.3.circle" catalog="system" id="sWh-QN-S2R">
                             <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <action selector="menuSideButton" destination="cx2-4H-WCh" id="R9c-9Z-5rL"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <size key="freeformSize" width="414" height="1700"/>

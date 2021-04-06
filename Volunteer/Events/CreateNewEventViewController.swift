@@ -86,6 +86,10 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         
     }
     
+    @IBAction func menuSideButton(){
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func CompletedButton(_ sender: Any) {
         
         let event = PFObject(className: "Events")

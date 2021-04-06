@@ -41,6 +41,10 @@ class CurrentEventsTableViewController: UIViewController, UITableViewDataSource,
 //    @objc func loadEvents() {
 //
 //    }
+    
+    @IBAction func menuSideButton(){
+        dismiss(animated: true, completion: nil)
+    }
 
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections

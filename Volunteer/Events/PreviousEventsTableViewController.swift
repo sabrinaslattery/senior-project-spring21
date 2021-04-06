@@ -41,6 +41,10 @@ class PreviousEventsTableViewController: UIViewController, UITableViewDataSource
 //        self.loadEvents()
 //    }
     
+    @IBAction func menuSideButton(){
+        dismiss(animated: true, completion: nil)
+    }
+    
     @objc func loadEvents() {
         
     }
