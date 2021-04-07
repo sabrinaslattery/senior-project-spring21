@@ -202,7 +202,7 @@
                                                 <constraint firstItem="EWe-5b-Jid" firstAttribute="leading" secondItem="d2H-LZ-aRc" secondAttribute="leadingMargin" id="vgm-Rt-M0U"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <accessibility key="accessibilityConfiguration" identifier="CurrentEventsCell"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="AllEventsCell"/>
                                         <connections>
                                             <outlet property="difficultyImage" destination="8i6-DD-hfb" id="iK7-X1-uWR"/>
                                             <outlet property="eventDate" destination="9fb-dn-Icw" id="6Cn-G3-dAr"/>
@@ -826,8 +826,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y7d-eG-QYr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80m-MS-cZv">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="80m-MS-cZv">
+                                        <rect key="frame" x="0.0" y="-88" width="414" height="1788"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Create a New Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQe-bo-91l">
                                                 <rect key="frame" x="64" y="102" width="286" height="41"/>
@@ -1055,12 +1055,12 @@
                                             <constraint firstItem="nra-Yr-SFq" firstAttribute="leading" secondItem="80m-MS-cZv" secondAttribute="leading" constant="59" id="3qt-oM-O5S"/>
                                             <constraint firstAttribute="trailing" secondItem="DBy-LJ-wXl" secondAttribute="trailing" constant="58" id="3w1-yK-213"/>
                                             <constraint firstItem="6Qz-RZ-epB" firstAttribute="leading" secondItem="80m-MS-cZv" secondAttribute="leading" constant="59" id="4CH-Nd-4vs"/>
-                                            <constraint firstAttribute="height" constant="1700" id="4MO-x3-uwp"/>
+                                            <constraint firstAttribute="height" constant="1788" id="4MO-x3-uwp"/>
                                             <constraint firstItem="MQe-bo-91l" firstAttribute="top" secondItem="80m-MS-cZv" secondAttribute="top" constant="102" id="4eE-Lu-gXy"/>
                                             <constraint firstAttribute="trailing" secondItem="3h1-a5-lJS" secondAttribute="trailing" constant="58" id="4gK-Rv-bTM"/>
                                             <constraint firstItem="pBU-KS-3Sl" firstAttribute="leading" secondItem="80m-MS-cZv" secondAttribute="leading" constant="59" id="5XX-Hq-Hx5"/>
                                             <constraint firstItem="DBy-LJ-wXl" firstAttribute="top" secondItem="Xje-1g-R7u" secondAttribute="bottom" constant="8" id="5kk-2g-iYM"/>
-                                            <constraint firstAttribute="bottom" secondItem="7cJ-aR-ZRO" secondAttribute="bottom" constant="111" id="5sK-qT-Cgs"/>
+                                            <constraint firstAttribute="bottom" secondItem="7cJ-aR-ZRO" secondAttribute="bottom" constant="199" id="5sK-qT-Cgs"/>
                                             <constraint firstItem="pBU-KS-3Sl" firstAttribute="top" secondItem="MQe-bo-91l" secondAttribute="bottom" constant="8" id="8cW-v6-ALR"/>
                                             <constraint firstItem="3h1-a5-lJS" firstAttribute="top" secondItem="Mgb-6G-bAa" secondAttribute="bottom" constant="7.5" id="9Db-TA-BeA"/>
                                             <constraint firstItem="Xje-1g-R7u" firstAttribute="leading" secondItem="80m-MS-cZv" secondAttribute="leading" constant="59" id="9PX-5c-mGv"/>
@@ -1136,7 +1136,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="80m-MS-cZv" secondAttribute="bottom" id="1mW-5f-CtH"/>
+                                    <constraint firstAttribute="bottom" secondItem="80m-MS-cZv" secondAttribute="bottom" constant="-88" id="1mW-5f-CtH"/>
                                     <constraint firstItem="80m-MS-cZv" firstAttribute="top" secondItem="Y7d-eG-QYr" secondAttribute="top" id="5bJ-dZ-Ikf"/>
                                     <constraint firstAttribute="trailing" secondItem="80m-MS-cZv" secondAttribute="trailing" id="loM-OD-ktO"/>
                                     <constraint firstItem="80m-MS-cZv" firstAttribute="leading" secondItem="Y7d-eG-QYr" secondAttribute="leading" id="o1b-2B-1bj"/>
