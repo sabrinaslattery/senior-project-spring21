@@ -4,7 +4,6 @@
 //
 //  Created by William Ordaz on 3/22/21.
 //
-
 import Foundation
 import UIKit
 import Parse
@@ -16,8 +15,8 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var eventTitleField: UITextField!
     
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet weak var fromField: UITextField!
-    @IBOutlet weak var toField: UITextField!
+    @IBOutlet weak var toPicker: UIDatePicker!
+    @IBOutlet weak var fromPicker: UIDatePicker!
     @IBOutlet weak var totalSpotsField: UITextField!
     @IBOutlet weak var aboutEventField: UITextField!
     @IBOutlet weak var volunteerExpectationField: UITextField!
@@ -32,7 +31,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     var difficultyPicker = UIPickerView()
     var tagsPicker = UIPickerView()
     
-    let difficulty = ["Easy/Facil", "Medium/Mediano", "Hard/Deficil"]
+    let difficulty = ["Easy", "Medium", "Hard"]
     
     let tags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
     
@@ -42,6 +41,8 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     var activityView:UIActivityIndicatorView!
     
     var imagePicker:UIImagePickerController!
+    
+    var event = PFObject(className: "Events")
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
@@ -65,8 +66,8 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         tagField.textAlignment = .center
 
         eventTitleField.delegate = self
-        fromField.delegate = self
-        toField.delegate = self
+        //fromField.delegate = self
+        //toField.delegate = self
         totalSpotsField.delegate = self
         aboutEventField.delegate = self
         volunteerExpectationField.delegate = self
@@ -75,8 +76,8 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         phoneNumberField.delegate = self
         
         eventTitleField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-        fromField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
-        toField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
+       // fromField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
+        //toField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         totalSpotsField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         aboutEventField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         volunteerExpectationField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
@@ -88,33 +89,45 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     
     @IBAction func CompletedButton(_ sender: Any) {
         
-        let event = PFObject(className: "Events")
        
-        event ["eventName"] = eventTitleField.text!
-        event ["dateFrom"] = fromField.text!
-        event ["dateTo"] = toField.text!
-        event ["spots"] = totalSpotsField.text!
-        event ["aboutEvent"] = aboutEventField.text!
-        event ["volExpectation"] = volunteerExpectationField.text!
-        event ["volWear"] = volunteerShouldWearField.text!
-        event ["contactEmail"] = emailField.text!
-        event ["contactNumber"] = phoneNumberField.text!
+        self.event["title"] = eventTitleField.text!
+        self.event["totalSpots"] = Int(totalSpotsField.text!)
+        self.event["description"] = aboutEventField.text!
+        self.event["expectations"] = volunteerExpectationField.text!
+        self.event["clothes"] = volunteerShouldWearField.text!
+        self.event["contactEmail"] = emailField.text!
+        self.event["contactPhone"] = phoneNumberField.text!
         
-        event ["eventDiff"] = difficultyPicker
-        event ["eventTag"] = tagsPicker
-        event ["eventDate"] = datePicker
+        //event ["difficulty"] = difficultyPicker
+        //event ["tag"] = tagsPicker
+        datePicker.locale = .current
+        toPicker.locale = .current
+        fromPicker.locale = .current
+        self.event["date"] = datePicker.date
+		self.event["startTime"] = fromPicker.date
+		self.event["endTime"] = toPicker.date
+        self.event["attendees"] = NSArray()
         
         
-        let coverPhoto = PFObject(className: "CoverImage.png")
+        
         let imageData = coverPhotoImageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
         
-        coverPhoto["eventImage"] = file
+        self.event["image"] = file
         
         _ = datePicker.date
         
         let diffPicker = difficultyPicker
         let tagPicker = tagsPicker
+        
+        self.event.saveInBackground { (success, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else if success != nil {
+                print("Created an event")
+                    self.performSegue(withIdentifier: "ToEvents", sender: self)
+            }
+        }
         
     }
     
@@ -159,8 +172,8 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         eventTitleField.resignFirstResponder()
-        fromField.resignFirstResponder()
-        toField.resignFirstResponder()
+        fromPicker.resignFirstResponder()
+        toPicker.resignFirstResponder()
         totalSpotsField.resignFirstResponder()
         aboutEventField.resignFirstResponder()
         volunteerExpectationField.resignFirstResponder()
@@ -181,8 +194,8 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     
     @objc func textFieldChanged(_ target:UITextField) {
         let title = eventTitleField.text
-        let from = fromField.text
-        let to = toField.text
+        //let from = fromField.text
+        //let to = toField.text
         let total = totalSpotsField.text
         let about = aboutEventField.text
         let expectation = volunteerExpectationField.text
@@ -190,7 +203,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         let number = phoneNumberField.text
         
         
-        _ = title != nil && title != "" && from != nil && from != "" && to != nil && to != "" && total != nil && total != "" && about != nil && about != "" && expectation != nil && expectation != "" && email != nil && email != "" && number != nil && number != "" 
+        _ = title != nil && title != "" && total != nil && total != "" && about != nil && about != "" && expectation != nil && expectation != "" && email != nil && email != "" && number != nil && number != ""
     }
     
 }
@@ -220,15 +233,16 @@ extension CreateNewEventViewController: UIPickerViewDataSource, UIPickerViewDele
         }
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        //let event = PFObject(className: "Events")
         switch pickerView.tag {
         case 1:
-            PFUser.current()?["eventDiff"] = self.difficulty[row];
-            PFUser.current()?.saveInBackground()
+            self.event["difficulty"] = self.difficulty[row]
+            //PFUser.current()?.saveInBackground()
             difficultyField.text = difficulty[row]
             difficultyField.resignFirstResponder()
         case 2:
-            PFUser.current()?["eventTag"] = self.tags[row];
-            PFUser.current()?.saveInBackground()
+            self.event["tag"] = self.tags[row]
+            //PFUser.current()?.saveInBackground()
             tagField.text = tags[row]
             tagField.resignFirstResponder()
         default:
