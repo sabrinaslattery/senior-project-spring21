@@ -565,7 +565,8 @@
                             <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31p-rz-T4g">
                                 <rect key="frame" x="29" y="373" width="74" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="privacy_unselected"/>
+                                <color key="tintColor" systemColor="systemPinkColor"/>
+                                <state key="normal" backgroundImage="checkmark.circle.fill" catalog="system"/>
                                 <connections>
                                     <action selector="defaultButton:" destination="AIj-sH-TFF" eventType="touchUpInside" id="9Sj-MD-3nr"/>
                                 </connections>
@@ -1522,7 +1523,7 @@
         <segue reference="xyj-rW-Qgl"/>
         <segue reference="QXO-lG-BiZ"/>
         <segue reference="POg-4C-8Be"/>
-        <segue reference="JST-Lb-N3u"/>
+        <segue reference="xYL-oc-d57"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="18+ Icon" width="674" height="674"/>
@@ -1531,6 +1532,7 @@
         <image name="Button_Edit" width="196" height="112"/>
         <image name="OutReachLogo" width="256" height="256"/>
         <image name="checkbox_unchecked" width="202" height="206"/>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
         <image name="iconfinder_user-alt_285645" width="64" height="64"/>
         <image name="privacy_unselected" width="264" height="262"/>
         <systemColor name="labelColor">
@@ -1547,6 +1549,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
