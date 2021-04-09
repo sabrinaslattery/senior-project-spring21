@@ -2,7 +2,7 @@
 //  PrivacySettingViewController.swift
 //  Volunteer
 //
-//  Created by William Ordaz on 2/22/21.
+//  Created by William Ordaz, Sabrina and Josh Freedman on 2/22/21.
 //
 
 import Foundation
@@ -30,14 +30,14 @@ class PrivacySettingViewController:UIViewController {
     }
     
     @IBAction func defaultButton(_ sender: UIButton) {
-        if (flag1 == false)
+        if (flag1 == true)
         {
-            sender.setBackgroundImage((UIImage(named: "privacy_selected")), for: UIControl.State.normal)
-            flag1 = true
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.circle.fill")), for: UIControl.State.normal)
+            flag1 = false
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "privacy_unselected")), for: UIControl.State.normal)
-            flag1 = false
+            sender.setBackgroundImage((UIImage(systemName: "circle")), for: UIControl.State.normal)
+            flag1 = true
         }
     }
     
@@ -45,11 +45,11 @@ class PrivacySettingViewController:UIViewController {
     @IBAction func organizerButton(_ sender: UIButton) {
         if (flag2 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "privacy_selected")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.circle.fill")), for: UIControl.State.normal)
             flag2 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "privacy_unselected")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "circle")), for: UIControl.State.normal)
             flag2 = false
         }
     }
@@ -57,11 +57,11 @@ class PrivacySettingViewController:UIViewController {
     @IBAction func privateButton(_ sender: UIButton) {
         if (flag3 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "privacy_selected")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.circle.fill")), for: UIControl.State.normal)
             flag3 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "privacy_unselected")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "circle")), for: UIControl.State.normal)
             flag3 = false
         }
     }

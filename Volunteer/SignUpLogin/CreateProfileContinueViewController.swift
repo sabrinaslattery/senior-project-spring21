@@ -40,6 +40,15 @@ class CreateProfileViewContinueController:UIViewController, UITextFieldDelegate 
     }
     }
     
+    func setContinueButton(enabled:Bool) {
+        if enabled {
+            continueButton.alpha = 1.0
+            continueButton.isEnabled = true
+        } else {
+            continueButton.alpha = 0.5
+            continueButton.isEnabled = false
+        }
+    }
        
     
 }
