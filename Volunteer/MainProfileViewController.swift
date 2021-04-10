@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Parse
+import AlamofireImage
 
 class MainProfileViewController: UIViewController {
     
@@ -18,11 +19,11 @@ class MainProfileViewController: UIViewController {
             @IBOutlet var zipCode: UILabel?
             @IBOutlet var jobTitle: UILabel?
             @IBOutlet var emailAddress: UILabel?
-            @IBOutlet var phoneNumber: UILabel?
+            //@IBOutlet var phoneNumber: UILabel?
             @IBOutlet var intro: UILabel?
             @IBOutlet var educationLevel: UILabel?
             @IBOutlet var workExperience: UILabel?
-            @IBOutlet var interests: UILabel?
+            //@IBOutlet var interests: UILabel?
             
             override func viewDidLoad() {
                 super.viewDidLoad()
@@ -35,7 +36,7 @@ class MainProfileViewController: UIViewController {
                 showEmail()
 //                showPhoneNumber()
                 showIntro()
-//                showEducationLevel()
+                showEducationLevel()
                 showWorkExperience()
 //                showInterests()
                 // Do any additional setup after loading the view.
@@ -175,17 +176,20 @@ class MainProfileViewController: UIViewController {
                     }
             }
     
-            func showEducationLevel () {
-                let eduLvlQuery = PFQuery(className:"Profile")
-                eduLvlQuery.whereKey("educationLevel", equalTo: PFUser.current() as Any)
-                eduLvlQuery.getObjectInBackground(withId: "educationLevel") { (result: PFObject?, error: Error?) in
-                    if let userEducationLevel = result
-                    {
-                        self.educationLevel?.text = userEducationLevel ["educationLevel"] as? String
-                        print(userEducationLevel)
-                    }
+    func showEducationLevel () {
+            let query = PFQuery(className: "Profile")
+            query.whereKey("user", equalTo: PFUser.current()!)
+            query.includeKey("educationLevel")
+            query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
+              if let result = result {
+                for list in result{
+                  let output = list["educationLevel"] as? String
+                  self.educationLevel?.text = output
+                  print(output!)
                 }
-            }
+              }
+              }
+          }
 
             func showWorkExperience () {
                 let query = PFQuery(className: "Profile")
