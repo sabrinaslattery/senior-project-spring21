@@ -150,7 +150,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="Nm5-gT-ECX" eventType="touchUpInside" id="9RK-HM-OrZ"/>
-                                    <segue destination="K6L-EE-RJc" kind="show" identifier="Profile Setup Dialogue" id="6bU-GD-5Yq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -212,6 +211,7 @@
                         <outlet property="lastnameField" destination="4Xg-4E-GI3" id="bel-MX-0GZ"/>
                         <outlet property="passwordField" destination="MOv-Fr-jMT" id="Gw3-Jp-YOj"/>
                         <outlet property="phonenumberField" destination="OTw-dl-f90" id="Wsw-rm-mWf"/>
+                        <segue destination="K6L-EE-RJc" kind="presentation" identifier="ToSetupProfile" id="TAb-5o-Ac7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXd-Y0-Sk1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1686,7 +1686,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="Q0T-yz-7kp"/>
         <segue reference="QXO-lG-BiZ"/>
-        <segue reference="RKr-ec-ojO"/>
+        <segue reference="TAb-5o-Ac7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="18+ Icon" width="674" height="674"/>
