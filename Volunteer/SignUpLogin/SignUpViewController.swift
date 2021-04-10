@@ -17,8 +17,8 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var phonenumberField: UITextField!
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var tapToChangeProfileButton: UIButton!
+    //@IBOutlet weak var profileImageView: UIImageView!
+    //@IBOutlet weak var tapToChangeProfileButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
     
  
@@ -88,11 +88,11 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
 		//user["newUser"] = true
         
         // saving the profile image
-        let profileImage = PFObject(className: "User")
-        let imageData = profileImageView.image!.pngData()
-        let file = PFFileObject(data: imageData!)
-        
-        profileImage["image"] = file
+        //let profileImage = PFObject(className: "Profile")
+//        let imageData = profileImageView.image!.pngData()
+//        let file = PFFileObject(data: imageData!)
+//
+//        profileImage["image"] = file
         
         user.signUpInBackground { (success, error) in
             if success{
@@ -110,34 +110,34 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
     }
 }
     
-    // Launching the camera to add a profile picture from camera or photo library
-    @IBAction func onCameraButton(_sender: Any) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
-        
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-            picker.sourceType = .camera
-        }
-        
-        else{
-            picker.sourceType = .photoLibrary
-        }
-        
-        present(picker, animated: true, completion: nil)
-    }
-    
-    // resizing the image and
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[.editedImage] as! UIImage
-        
-        let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af_imageScaled(to:size)
-        
-        profileImageView.image = scaledImage
-        
-        dismiss(animated: true, completion: nil)
-    }
+//    // Launching the camera to add a profile picture from camera or photo library
+//    @IBAction func onCameraButton(_sender: Any) {
+//        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.allowsEditing = true
+//
+//        if UIImagePickerController.isSourceTypeAvailable(.camera){
+//            picker.sourceType = .camera
+//        }
+//
+//        else{
+//            picker.sourceType = .photoLibrary
+//        }
+//
+//        present(picker, animated: true, completion: nil)
+//    }
+//
+//    // resizing the image and
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        let image = info[.editedImage] as! UIImage
+//
+//        let size = CGSize(width: 300, height: 300)
+//        let scaledImage = image.af_imageScaled(to:size)
+//
+//        profileImageView.image = scaledImage
+//
+//        dismiss(animated: true, completion: nil)
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

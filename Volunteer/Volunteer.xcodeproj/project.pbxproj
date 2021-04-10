@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		030E5D2F2613E3A900B928D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E5D2E2613E3A900B928D8 /* HomeViewController.swift */; };
+		032E503A2621460B00A59F14 /* CreateProfileAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E50392621460B00A59F14 /* CreateProfileAllViewController.swift */; };
 		035BEE632613D3D400015ADC /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE622613D3D400015ADC /* AboutUsViewController.swift */; };
 		035BEE682613D58100015ADC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE672613D58100015ADC /* EditProfileViewController.swift */; };
 		035BEE6D2613D59800015ADC /* MainProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE6C2613D59800015ADC /* MainProfileViewController.swift */; };
@@ -76,6 +77,7 @@
 
 /* Begin PBXFileReference section */
 		030E5D2E2613E3A900B928D8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		032E50392621460B00A59F14 /* CreateProfileAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileAllViewController.swift; sourceTree = "<group>"; };
 		035BEE622613D3D400015ADC /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = SOURCE_ROOT; };
 		035BEE672613D58100015ADC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = SOURCE_ROOT; };
 		035BEE6C2613D59800015ADC /* MainProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProfileViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -308,6 +310,7 @@
 				B152DC6425E4419F00A7DB17 /* SelectSkillsViewController.swift */,
 				B152DC6925E441BC00A7DB17 /* SelectInterestViewController.swift */,
 				03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */,
+				032E50392621460B00A59F14 /* CreateProfileAllViewController.swift */,
 			);
 			path = SignUpLogin;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				B152DC2425E43EEA00A7DB17 /* ResetPassViewController.swift in Sources */,
 				0381BCF1260A8DA900168C48 /* AllEventsTableViewCell.swift in Sources */,
 				035BEE632613D3D400015ADC /* AboutUsViewController.swift in Sources */,
+				032E503A2621460B00A59F14 /* CreateProfileAllViewController.swift in Sources */,
 				035BEE6D2613D59800015ADC /* MainProfileViewController.swift in Sources */,
 				B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */,
 				0381BD03260A8E5500168C48 /* AllEventsTableViewController.swift in Sources */,

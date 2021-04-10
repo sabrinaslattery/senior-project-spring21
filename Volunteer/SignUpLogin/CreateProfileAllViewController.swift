@@ -1,8 +1,8 @@
 //
-//  EditProfileViewController.swift
+//  CreateProfileAllViewController.swift
 //  Volunteer
 //
-//  Created by Joshua Freedman, Jessica and Karina on 3/30/21.
+//  Created by Joshua Freedman, Jessica and Karina on 4/9/21.
 //
 
 import Foundation
@@ -10,9 +10,8 @@ import UIKit
 import Parse
 import AlamofireImage
 
-
-class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
- 
+class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var tapToChangeProfileButton: UIButton!
@@ -31,8 +30,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     let educationLevel = ["High School Graduate", "Some College", "Associate Degree", "Bachelor's Degree", "Master's Degree", "Higher Degree"]
     
     var profile = PFObject(className: "Profile")
-
-
+    
     //Interest Checkboxes
     @IBOutlet weak var animalWelfareCheckbox: UIButton!
     @IBOutlet weak var childCareCheckbox: UIButton!
@@ -64,8 +62,6 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     override func viewDidLoad() {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
-        showUserData()
-        
         educationLevelField.inputView = educationLevelPicker
                 
         educationLevelPicker.dataSource = self
@@ -93,63 +89,40 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         
 //        buttonEducationLevel = dropDownBtn.init(frame: CGRect(x: 0, y: 0, width:0, height: 0))
 //        buttonEducationLevel.translatesAutoresizingMaskIntoConstraints = false
-//        
+//
 //        self.view.addSubview(buttonEducationLevel)
-//        
+//
 //        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
 //        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        
     }
-    func showUserData() {
-        let query = PFQuery(className: "Profile")
-        query.whereKey("user", equalTo: PFUser.current()!)
-        query.includeKeys(["jobTitle","city","zipCode","educationLevel","userBio","workExperience"])
-        query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
-          if let result = result {
-            for list in result{
-              let userJobTitle = list["jobTitle"] as? String
-              let userCity = list["city"] as? String
-              let userZipCode = list["zipCode"] as? String
-              let userIntro = list["userBio"] as? String
-              let userWorkExperience = list["workExperience"] as? String
-              let userEducationLevel = list["educationLevel"] as? String
-              self.jobTitleTextField?.text = userJobTitle
-              self.cityTextField?.text = userCity
-              self.zipCodeTextField?.text = userZipCode
-              self.introTextField?.text = userIntro
-              self.workExperienceTextField?.text = userWorkExperience
-              self.educationLevelField?.text = userEducationLevel
-            }
-          }
-          }
-      }
     
-    
+
     
     @IBAction func updateUser(_ sender: Any) {
         let currentUser = PFUser.current()
             self.profile["jobTitle"] = jobTitleTextField.text!
             self.profile["city"] = cityTextField.text!
             self.profile["zipCode"] = zipCodeTextField.text!
+            self.profile["user"] = currentUser
             self.profile["userBio"] = introTextField.text!
             self.profile["workExperience"] = workExperienceTextField.text!
-            self.profile["user"] = currentUser
-            let eduLevelPicker = educationLevelPicker
         
+            let eduLvlPicker = educationLevelPicker
+            
             // saving the profile image
             let imageData = profileImageView.image!.pngData()
             let file = PFFileObject(data: imageData!)
             self.profile["image"] = file
-            
+        
             self.profile.saveInBackground {
-              (success: Bool, error: Error?) in
-              if (success) {
-                // The object has been saved.
-              } else {
-                // There was a problem, check error.description
-              }
-            }
-          }
+                (success: Bool, error: Error?) in
+                   if (success) {
+                       // The object has been saved.
+                   } else {
+                       // There was a problem, check error.description
+                   }
+               }
+           }
 
     // Launching the camera to add a profile picture from camera or photo library
     @IBAction func onCameraButton(_sender: Any) {
@@ -179,6 +152,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         dismiss(animated: true, completion: nil)
     }
+
 
     //interest tag buttons
     @IBAction func animalCheckboxButton(_ sender: UIButton) {
@@ -315,10 +289,11 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     
 }
-extension EditProfileViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+extension CreateProfileAllViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView.tag {
         case 1:
