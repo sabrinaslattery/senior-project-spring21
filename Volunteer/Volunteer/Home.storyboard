@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -57,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OutReachLogo" translatesAutoresizingMaskIntoConstraints="NO" id="M3W-Mw-cAa">
-                                <rect key="frame" x="123" y="120" width="169" height="157"/>
+                                <rect key="frame" x="123" y="76" width="169" height="201"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="157" id="ju2-Mm-CTq"/>
                                     <constraint firstAttribute="width" constant="169" id="vsh-hu-J9c"/>
@@ -79,13 +80,13 @@
                                     <constraint firstAttribute="height" constant="475" id="DDo-Ef-ngW"/>
                                     <constraint firstAttribute="width" constant="374" id="wnp-6h-dY8"/>
                                 </constraints>
-                                <mutableString key="text">This app was created by the students at Notre Dame de Namur University, class of 2021, for our Senior Project. 
+                                <string key="text">This app was created by the students at Notre Dame de Namur University, class of 2021, for our Senior Project. 
 
 Due to recent events in our community and around the globe, we were inspired to create and design a mobile app called "OutReach". This said app gives our community a way to collaborate with one another to provide help and support to those in need during these difficult times. 
 
 We are designers, programmers and engineers that wish to include all members of our community, including those who are not tech-savvy, speak a different language, and even individuals who are colorblind. We hope this app will be able to assist people in all aspects of life, no matter how far we have to reach. 
 
-To learn more about advocacy for colorblind-friendly design through education and awareness, go to: </mutableString>
+To learn more about advocacy for colorblind-friendly design through education and awareness, go to: </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -112,6 +113,15 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vG-NE-emY">
+                                <rect key="frame" x="20" y="44" width="77" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.left.circle" catalog="system">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jwm-Ze-cRx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -250,12 +260,23 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OutReachLogo" translatesAutoresizingMaskIntoConstraints="NO" id="aO5-m0-Tku">
-                                <rect key="frame" x="136" y="88" width="143" height="161"/>
+                                <rect key="frame" x="136" y="44" width="143" height="205"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="7e2-QJ-q1W"/>
                                     <constraint firstAttribute="height" constant="161" id="zaW-uz-jpO"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgO-7X-rRg" userLabel="SideMenuButton">
+                                <rect key="frame" x="20" y="44" width="70" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                    <imageReference key="image" image="line.horizontal.3.circle" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KQO-rr-gxW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -318,11 +339,10 @@ To learn more about advocacy for colorblind-friendly design through education an
         <!--Home Nav Controller-->
         <scene sceneID="XId-rG-5AM">
             <objects>
-                <navigationController title="Home Nav Controller" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="gTW-Ux-ULN" sceneMemberID="viewController">
+                <navigationController title="Home Nav Controller" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="gTW-Ux-ULN" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Home" id="b2e-dN-30N"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="iBI-ie-dyV">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
