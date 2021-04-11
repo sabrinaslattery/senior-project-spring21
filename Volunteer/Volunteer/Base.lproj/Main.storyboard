@@ -150,7 +150,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signUp:" destination="Nm5-gT-ECX" eventType="touchUpInside" id="9RK-HM-OrZ"/>
-                                    <segue destination="K6L-EE-RJc" kind="show" identifier="Profile Setup Dialogue" id="6bU-GD-5Yq"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -212,6 +211,7 @@
                         <outlet property="lastnameField" destination="4Xg-4E-GI3" id="bel-MX-0GZ"/>
                         <outlet property="passwordField" destination="MOv-Fr-jMT" id="Gw3-Jp-YOj"/>
                         <outlet property="phonenumberField" destination="OTw-dl-f90" id="Wsw-rm-mWf"/>
+                        <segue destination="K6L-EE-RJc" kind="presentation" identifier="ToSetupProfile" id="TAb-5o-Ac7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXd-Y0-Sk1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -706,6 +706,7 @@
                                 </state>
                                 <connections>
                                     <action selector="SendLinkBtnAction:" destination="opX-Z9-5p4" eventType="touchUpInside" id="Vja-MI-ytT"/>
+                                    <segue destination="TJM-Yz-rkw" kind="show" id="aAe-6c-xff"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o3A-1r-yF2">
@@ -750,7 +751,6 @@
                         <outlet property="dismissButton" destination="vy9-wq-KEO" id="sfi-6k-7kJ"/>
                         <outlet property="enterEmailTextField" destination="o3A-1r-yF2" id="XSa-Zx-ITu"/>
                         <outlet property="sendInstructionButton" destination="jiU-H8-Sg6" id="MPq-PI-emj"/>
-                        <segue destination="9fr-RJ-Pme" kind="show" identifier="showLoginView" id="pH7-dA-Zax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvH-o8-lL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -776,7 +776,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="We have sent password recover instructions to the email that you provided." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTK-lK-N7H">
-                                <rect key="frame" x="66" y="359" width="292" height="364.5"/>
+                                <rect key="frame" x="66" y="359" width="292" height="178"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="178" id="CUN-fh-TAm"/>
                                     <constraint firstAttribute="height" constant="178" id="DeN-5t-pfh"/>
@@ -788,7 +788,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Did not receive the email? Check your spam folder, or try another email address." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSb-ee-12z">
-                                <rect key="frame" x="24" y="752.5" width="366" height="48"/>
+                                <rect key="frame" x="24" y="566" width="366" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="3cT-GA-SS4"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="6cA-Wk-KgC"/>
@@ -1685,8 +1685,8 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Q0T-yz-7kp"/>
-        <segue reference="pH7-dA-Zax"/>
-        <segue reference="RKr-ec-ojO"/>
+        <segue reference="QXO-lG-BiZ"/>
+        <segue reference="TAb-5o-Ac7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="18+ Icon" width="674" height="674"/>
