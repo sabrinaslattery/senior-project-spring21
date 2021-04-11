@@ -65,7 +65,6 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
         showUserData()
-        showProfileImage()
         
         educationLevelField.inputView = educationLevelPicker
                 
@@ -101,31 +100,6 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
 //        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         
     }
-    
-    func showProfileImage () {
-        let query = PFQuery(className: "Profile")
-        query.whereKey("user", equalTo:  PFUser.current()!)
-        query.includeKey("image")
-        query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
-        if let result = result {
-            for list in result{
-                
-                let output:PFFileObject = list["image"] as! PFFileObject
-                output.getDataInBackground { (ImageData: Data?, error: Error?) in
-                    if error == nil {
-                        
-                        let Image: UIImage = UIImage (data: ImageData!)!
-                        self.profileImageView?.image = Image
-                    }
-                }
-//                        let output = list["image"] as? PFFileObject
-//                        self.profileImage.image!.pngData() = output
-
-              }
-           }
-        }
-    }
-    
     func showUserData() {
         let query = PFQuery(className: "Profile")
         query.whereKey("user", equalTo: PFUser.current()!)
