@@ -83,8 +83,8 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         
         // adding objects to the user class
 
-        user["firstname"] = firstnameField.text!
-        user["lastname"] = lastnameField.text!
+        user ["firstname"] = firstnameField.text!
+        user ["lastname"] = lastnameField.text!
 		//user["newUser"] = true
         
         // saving the profile image
@@ -94,27 +94,20 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
 //
 //        profileImage["image"] = file
         
-		if !firstnameField.hasText || !lastnameField.hasText || !emailField.hasText || !passwordField.hasText {
-			let alert = UIAlertController(title: "Oops!", message: "Please fill out all of the required information", preferredStyle: .alert)
+        user.signUpInBackground { (success, error) in
+            if success{
+				self.performSegue(withIdentifier: "Profile Setup Dialogue", sender: nil)
+            }
+         else{
+			let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
 			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-				
+				print(error.debugDescription)
 			}))
 			self.present(alert, animated: true)
-			print("Error:")
-		} else {
-			user.signUpInBackground { (success, error) in
-				if success{
-					self.performSegue(withIdentifier: "ToSetupProfile", sender: nil)
-				} else {
-				let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
-				alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-					print(error.debugDescription)
-				}))
-				self.present(alert, animated: true)
-				print("Error: \(String(describing: error.debugDescription))")
-			 }
-		}
-		}
+			print("Error: \(String(describing: error.debugDescription))")
+         }
+        
+    }
 }
     
 //    // Launching the camera to add a profile picture from camera or photo library

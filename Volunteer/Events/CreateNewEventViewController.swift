@@ -9,7 +9,7 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
+class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var coverPhotoImageView: UIImageView!
     @IBOutlet weak var eventTitleField: UITextField!
@@ -18,18 +18,9 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var toPicker: UIDatePicker!
     @IBOutlet weak var fromPicker: UIDatePicker!
     @IBOutlet weak var totalSpotsField: UITextField!
-    
-    //@IBOutlet weak var aboutEventField: UITextField!
-    //@IBOutlet weak var volunteerExpectationField: UITextField!
-    //@IBOutlet weak var volunteerShouldWearField: UITextField!
-    
-   // @IBOutlet weak var aboutEventView: UITextView!
-    
-    @IBOutlet weak var aboutEventField: UITextView!
-    @IBOutlet weak var volunteerExpectationField: UITextView!
-    @IBOutlet weak var volunteerShouldWearField: UITextView!
-    
-    
+    @IBOutlet weak var aboutEventField: UITextField!
+    @IBOutlet weak var volunteerExpectationField: UITextField!
+    @IBOutlet weak var volunteerShouldWearField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
     
@@ -84,20 +75,13 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         emailField.delegate = self
         phoneNumberField.delegate = self
         
-        aboutEventField!.layer.borderWidth = 1
-        aboutEventField!.layer.borderColor = UIColor.black.cgColor
-        volunteerExpectationField!.layer.borderWidth = 1
-        volunteerExpectationField!.layer.borderColor = UIColor.black.cgColor
-        volunteerShouldWearField!.layer.borderWidth = 1
-        volunteerShouldWearField!.layer.borderColor = UIColor.black.cgColor
-        
         eventTitleField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
        // fromField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         //toField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         totalSpotsField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
-        //aboutEventField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
-        //volunteerExpectationField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
-        //volunteerShouldWearField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
+        aboutEventField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
+        volunteerExpectationField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
+        volunteerShouldWearField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         emailField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         phoneNumberField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         
