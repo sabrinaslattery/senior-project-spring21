@@ -17,8 +17,8 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var phonenumberField: UITextField!
-    @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var tapToChangeProfileButton: UIButton!
+    //@IBOutlet weak var profileImageView: UIImageView!
+    //@IBOutlet weak var tapToChangeProfileButton: UIButton!
     @IBOutlet weak var continueButton: UIButton!
     
  
@@ -83,61 +83,68 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         
         // adding objects to the user class
 
-        user ["firstname"] = firstnameField.text!
-        user ["lastname"] = lastnameField.text!
+        user["firstname"] = firstnameField.text!
+        user["lastname"] = lastnameField.text!
 		//user["newUser"] = true
         
         // saving the profile image
-        let profileImage = PFObject(className: "User")
-        let imageData = profileImageView.image!.pngData()
-        let file = PFFileObject(data: imageData!)
+        //let profileImage = PFObject(className: "Profile")
+//        let imageData = profileImageView.image!.pngData()
+//        let file = PFFileObject(data: imageData!)
+//
+//        profileImage["image"] = file
         
-        profileImage["image"] = file
-        
-        user.signUpInBackground { (success, error) in
-            if success{
-				self.performSegue(withIdentifier: "Profile Setup Dialogue", sender: nil)
-            }
-         else{
-			let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
+		if !firstnameField.hasText || !lastnameField.hasText || !emailField.hasText || !passwordField.hasText {
+			let alert = UIAlertController(title: "Oops!", message: "Please fill out all of the required information", preferredStyle: .alert)
 			alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-				print(error.debugDescription)
+				
 			}))
 			self.present(alert, animated: true)
-			print("Error: \(String(describing: error.debugDescription))")
-         }
-        
-    }
+			print("Error:")
+		} else {
+			user.signUpInBackground { (success, error) in
+				if success{
+					self.performSegue(withIdentifier: "ToSetupProfile", sender: nil)
+				} else {
+				let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
+				alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+					print(error.debugDescription)
+				}))
+				self.present(alert, animated: true)
+				print("Error: \(String(describing: error.debugDescription))")
+			 }
+		}
+		}
 }
     
-    // Launching the camera to add a profile picture from camera or photo library
-    @IBAction func onCameraButton(_sender: Any) {
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.allowsEditing = true
-        
-        if UIImagePickerController.isSourceTypeAvailable(.camera){
-            picker.sourceType = .camera
-        }
-        
-        else{
-            picker.sourceType = .photoLibrary
-        }
-        
-        present(picker, animated: true, completion: nil)
-    }
-    
-    // resizing the image and
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        let image = info[.editedImage] as! UIImage
-        
-        let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af_imageScaled(to:size)
-        
-        profileImageView.image = scaledImage
-        
-        dismiss(animated: true, completion: nil)
-    }
+//    // Launching the camera to add a profile picture from camera or photo library
+//    @IBAction func onCameraButton(_sender: Any) {
+//        let picker = UIImagePickerController()
+//        picker.delegate = self
+//        picker.allowsEditing = true
+//
+//        if UIImagePickerController.isSourceTypeAvailable(.camera){
+//            picker.sourceType = .camera
+//        }
+//
+//        else{
+//            picker.sourceType = .photoLibrary
+//        }
+//
+//        present(picker, animated: true, completion: nil)
+//    }
+//
+//    // resizing the image and
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+//        let image = info[.editedImage] as! UIImage
+//
+//        let size = CGSize(width: 300, height: 300)
+//        let scaledImage = image.af_imageScaled(to:size)
+//
+//        profileImageView.image = scaledImage
+//
+//        dismiss(animated: true, completion: nil)
+//    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
