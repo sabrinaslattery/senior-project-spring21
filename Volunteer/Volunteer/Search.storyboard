@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="w63-OE-Ov2">
+                        <searchBar key="tableHeaderView" contentMode="redraw" showsCancelButton="YES" id="w63-OE-Ov2">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -47,7 +47,7 @@
                             <outlet property="delegate" destination="JCD-vD-6u4" id="x1F-gP-FHx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search View Controller" id="IiC-Ih-31R"/>
+                    <navigationItem key="navigationItem" title="Search Events" id="IiC-Ih-31R"/>
                     <connections>
                         <outlet property="searchBar" destination="w63-OE-Ov2" id="yyX-eD-Qd3"/>
                         <outlet property="tableView" destination="Xyd-nK-cap" id="lam-kB-sUx"/>
