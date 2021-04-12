@@ -25,8 +25,8 @@ class ResetPassViewController:UIViewController, UITextFieldDelegate {
                    if emailAddress.isEmpty
                    {
                        //Display warning message
-                       let userMessage: String = "Please type in your email address"
-                       displayMessage(userMessage: userMessage)
+                    let missingEmailMessage: String = "Please type in your email address"
+                        displayMissingEmailMessage(missingEmailMessage: missingEmailMessage)
                        return
                    }
 
@@ -35,6 +35,8 @@ class ResetPassViewController:UIViewController, UITextFieldDelegate {
                        if(success)
                        {
                             //Display success message
+                        let emailSentMessage: String = "We have emailed your password reset link to "  + emailAddress
+                            self.displayEmailSentMessage(emailSentMessage: emailSentMessage)
                         print("success")
                            
                        } else {
@@ -47,9 +49,8 @@ class ResetPassViewController:UIViewController, UITextFieldDelegate {
                    })
          }
 
-         func displayMessage (userMessage:String)
-             {
-                     var myAlert = UIAlertController(title: "Missing Email", message: userMessage, preferredStyle: UIAlertController.Style.alert)
+        func displayMissingEmailMessage (missingEmailMessage:String) {
+            let myAlert = UIAlertController(title: "Missing Email", message: missingEmailMessage, preferredStyle: UIAlertController.Style.alert)
 
                      let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
                          action in
@@ -61,7 +62,20 @@ class ResetPassViewController:UIViewController, UITextFieldDelegate {
                      }
 
 
-    
+        func displayEmailSentMessage (emailSentMessage:String)
+                {
+                    let myAlert = UIAlertController(title: "Check your Email!", message: emailSentMessage, preferredStyle: UIAlertController.Style.alert)
+
+                        let okAction = UIAlertAction(title: "Return to Login", style: UIAlertAction.Style.default) {
+                            action in
+                           // self.dismiss(animated: true, completion: nil)
+                            self.performSegue(withIdentifier: "showLoginView", sender: nil)
+
+                        }
+
+                       myAlert.addAction(okAction)
+                       self.present(myAlert, animated: true, completion: nil)
+                        }
     @IBAction func handleDismissButton(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }

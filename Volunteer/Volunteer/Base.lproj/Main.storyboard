@@ -706,7 +706,6 @@
                                 </state>
                                 <connections>
                                     <action selector="SendLinkBtnAction:" destination="opX-Z9-5p4" eventType="touchUpInside" id="Vja-MI-ytT"/>
-                                    <segue destination="TJM-Yz-rkw" kind="show" id="aAe-6c-xff"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o3A-1r-yF2">
@@ -751,6 +750,7 @@
                         <outlet property="dismissButton" destination="vy9-wq-KEO" id="sfi-6k-7kJ"/>
                         <outlet property="enterEmailTextField" destination="o3A-1r-yF2" id="XSa-Zx-ITu"/>
                         <outlet property="sendInstructionButton" destination="jiU-H8-Sg6" id="MPq-PI-emj"/>
+                        <segue destination="9fr-RJ-Pme" kind="show" identifier="showLoginView" id="v0p-LL-aQP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvH-o8-lL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1685,7 +1685,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Q0T-yz-7kp"/>
-        <segue reference="QXO-lG-BiZ"/>
+        <segue reference="v0p-LL-aQP"/>
         <segue reference="TAb-5o-Ac7"/>
     </inferredMetricsTieBreakers>
     <resources>

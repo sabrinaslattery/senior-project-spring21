@@ -818,6 +818,9 @@
                                                 <state key="normal" title="Tap to Change">
                                                     <color key="titleColor" systemColor="labelColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onCameraButtonWith_sender:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="XBx-kD-4vI"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0E-ee-32T">
                                                 <rect key="frame" x="52" y="1373" width="88" height="21"/>
