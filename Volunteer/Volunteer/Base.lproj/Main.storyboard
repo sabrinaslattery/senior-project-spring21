@@ -133,7 +133,7 @@
                                     <constraint firstAttribute="height" constant="124" id="96C-CL-9zk"/>
                                     <constraint firstAttribute="width" constant="299" id="XFP-3S-9pC"/>
                                 </constraints>
-                                <string key="text">Password must include: - 8-20 characters  - 1 uppercase and lowercase character - 1 number  - 1 special character (i.e. ?, !, $, *, %) </string>
+                                <string key="text">Password must include:- 8-20 characters - 1 uppercase and lowercase character- 1 number - 1 special character (i.e. ?, !, $, *, %)</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
