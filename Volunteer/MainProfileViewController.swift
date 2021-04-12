@@ -29,7 +29,7 @@ class MainProfileViewController: UIViewController {
                 super.viewDidLoad()
                 showFirstName()
                 showLastName()
-//                showProfileImage()
+                showProfileImage()
                 showCity()
                 showZipCode()
                 showJobTitle()
@@ -44,53 +44,59 @@ class MainProfileViewController: UIViewController {
             }
             
     
-            func showFirstName() {
-                let userFirstName = PFUser.current()?.object(forKey: "firstname") as! String
-                self.firstName?.text = userFirstName
-                print(userFirstName)
-            }
+                func showFirstName() {
+                    let userFirstName = PFUser.current()?.object(forKey: "firstname") as! String
+                    self.firstName?.text = userFirstName
+                    print(userFirstName)
+                }
                 func showLastName() {
                     let userLastName = PFUser.current()?.object(forKey: "lastname") as! String
                     self.lastName?.text =  userLastName
                     print(userLastName)
-            }
-            
-//                func showProfileImage() {
-//                    let profileImageQuery = PFQuery(className:"Profile")
-//                    profileImageQuery.whereKey("profileImage", equalTo: PFUser.current() as Any)
-//                    profileImageQuery.getObjectInBackground(withId: "profileImage") { (result:PFObject?, error: Error?) in
-//                        if let userProfileImage = result
-//                        {
-//                            self.profileImage.image = userProfileImage ["profileImage"] as? UIImage
-//                            print(userProfileImage)
-//                        }
-//                    }
-//                }
-        
-   // @IBAction func backButton(_ sender: Any) {
-           // dismiss(animated: true, completion: nil)
-        //}
-    
-    
-    
-    func showCity () {
-        let query = PFQuery(className: "Profile")
-        query.whereKey("user", equalTo:  PFUser.current()!)
-        query.includeKey("city")
-        query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
-            if let result = result {
-                for list in result{
-
-                    let output = list["city"] as? String
-                    self.city?.text = output
-
-                    print(output!)
                 }
+            
+                func showProfileImage () {
+                                let query = PFQuery(className: "Profile")
+                                query.whereKey("user", equalTo:  PFUser.current()!)
+                                query.includeKey("image")
+                                query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
+                                if let result = result {
+                                    for list in result{
 
-            }
+                                        let output:PFFileObject = list["image"] as! PFFileObject
+                                        output.getDataInBackground { (ImageData: Data?, error: Error?) in
+                                            if error == nil {
 
-            }
-    }
+                                                let Image: UIImage = UIImage (data: ImageData!)!
+                                                self.profileImage?.image = Image
+                                            }
+                                        }
+                //                        let output = list["image"] as? PFFileObject
+                //                        self.profileImage.image!.pngData() = output
+
+                                      }
+                                   }
+                                }
+                            }
+                
+                func showCity () {
+                    let query = PFQuery(className: "Profile")
+                    query.whereKey("user", equalTo:  PFUser.current()!)
+                    query.includeKey("city")
+                    query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
+                        if let result = result {
+                            for list in result{
+
+                                let output = list["city"] as? String
+                                self.city?.text = output
+
+                                print(output as Any)
+                            }
+
+                        }
+
+                        }
+                }
                 func showZipCode () {
                     let query = PFQuery(className: "Profile")
                     query.whereKey("user", equalTo:  PFUser.current()!)
@@ -102,7 +108,7 @@ class MainProfileViewController: UIViewController {
                                 let output = list["zipCode"] as? String
                                 self.zipCode?.text = output
 
-                                print(output!)
+                                print(output as Any)
                             }
 
                         }
@@ -122,7 +128,7 @@ class MainProfileViewController: UIViewController {
                             let output = list["jobTitle"] as? String
                             self.jobTitle?.text = output
 
-                            print(output!)
+                            print(output as Any)
                         }
 
                     }
@@ -168,7 +174,7 @@ class MainProfileViewController: UIViewController {
                             let output = list["userBio"] as? String
                             self.intro?.text = output
 
-                            print(output!)
+                            print(output as Any)
                         }
 
                     }
@@ -185,7 +191,7 @@ class MainProfileViewController: UIViewController {
                 for list in result{
                   let output = list["educationLevel"] as? String
                   self.educationLevel?.text = output
-                  print(output!)
+                  print(output as Any)
                 }
               }
               }
@@ -202,7 +208,7 @@ class MainProfileViewController: UIViewController {
                             let output = list["workExperience"] as? String
                             self.workExperience?.text = output
 
-                            print(output!)
+                            print(output as Any)
                         }
 
                     }
