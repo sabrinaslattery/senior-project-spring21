@@ -36,13 +36,8 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		tableView.rowHeight = UITableView.automaticDimension
 		tableView.estimatedRowHeight = 150
-		
-		
-		
 	}
-	
-	
-	
+
 	@objc func loadEvents() {
 		let query = PFQuery(className:"Events")
 		query.whereKey("date", greaterThan: Date())
@@ -119,6 +114,10 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		return cell
 	}
 	
+    @IBAction func handleDismissButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 	//Pass the selected event to the details page
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		
