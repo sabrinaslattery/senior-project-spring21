@@ -38,9 +38,13 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
         super.viewDidAppear(true)
             loadEvents()
     }
-        
+    
+    @IBAction func handleDismissButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
     @objc func loadEvents() {
-            
         let user = PFUser.current()
         let query = PFQuery(className:"Events")
         query.whereKey("attendees", equalTo: user)
@@ -108,7 +112,7 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
         }
         return cell
     }
-        
+    
     //Pass the selected event to the details page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

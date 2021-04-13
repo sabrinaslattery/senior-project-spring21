@@ -84,17 +84,22 @@ class EventDetailsViewController:UIViewController {
         //Set contact email and phone
         contactEmailLabel.text = (event["contactEmail"] as! String)
         phoneNumberLabel.text = (event["contactPhone"] as! String)
+    }
+    
+    func displaySignUpSuccessMessage (signUpSuccessMessage:String) {
         
-        
-        
-        
-        
-        
-        
+        let myAlert = UIAlertController(title: "You're signed up!", message: signUpSuccessMessage, preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { action in
+                self.navigationController?.popViewController(animated: true)
+            
+            }
+
+        myAlert.addAction(okAction)
+        self.present(myAlert, animated: true, completion: nil)
     }
     
     @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     @IBAction func signMeUpButton(_ sender: Any) {
@@ -106,12 +111,12 @@ class EventDetailsViewController:UIViewController {
             self.event.addUniqueObject(PFUser.current(), forKey: "attendees")
             self.event.saveInBackground { (ok, error) in
                 if ok{
+                    self.displaySignUpSuccessMessage(signUpSuccessMessage: "This event has been added to your events.")
                     print("Signed up for an event")
-                    self.performSegue(withIdentifier: "ToMyEvents", sender: self)
                 } else {
                     print(error?.localizedDescription)
-                    }
-            }
+                }
+        }
         } else {
             print("Event is full")
         }
@@ -119,3 +124,4 @@ class EventDetailsViewController:UIViewController {
     }
     
 }
+

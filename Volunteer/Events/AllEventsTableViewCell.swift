@@ -12,7 +12,6 @@ class AllEventsTableViewCell: UITableViewCell {
     //@IBOutlet weak var eventDate: UILabel!
     @IBOutlet weak var eventDate: UIDatePicker!
     @IBOutlet weak var eventTags: UILabel!
-    @IBOutlet weak var eventDifficulty: UILabel!
     @IBOutlet weak var difficultyImage: UIImageView!
     
     @IBOutlet weak var eventName: UILabel!
