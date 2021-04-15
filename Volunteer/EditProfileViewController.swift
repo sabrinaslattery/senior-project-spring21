@@ -171,6 +171,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             self.profile.saveInBackground {
               (success: Bool, error: Error?) in
               if (success) {
+                
                 // The object has been saved.
               } else {
                 // There was a problem, check error.description
@@ -372,15 +373,10 @@ extension EditProfileViewController: UIPickerViewDataSource, UIPickerViewDelegat
             return
         }
     }
+    
+    @IBAction func handledViewPop(_ sender:Any){
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
 }
-//class dropDownBtn: UIButton {
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//
-//    }
-//
-//    required init?(coder: NSCoder) {
-//        fatalError("init(coder:) has not been implemented")
-//    }
-//}
 
