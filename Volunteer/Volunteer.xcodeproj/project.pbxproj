@@ -37,6 +37,8 @@
 		98CC89F425DCFCA5008E4A7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98CC89F225DCFCA5008E4A7B /* LaunchScreen.storyboard */; };
 		98CC89FF25DCFCA6008E4A7B /* VolunteerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC89FE25DCFCA6008E4A7B /* VolunteerTests.swift */; };
 		98CC8A0A25DCFCA6008E4A7B /* VolunteerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC8A0925DCFCA6008E4A7B /* VolunteerUITests.swift */; };
+		B125CA772628E98E00E01AD5 /* CreatedEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA762628E98E00E01AD5 /* CreatedEventsTableViewCell.swift */; };
+		B125CA7C2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA7B2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift */; };
 		B152DC0325E37C6B00A7DB17 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */; };
 		B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0725E37C7E00A7DB17 /* ImageService.swift */; };
 		B152DC0D25E37C9100A7DB17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0C25E37C9100A7DB17 /* LoginViewController.swift */; };
@@ -119,6 +121,8 @@
 		98CC8A0925DCFCA6008E4A7B /* VolunteerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerUITests.swift; sourceTree = "<group>"; };
 		98CC8A0B25DCFCA6008E4A7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E7472CEAE76EF1A03265E59 /* Pods_Volunteer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volunteer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B125CA762628E98E00E01AD5 /* CreatedEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedEventsTableViewCell.swift; sourceTree = "<group>"; };
+		B125CA7B2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedEventsTableViewController.swift; sourceTree = "<group>"; };
 		B13A518CCA7D53725E1CFA0C /* Pods_Volunteer_VolunteerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volunteer_VolunteerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		B152DC0725E37C7E00A7DB17 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
@@ -230,6 +234,8 @@
 				0381BCFD260A8E4800168C48 /* MyEventsTableViewController.swift */,
 				0381BD02260A8E5500168C48 /* AllEventsTableViewController.swift */,
 				B1B328AB2617EB32003BCF34 /* EventDetailsViewController.swift */,
+				B125CA762628E98E00E01AD5 /* CreatedEventsTableViewCell.swift */,
+				B125CA7B2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -634,11 +640,13 @@
 				0381BCF1260A8DA900168C48 /* AllEventsTableViewCell.swift in Sources */,
 				035BEE632613D3D400015ADC /* AboutUsViewController.swift in Sources */,
 				032E503A2621460B00A59F14 /* CreateProfileAllViewController.swift in Sources */,
+				B125CA7C2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift in Sources */,
 				035BEE6D2613D59800015ADC /* MainProfileViewController.swift in Sources */,
 				B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */,
 				0381BD03260A8E5500168C48 /* AllEventsTableViewController.swift in Sources */,
 				B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */,
 				B152DC2E25E43F9A00A7DB17 /* ChangePassViewController.swift in Sources */,
+				B125CA772628E98E00E01AD5 /* CreatedEventsTableViewCell.swift in Sources */,
 				B152DC6A25E441BC00A7DB17 /* SelectInterestViewController.swift in Sources */,
 				B152DC3325E4400800A7DB17 /* VerifyEmailViewController.swift in Sources */,
 				030E5D2F2613E3A900B928D8 /* HomeViewController.swift in Sources */,
