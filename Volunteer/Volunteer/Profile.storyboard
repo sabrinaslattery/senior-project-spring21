@@ -9,22 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Profile Navigation Controller-->
-        <scene sceneID="hXd-zw-ZUO">
-            <objects>
-                <navigationController title="Profile Navigation Controller" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Rak-js-hi0" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="20L-US-lTx"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2cF-BI-SUV">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TLL-Fl-okP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3210" y="2366"/>
-        </scene>
         <!--Home-->
         <scene sceneID="RQq-xN-gWo">
             <objects>
@@ -432,7 +416,7 @@
                                                     <imageReference key="image" image="arrow.backward.circle" catalog="system" symbolScale="large" renderingMode="original"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="VT2-yk-u93" kind="show" id="eQ0-hp-neK"/>
+                                                    <action selector="handledViewPop:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="sLB-ge-dW0"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a7O-Xr-LnF">
@@ -1036,9 +1020,6 @@
             <point key="canvasLocation" x="4992.753623188406" y="1723.6607142857142"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="hYP-io-jI5"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
         <image name="checkbox_unchecked" width="202" height="206"/>
