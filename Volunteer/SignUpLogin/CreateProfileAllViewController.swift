@@ -18,8 +18,8 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBOutlet weak var jobTitleTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var zipCodeTextField: UITextField!
-    @IBOutlet weak var introTextField: UITextField!
-    @IBOutlet weak var workExperienceTextField: UITextField!
+    @IBOutlet weak var introTextField: UITextView!
+    @IBOutlet weak var workExperienceTextField: UITextView!
     @IBOutlet weak var educationLevelField: UITextField!
     
     //@IBOutlet var control: UISegmentedControl!
@@ -61,6 +61,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        
+        introTextField!.layer.borderWidth = 1
+        introTextField!.layer.borderColor = UIColor.black.cgColor
+        workExperienceTextField!.layer.borderWidth = 1
+        workExperienceTextField!.layer.borderColor = UIColor.black.cgColor
         
         educationLevelField.inputView = educationLevelPicker
                 

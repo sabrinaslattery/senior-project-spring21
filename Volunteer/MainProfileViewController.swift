@@ -24,7 +24,8 @@ class MainProfileViewController: UIViewController {
             @IBOutlet var educationLevel: UILabel?
             @IBOutlet var workExperience: UILabel?
             //@IBOutlet var interests: UILabel?
-            
+
+
             override func viewDidLoad() {
                 super.viewDidLoad()
                 showFirstName()
@@ -40,6 +41,8 @@ class MainProfileViewController: UIViewController {
                 showWorkExperience()
 //                showInterests()
                 // Do any additional setup after loading the view.
+                
+                
             
             }
             
