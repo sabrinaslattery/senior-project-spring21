@@ -10,7 +10,7 @@
         <!--Search View Controller-->
         <scene sceneID="jey-yK-ubP">
             <objects>
-                <tableViewController title="Search View Controller" id="JCD-vD-6u4" customClass="SearchViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Search View Controller" id="JCD-vD-6u4" customClass="SearchTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xyd-nK-cap">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Title " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwV-lO-Zu3">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwV-lO-Zu3">
                                             <rect key="frame" x="20" y="0.0" width="374" height="47"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -49,7 +49,8 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Search Events" id="IiC-Ih-31R"/>
                     <connections>
-                        <outlet property="searchBar" destination="w63-OE-Ov2" id="yyX-eD-Qd3"/>
+                        <outlet property="searchBar" destination="w63-OE-Ov2" id="hRW-ok-fDX"/>
+                        <outlet property="searchTableView" destination="Xyd-nK-cap" id="4GG-B0-6tz"/>
                         <outlet property="tableView" destination="Xyd-nK-cap" id="lam-kB-sUx"/>
                     </connections>
                 </tableViewController>

@@ -133,7 +133,7 @@
                                     <constraint firstAttribute="height" constant="124" id="96C-CL-9zk"/>
                                     <constraint firstAttribute="width" constant="299" id="XFP-3S-9pC"/>
                                 </constraints>
-                                <string key="text">Password must include: - 8-20 characters  - 1 uppercase and lowercase character - 1 number  - 1 special character (i.e. ?, !, $, *, %) </string>
+                                <string key="text">Password must include:- 8-20 characters - 1 uppercase and lowercase character- 1 number - 1 special character (i.e. ?, !, $, *, %)</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -673,89 +673,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yns-9M-ASU">
-                                <rect key="frame" x="67" y="165" width="281" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yns-9M-ASU">
+                                <rect key="frame" x="90.618755901022269" y="165" width="231.5" height="40.999999999999886"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vy9-wq-KEO">
-                                <rect key="frame" x="0.0" y="44" width="50" height="35"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="avl-Yj-m0X"/>
-                                    <constraint firstAttribute="height" constant="35" id="hD5-cK-N6O"/>
-                                </constraints>
-                                <state key="normal">
-                                    <imageReference key="image" image="arrow.backward.circle" catalog="system" symbolScale="large" renderingMode="original"/>
-                                </state>
-                                <connections>
-                                    <action selector="handleDismissButton:" destination="opX-Z9-5p4" eventType="touchUpInside" id="9xo-T6-3ai"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the email address associated with your account and we will send an email with instructions to reset your password." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCw-Te-HTX">
-                                <rect key="frame" x="21" y="263" width="370" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter the email address associated with your account and we will send an email with instructions to reset your password." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yCw-Te-HTX">
+                                <rect key="frame" x="37.465286166613851" y="262.99999999999977" width="335.99999999999977" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiU-H8-Sg6" customClass="RoundedWhiteButton" customModule="Volunteer" customModuleProvider="target">
-                                <rect key="frame" x="76" y="502" width="260" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jiU-H8-Sg6" customClass="RoundedWhiteButton" customModule="Volunteer" customModuleProvider="target">
+                                <rect key="frame" x="79" y="592" width="259.99999999999977" height="36.000000000000227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Send">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
                                     <action selector="SendLinkBtnAction:" destination="opX-Z9-5p4" eventType="touchUpInside" id="Vja-MI-ytT"/>
-                                    <segue destination="TJM-Yz-rkw" kind="show" id="aAe-6c-xff"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o3A-1r-yF2">
-                                <rect key="frame" x="21" y="431" width="370" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o3A-1r-yF2">
+                                <rect key="frame" x="40" y="476" width="336" height="33.999999999999943"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjo-7E-C67">
-                                <rect key="frame" x="21" y="381" width="220" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="9XE-1O-5gh"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Your Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjo-7E-C67">
+                                <rect key="frame" x="39" y="426" width="336" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vy9-wq-KEO">
+                                <rect key="frame" x="20" y="44" width="52" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="arrow.backward.circle" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="light"/>
+                                </state>
+                                <connections>
+                                    <action selector="handlePopView:" destination="opX-Z9-5p4" eventType="touchUpInside" id="ZR4-yk-nfJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rw5-Y1-O2k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="rw5-Y1-O2k" firstAttribute="bottom" secondItem="jiU-H8-Sg6" secondAttribute="bottom" constant="324" id="2EI-T5-UMB"/>
-                            <constraint firstItem="yns-9M-ASU" firstAttribute="top" secondItem="rw5-Y1-O2k" secondAttribute="top" constant="121" id="9ls-iw-xcW"/>
-                            <constraint firstItem="vy9-wq-KEO" firstAttribute="leading" secondItem="rw5-Y1-O2k" secondAttribute="leading" id="KF7-ii-8VU"/>
-                            <constraint firstItem="tjo-7E-C67" firstAttribute="top" secondItem="yCw-Te-HTX" secondAttribute="bottom" constant="46" id="LIV-Bd-p5N"/>
-                            <constraint firstItem="vy9-wq-KEO" firstAttribute="top" secondItem="rw5-Y1-O2k" secondAttribute="top" id="ROP-vP-4ZU"/>
-                            <constraint firstItem="tjo-7E-C67" firstAttribute="leading" secondItem="rw5-Y1-O2k" secondAttribute="leading" constant="21" id="SRP-Fg-1ju"/>
-                            <constraint firstItem="rw5-Y1-O2k" firstAttribute="trailing" secondItem="tjo-7E-C67" secondAttribute="trailing" constant="173" id="UoC-aj-272"/>
-                            <constraint firstItem="o3A-1r-yF2" firstAttribute="top" secondItem="tjo-7E-C67" secondAttribute="bottom" constant="8" id="Uyy-mL-DEv"/>
-                            <constraint firstItem="yns-9M-ASU" firstAttribute="leading" secondItem="vy9-wq-KEO" secondAttribute="trailing" constant="17" id="WVH-vg-pkf"/>
-                            <constraint firstItem="rw5-Y1-O2k" firstAttribute="trailing" secondItem="yns-9M-ASU" secondAttribute="trailing" constant="66" id="Wx3-Pm-CLc"/>
-                            <constraint firstItem="yCw-Te-HTX" firstAttribute="trailing" secondItem="o3A-1r-yF2" secondAttribute="trailing" id="YDa-2Y-xgM"/>
-                            <constraint firstItem="jiU-H8-Sg6" firstAttribute="top" secondItem="o3A-1r-yF2" secondAttribute="bottom" constant="37" id="Yae-rv-3wF"/>
-                            <constraint firstItem="rw5-Y1-O2k" firstAttribute="trailing" secondItem="jiU-H8-Sg6" secondAttribute="trailing" constant="78" id="jXL-fx-rDs"/>
-                            <constraint firstItem="rw5-Y1-O2k" firstAttribute="trailing" secondItem="o3A-1r-yF2" secondAttribute="trailing" constant="23" id="kfk-iy-Yya"/>
-                            <constraint firstItem="o3A-1r-yF2" firstAttribute="leading" secondItem="rw5-Y1-O2k" secondAttribute="leading" constant="21" id="rJ9-eQ-3ZL"/>
-                            <constraint firstItem="yCw-Te-HTX" firstAttribute="leading" secondItem="tjo-7E-C67" secondAttribute="leading" id="u4n-DH-xW4"/>
-                            <constraint firstItem="jiU-H8-Sg6" firstAttribute="leading" secondItem="rw5-Y1-O2k" secondAttribute="leading" constant="76" id="ug5-HA-tnf"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7l4-tL-vBr"/>
                     <connections>
-                        <outlet property="dismissButton" destination="vy9-wq-KEO" id="sfi-6k-7kJ"/>
                         <outlet property="enterEmailTextField" destination="o3A-1r-yF2" id="XSa-Zx-ITu"/>
                         <outlet property="sendInstructionButton" destination="jiU-H8-Sg6" id="MPq-PI-emj"/>
+                        <segue destination="9fr-RJ-Pme" kind="show" identifier="showLoginView" id="v0p-LL-aQP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wvH-o8-lL5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2291" y="-258"/>
+            <point key="canvasLocation" x="2289.8550724637685" y="-258.48214285714283"/>
         </scene>
         <!--Check Email View Controller-->
         <scene sceneID="srf-Wq-7Ba">
@@ -776,7 +757,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="We have sent password recover instructions to the email that you provided." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTK-lK-N7H">
-                                <rect key="frame" x="66" y="359" width="292" height="178"/>
+                                <rect key="frame" x="66" y="359" width="292" height="364.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="178" id="CUN-fh-TAm"/>
                                     <constraint firstAttribute="height" constant="178" id="DeN-5t-pfh"/>
@@ -788,7 +769,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Did not receive the email? Check your spam folder, or try another email address." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSb-ee-12z">
-                                <rect key="frame" x="24" y="566" width="366" height="48"/>
+                                <rect key="frame" x="24" y="752.5" width="366" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="3cT-GA-SS4"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="6cA-Wk-KgC"/>
@@ -1685,7 +1666,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Q0T-yz-7kp"/>
-        <segue reference="QXO-lG-BiZ"/>
+        <segue reference="v0p-LL-aQP"/>
         <segue reference="TAb-5o-Ac7"/>
     </inferredMetricsTieBreakers>
     <resources>

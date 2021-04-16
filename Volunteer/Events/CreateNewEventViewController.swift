@@ -148,7 +148,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     }
     
     @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: false, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onCameraButton(_sender: Any) {
