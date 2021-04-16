@@ -1,15 +1,16 @@
 //
-//  EventViewController.swift
+//  CreatorEventDetailsViewController.swift
 //  Volunteer
 //
-//  Created by William Ordaz on 4/2/21.
+//  Created by William Ordaz on 4/15/21.
 //
+
 import Foundation
 import UIKit
 import Parse
 
-class EventDetailsViewController:UIViewController {
-    
+class CreatorEventDetailsViewController: UIViewController {
+
     @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var difficultyImage: UIImageView!
@@ -86,42 +87,10 @@ class EventDetailsViewController:UIViewController {
         phoneNumberLabel.text = (event["contactPhone"] as! String)
     }
     
-    func displaySignUpSuccessMessage (signUpSuccessMessage:String) {
-        
-        let myAlert = UIAlertController(title: "You're signed up!", message: signUpSuccessMessage, preferredStyle: UIAlertController.Style.alert)
-        let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default) { action in
-                self.navigationController?.popViewController(animated: true)
-            
-            }
-
-        myAlert.addAction(okAction)
-        self.present(myAlert, animated: true, completion: nil)
-    }
     
-    @IBAction func handleDismissButton(_ sender: Any) {
-        _ = navigationController?.popViewController(animated: true)
-    }
+//    @IBAction func handleDismissButton(_ sender: Any) {
+//        _ = navigationController?.popViewController(animated: true)
+//    }
     
-    @IBAction func signMeUpButton(_ sender: Any) {
-        
-        let attendees = self.event["attendees"] as! NSArray
-        let totalSpots = self.event["totalSpots"] as! Int
-        
-        if attendees.count < totalSpots {
-            self.event.addUniqueObject(PFUser.current(), forKey: "attendees")
-            self.event.saveInBackground { (ok, error) in
-                if ok{
-                    self.displaySignUpSuccessMessage(signUpSuccessMessage: "This event has been added to your events.")
-                    print("Signed up for an event")
-                } else {
-                    print(error?.localizedDescription)
-                }
-        }
-        } else {
-            print("Event is full")
-        }
-        
-    }
     
 }
-
