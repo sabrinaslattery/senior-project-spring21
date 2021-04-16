@@ -18,6 +18,10 @@ class VolunteersTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
+    @IBAction func handleDismissButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     // MARK: - Table view data source
 

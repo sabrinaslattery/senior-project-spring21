@@ -238,7 +238,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACH-5t-C1x">
-                                <rect key="frame" x="0.0" y="88" width="414" height="759"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQB-TG-c1a">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1303"/>
@@ -724,7 +724,18 @@
                             <constraint firstItem="e7f-5Z-dTP" firstAttribute="trailing" secondItem="5q3-4p-ZSY" secondAttribute="trailing" id="uN1-uB-4uG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="S6k-qN-nfj"/>
+                    <navigationItem key="navigationItem" id="S6k-qN-nfj">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="8tp-d1-Dhg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="x0g-kR-GRv">
+                                <rect key="frame" x="20" y="11" width="75" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="arrowshape.turn.up.backward.fill" catalog="system"/>
+                            </button>
+                            <connections>
+                                <action selector="handleDismissButton:" destination="aHo-rt-w9F" id="nrY-hK-gTl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTZ-1P-Vtr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1649,7 +1660,6 @@
                         <segue destination="8zK-XE-st7" kind="relationship" relationship="viewControllers" id="1nP-ft-2a5"/>
                         <segue destination="Eew-dU-H51" kind="relationship" relationship="viewControllers" id="bUZ-2E-NJJ"/>
                         <segue destination="zw9-jF-bHW" kind="relationship" relationship="viewControllers" id="JJQ-X0-O31"/>
-                        <segue destination="b2w-Iq-1lP" kind="relationship" relationship="viewControllers" id="cpB-Bq-CcG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4J-QQ-GTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
