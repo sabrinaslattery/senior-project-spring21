@@ -23,7 +23,9 @@ class MainProfileViewController: UIViewController {
             @IBOutlet var intro: UILabel?
             @IBOutlet var educationLevel: UILabel?
             @IBOutlet var workExperience: UILabel?
-            //@IBOutlet var interests: UILabel?
+			@IBOutlet var interests: UILabel!
+	
+			//@IBOutlet var interests: UILabel?
             
             override func viewDidLoad() {
                 super.viewDidLoad()
@@ -38,7 +40,7 @@ class MainProfileViewController: UIViewController {
                 showIntro()
                 showEducationLevel()
                 showWorkExperience()
-//                showInterests()
+                showInterests()
                 // Do any additional setup after loading the view.
             
             }
@@ -216,17 +218,21 @@ class MainProfileViewController: UIViewController {
                     }
             }
 //
-//            func showInterests () {
-//                let interestsQuery = PFQuery(className:"Profile")
-//                interestsQuery.whereKey("interests", equalTo: PFUser.current() as Any)
-//                interestsQuery.getObjectInBackground(withId: "interests") { (result: PFObject?, error: Error?) in
-//                    if let userInterests = result
-//                    {
-//                        self.workExperience?.text = userInterests ["interests"] as? String
-//                        print(userInterests)
-//
-//                    }
-//                }
-//            }
+            func showInterests () {
+                let interestsQuery = PFQuery(className:"Profile")
+                interestsQuery.whereKey("user", equalTo:  PFUser.current()!)
+				interestsQuery.includeKey("selectedTags")
+				interestsQuery.findObjectsInBackground { (profiles, error) in
+					if let error = error {
+						print(error.localizedDescription)
+					} else if let profiles = profiles {
+						for profile in profiles {
+							let tagsList = profile.object(forKey: "selectedTags") as? NSArray
+							self.interests?.text = tagsList?.componentsJoined(by: ", ")
+						}
+					}
+				}
+                
+            }
 
 }

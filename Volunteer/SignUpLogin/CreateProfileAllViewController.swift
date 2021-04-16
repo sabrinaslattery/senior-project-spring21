@@ -28,6 +28,8 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     var educationLevelPicker = UIPickerView()
     
     let educationLevel = ["High School Graduate", "Some College", "Associate Degree", "Bachelor's Degree", "Master's Degree", "Higher Degree"]
+	
+	let interestTags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
     
     var profile = PFObject(className: "Profile")
     
@@ -107,7 +109,7 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
             self.profile["userBio"] = introTextField.text!
             self.profile["workExperience"] = workExperienceTextField.text!
         
-            let eduLvlPicker = educationLevelPicker
+            let eduLvlPicker = educationLevelPicker		
             
             // saving the profile image
             let imageData = profileImageView.image!.pngData()
@@ -160,10 +162,13 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag1 = true
+			self.profile.addUniqueObject(self.interestTags[0], forKey: "selectedTags")
+			
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag1 = false
+			self.profile.remove(self.interestTags[0], forKey: "selectedTags")
         }
     }
     
@@ -172,10 +177,12 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag2 = true
+			self.profile.addUniqueObject(self.interestTags[2], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag2 = false
+			self.profile.remove(self.interestTags[2], forKey: "selectedTags")
         }
     }
     
@@ -184,10 +191,13 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag3 = true
+			self.profile.addUniqueObject(self.interestTags[1], forKey: "selectedTags")
+			
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag3 = false
+			self.profile.remove(self.interestTags[1], forKey: "selectedTags")
         }
     }
     
@@ -196,10 +206,12 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag4 = true
+			self.profile.addUniqueObject(self.interestTags[3], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag4 = false
+			self.profile.remove(self.interestTags[3], forKey: "selectedTags")
         }
     }
     
@@ -208,10 +220,12 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag5 = true
+			self.profile.addUniqueObject(self.interestTags[4], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag5 = false
+			self.profile.remove(self.interestTags[4], forKey: "selectedTags")
         }
     }
     
@@ -220,10 +234,12 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag6 = true
+			self.profile.addUniqueObject(self.interestTags[5], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag6 = false
+			self.profile.remove(self.interestTags[5], forKey: "selectedTags")
         }
     }
     
@@ -232,10 +248,13 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag7 = true
+			self.profile.addUniqueObject(self.interestTags[6], forKey: "selectedTags")
+			
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag7 = false
+			self.profile.remove(self.interestTags[6], forKey: "selectedTags")
         }
     }
     
@@ -244,10 +263,12 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag8 = true
+			self.profile.addUniqueObject(self.interestTags[7], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag8 = false
+			self.profile.remove(self.interestTags[7], forKey: "selectedTags")
         }
     }
     
@@ -256,10 +277,12 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag9 = true
+			self.profile.addUniqueObject(self.interestTags[8], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag9 = false
+			self.profile.remove(self.interestTags[8], forKey: "selectedTags")
         }
     }
     
@@ -268,10 +291,12 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag10 = true
+			self.profile.addUniqueObject(self.interestTags[9], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag10 = false
+			self.profile.remove(self.interestTags[9], forKey: "selectedTags")
         }
     }
     
@@ -280,10 +305,12 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag11 = true
+			self.profile.addUniqueObject(self.interestTags[10], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag11 = false
+			self.profile.remove(self.interestTags[10], forKey: "selectedTags")
         }
     }
     

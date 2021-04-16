@@ -29,6 +29,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     var educationLevelPicker = UIPickerView()
     
     let educationLevel = ["High School Graduate", "Some College", "Associate Degree", "Bachelor's Degree", "Master's Degree", "Higher Degree"]
+	let interestTags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
     
     var profile = PFObject(className: "Profile")
 
@@ -58,6 +59,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     var flag9 = false
     var flag10 = false
     var flag11 = false
+	
+	
     
    //var buttonEducationLevel = dropDownBtn()
     
@@ -78,6 +81,51 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         educationLevelField.placeholder = "Select Education Level"
         
         educationLevelField.textAlignment = .center
+		
+		//The interest tags already chosen should already have the checkbox clicked image. Uncomment when ready
+		/*
+		let interestsQuery = PFQuery(className:"Profile")
+		interestsQuery.whereKey("user", equalTo:  PFUser.current()!)
+		interestsQuery.includeKey("selectedTags")
+		interestsQuery.findObjectsInBackground { (profiles, error) in
+			if let error = error {
+				print(error.localizedDescription)
+			} else if let profiles = profiles {
+				for profile in profiles {
+					let tagsList = profile.object(forKey: "selectedTags") as? NSArray
+					for tag in tagsList! {
+						if self.interestTags.contains(tag as! String) {
+							switch tag as! String {
+							case self.interestTags[0]:
+								self.flag1 = true
+							case self.interestTags[2]:
+								self.flag2 = true
+							case self.interestTags[1]:
+								self.flag3 = true
+							case self.interestTags[3]:
+								self.flag4 = true
+							case self.interestTags[4]:
+								self.flag5 = true
+							case self.interestTags[5]:
+								self.flag6 = true
+							case self.interestTags[6]:
+								self.flag7 = true
+							case self.interestTags[7]:
+								self.flag8 = true
+							case self.interestTags[8]:
+								self.flag9 = true
+							case self.interestTags[9]:
+								self.flag10 = true
+							case self.interestTags[10]:
+								self.flag11 = true
+							default:
+								continue
+							}
+						}
+					}
+				}
+			}
+		} */
         
         
 //        let imageTap = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
@@ -214,10 +262,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag1 = true
+			self.profile.addUniqueObject(self.interestTags[0], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag1 = false
+			self.profile.remove(self.interestTags[0], forKey: "selectedTags")
         }
     }
     
@@ -226,10 +276,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag2 = true
+			self.profile.addUniqueObject(self.interestTags[2], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag2 = false
+			self.profile.remove(self.interestTags[2], forKey: "selectedTags")
         }
     }
     
@@ -238,10 +290,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag3 = true
+			self.profile.addUniqueObject(self.interestTags[1], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag3 = false
+			self.profile.remove(self.interestTags[1], forKey: "selectedTags")
         }
     }
     
@@ -250,10 +304,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag4 = true
+			self.profile.addUniqueObject(self.interestTags[3], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag4 = false
+			self.profile.remove(self.interestTags[3], forKey: "selectedTags")
         }
     }
     
@@ -262,10 +318,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag5 = true
+			self.profile.addUniqueObject(self.interestTags[4], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag5 = false
+			self.profile.remove(self.interestTags[4], forKey: "selectedTags")
         }
     }
     
@@ -274,10 +332,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag6 = true
+			self.profile.addUniqueObject(self.interestTags[5], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag6 = false
+			self.profile.remove(self.interestTags[5], forKey: "selectedTags")
         }
     }
     
@@ -286,10 +346,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag7 = true
+			self.profile.addUniqueObject(self.interestTags[6], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag7 = false
+			self.profile.remove(self.interestTags[6], forKey: "selectedTags")
         }
     }
     
@@ -298,10 +360,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag8 = true
+			self.profile.addUniqueObject(self.interestTags[7], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag8 = false
+			self.profile.remove(self.interestTags[7], forKey: "selectedTags")
         }
     }
     
@@ -310,10 +374,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag9 = true
+			self.profile.addUniqueObject(self.interestTags[8], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag9 = false
+			self.profile.remove(self.interestTags[8], forKey: "selectedTags")
         }
     }
     
@@ -322,10 +388,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag10 = true
+			self.profile.addUniqueObject(self.interestTags[9], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag10 = false
+			self.profile.remove(self.interestTags[9], forKey: "selectedTags")
         }
     }
     
@@ -334,10 +402,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
             flag11 = true
+			self.profile.addUniqueObject(self.interestTags[10], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
             flag11 = false
+			self.profile.remove(self.interestTags[10], forKey: "selectedTags")
         }
     }
     
