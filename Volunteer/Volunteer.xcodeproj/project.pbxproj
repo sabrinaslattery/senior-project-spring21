@@ -39,6 +39,10 @@
 		98CC8A0A25DCFCA6008E4A7B /* VolunteerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC8A0925DCFCA6008E4A7B /* VolunteerUITests.swift */; };
 		B125CA772628E98E00E01AD5 /* CreatedEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA762628E98E00E01AD5 /* CreatedEventsTableViewCell.swift */; };
 		B125CA7C2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA7B2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift */; };
+		B125CA8126290ABB00E01AD5 /* CreatorEventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA8026290ABB00E01AD5 /* CreatorEventDetailsViewController.swift */; };
+		B125CA8626290AF600E01AD5 /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA8526290AF600E01AD5 /* EditEventViewController.swift */; };
+		B125CA8B26290B3C00E01AD5 /* VolunteersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA8A26290B3C00E01AD5 /* VolunteersTableViewCell.swift */; };
+		B125CA902629317A00E01AD5 /* VolunteersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA8F2629317900E01AD5 /* VolunteersTableViewController.swift */; };
 		B152DC0325E37C6B00A7DB17 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */; };
 		B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0725E37C7E00A7DB17 /* ImageService.swift */; };
 		B152DC0D25E37C9100A7DB17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0C25E37C9100A7DB17 /* LoginViewController.swift */; };
@@ -123,6 +127,10 @@
 		9E7472CEAE76EF1A03265E59 /* Pods_Volunteer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volunteer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B125CA762628E98E00E01AD5 /* CreatedEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedEventsTableViewCell.swift; sourceTree = "<group>"; };
 		B125CA7B2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedEventsTableViewController.swift; sourceTree = "<group>"; };
+		B125CA8026290ABB00E01AD5 /* CreatorEventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorEventDetailsViewController.swift; sourceTree = "<group>"; };
+		B125CA8526290AF600E01AD5 /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
+		B125CA8A26290B3C00E01AD5 /* VolunteersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteersTableViewCell.swift; sourceTree = "<group>"; };
+		B125CA8F2629317900E01AD5 /* VolunteersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteersTableViewController.swift; sourceTree = "<group>"; };
 		B13A518CCA7D53725E1CFA0C /* Pods_Volunteer_VolunteerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volunteer_VolunteerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		B152DC0725E37C7E00A7DB17 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
@@ -236,6 +244,10 @@
 				B1B328AB2617EB32003BCF34 /* EventDetailsViewController.swift */,
 				B125CA762628E98E00E01AD5 /* CreatedEventsTableViewCell.swift */,
 				B125CA7B2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift */,
+				B125CA8026290ABB00E01AD5 /* CreatorEventDetailsViewController.swift */,
+				B125CA8526290AF600E01AD5 /* EditEventViewController.swift */,
+				B125CA8A26290B3C00E01AD5 /* VolunteersTableViewCell.swift */,
+				B125CA8F2629317900E01AD5 /* VolunteersTableViewController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -632,16 +644,19 @@
 				B152DC3825E4403100A7DB17 /* GreatViewController.swift in Sources */,
 				98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */,
 				0381BCF9260A8E3600168C48 /* MyEventsTableViewCell.swift in Sources */,
+				B125CA8626290AF600E01AD5 /* EditEventViewController.swift in Sources */,
 				B1E4955F26090CF500F10A9E /* CreateNewEventViewController.swift in Sources */,
 				7A98C719261E83C200798493 /* SearchEventCell.swift in Sources */,
 				B152DC1C25E37CCF00A7DB17 /* SignUpViewController.swift in Sources */,
 				B152DC2425E43EEA00A7DB17 /* ResetPassViewController.swift in Sources */,
 				0367FA082623EAFE000CBE37 /* SearchTableViewController.swift in Sources */,
 				0381BCF1260A8DA900168C48 /* AllEventsTableViewCell.swift in Sources */,
+				B125CA902629317A00E01AD5 /* VolunteersTableViewController.swift in Sources */,
 				035BEE632613D3D400015ADC /* AboutUsViewController.swift in Sources */,
 				032E503A2621460B00A59F14 /* CreateProfileAllViewController.swift in Sources */,
 				B125CA7C2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift in Sources */,
 				035BEE6D2613D59800015ADC /* MainProfileViewController.swift in Sources */,
+				B125CA8B26290B3C00E01AD5 /* VolunteersTableViewCell.swift in Sources */,
 				B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */,
 				0381BD03260A8E5500168C48 /* AllEventsTableViewController.swift in Sources */,
 				B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */,
@@ -655,6 +670,7 @@
 				B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */,
 				98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */,
 				B1B328AC2617EB32003BCF34 /* EventDetailsViewController.swift in Sources */,
+				B125CA8126290ABB00E01AD5 /* CreatorEventDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
