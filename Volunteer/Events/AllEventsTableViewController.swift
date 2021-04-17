@@ -7,12 +7,15 @@
 
 import UIKit
 import Parse
+import SideMenu
 
-class AllEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class AllEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MenuControllerDelegate  {
 
 	@IBOutlet weak var tableView: UITableView!
-	
-	//var eventsArray = [NSDictionary]()
+    
+    private var sideMenu: SideMenuNavigationController?
+       
+    private let profileController = MainProfileViewController()
 	
 	let myRefreshControl = UIRefreshControl()
 	
@@ -25,7 +28,6 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		super.viewDidLoad()
 		loadEvents()
 		
-		
 		tableView.delegate = self
 		tableView.dataSource = self
 		
@@ -36,8 +38,84 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		tableView.rowHeight = UITableView.automaticDimension
 		tableView.estimatedRowHeight = 150
+        
+        let menu = SideMenuListController(with: SideMenuItem.allCases)
+                
+        menu.delegate = self
+                    
+        sideMenu = SideMenuNavigationController(rootViewController: menu)
+                    sideMenu?.leftSide = true
+                
+        SideMenuManager.default.leftMenuNavigationController = sideMenu
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
+                
+        addChildControllers()
 	}
+    
+    private func addChildControllers(){
+        addChild(profileController)
+        //add more children
+            
+        view.addSubview(profileController.view)
+            
+        profileController.view.frame = view.bounds
+        profileController.didMove(toParent: self)
+        profileController.view.isHidden = true
+    }
+    
+    @IBAction func didTapMenu() {
+        present(sideMenu!, animated: true)
+    }
+    
+    func loadLoginScreen(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier:         "LoginViewController")
+        self.present(viewController, animated: true, completion: nil)
+    }
 
+    func didSelectMenuItem(named: SideMenuItem) {
+        sideMenu?.dismiss(animated: true, completion: nil)
+                
+        title = named.rawValue
+        switch named {
+            case .user:
+                performSegue(withIdentifier: "profileSegue", sender: nil)
+            
+            case .home:
+                performSegue(withIdentifier: "homeSegue", sender: nil)
+
+            case .profile:
+                performSegue(withIdentifier: "profileSegue", sender: nil)
+                    
+            case .events:
+                performSegue(withIdentifier: "eventsSegue", sender: nil)
+                    
+            case .create:
+                performSegue(withIdentifier: "createSegue", sender: nil)
+        
+            case .search:
+                performSegue(withIdentifier: "searchSegue", sender: nil)
+        
+            case .settings:
+                performSegue(withIdentifier: "settingsSegue", sender: nil)
+        
+            case .logOut:
+                PFUser.logOutInBackground { (error: Error?) in
+                    if (error == nil){
+                        self.loadLoginScreen()
+                    }else{
+                        let alert = UIAlertController(title: "Error Logging Out", message: error?.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                   print(error.debugDescription)
+            }))
+        self.present(alert, animated: true)
+        }
+
+        }
+        loadLoginScreen()
+        }
+    }
+    
 	@objc func loadEvents() {
 		let query = PFQuery(className:"Events")
 		query.whereKey("date", greaterThan: Date())
@@ -71,7 +149,7 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 	
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let event = Events[indexPath.row] as! PFObject
+        let event = Events[indexPath.row]
 		
 		let cell = self.tableView.dequeueReusableCell(withIdentifier: "AllEventsCell", for: indexPath) as! AllEventsTableViewCell
 		
@@ -83,7 +161,7 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		//Setting the date/time of the event
 		let date = event["date"] as! Date
 		let formatter = DateFormatter()
-		let eventDate = formatter.string(from: date) as! String
+        _ = formatter.string(from: date)
 		cell.eventDate.date = date
 		
 		//Setting the event's image

@@ -8,8 +8,9 @@ import Foundation
 import UIKit
 import Parse
 import AlamofireImage
+import SideMenu
 
-class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
+class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate, MenuControllerDelegate {
     
     @IBOutlet weak var coverPhotoImageView: UIImageView!
     @IBOutlet weak var eventTitleField: UITextField!
@@ -19,24 +20,16 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var fromPicker: UIDatePicker!
     @IBOutlet weak var totalSpotsField: UITextField!
     
-    //@IBOutlet weak var aboutEventField: UITextField!
-    //@IBOutlet weak var volunteerExpectationField: UITextField!
-    //@IBOutlet weak var volunteerShouldWearField: UITextField!
-    
-   // @IBOutlet weak var aboutEventView: UITextView!
-    
     @IBOutlet weak var aboutEventField: UITextView!
     @IBOutlet weak var volunteerExpectationField: UITextView!
     @IBOutlet weak var volunteerShouldWearField: UITextView!
-    
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
     
     @IBOutlet weak var difficultyField: UITextField!
     @IBOutlet weak var tagField: UITextField!
-    
-    
+
     var difficultyPicker = UIPickerView()
     var tagsPicker = UIPickerView()
     
@@ -46,14 +39,18 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     
     //let tags = ["Animal Rescue Shelters", "Food Pantries", "Habitat for Humanity", "Local Libraries", "Museums", "YMCA", "Retirement Homes", "Red Cross", "Volunteering Abroad", "Church/Volunteers of America", "National Parks", "Hospital", "Homeless Shelter", "Park Clean Up/Preservation Efforts", "After School Tutoring"]
     
-    
     var activityView:UIActivityIndicatorView!
     
     var imagePicker:UIImagePickerController!
     
     var event = PFObject(className: "Events")
     
+    //sidebar menu vars
+    private var sideMenu: SideMenuNavigationController?
+    private let profileController = MainProfileViewController()
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
         difficultyField.inputView = difficultyPicker
@@ -101,11 +98,84 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         emailField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         phoneNumberField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         
+        //sidebar menu implementation
+        let menu = SideMenuListController(with: SideMenuItem.allCases)
+            
+        menu.delegate = self
+                
+        sideMenu = SideMenuNavigationController(rootViewController: menu)
+        sideMenu?.leftSide = true
+            
+        SideMenuManager.default.leftMenuNavigationController = sideMenu
+        SideMenuManager.default.addPanGestureToPresent(toView: view)
+            
+        addChildControllers()
     }
     
+    private func addChildControllers() {
+        addChild(profileController)
+        //add more children
+            
+        view.addSubview(profileController.view)
+            
+        profileController.view.frame = view.bounds
+        profileController.didMove(toParent: self)
+        profileController.view.isHidden = true
+    }
+    
+    @IBAction func didTapMenu() {
+        present(sideMenu!, animated: true)
+    }
+    
+    func loadLoginScreen(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyBoard.instantiateViewController(withIdentifier:         "LoginViewController")
+        self.present(viewController, animated: true, completion: nil)
+    }
+
+    func didSelectMenuItem(named: SideMenuItem) {
+        sideMenu?.dismiss(animated: true, completion: nil)
+                
+        title = named.rawValue
+        switch named {
+            case .user:
+                performSegue(withIdentifier: "profileSegue", sender: nil)
+            
+            case .home:
+                performSegue(withIdentifier: "homeSegue", sender: nil)
+                    
+            case .profile:
+                performSegue(withIdentifier: "profileSegue", sender: nil)
+                
+            case .events:
+                performSegue(withIdentifier: "eventsSegue", sender: nil)
+                    
+            case .create:
+                performSegue(withIdentifier: "createSegue", sender: nil)
+                    
+            case .search:
+                performSegue(withIdentifier: "searchSegue", sender: nil)
+                    
+            case .settings:
+                performSegue(withIdentifier: "settingsSegue", sender: nil)
+                    
+            case .logOut:
+                PFUser.logOutInBackground { (error: Error?) in
+                    if (error == nil){
+                        self.loadLoginScreen()
+                    }else{
+                        let alert = UIAlertController(title: "Error Logging Out", message: error?.localizedDescription, preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                               print(error.debugDescription)
+                    }))
+                        self.present(alert, animated: true)
+                    }
+                }
+                loadLoginScreen()
+        }
+    }
+
     @IBAction func CompletedButton(_ sender: Any) {
-        
-       
         self.event["title"] = eventTitleField.text!
         self.event["totalSpots"] = Int(totalSpotsField.text!)
         self.event["description"] = aboutEventField.text!
@@ -123,8 +193,6 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
 		self.event["startTime"] = fromPicker.date
 		self.event["endTime"] = toPicker.date
         self.event["attendees"] = NSArray()
-        
-        
         
         let imageData = coverPhotoImageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
@@ -146,11 +214,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         }
         
     }
-    
-    @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+ 
     @IBAction func onCameraButton(_sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -182,7 +246,6 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         super.viewWillAppear(animated)
         eventTitleField.becomeFirstResponder()
         NotificationCenter.default.addObserver(self, selector:#selector(keyboardWillAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -198,14 +261,12 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         phoneNumberField.resignFirstResponder()
         
         NotificationCenter.default.removeObserver(self)
-        
     }
+    
     @objc func keyboardWillAppear(notification: NSNotification){
         
         let info = notification.userInfo!
         let _: CGRect = (info[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        
-       
     }
     
     @objc func textFieldChanged(_ target:UITextField) {
@@ -218,11 +279,11 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         let email = emailField.text
         let number = phoneNumberField.text
         
-        
         _ = title != nil && title != "" && total != nil && total != "" && about != nil && about != "" && expectation != nil && expectation != "" && email != nil && email != "" && number != nil && number != ""
     }
     
 }
+
 extension CreateNewEventViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -238,6 +299,7 @@ extension CreateNewEventViewController: UIPickerViewDataSource, UIPickerViewDele
             return 1
         }
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView.tag {
         case 1:
@@ -248,6 +310,7 @@ extension CreateNewEventViewController: UIPickerViewDataSource, UIPickerViewDele
             return "Data not found"
         }
     }
+    
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         //let event = PFObject(className: "Events")
         switch pickerView.tag {
