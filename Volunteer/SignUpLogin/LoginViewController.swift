@@ -24,24 +24,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
-//        continueButton = RoundedWhiteButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
-//        continueButton.setTitleColor(secondaryColor, for: .normal)
-//        continueButton.setTitle("Continue", for: .normal)
-//        continueButton.titleLabel?.font = UIFont.systemFont(ofSize: 18.0, weight: UIFont.Weight.bold)
-//        continueButton.center = CGPoint(x: view.center.x, y: view.frame.height - continueButton.frame.height - 24)
-//        continueButton.highlightedColor = UIColor(white: 1.0, alpha: 1.0)
-//        continueButton.defaultColor = UIColor.white
-//        continueButton.addTarget(self, action: #selector(handleSignIn), for: .touchUpInside)
-//        continueButton.alpha = 0.5
-//        view.addSubview(continueButton)
-//        setContinueButton(enabled: false)
-//
-//        activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-//        activityView.color = secondaryColor
-//        activityView.frame = CGRect(x: 0, y: 0, width: 50.0, height: 50.0)
-//        activityView.center = continueButton.center
-//
-//        view.addSubview(activityView)
+
         
         emailField.delegate = self
         passwordField.delegate = self
@@ -176,8 +159,7 @@ class LoginViewController:UIViewController, UITextFieldDelegate {
         guard passwordField.text != nil else { return }
         
 //        setContinueButton(enabled: false)
-//        continueButton.setTitle("", for: .normal)
-        activityView.startAnimating()
+//        continueButton.setTitle("", for: .normal)activityView.startAnimating()
         
         /* Auth.auth().signIn(withEmail: email, password: pass) { user, error in
             if error == nil && user != nil {
