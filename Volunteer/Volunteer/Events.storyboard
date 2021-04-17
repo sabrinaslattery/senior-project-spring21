@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Previous Events View Controller-->
+        <!--My Events View Controller-->
         <scene sceneID="j0Q-45-Ali">
             <objects>
-                <viewController title="Previous Events View Controller" modalPresentationStyle="fullScreen" id="gbB-Pc-3p4" customClass="MyEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="My Events View Controller" modalPresentationStyle="fullScreen" id="gbB-Pc-3p4" customClass="MyEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sgh-Ld-5pd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,6 +156,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DlO-P8-lb0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3397" y="1116"/>
+        </scene>
         <!--Created Events Table View Controller-->
         <scene sceneID="NmJ-BD-OEr">
             <objects>
@@ -165,7 +166,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ExV-MO-Pd8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="119" width="414" height="777"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="240" id="uKi-pZ-ld4" customClass="CreatedEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
@@ -250,15 +251,44 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wlf-Ds-vEi">
+                                <rect key="frame" x="175" y="49" width="60" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="MfZ-ng-GOx"/>
+                                    <constraint firstAttribute="height" constant="55" id="gaP-zz-kDr"/>
+                                </constraints>
+                                <state key="normal" image="OutReachLogo"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmh-dn-JQf">
+                                <rect key="frame" x="29" y="59" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Lat-bE-qKz"/>
+                                    <constraint firstAttribute="width" constant="35" id="bxK-Dm-bcx"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button" image="line.horizontal.3.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="light"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapMenu" destination="mYr-en-u8f" eventType="touchUpInside" id="fc7-Nn-Bea"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bLS-az-XWJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ExV-MO-Pd8" firstAttribute="top" secondItem="pI5-Sj-ga1" secondAttribute="top" id="YRz-zU-CeC"/>
+                            <constraint firstItem="ExV-MO-Pd8" firstAttribute="top" secondItem="xmh-dn-JQf" secondAttribute="bottom" constant="25" id="A4W-P1-ygI"/>
+                            <constraint firstItem="xmh-dn-JQf" firstAttribute="leading" secondItem="bLS-az-XWJ" secondAttribute="leading" constant="29" id="E8Z-UV-gPk"/>
+                            <constraint firstItem="xmh-dn-JQf" firstAttribute="top" secondItem="bLS-az-XWJ" secondAttribute="top" constant="15" id="F6R-C4-nnI"/>
+                            <constraint firstItem="bLS-az-XWJ" firstAttribute="trailing" secondItem="Wlf-Ds-vEi" secondAttribute="trailing" constant="179" id="UYD-oz-aOv"/>
+                            <constraint firstItem="ExV-MO-Pd8" firstAttribute="top" secondItem="pI5-Sj-ga1" secondAttribute="top" constant="119" id="YRz-zU-CeC"/>
                             <constraint firstItem="ExV-MO-Pd8" firstAttribute="leading" secondItem="bLS-az-XWJ" secondAttribute="leading" id="bxH-4T-qjP"/>
                             <constraint firstItem="ExV-MO-Pd8" firstAttribute="trailing" secondItem="bLS-az-XWJ" secondAttribute="trailing" id="eBA-8o-aWK"/>
+                            <constraint firstItem="Wlf-Ds-vEi" firstAttribute="top" secondItem="bLS-az-XWJ" secondAttribute="top" constant="5" id="jxK-y1-lHA"/>
                             <constraint firstAttribute="bottom" secondItem="ExV-MO-Pd8" secondAttribute="bottom" id="o3D-i3-Kql"/>
+                            <constraint firstItem="Wlf-Ds-vEi" firstAttribute="leading" secondItem="xmh-dn-JQf" secondAttribute="trailing" constant="111" id="ok7-Hm-Igm"/>
                             <constraint firstItem="ExV-MO-Pd8" firstAttribute="centerX" secondItem="pI5-Sj-ga1" secondAttribute="centerX" id="owx-Ch-kKD"/>
+                            <constraint firstItem="ExV-MO-Pd8" firstAttribute="top" secondItem="Wlf-Ds-vEi" secondAttribute="bottom" constant="15" id="vay-2n-3Wk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="nGB-TP-IhQ"/>
@@ -268,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TIu-07-ceC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2020" y="-1362"/>
+            <point key="canvasLocation" x="2023.1884057971015" y="-1343.3035714285713"/>
         </scene>
         <!--Creator Event Details View Controller-->
         <scene sceneID="5tC-tC-Yyn">
@@ -279,7 +309,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ACH-5t-C1x">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQB-TG-c1a">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1303"/>
@@ -1170,10 +1200,10 @@
             </objects>
             <point key="canvasLocation" x="3017" y="-2392"/>
         </scene>
-        <!--Current Events View Controller-->
+        <!--All Events View Controller-->
         <scene sceneID="fef-5J-Yaf">
             <objects>
-                <viewController title="Current Events View Controller" modalPresentationStyle="fullScreen" id="bxU-GJ-Dpb" customClass="AllEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="All Events View Controller" modalPresentationStyle="fullScreen" id="bxU-GJ-Dpb" customClass="AllEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EeX-kd-qMs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2195,11 +2225,10 @@
         <!--Created Events-->
         <scene sceneID="N4K-ms-yIa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="b2w-Iq-1lP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="b2w-Iq-1lP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Created Events" id="4ax-Y1-r53"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rkW-bN-pMT">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2253,7 +2282,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="ZPh-c5-aop"/>
         <segue reference="xLU-Kf-l4d"/>
-        <segue reference="Xcz-4F-ppc"/>
+        <segue reference="ELk-p7-qaV"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="+18" width="598" height="600"/>
@@ -2262,7 +2291,6 @@
         <image name="arrow.left.circle" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
         <image name="checkmark.seal.fill" catalog="system" width="128" height="128"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="email icon" width="140" height="135"/>

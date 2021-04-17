@@ -199,7 +199,7 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 	//Pass the selected event to the details page
 	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		
-		let cell = sender as! UITableViewCell
+        let cell = sender as! UITableViewCell
 		let indexPath = tableView.indexPath(for: cell)
 		let event = Events[indexPath!.row]
 		
