@@ -118,7 +118,7 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
     
 	@objc func loadEvents() {
 		let query = PFQuery(className:"Events")
-		query.whereKey("date", greaterThan: Date())
+        query.whereKey("date", greaterThan: Date()).addAscendingOrder("date")
 		//query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
 		query.limit = 20
 		

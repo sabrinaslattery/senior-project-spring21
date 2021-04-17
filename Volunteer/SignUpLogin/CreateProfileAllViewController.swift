@@ -18,8 +18,8 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBOutlet weak var jobTitleTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var zipCodeTextField: UITextField!
-    @IBOutlet weak var introTextField: UITextField!
-    @IBOutlet weak var workExperienceTextField: UITextField!
+    @IBOutlet weak var introTextField: UITextView!
+    @IBOutlet weak var workExperienceTextField: UITextView!
     @IBOutlet weak var educationLevelField: UITextField!
     
     //@IBOutlet var control: UISegmentedControl!
@@ -61,6 +61,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+        
+        introTextField!.layer.borderWidth = 1
+        introTextField!.layer.borderColor = UIColor.black.cgColor
+        workExperienceTextField!.layer.borderWidth = 1
+        workExperienceTextField!.layer.borderColor = UIColor.black.cgColor
         
         educationLevelField.inputView = educationLevelPicker
                 
@@ -158,11 +163,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBAction func animalCheckboxButton(_ sender: UIButton) {
         if (flag1 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag1 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag1 = false
         }
     }
@@ -170,11 +175,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBAction func childCheckboxButton(_ sender: UIButton) {
         if (flag2 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag2 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag2 = false
         }
     }
@@ -182,11 +187,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBAction func communityCheckboxButton(_ sender: UIButton) {
         if (flag3 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag3 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag3 = false
         }
     }
@@ -194,11 +199,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBAction func educationCheckboxButton(_ sender: UIButton) {
         if (flag4 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag4 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag4 = false
         }
     }
@@ -206,11 +211,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBAction func elderlyCheckboxButton(_ sender: UIButton) {
         if (flag5 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag5 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag5 = false
         }
     }
@@ -218,11 +223,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBAction func healthCheckboxButton(_ sender: UIButton) {
         if (flag6 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag6 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag6 = false
         }
     }
@@ -230,11 +235,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBAction func homeCheckboxButton(_ sender: UIButton) {
         if (flag7 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag7 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag7 = false
         }
     }
@@ -242,11 +247,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBAction func otherCheckboxButton(_ sender: UIButton) {
         if (flag8 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag8 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag8 = false
         }
     }
@@ -254,11 +259,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBAction func poveryCheckboxButton(_ sender: UIButton) {
         if (flag9 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag9 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag9 = false
         }
     }
@@ -266,11 +271,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBAction func religionCheckboxButton(_ sender: UIButton) {
         if (flag10 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag10 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag10 = false
         }
     }
@@ -278,11 +283,11 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     @IBAction func technologyCheckboxButton(_ sender: UIButton) {
         if (flag11 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag11 = true
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag11 = false
         }
     }
