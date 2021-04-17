@@ -11,7 +11,7 @@ import Parse
 import AlamofireImage
 
 
-class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
  
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -19,8 +19,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var jobTitleTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var zipCodeTextField: UITextField!
-    @IBOutlet weak var introTextField: UITextField!
-    @IBOutlet weak var workExperienceTextField: UITextField!
+    @IBOutlet weak var introTextField: UITextView!
+    @IBOutlet weak var workExperienceTextField: UITextView!
     @IBOutlet weak var educationLevelField: UITextField!
     
     //@IBOutlet var control: UISegmentedControl!
@@ -66,7 +66,11 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         showUserData()
         showProfileImage()
-
+        
+        introTextField!.layer.borderWidth = 1
+        introTextField!.layer.borderColor = UIColor.black.cgColor
+        workExperienceTextField!.layer.borderWidth = 1
+        workExperienceTextField!.layer.borderColor = UIColor.black.cgColor
         
         educationLevelField.inputView = educationLevelPicker
                 
@@ -171,7 +175,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             self.profile.saveInBackground {
               (success: Bool, error: Error?) in
               if (success) {
-                
+                //self.mainProfileViewController = UIViewController.reloadData()
                 // The object has been saved.
               } else {
                 // There was a problem, check error.description
