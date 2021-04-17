@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VT2-yk-u93">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yD9-QF-60h">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -17,18 +17,34 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OvP-nj-mnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3848" y="1301"/>
+            <point key="canvasLocation" x="4999" y="2215"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wci-wV-gfl">
+            <objects>
+                <navigationController id="yD9-QF-60h" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HbF-i9-YwV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VT2-yk-u93" kind="relationship" relationship="rootViewController" id="g6c-AB-soR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LDx-ek-bzM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3274" y="1732"/>
         </scene>
         <!--Main Profile View Controller-->
         <scene sceneID="6qa-He-XJ3">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="VT2-yk-u93" customClass="MainProfileViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="VT2-yk-u93" customClass="MainProfileViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIb-oT-fJd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Tu-1E-2J7">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sE1-FS-Cpn">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
@@ -363,11 +379,16 @@
                         <outlet property="profileImage" destination="Ybj-X8-XeV" id="hLj-wx-dJL"/>
                         <outlet property="workExperience" destination="gkn-la-So9" id="2b3-XN-XUc"/>
                         <outlet property="zipCode" destination="8vi-g1-of5" id="VdH-CO-kKB"/>
+                        <segue destination="D15-cG-jWv" kind="presentation" identifier="eventsSegue" id="UtF-r9-ogf"/>
+                        <segue destination="JC6-h0-HdZ" kind="presentation" identifier="searchSegue" id="5hx-Yj-3Dv"/>
+                        <segue destination="OXy-JN-z0A" kind="presentation" identifier="createSegue" id="9a5-Bg-Nlh"/>
+                        <segue destination="Okb-5J-i1Q" kind="presentation" identifier="profileSegue" id="8vP-au-2Oc"/>
+                        <segue destination="0ga-lO-IUq" kind="presentation" identifier="settingsSegue" id="CmE-fL-cKf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apG-XI-zaH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4186.9565217391309" y="1723.6607142857142"/>
+            <point key="canvasLocation" x="4251" y="1740"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="ADj-fS-i67">
@@ -378,7 +399,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAs-lP-Ah2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TwH-VB-QHy">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
@@ -1001,11 +1022,79 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mpX-bB-90a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4992.753623188406" y="1723.6607142857142"/>
+            <point key="canvasLocation" x="5232" y="1725"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="Mgt-NI-M8I">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Search" id="JC6-h0-HdZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="epv-CY-hI6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDQ-DD-ZeM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3891" y="2215"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="MZs-Z4-TiD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Events" id="D15-cG-jWv" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="YWc-SV-ckq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iXl-5C-FEC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3664" y="2215"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="64v-TK-gch">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Profile" id="Okb-5J-i1Q" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="inv-w0-7IU"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jyx-3j-zMw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4309" y="2215"/>
+        </scene>
+        <!--Create Events Page-->
+        <scene sceneID="LA4-9F-ths">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Events" referencedIdentifier="Create Events Page" id="OXy-JN-z0A" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FMQ-2b-glc"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="arf-aP-7ig" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4112" y="2215"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="oDS-oK-QkX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Settings" id="0ga-lO-IUq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zuz-ci-B9j"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsp-Ug-0FK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4480" y="2215"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="k9g-xd-Igc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Home" id="B2T-Nb-mAh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MEB-OK-FfN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4817" y="2215"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="qNB-UO-1ST">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="flT-Ja-WO1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="t2E-Us-urd"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="it8-SQ-2MH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4643" y="2215"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hYP-io-jI5"/>
+        <segue reference="g6c-AB-soR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
