@@ -256,7 +256,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="18+ Icon" translatesAutoresizingMaskIntoConstraints="NO" id="LzY-1Y-MX0">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="+18" translatesAutoresizingMaskIntoConstraints="NO" id="LzY-1Y-MX0">
                                                 <rect key="frame" x="47" y="297" width="47" height="53"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="53" id="wbg-ad-KmS"/>
@@ -2358,6 +2358,7 @@
         <segue reference="xLU-Kf-l4d"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="+18" width="598" height="600"/>
         <image name="18+ Icon" width="674" height="674"/>
         <image name="Button_Menu" width="168" height="104"/>
         <image name="Difficulty_Easy" width="282" height="120"/>
