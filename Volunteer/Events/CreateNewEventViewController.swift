@@ -51,6 +51,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     
     var imagePicker:UIImagePickerController!
     
+   
     var event = PFObject(className: "Events")
     
     override func viewDidLoad() {
@@ -106,84 +107,65 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     @IBAction func CompletedButton(_ sender: Any) {
         
         
-        self.event["title"] = eventTitleField.text!
-        self.event["totalSpots"] = Int(totalSpotsField.text!)
-        self.event["description"] = aboutEventField.text!
-        self.event["expectations"] = volunteerExpectationField.text!
-        self.event["clothes"] = volunteerShouldWearField.text!
-        self.event["contactEmail"] = emailField.text!
-        self.event["contactPhone"] = phoneNumberField.text!
+        let title = eventTitleField.text!
+        let totalSpots = Int(totalSpotsField.text!)
+        let description = aboutEventField.text!
+        let expectations = volunteerExpectationField.text!
+        let clothes = volunteerShouldWearField.text!
+        let contactEmail = emailField.text!
+        let contactPhone = phoneNumberField.text!
         
         //event ["difficulty"] = difficultyPicker
         //event ["tag"] = tagsPicker
         datePicker.locale = .current
         toPicker.locale = .current
         fromPicker.locale = .current
-        self.event["date"] = datePicker.date
-		self.event["startTime"] = fromPicker.date
-		self.event["endTime"] = toPicker.date
-        self.event["attendees"] = NSArray()
+        let date = datePicker.date
+		let startTime = fromPicker.date
+		let endTime = toPicker.date
+        let attendes = NSArray()
         
         
         
         let imageData = coverPhotoImageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
         
-        self.event["image"] = file
+        let image = file
         
         _ = datePicker.date
         
         let diffPicker = difficultyPicker
         let tagPicker = tagsPicker
+ 
         
-        /*
-        //Find PF objects first before saving in background
-        let query = PFQuery(className: "Events")
-        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
-            if let error = error {
-                // Log details of the failure
-                //Send alert if all text boxes in Create Event are nil
-                let alert = UIAlertController(title: "Oops!", message: error.localizedDescription, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                    print(error.localizedDescription)
-                }))
-                self.present(alert, animated: true)
-                
-            } else if let objects = objects {
-                // The find succeeded.
-                print("Successfully retrieved \(objects.count) events.")
-                // Do something with the found objects
-                self.event.saveInBackground { (success, error) in
-                    if let error = error {
-                        
-
-                       print(error.localizedDescription)
-                        
-                    
-                    } else if success != nil {
-                        print("Created an event")
-                            self.performSegue(withIdentifier: "ToEvents", sender: self)
-                    }
-                }
-                
-            }
-        }
- */
-        
-        
-        self.event.saveInBackground { (success, error) in
-            if (success){
-                
-                print("Created an event")
-                self.performSegue(withIdentifier: "ToEvents", sender: self)
-               
-                
+        // MARK: - User must click fillout title and contact email
+        if title == "" && contactEmail == "" {
+            let alert = UIAlertController(title: "Oops!", message: "Please fill out title and contact email fields!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                print("Please fill out fields!")
+            }))
+            self.present(alert, animated: true)
             
-            } else if self.event["title"] != nil && self.event["contactEmail"] != nil {
-                 print(error?.localizedDescription)
+            } else {
+            event.saveInBackground { (success, error) in
+                if success {
+                    
+                    print("Created an event")
+                    self.performSegue(withIdentifier: "ToEvents", sender: self)
+                   
+                    
+                
+                } else  {
+                    
+                    let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                        print(error.debugDescription)
+                    }))
+                    self.present(alert, animated: true)
+                
+                }
             }
         }
-        
     }
     
     @IBAction func handleDismissButton(_ sender: Any) {
