@@ -105,7 +105,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     
     @IBAction func CompletedButton(_ sender: Any) {
         
-       
+        
         self.event["title"] = eventTitleField.text!
         self.event["totalSpots"] = Int(totalSpotsField.text!)
         self.event["description"] = aboutEventField.text!
@@ -136,12 +136,51 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         let diffPicker = difficultyPicker
         let tagPicker = tagsPicker
         
-        self.event.saveInBackground { (success, error) in
+        /*
+        //Find PF objects first before saving in background
+        let query = PFQuery(className: "Events")
+        query.findObjectsInBackground { (objects: [PFObject]?, error: Error?) in
             if let error = error {
-                print(error.localizedDescription)
-            } else if success != nil {
+                // Log details of the failure
+                //Send alert if all text boxes in Create Event are nil
+                let alert = UIAlertController(title: "Oops!", message: error.localizedDescription, preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                    print(error.localizedDescription)
+                }))
+                self.present(alert, animated: true)
+                
+            } else if let objects = objects {
+                // The find succeeded.
+                print("Successfully retrieved \(objects.count) events.")
+                // Do something with the found objects
+                self.event.saveInBackground { (success, error) in
+                    if let error = error {
+                        
+
+                       print(error.localizedDescription)
+                        
+                    
+                    } else if success != nil {
+                        print("Created an event")
+                            self.performSegue(withIdentifier: "ToEvents", sender: self)
+                    }
+                }
+                
+            }
+        }
+ */
+        
+        
+        self.event.saveInBackground { (success, error) in
+            if (success){
+                
                 print("Created an event")
-                    self.performSegue(withIdentifier: "ToEvents", sender: self)
+                self.performSegue(withIdentifier: "ToEvents", sender: self)
+               
+                
+            
+            } else if self.event["title"] != nil && self.event["contactEmail"] != nil {
+                 print(error?.localizedDescription)
             }
         }
         
