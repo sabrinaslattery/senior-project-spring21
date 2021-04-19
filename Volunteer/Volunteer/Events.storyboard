@@ -2361,9 +2361,9 @@
         <image name="+18" width="598" height="600"/>
         <image name="18+ Icon" width="674" height="674"/>
         <image name="Button_Menu" width="168" height="104"/>
-        <image name="Difficulty_Easy" width="282" height="120"/>
-        <image name="Difficulty_Hard" width="302" height="134"/>
-        <image name="Difficulty_Medium" width="330" height="146"/>
+        <image name="Difficulty_Easy" width="412" height="172"/>
+        <image name="Difficulty_Hard" width="460" height="180"/>
+        <image name="Difficulty_Medium" width="552" height="172"/>
         <image name="Elder Care - We run Errands" width="734" height="340"/>
         <image name="Hunger - Food Drive" width="452" height="193"/>
         <image name="OutReachLogo" width="256" height="256"/>
