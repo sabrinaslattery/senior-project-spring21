@@ -24,8 +24,10 @@ class MainProfileViewController: UIViewController {
             @IBOutlet var educationLevel: UILabel?
             @IBOutlet var workExperience: UILabel?
             //@IBOutlet var interests: UILabel?
-
-
+            
+            var refreshControl: UIRefreshControl!
+            var scrollView: UIScrollView!
+    
             override func viewDidLoad() {
                 super.viewDidLoad()
                 showFirstName()
@@ -41,11 +43,26 @@ class MainProfileViewController: UIViewController {
                 showWorkExperience()
 //                showInterests()
                 // Do any additional setup after loading the view.
+                super.viewDidLoad()
+                
+                refreshControl = UIRefreshControl()
+                refreshControl.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
                 
                 
             
             }
-            
+            func run(after wait: TimeInterval, closure: @escaping () -> Void) {
+                let queue = DispatchQueue.main
+                queue.asyncAfter(deadline: DispatchTime.now() + wait, execute: closure)
+            }
+    @objc func onRefresh() {
+                    func refresh() {
+                        run(after: 2) {
+                           self.refreshControl.endRefreshing()
+                        }
+                    }
+                   
+                }
     
                 func showFirstName() {
                     let userFirstName = PFUser.current()?.object(forKey: "firstname") as! String
