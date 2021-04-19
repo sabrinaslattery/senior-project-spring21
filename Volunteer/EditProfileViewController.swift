@@ -211,140 +211,142 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         dismiss(animated: true, completion: nil)
     }
+    
 
     //interest tag buttons
-    @IBAction func animalCheckboxButton(_ sender: UIButton) {
-        if (flag1 == false)
-        {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
-            flag1 = true
-        }
-        else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
-            flag1 = false
-        }
-    }
-    
-    @IBAction func childCheckboxButton(_ sender: UIButton) {
-        if (flag2 == false)
-        {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
-            flag2 = true
-        }
-        else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
-            flag2 = false
-        }
-    }
-    
-    @IBAction func communityCheckboxButton(_ sender: UIButton) {
-        if (flag3 == false)
-        {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
-            flag3 = true
-        }
-        else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
-            flag3 = false
-        }
-    }
-    
-    @IBAction func educationCheckboxButton(_ sender: UIButton) {
-        if (flag4 == false)
-        {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
-            flag4 = true
-        }
-        else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
-            flag4 = false
-        }
-    }
-    
-    @IBAction func elderlyCheckboxButton(_ sender: UIButton) {
-        if (flag5 == false)
-        {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
-            flag5 = true
-        }
-        else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
-            flag5 = false
-        }
-    }
-    
-    @IBAction func healthCheckboxButton(_ sender: UIButton) {
-        if (flag6 == false)
-        {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
-            flag6 = true
-        }
-        else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
-            flag6 = false
-        }
-    }
-    
-    @IBAction func homeCheckboxButton(_ sender: UIButton) {
-        if (flag7 == false)
-        {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
-            flag7 = true
-        }
-        else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
-            flag7 = false
-        }
-    }
-    
-    @IBAction func otherCheckboxButton(_ sender: UIButton) {
-        if (flag8 == false)
-        {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
-            flag8 = true
-        }
-        else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
-            flag8 = false
-        }
-    }
-    
-    @IBAction func poveryCheckboxButton(_ sender: UIButton) {
-        if (flag9 == false)
-        {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
-            flag9 = true
-        }
-        else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
-            flag9 = false
-        }
-    }
-    
-    @IBAction func religionCheckboxButton(_ sender: UIButton) {
-        if (flag10 == false)
-        {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
-            flag10 = true
-        }
-        else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
-            flag10 = false
-        }
-    }
-    
-    @IBAction func technologyCheckboxButton(_ sender: UIButton) {
-        if (flag11 == false)
-        {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
-            flag11 = true
-        }
-        else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
-            flag11 = false
-        }
-    }
-    
+       @IBAction func animalCheckboxButton(_ sender: UIButton) {
+           if (flag1 == false)
+           {
+               sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+               flag1 = true
+           }
+           else {
+               sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+               flag1 = false
+           }
+       }
+       
+       @IBAction func childCheckboxButton(_ sender: UIButton) {
+           if (flag2 == false)
+           {
+               sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+               flag2 = true
+           }
+           else {
+               sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+               flag2 = false
+           }
+       }
+       
+       @IBAction func communityCheckboxButton(_ sender: UIButton) {
+           if (flag3 == false)
+           {
+               sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+               flag3 = true
+           }
+           else {
+               sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+               flag3 = false
+           }
+       }
+       
+       @IBAction func educationCheckboxButton(_ sender: UIButton) {
+           if (flag4 == false)
+           {
+               sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+               flag4 = true
+           }
+           else {
+               sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+               flag4 = false
+           }
+       }
+       
+       @IBAction func elderlyCheckboxButton(_ sender: UIButton) {
+           if (flag5 == false)
+           {
+               sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+               flag5 = true
+           }
+           else {
+               sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+               flag5 = false
+           }
+       }
+       
+       @IBAction func healthCheckboxButton(_ sender: UIButton) {
+           if (flag6 == false)
+           {
+               sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+               flag6 = true
+           }
+           else {
+               sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+               flag6 = false
+           }
+       }
+       
+       @IBAction func homeCheckboxButton(_ sender: UIButton) {
+           if (flag7 == false)
+           {
+               sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+               flag7 = true
+           }
+           else {
+               sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+               flag7 = false
+           }
+       }
+       
+       @IBAction func otherCheckboxButton(_ sender: UIButton) {
+           if (flag8 == false)
+           {
+               sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+               flag8 = true
+           }
+           else {
+               sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+               flag8 = false
+           }
+       }
+       
+       @IBAction func poveryCheckboxButton(_ sender: UIButton) {
+           if (flag9 == false)
+           {
+               sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+               flag9 = true
+           }
+           else {
+               sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+               flag9 = false
+           }
+       }
+       
+       @IBAction func religionCheckboxButton(_ sender: UIButton) {
+           if (flag10 == false)
+           {
+               sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+               flag10 = true
+           }
+           else {
+               sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+               flag10 = false
+           }
+       }
+       
+       @IBAction func technologyCheckboxButton(_ sender: UIButton) {
+           if (flag11 == false)
+           {
+               sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+               flag11 = true
+           }
+           else {
+               sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+               flag11 = false
+           }
+       }
+       
+       
     
 }
 extension EditProfileViewController: UIPickerViewDataSource, UIPickerViewDelegate {
