@@ -11,7 +11,7 @@ import Parse
 import AlamofireImage
 
 
-class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
  
     
     @IBOutlet weak var profileImageView: UIImageView!
@@ -19,8 +19,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBOutlet weak var jobTitleTextField: UITextField!
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var zipCodeTextField: UITextField!
-    @IBOutlet weak var introTextField: UITextField!
-    @IBOutlet weak var workExperienceTextField: UITextField!
+    @IBOutlet weak var introTextField: UITextView!
+    @IBOutlet weak var workExperienceTextField: UITextView!
     @IBOutlet weak var educationLevelField: UITextField!
     
     //@IBOutlet var control: UISegmentedControl!
@@ -69,7 +69,11 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         
         showUserData()
         showProfileImage()
-
+        
+        introTextField!.layer.borderWidth = 1
+        introTextField!.layer.borderColor = UIColor.black.cgColor
+        workExperienceTextField!.layer.borderWidth = 1
+        workExperienceTextField!.layer.borderColor = UIColor.black.cgColor
         
         educationLevelField.inputView = educationLevelPicker
                 
@@ -148,7 +152,6 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
 //        
 //        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
 //        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        
     }
     
     func showProfileImage () {
@@ -167,9 +170,6 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
                             self.profileImageView?.image = Image
                         }
                     }
-    //                        let output = list["image"] as? PFFileObject
-    //                        self.profileImage.image!.pngData() = output
-
                   }
                }
             }
@@ -199,35 +199,42 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
           }
       }
     
-    
-    
     @IBAction func updateUser(_ sender: Any) {
-        let currentUser = PFUser.current()
-            self.profile["jobTitle"] = jobTitleTextField.text!
-            self.profile["city"] = cityTextField.text!
-            self.profile["zipCode"] = zipCodeTextField.text!
-            self.profile["userBio"] = introTextField.text!
-            self.profile["workExperience"] = workExperienceTextField.text!
-            self.profile["user"] = currentUser
-            let eduLevelPicker = educationLevelPicker
+        let query = PFQuery(className: "Profile")
+        query.whereKey("user", equalTo: PFUser.current()!)
+        query.getFirstObjectInBackground { [self] (object, error) -> Void in
+            if error == nil {
+                if let result = object {
         
+            result["jobTitle"] = jobTitleTextField.text!
+            result["city"] = cityTextField.text!
+            result["zipCode"] = zipCodeTextField.text!
+            result["userBio"] = introTextField.text!
+            result["workExperience"] = workExperienceTextField.text!
+            result["educationLevel"] = educationLevelField.text!
+            
+            //let eduLevelPicker = educationLevelPicker
             // saving the profile image
             let imageData = profileImageView.image!.pngData()
             let file = PFFileObject(data: imageData!)
-            self.profile["image"] = file
-            
-            self.profile.saveInBackground {
+            result["image"] = file
+        
+            result.saveInBackground {
               (success: Bool, error: Error?) in
               if (success) {
-                
                 // The object has been saved.
               } else {
                 // There was a problem, check error.description
               }
             }
           }
+          }
+        }
+    }
 
-    // Launching the camera to add a profile picture from camera or photo library
+            
+        
+// Launching the camera to add a profile picture from camera or photo library
     @IBAction func onCameraButton(_sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -260,12 +267,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func animalCheckboxButton(_ sender: UIButton) {
         if (flag1 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag1 = true
 			self.profile.addUniqueObject(self.interestTags[0], forKey: "selectedTags")
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag1 = false
 			self.profile.remove(self.interestTags[0], forKey: "selectedTags")
         }
@@ -274,12 +281,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func childCheckboxButton(_ sender: UIButton) {
         if (flag2 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag2 = true
 			self.profile.addUniqueObject(self.interestTags[2], forKey: "selectedTags")
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag2 = false
 			self.profile.remove(self.interestTags[2], forKey: "selectedTags")
         }
@@ -288,12 +295,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func communityCheckboxButton(_ sender: UIButton) {
         if (flag3 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag3 = true
 			self.profile.addUniqueObject(self.interestTags[1], forKey: "selectedTags")
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag3 = false
 			self.profile.remove(self.interestTags[1], forKey: "selectedTags")
         }
@@ -302,12 +309,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func educationCheckboxButton(_ sender: UIButton) {
         if (flag4 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag4 = true
 			self.profile.addUniqueObject(self.interestTags[3], forKey: "selectedTags")
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag4 = false
 			self.profile.remove(self.interestTags[3], forKey: "selectedTags")
         }
@@ -316,12 +323,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func elderlyCheckboxButton(_ sender: UIButton) {
         if (flag5 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag5 = true
 			self.profile.addUniqueObject(self.interestTags[4], forKey: "selectedTags")
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag5 = false
 			self.profile.remove(self.interestTags[4], forKey: "selectedTags")
         }
@@ -330,12 +337,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func healthCheckboxButton(_ sender: UIButton) {
         if (flag6 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag6 = true
 			self.profile.addUniqueObject(self.interestTags[5], forKey: "selectedTags")
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag6 = false
 			self.profile.remove(self.interestTags[5], forKey: "selectedTags")
         }
@@ -344,12 +351,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func homeCheckboxButton(_ sender: UIButton) {
         if (flag7 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag7 = true
 			self.profile.addUniqueObject(self.interestTags[6], forKey: "selectedTags")
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag7 = false
 			self.profile.remove(self.interestTags[6], forKey: "selectedTags")
         }
@@ -358,12 +365,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func otherCheckboxButton(_ sender: UIButton) {
         if (flag8 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag8 = true
 			self.profile.addUniqueObject(self.interestTags[7], forKey: "selectedTags")
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag8 = false
 			self.profile.remove(self.interestTags[7], forKey: "selectedTags")
         }
@@ -372,12 +379,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func poveryCheckboxButton(_ sender: UIButton) {
         if (flag9 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag9 = true
 			self.profile.addUniqueObject(self.interestTags[8], forKey: "selectedTags")
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag9 = false
 			self.profile.remove(self.interestTags[8], forKey: "selectedTags")
         }
@@ -386,12 +393,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func religionCheckboxButton(_ sender: UIButton) {
         if (flag10 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag10 = true
 			self.profile.addUniqueObject(self.interestTags[9], forKey: "selectedTags")
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag10 = false
 			self.profile.remove(self.interestTags[9], forKey: "selectedTags")
         }
@@ -400,12 +407,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     @IBAction func technologyCheckboxButton(_ sender: UIButton) {
         if (flag11 == false)
         {
-            sender.setBackgroundImage((UIImage(named: "checkbox_checked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag11 = true
 			self.profile.addUniqueObject(self.interestTags[10], forKey: "selectedTags")
         }
         else {
-            sender.setBackgroundImage((UIImage(named: "checkbox_unchecked")), for: UIControl.State.normal)
+            sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag11 = false
 			self.profile.remove(self.interestTags[10], forKey: "selectedTags")
         }
@@ -436,6 +443,7 @@ extension EditProfileViewController: UIPickerViewDataSource, UIPickerViewDelegat
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView.tag {
         case 1:
+            
             self.profile["educationLevel"] = self.educationLevel[row]
             educationLevelField.text = educationLevel[row]
             educationLevelField.resignFirstResponder()

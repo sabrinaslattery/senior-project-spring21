@@ -32,30 +32,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         super.viewDidLoad()
         
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-//        let user = PFUser.current()
-//        user!["newUser"] = false
-//        user?.saveInBackground()
-//        print(user!["newUser"] as! Bool)
-        /*continueButton = RoundedWhiteButton(frame: CGRect(x: 0, y: 0, width: 200, height: 50))
-        continueButton.setTitleColor(secondaryColor, for: .normal)
-        continueButton.setTitle("Continue", for: .normal)
-        continueButton.titleLabel?.font = UIFont.systemFont(ofSize: 18.0, weight: UIFont.Weight.bold)
-        continueButton.center = CGPoint(x: view.center.x, y: view.frame.height - continueButton.frame.height - 24)
-        continueButton.highlightedColor = UIColor(white: 1.0, alpha: 1.0)
-        continueButton.defaultColor = UIColor.white
-        // continueButton.addTarget(self, action: #selector(handleSignUp), for: .touchUpInside)
-        
-        
-        view.addSubview(continueButton)
-        setContinueButton(enabled: false)
-        
-        activityView = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
-        activityView.color = secondaryColor
-        activityView.frame = CGRect(x: 0, y: 0, width: 50.0, height: 50.0)
-        activityView.center = continueButton.center
-        
-        view.addSubview(activityView)
-        */
+
         
         firstnameField.delegate = self
         lastnameField.delegate = self
@@ -87,12 +64,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
         user["lastname"] = lastnameField.text!
 		//user["newUser"] = true
         
-        // saving the profile image
-        //let profileImage = PFObject(className: "Profile")
-//        let imageData = profileImageView.image!.pngData()
-//        let file = PFFileObject(data: imageData!)
-//
-//        profileImage["image"] = file
+       
         
 		if !firstnameField.hasText || !lastnameField.hasText || !emailField.hasText || !passwordField.hasText {
 			let alert = UIAlertController(title: "Oops!", message: "Please fill out all of the required information", preferredStyle: .alert)
@@ -117,34 +89,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
 		}
 }
     
-//    // Launching the camera to add a profile picture from camera or photo library
-//    @IBAction func onCameraButton(_sender: Any) {
-//        let picker = UIImagePickerController()
-//        picker.delegate = self
-//        picker.allowsEditing = true
-//
-//        if UIImagePickerController.isSourceTypeAvailable(.camera){
-//            picker.sourceType = .camera
-//        }
-//
-//        else{
-//            picker.sourceType = .photoLibrary
-//        }
-//
-//        present(picker, animated: true, completion: nil)
-//    }
-//
-//    // resizing the image and
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        let image = info[.editedImage] as! UIImage
-//
-//        let size = CGSize(width: 300, height: 300)
-//        let scaledImage = image.af_imageScaled(to:size)
-//
-//        profileImageView.image = scaledImage
-//
-//        dismiss(animated: true, completion: nil)
-//    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -225,58 +170,7 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
     }
     
     
-    // This section will be used when we have a database. We will connect it to that!
-    /* @objc func handleSignUp() {
-     guard let username = usernameField.text else { return }
-     guard let email = emailField.text else { return }
-     guard let pass = passwordField.text else { return }
-     guard let image = profileImageView.image else { return }
-     
-     setContinueButton(enabled: false)
-     continueButton.setTitle("", for: .normal)
-     activityView.startAnimating()
-     
-     Auth.auth().createUser(withEmail: email, password: pass) { user, error in
-     if error == nil && user != nil {
-     
-     print("User created!")
-     
-     // 1. Upload the profile image to Firebase Storage
-     
-     self.uploadProfileImage(image) { url in
-     
-     if url != nil {
-     let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-     changeRequest?.displayName = username
-     changeRequest?.photoURL = url
-     
-     changeRequest?.commitChanges { error in
-     if error == nil {
-     print("User display name changed!")
-     
-     self.saveProfile(username: username, email:email, profileImageURL: url!) { success in
-     if success {
-     self.dismiss(animated: true, completion: nil)
-     } else {
-     self.resetForm()
-     }
-     }
-     
-     } else {
-     print("Error: \(error!.localizedDescription)")
-     self.resetForm()
-     }
-     }
-     } else {
-     self.resetForm()
-     }
-     }
-     } else {
-     self.resetForm()
-     }
-     }
-     }
-     */
+   
     
     
     
@@ -292,68 +186,5 @@ class SignUpViewController:UIViewController, UITextFieldDelegate, UIImagePickerC
     }
     
     
-    // This section will be used when we have a database. We will connect it to that!
-    
-    /* func uploadProfileImage(_ image:UIImage, completion: @escaping ((_ url:URL?)->())) {
-     guard let uid = Auth.auth().currentUser?.uid else { return }
-     let storageRef = Storage.storage().reference().child("user/\(uid)")
-     
-     guard let imageData = UIImageJPEGRepresentation(image, 0.75) else { return }
-     
-     
-     let metaData = StorageMetadata()
-     metaData.contentType = "image/jpg"
-     
-     storageRef.putData(imageData, metadata: metaData) { metaData, error in
-     if error == nil, metaData != nil {
-     if let url = metaData?.downloadURL() {
-     completion(url)
-     } else {
-     completion(nil)
-     }
-     // success!
-     } else {
-     // failed
-     completion(nil)
-     }
-     }
-     }
-     */
-    
-    
-    // This section will be used when we have a database. We will connect it to that!
-    
-    /* func saveProfile(username:String, email:String, profileImageURL:URL, completion: @escaping ((_ success:Bool)->())) {
-     guard let uid = Auth.auth().currentUser?.uid else { return }
-     let databaseRef = Database.database().reference().child("users/profile/\(uid)")
-     
-     let userObject = [
-     "username": username,
-     "email": email,
-     "photoURL": profileImageURL.absoluteString
-     ] as [String:Any]
-     
-     databaseRef.setValue(userObject) { error, ref in
-     completion(error == nil)
-     }
-     }
-     }
-     */
+   
 }
-//extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-    
-    //func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        //picker.dismiss(animated: true, completion: nil)
-   // }
-    
-    //private func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-       // if let pickedImage = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage {
-           // self.profileImageView.image = pickedImage
-       // }
-        
-       // picker.dismiss(animated: true, completion: nil)
-   // }
-    
-    
-//}
