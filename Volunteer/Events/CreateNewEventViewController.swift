@@ -43,12 +43,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     
     var imagePicker:UIImagePickerController!
     
-   
     var event = PFObject(className: "Events")
-    
-    //sidebar menu vars
-//    private var sideMenu: SideMenuNavigationController?
-//    private let profileController = MainProfileViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()

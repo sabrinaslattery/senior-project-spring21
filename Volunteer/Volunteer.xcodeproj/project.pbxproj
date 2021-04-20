@@ -18,6 +18,7 @@
 		0381BCF9260A8E3600168C48 /* MyEventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCF8260A8E3600168C48 /* MyEventsTableViewCell.swift */; };
 		0381BCFE260A8E4800168C48 /* MyEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BCFD260A8E4800168C48 /* MyEventsTableViewController.swift */; };
 		0381BD03260A8E5500168C48 /* AllEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0381BD02260A8E5500168C48 /* AllEventsTableViewController.swift */; };
+		03A25B97262F6E30008C509F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A25B96262F6E30008C509F /* SettingsViewController.swift */; };
 		03A37400260AE9430011DC21 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A373FF260AE9430011DC21 /* Home.storyboard */; };
 		03A37405260AEA720011DC21 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37404260AEA720011DC21 /* Search.storyboard */; };
 		03A3741A260AEDA30011DC21 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37419260AEDA30011DC21 /* Settings.storyboard */; };
@@ -94,6 +95,7 @@
 		0381BCF8260A8E3600168C48 /* MyEventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewCell.swift; sourceTree = "<group>"; };
 		0381BCFD260A8E4800168C48 /* MyEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEventsTableViewController.swift; sourceTree = "<group>"; };
 		0381BD02260A8E5500168C48 /* AllEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllEventsTableViewController.swift; sourceTree = "<group>"; };
+		03A25B96262F6E30008C509F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = Search/SettingsViewController.swift; sourceTree = SOURCE_ROOT; };
 		03A373FF260AE9430011DC21 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		03A37404260AEA720011DC21 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		03A37411260AED200011DC21 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		03A3742A260AEF960011DC21 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				03A25B96262F6E30008C509F /* SettingsViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */,
 				B152DC2E25E43F9A00A7DB17 /* ChangePassViewController.swift in Sources */,
 				B125CA772628E98E00E01AD5 /* CreatedEventsTableViewCell.swift in Sources */,
+				03A25B97262F6E30008C509F /* SettingsViewController.swift in Sources */,
 				B152DC6A25E441BC00A7DB17 /* SelectInterestViewController.swift in Sources */,
 				B152DC3325E4400800A7DB17 /* VerifyEmailViewController.swift in Sources */,
 				030E5D2F2613E3A900B928D8 /* HomeViewController.swift in Sources */,

@@ -13,18 +13,11 @@ import AlamofireImage
 class AllEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 	@IBOutlet weak var tableView: UITableView!
-//    @IBOutlet weak var searchBar: UISearchBar!
-//    @IBOutlet var searchTableView: UITableView!
     
 	let myRefreshControl = UIRefreshControl()
 	
 	var Events = [PFObject]()
 	var selectedEvent: PFObject!
-	
-//    var events = [PFObject]()
-//    var titles = [String]()
-//
-//    var filteredData: [String]!
     
 	var date :NSDate?
 	
@@ -65,7 +58,6 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 	}
 
 	func numberOfSections(in tableView: UITableView) -> Int {
-		// #warning Incomplete implementation, return the number of sections
 		return 1
 	}
 

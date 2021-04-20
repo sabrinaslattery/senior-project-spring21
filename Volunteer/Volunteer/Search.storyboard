@@ -49,7 +49,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Search Events" id="IiC-Ih-31R">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="XUg-q9-gIL">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLJ-7g-LvR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLJ-7g-LvR">
                                 <rect key="frame" x="20" y="6" width="35" height="33"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="arrow.backward" catalog="system"/>
@@ -72,9 +72,8 @@
         <!--Navigation Controller-->
         <scene sceneID="5Gi-yW-8Em">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="OrV-Eg-wb7" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="OrV-Eg-wb7" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sXN-Cj-005">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

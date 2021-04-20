@@ -7,9 +7,8 @@
 
 import UIKit
 import Parse
-import SideMenu
 
-class CreatedEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MenuControllerDelegate  {
+class CreatedEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -19,10 +18,6 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
     var selectedEvent: PFObject!
     
     var date :NSDate?
-    
-    //sidebar menu vars
-    private var sideMenu: SideMenuNavigationController?
-    private let profileController = MainProfileViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,25 +33,14 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
         
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
-        
-        //sidebar menu integration
-        let menu = SideMenuListController(with: SideMenuItem.allCases)
-                
-        menu.delegate = self
-                    
-        sideMenu = SideMenuNavigationController(rootViewController: menu)
-        sideMenu?.leftSide = true
-                
-        SideMenuManager.default.leftMenuNavigationController = sideMenu
-        SideMenuManager.default.addPanGestureToPresent(toView: view)
-                
-        addChildControllers()
     }
 
     @objc func loadEvents() {
         let user = PFUser.current()
         let query = PFQuery(className:"Events")
-        //query.whereKey("ToEvents", equalTo: user).addAscendingOrder("date")
+       //work on this line of code
+        //want to retun only events created by user
+        query.whereKey("ToEvents", equalTo: user!).addAscendingOrder("date")
 
         query.findObjectsInBackground { (posts, error) in
             self.Events.removeAll()
@@ -71,7 +55,6 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -85,7 +68,7 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = Events[indexPath.row]
         
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "CreatedEventsCell", for: indexPath) as! CreatedEventsTableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "OrganizerEventsCell", for: indexPath) as! CreatedEventsTableViewCell
         
         
         //Setting name and tag
@@ -136,71 +119,5 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
         let eventDetailsViewController = segue.destination as! EventDetailsViewController
         
         eventDetailsViewController.event = event
-        
     }
-    //sidebar menu funcs
-    private func addChildControllers() {
-        addChild(profileController)
-        //add more children
-            
-        view.addSubview(profileController.view)
-            
-        profileController.view.frame = view.bounds
-        profileController.didMove(toParent: self)
-        profileController.view.isHidden = true
-    }
-
-    @IBAction func didTapMenu() {
-        present(sideMenu!, animated: true)
-    }
-
-    func loadLoginScreen(){
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier:         "LoginViewController")
-        self.present(viewController, animated: true, completion: nil)
-    }
-
-    func didSelectMenuItem(named: SideMenuItem) {
-        sideMenu?.dismiss(animated: true, completion: nil)
-        
-        title = named.rawValue
-        switch named {
-            case .user:
-                performSegue(withIdentifier: "profileSegue", sender: nil)
-
-            case .home:
-                performSegue(withIdentifier: "homeSegue", sender: nil)
-        
-            case .profile:
-                performSegue(withIdentifier: "profileSegue", sender: nil)
-        
-            case .events:
-                performSegue(withIdentifier: "eventsSegue", sender: nil)
-        
-            case .create:
-                performSegue(withIdentifier: "createSegue", sender: nil)
-        
-            case .search:
-                performSegue(withIdentifier: "searchSegue", sender: nil)
-        
-            case .settings:
-                performSegue(withIdentifier: "settingsSegue", sender: nil)
-                    
-            case .logOut:
-                PFUser.logOutInBackground { (error: Error?) in
-                    if (error == nil){
-                        self.loadLoginScreen()
-                    }else{
-                        let alert = UIAlertController(title: "Error Logging Out", message: error?.localizedDescription, preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                               print(error.debugDescription)
-                        }))
-                        self.present(alert, animated: true)
-                    }
-
-                }
-                loadLoginScreen()
-        }
-    }
-
 }
