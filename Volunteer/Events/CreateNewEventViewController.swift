@@ -55,6 +55,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     var event = PFObject(className: "Events")
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
         
         difficultyField.inputView = difficultyPicker
@@ -106,7 +107,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     
     @IBAction func CompletedButton(_ sender: Any) {
         
-        
+        /*
         let title = eventTitleField.text!
         let totalSpots = Int(totalSpotsField.text!)
         let description = aboutEventField.text!
@@ -124,48 +125,72 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
 		let startTime = fromPicker.date
 		let endTime = toPicker.date
         let attendes = NSArray()
+        */
         
-        
-        
+        self.event["title"] = eventTitleField.text!
+        self.event["totalSpots"] = Int(totalSpotsField.text!)
+        self.event["description"] = aboutEventField.text!
+        self.event["expectations"] = volunteerExpectationField.text!
+        self.event["clothes"] = volunteerShouldWearField.text!
+        self.event["contactEmail"] = emailField.text!
+        self.event["contactPhone"] = phoneNumberField.text!
+               
+        //self.event ["difficulty"] = difficultyPicker
+        //self.event ["tag"] = tagsPicker
+        datePicker.locale = .current
+        toPicker.locale = .current
+        fromPicker.locale = .current
+        self.event["date"] = datePicker.date
+        self.event["startTime"] = fromPicker.date
+        self.event["endTime"] = toPicker.date
+        event["attendees"] = NSArray()
+         
+            
+               
         let imageData = coverPhotoImageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
-        
-        let image = file
-        
+               
+        event["image"] = file
+               
         _ = datePicker.date
-        
-        let diffPicker = difficultyPicker
-        let tagPicker = tagsPicker
- 
+               
+        //let diffPicker = difficultyPicker
+        //let tagPicker = tagsPicker
+
+      
         
         // MARK: - User must click fillout title and contact email
-        if title == "" && contactEmail == "" {
-            let alert = UIAlertController(title: "Oops!", message: "Please fill out title and contact email fields!", preferredStyle: .alert)
+        if !eventTitleField.hasText || !emailField.hasText || !aboutEventField.hasText ||
+            !volunteerExpectationField.hasText ||
+            !volunteerShouldWearField.hasText ||
+            !phoneNumberField.hasText ||
+            !totalSpotsField.hasText
+        {
+            let alert = UIAlertController(title: "Oops!", message: "Please fill out the required infomation!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                 print("Please fill out fields!")
             }))
             self.present(alert, animated: true)
             
             } else {
-            event.saveInBackground { (success, error) in
-                if success {
-                    
-                    print("Created an event")
-                    self.performSegue(withIdentifier: "ToEvents", sender: self)
-                   
-                    
-                
-                } else  {
-                    
-                    let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                        print(error.debugDescription)
-                    }))
-                    self.present(alert, animated: true)
+                event.saveInBackground { (success, error) in
+                            if success {
+                                
+                                print("Created an event")
+                                    self.performSegue(withIdentifier: "ToEvents", sender: nil)
+                                
+                                
+                               
+                            } else {
+                                let alert = UIAlertController(title: "Oops!", message: error?.localizedDescription, preferredStyle: .alert)
+                                                   alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                                                       print(error.debugDescription)
+                                                   }))
+                                                   self.present(alert, animated: true)
+                            }
+                        }
                 
                 }
-            }
-        }
     }
     
     @IBAction func handleDismissButton(_ sender: Any) {
