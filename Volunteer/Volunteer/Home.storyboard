@@ -162,7 +162,7 @@ To learn more about advocacy for colorblind-friendly design through education an
         <!--Home Page View Controller-->
         <scene sceneID="BMA-j9-5tF">
             <objects>
-                <viewController title="Home Page View Controller" modalPresentationStyle="fullScreen" id="O0d-5z-Fxm" customClass="HomeViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeView" title="Home Page View Controller" modalPresentationStyle="fullScreen" id="O0d-5z-Fxm" customClass="HomeViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oFR-DI-4Vc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -9,16 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
-        <scene sceneID="RQq-xN-gWo">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="H4h-Cg-rJy" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="FXh-Aw-YBK"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OvP-nj-mnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3848" y="1301"/>
-        </scene>
         <!--Main Profile View Controller-->
         <scene sceneID="6qa-He-XJ3">
             <objects>
@@ -187,23 +177,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7n-jK-VVr">
-                                                <rect key="frame" x="8" y="13" width="35" height="33"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="35" id="LAD-q1-Gcp"/>
-                                                    <constraint firstAttribute="height" constant="33" id="XBk-gz-e1H"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                <color key="tintColor" systemColor="labelColor"/>
-                                                <state key="normal">
-                                                    <color key="titleColor" systemColor="labelColor"/>
-                                                    <imageReference key="image" image="line.horizontal.3.circle" catalog="system" symbolScale="large"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="large"/>
-                                                </state>
-                                                <connections>
-                                                    <segue destination="H4h-Cg-rJy" kind="show" id="Gy1-we-hed"/>
-                                                </connections>
-                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="intro" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9p-Qe-9pw">
                                                 <rect key="frame" x="38" y="529" width="333" height="105"/>
                                                 <constraints>
@@ -277,7 +250,6 @@
                                             <constraint firstAttribute="trailing" secondItem="8vi-g1-of5" secondAttribute="trailing" constant="37" id="H3l-2Y-AQk"/>
                                             <constraint firstItem="12i-zJ-lyW" firstAttribute="leading" secondItem="sE1-FS-Cpn" secondAttribute="leading" constant="38" id="JQX-UF-B86"/>
                                             <constraint firstItem="IEy-f1-7J1" firstAttribute="top" secondItem="Ybj-X8-XeV" secondAttribute="bottom" constant="8" symbolic="YES" id="Kh6-jq-pRv"/>
-                                            <constraint firstItem="p7n-jK-VVr" firstAttribute="leading" secondItem="sE1-FS-Cpn" secondAttribute="leading" constant="8" id="KhG-T8-EBl"/>
                                             <constraint firstItem="kDX-XI-nid" firstAttribute="top" secondItem="8vi-g1-of5" secondAttribute="bottom" constant="8" symbolic="YES" id="Lsh-F9-ChJ"/>
                                             <constraint firstItem="kDX-XI-nid" firstAttribute="top" secondItem="8vi-g1-of5" secondAttribute="bottom" constant="8" symbolic="YES" id="MBH-Nw-vip"/>
                                             <constraint firstItem="8vi-g1-of5" firstAttribute="leading" secondItem="sE1-FS-Cpn" secondAttribute="leading" constant="37" id="MUy-IL-OYg"/>
@@ -294,7 +266,6 @@
                                             <constraint firstItem="q8n-SV-P86" firstAttribute="top" secondItem="gkn-la-So9" secondAttribute="bottom" constant="11" id="UjV-8P-GT5"/>
                                             <constraint firstItem="50P-ta-1cI" firstAttribute="top" secondItem="kDX-XI-nid" secondAttribute="bottom" constant="29" id="VCE-8i-BA6"/>
                                             <constraint firstAttribute="trailing" secondItem="IEy-f1-7J1" secondAttribute="trailing" constant="37" id="WZS-Xb-Kd6"/>
-                                            <constraint firstItem="p7n-jK-VVr" firstAttribute="top" secondItem="sE1-FS-Cpn" secondAttribute="top" constant="13" id="Zbl-x5-OmL"/>
                                             <constraint firstItem="7Wb-ww-H25" firstAttribute="top" secondItem="IEy-f1-7J1" secondAttribute="bottom" constant="8" symbolic="YES" id="Zmm-1w-zsY"/>
                                             <constraint firstItem="FH9-JZ-7lP" firstAttribute="top" secondItem="12i-zJ-lyW" secondAttribute="bottom" constant="8" symbolic="YES" id="a9S-cD-ZGu"/>
                                             <constraint firstAttribute="bottom" secondItem="Edh-u7-clW" secondAttribute="bottom" constant="497" id="aEK-p3-CA4"/>
@@ -1009,7 +980,6 @@
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="email icon" width="140" height="135"/>
-        <image name="line.horizontal.3.circle" catalog="system" width="128" height="121"/>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="person.fill.badge.plus" catalog="system" width="128" height="124"/>

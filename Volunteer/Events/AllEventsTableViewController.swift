@@ -5,23 +5,27 @@
 //  Created by Sabrina Slattery on 3/23/21.
 //
 
+import Foundation
 import UIKit
 import Parse
-import SideMenu
+import AlamofireImage
 
-class AllEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MenuControllerDelegate  {
+class AllEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 	@IBOutlet weak var tableView: UITableView!
+//    @IBOutlet weak var searchBar: UISearchBar!
+//    @IBOutlet var searchTableView: UITableView!
     
-    private var sideMenu: SideMenuNavigationController?
-       
-    private let profileController = MainProfileViewController()
-	
 	let myRefreshControl = UIRefreshControl()
 	
 	var Events = [PFObject]()
 	var selectedEvent: PFObject!
 	
+//    var events = [PFObject]()
+//    var titles = [String]()
+//
+//    var filteredData: [String]!
+    
 	var date :NSDate?
 	
 	override func viewDidLoad() {
@@ -38,82 +42,6 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		tableView.rowHeight = UITableView.automaticDimension
 		tableView.estimatedRowHeight = 150
-        
-        let menu = SideMenuListController(with: SideMenuItem.allCases)
-                
-        menu.delegate = self
-                    
-        sideMenu = SideMenuNavigationController(rootViewController: menu)
-                    sideMenu?.leftSide = true
-                
-        SideMenuManager.default.leftMenuNavigationController = sideMenu
-        SideMenuManager.default.addPanGestureToPresent(toView: view)
-                
-        addChildControllers()
-	}
-    
-    private func addChildControllers(){
-        addChild(profileController)
-        //add more children
-            
-        view.addSubview(profileController.view)
-            
-        profileController.view.frame = view.bounds
-        profileController.didMove(toParent: self)
-        profileController.view.isHidden = true
-    }
-    
-    @IBAction func didTapMenu() {
-        present(sideMenu!, animated: true)
-    }
-    
-    func loadLoginScreen(){
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let viewController = storyBoard.instantiateViewController(withIdentifier:         "LoginViewController")
-        self.present(viewController, animated: true, completion: nil)
-    }
-
-    func didSelectMenuItem(named: SideMenuItem) {
-        sideMenu?.dismiss(animated: true, completion: nil)
-                
-        title = named.rawValue
-        switch named {
-            case .user:
-                performSegue(withIdentifier: "eventToProfileSegue", sender: nil)
-            
-            case .home:
-                performSegue(withIdentifier: "eventToHomeSegue", sender: nil)
-                    
-            case .profile:
-                performSegue(withIdentifier: "eventToProfileSegue", sender: nil)
-                
-            case .events:
-                performSegue(withIdentifier: "eventToEventsSegue", sender: nil)
-                    
-            case .create:
-                performSegue(withIdentifier: "eventToCreateSegue", sender: nil)
-                    
-            case .search:
-                performSegue(withIdentifier: "eventToSearchSegue", sender: nil)
-                    
-            case .settings:
-                performSegue(withIdentifier: "eventToSettingsSegue", sender: nil)
-        
-            case .logOut:
-                PFUser.logOutInBackground { (error: Error?) in
-                    if (error == nil){
-                        self.loadLoginScreen()
-                    }else{
-                        let alert = UIAlertController(title: "Error Logging Out", message: error?.localizedDescription, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
-                   print(error.debugDescription)
-            }))
-        self.present(alert, animated: true)
-        }
-
-        }
-        loadLoginScreen()
-        }
     }
     
 	@objc func loadEvents() {
@@ -191,22 +119,69 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		return cell
 	}
-	
-    @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
 	//Pass the selected event to the details page
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		
         let cell = sender as! UITableViewCell
 		let indexPath = tableView.indexPath(for: cell)
 		let event = Events[indexPath!.row]
+        
+        let eventDetailsViewController = segue.destination as! EventDetailsViewController
 		
-		let eventDetailsViewController = segue.destination as! EventDetailsViewController
-		
-		eventDetailsViewController.event = event
-		
+        eventDetailsViewController.event = event
 	}
-	
+
 }
+//extension AllEventsTableViewController: UISearchBarDelegate  {
+//
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(true)
+//        let query = PFQuery(className: "Events")
+//        query.includeKey("title")
+//        query.limit = 100
+//
+//        query.findObjectsInBackground { (events, error) in
+//            self.events.removeAll()
+//            self.titles.removeAll()
+//            if let events = events {
+//                for event in events {
+//                    self.events.append(event)
+//                    print(events)
+//                    self.titles.append(event["title"] as! String)
+//                    print(self.titles)
+//                    self.tableView.reloadData()
+//                }
+//            } else if let error = error {
+//                    print(error.localizedDescription)
+//            }
+//        }
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchEventCell", for: indexPath) as! SearchEventCell
+//        cell.textLabel?.text = filteredData[indexPath.row]
+//        return cell
+//    }
+//
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return self.filteredData.count
+//    }
+//
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//         filteredData = searchText.isEmpty ? titles : titles.filter { (item: String) -> Bool in
+//             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
+//         }
+//         tableView.reloadData()
+//    }
+//
+//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+//         self.searchBar.showsCancelButton = true
+//    }
+//
+//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+//         searchBar.showsCancelButton = false
+//         searchBar.text = ""
+//         searchBar.resignFirstResponder()
+//    }
+//}

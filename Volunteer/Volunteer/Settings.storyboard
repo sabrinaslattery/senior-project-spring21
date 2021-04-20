@@ -107,20 +107,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Accessibility" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-mf-4P8">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Accessibility" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEb-mf-4P8">
                                 <rect key="frame" x="152" y="44" width="109" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLk-NX-vDA">
-                                <rect key="frame" x="20" y="50" width="74" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="arrow.backward.circle" catalog="system"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aLk-NX-vDA">
+                                <rect key="frame" x="29" y="49" width="51" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="51" id="cPf-tb-WJC"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button" image="arrow.backward.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="light"/>
+                                </state>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Language" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzb-xB-Dzw">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Language" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzb-xB-Dzw">
                                 <rect key="frame" x="20" y="101" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -183,12 +186,18 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="onr-W2-JiK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aLk-NX-vDA" firstAttribute="leading" secondItem="onr-W2-JiK" secondAttribute="leading" constant="29" id="K40-wu-sWK"/>
+                            <constraint firstItem="aEb-mf-4P8" firstAttribute="leading" secondItem="aLk-NX-vDA" secondAttribute="trailing" constant="72" id="Mzr-YS-lad"/>
+                            <constraint firstItem="mzb-xB-Dzw" firstAttribute="top" secondItem="aLk-NX-vDA" secondAttribute="bottom" constant="18" id="b1p-4x-ltT"/>
+                            <constraint firstItem="aLk-NX-vDA" firstAttribute="top" secondItem="onr-W2-JiK" secondAttribute="top" constant="5" id="j56-gP-sOv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wGH-Ca-oLa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwZ-C5-Yez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="729" y="848"/>
+            <point key="canvasLocation" x="639.13043478260875" y="889.95535714285711"/>
         </scene>
         <!--Settings-->
         <scene sceneID="jXe-fL-B4f">
@@ -271,11 +280,7 @@
                         <viewLayoutGuide key="safeArea" id="jpa-I3-hBq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Settings" id="7bQ-zk-r9P">
-                        <barButtonItem key="leftBarButtonItem" image="line.horizontal.3.circle" catalog="system" id="zAj-55-JCp">
-                            <color key="tintColor" systemColor="labelColor"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Settings" id="7bQ-zk-r9P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zaF-tP-9c7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -456,10 +461,9 @@
         <!--Navigation Controller-->
         <scene sceneID="Vvi-8m-90j">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ecx-60-mMX" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Ecx-60-mMX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4iU-xI-ebZ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -476,7 +480,6 @@
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark.shield.fill" catalog="system" width="128" height="118"/>
         <image name="email icon" width="140" height="135"/>
-        <image name="line.horizontal.3.circle" catalog="system" width="128" height="121"/>
         <image name="lock" catalog="system" width="128" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
