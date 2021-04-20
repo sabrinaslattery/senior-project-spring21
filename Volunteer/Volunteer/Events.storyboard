@@ -11,7 +11,7 @@
         <!--My Events View Controller-->
         <scene sceneID="j0Q-45-Ali">
             <objects>
-                <viewController title="My Events View Controller" modalPresentationStyle="fullScreen" id="gbB-Pc-3p4" customClass="MyEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="My Events Page" title="My Events View Controller" modalPresentationStyle="fullScreen" id="gbB-Pc-3p4" customClass="MyEventsTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sgh-Ld-5pd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -106,6 +106,9 @@
                                 <state key="normal" image="line.horizontal.3.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="light"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapMenu" destination="gbB-Pc-3p4" eventType="touchUpInside" id="JWE-v9-mtj"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OutReachLogo" translatesAutoresizingMaskIntoConstraints="NO" id="5k6-5Y-2Jv">
                                 <rect key="frame" x="177" y="49" width="60" height="55"/>
@@ -140,7 +143,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="aYZ-QK-VTY" id="2M6-n1-quy"/>
-                        <segue destination="z0s-Gx-H5B" kind="show" identifier="homeSegue" id="7zR-o2-dde"/>
+                        <segue destination="z0s-Gx-H5B" kind="show" identifier="eventToHomeSegue" id="7zR-o2-dde"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ey-1J-udH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1332,7 +1335,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="984-z2-xZP" id="b4S-ym-KmP"/>
-                        <segue destination="z0s-Gx-H5B" kind="show" identifier="homeSegue" id="ELk-p7-qaV"/>
+                        <segue destination="z0s-Gx-H5B" kind="show" identifier="eventToHomeSegue" id="ELk-p7-qaV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agp-DN-pDo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2160,7 +2163,7 @@
                         <outlet property="volunteerExpectationField" destination="Obe-bq-DCD" id="fkd-xv-5tb"/>
                         <outlet property="volunteerShouldWearField" destination="ttN-72-hib" id="kOc-k2-UV1"/>
                         <segue destination="bxU-GJ-Dpb" kind="show" identifier="ToEvents" id="xLU-Kf-l4d"/>
-                        <segue destination="z0s-Gx-H5B" kind="show" identifier="homeSegue" id="Xcz-4F-ppc"/>
+                        <segue destination="z0s-Gx-H5B" kind="show" identifier="eventToHomeSegue" id="Xcz-4F-ppc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wZ-a1-0dJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

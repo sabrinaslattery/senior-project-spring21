@@ -193,7 +193,7 @@
         <!--Settings-->
         <scene sceneID="jXe-fL-B4f">
             <objects>
-                <viewController title="Settings" modalPresentationStyle="fullScreen" id="emc-HI-zXm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Settings" title="Settings" modalPresentationStyle="fullScreen" id="emc-HI-zXm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zfz-Eh-X2K">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

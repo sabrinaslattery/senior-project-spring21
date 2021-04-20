@@ -139,25 +139,25 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         title = named.rawValue
         switch named {
             case .user:
-                performSegue(withIdentifier: "profileSegue", sender: nil)
+                performSegue(withIdentifier: "eventToProfileSegue", sender: nil)
             
             case .home:
-                performSegue(withIdentifier: "homeSegue", sender: nil)
+                performSegue(withIdentifier: "eventToHomeSegue", sender: nil)
                     
             case .profile:
-                performSegue(withIdentifier: "profileSegue", sender: nil)
+                performSegue(withIdentifier: "eventToProfileSegue", sender: nil)
                 
             case .events:
-                performSegue(withIdentifier: "eventsSegue", sender: nil)
+                performSegue(withIdentifier: "eventToEventsSegue", sender: nil)
                     
             case .create:
-                performSegue(withIdentifier: "createSegue", sender: nil)
+                performSegue(withIdentifier: "eventToCreateSegue", sender: nil)
                     
             case .search:
-                performSegue(withIdentifier: "searchSegue", sender: nil)
+                performSegue(withIdentifier: "eventToSearchSegue", sender: nil)
                     
             case .settings:
-                performSegue(withIdentifier: "settingsSegue", sender: nil)
+                performSegue(withIdentifier: "eventToSettingsSegue", sender: nil)
                     
             case .logOut:
                 PFUser.logOutInBackground { (error: Error?) in
