@@ -143,7 +143,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             result["userBio"] = introTextField.text!
             result["workExperience"] = workExperienceTextField.text!
             result["educationLevel"] = educationLevelField.text!
-//            let eduLevelPicker = educationLevelPicker
+            
+            //let eduLevelPicker = educationLevelPicker
             // saving the profile image
             let imageData = profileImageView.image!.pngData()
             let file = PFFileObject(data: imageData!)

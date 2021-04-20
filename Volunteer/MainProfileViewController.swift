@@ -47,7 +47,7 @@ class MainProfileViewController: UIViewController {
                 super.viewDidLoad()
                 
                 refreshControl = UIRefreshControl()
-                refreshControl.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
+               refreshControl.addTarget(self, action: #selector(onRefresh), for: .valueChanged)
                 
                 
             
