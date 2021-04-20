@@ -31,7 +31,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     let educationLevel = ["High School Graduate", "Some College", "Associate Degree", "Bachelor's Degree", "Master's Degree", "Higher Degree"]
     
     var profile = PFObject(className: "Profile")
-
+    
+    var opener: MainProfileViewController!
 
     //Interest Checkboxes
     @IBOutlet weak var animalWelfareCheckbox: UIButton!
@@ -152,15 +153,30 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
               (success: Bool, error: Error?) in
               if (success) {
                 // The object has been saved.
-              } else {
+                let userMessage = "Profile details successfully updated"
+                let myAlert = UIAlertController(title:"Success", message:userMessage, preferredStyle: UIAlertController.Style.alert);
+                                
+                let okAction =  UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action:UIAlertAction!) -> Void in
+                                    
+                    self.dismiss(animated: true, completion: { () -> Void in
+                                        self.opener.loadUserDetails()
+                                    })
+
+                                })
+                                
+                                myAlert.addAction(okAction);
+                self.present(myAlert, animated:true, completion:nil);
+                                
+                            }
+                    else {
                 // There was a problem, check error.description
               }
             }
           }
           }
         }
-    }
-
+}
+    
             
         
 // Launching the camera to add a profile picture from camera or photo library

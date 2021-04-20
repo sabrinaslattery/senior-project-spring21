@@ -234,7 +234,7 @@
                                                     <imageReference key="image" image="pencil.circle" catalog="system" symbolScale="large" renderingMode="original"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="uVb-Cm-2YZ" kind="presentation" id="zzk-ou-06T"/>
+                                                    <action selector="editButtonTappedWithSender:" destination="VT2-yk-u93" eventType="touchUpInside" id="Qb1-JK-eSw"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="firstname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEy-f1-7J1">
@@ -372,7 +372,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="ADj-fS-i67">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="uVb-Cm-2YZ" customClass="EditProfileViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditProfileViewController" modalPresentationStyle="fullScreen" id="uVb-Cm-2YZ" customClass="EditProfileViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EDp-Ho-w9I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -792,7 +792,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="updateUser:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="sr1-bR-2WS"/>
-                                                    <segue destination="VT2-yk-u93" kind="presentation" id="1rW-KG-WwQ"/>
                                                 </connections>
                                             </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nGd-pW-6jP">
@@ -1006,9 +1005,6 @@
             <point key="canvasLocation" x="4992.753623188406" y="1723.6607142857142"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="1rW-KG-WwQ"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
