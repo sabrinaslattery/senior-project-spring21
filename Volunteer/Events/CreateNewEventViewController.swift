@@ -106,29 +106,10 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     }
     
     @IBAction func CompletedButton(_ sender: Any) {
-        
-        /*
-        let title = eventTitleField.text!
-        let totalSpots = Int(totalSpotsField.text!)
-        let description = aboutEventField.text!
-        let expectations = volunteerExpectationField.text!
-        let clothes = volunteerShouldWearField.text!
-        let contactEmail = emailField.text!
-        let contactPhone = phoneNumberField.text!
-        
-        //event ["difficulty"] = difficultyPicker
-        //event ["tag"] = tagsPicker
-        datePicker.locale = .current
-        toPicker.locale = .current
-        fromPicker.locale = .current
-        let date = datePicker.date
-		let startTime = fromPicker.date
-		let endTime = toPicker.date
-        let attendes = NSArray()
-        */
-        
+    
         self.event["title"] = eventTitleField.text!
-        self.event["totalSpots"] = Int(totalSpotsField.text!)
+        self.event["totalSpots"] = Int(totalSpotsField.text!) ?? Int(0)
+        //self.event["totalSpots"] = Int(totalSpotsField.text!)
         self.event["description"] = aboutEventField.text!
         self.event["expectations"] = volunteerExpectationField.text!
         self.event["clothes"] = volunteerShouldWearField.text!
@@ -137,6 +118,8 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
                
         //self.event ["difficulty"] = difficultyPicker
         //self.event ["tag"] = tagsPicker
+        
+        
         datePicker.locale = .current
         toPicker.locale = .current
         fromPicker.locale = .current
@@ -157,9 +140,10 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         //let diffPicker = difficultyPicker
         //let tagPicker = tagsPicker
 
-      
+       
         
-        // MARK: - User must click fillout title and contact email
+        // MARK: - User must click fillout title, contact email, about event, volunteer expectation and wear,
+        // MARK: - phone # and total spots
         if !eventTitleField.hasText || !emailField.hasText || !aboutEventField.hasText ||
             !volunteerExpectationField.hasText ||
             !volunteerShouldWearField.hasText ||
@@ -167,13 +151,13 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
             !totalSpotsField.hasText
         {
             let alert = UIAlertController(title: "Oops!", message: "Please fill out the required infomation!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                 print("Please fill out fields!")
             }))
             self.present(alert, animated: true)
             
             } else {
-                event.saveInBackground { (success, error) in
+                event.saveInBackground { (success, error) -> Void in
                             if success {
                                 
                                 print("Created an event")
