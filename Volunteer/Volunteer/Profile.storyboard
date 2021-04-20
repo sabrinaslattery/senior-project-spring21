@@ -22,7 +22,7 @@
         <!--Main Profile View Controller-->
         <scene sceneID="6qa-He-XJ3">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="VT2-yk-u93" customClass="MainProfileViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainProfileViewController" modalPresentationStyle="fullScreen" id="VT2-yk-u93" customClass="MainProfileViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XIb-oT-fJd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -234,7 +234,7 @@
                                                     <imageReference key="image" image="pencil.circle" catalog="system" symbolScale="large" renderingMode="original"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="uVb-Cm-2YZ" kind="show" id="eOd-dW-T7A"/>
+                                                    <action selector="editButtonTappedWithSender:" destination="VT2-yk-u93" eventType="touchUpInside" id="Qb1-JK-eSw"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="firstname" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEy-f1-7J1">
@@ -372,7 +372,7 @@
         <!--Edit Profile View Controller-->
         <scene sceneID="ADj-fS-i67">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="uVb-Cm-2YZ" customClass="EditProfileViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditProfileViewController" modalPresentationStyle="fullScreen" id="uVb-Cm-2YZ" customClass="EditProfileViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EDp-Ho-w9I">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -520,136 +520,138 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsM-9H-5Bg">
-                                                <rect key="frame" x="16" y="1085" width="28" height="29"/>
+                                                <rect key="frame" x="16" y="1086" width="28" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="k43-Gz-AD5"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="qRK-rY-huH"/>
                                                     <constraint firstAttribute="height" constant="29" id="thS-xH-2LD"/>
                                                     <constraint firstAttribute="width" constant="28" id="ygL-EP-MKd"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <state key="normal" backgroundImage="square" catalog="system"/>
                                                 <connections>
                                                     <action selector="healthCheckboxButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="mJ9-Wn-PsD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gNH-nR-Oz3">
-                                                <rect key="frame" x="16" y="1259" width="28" height="29"/>
+                                                <rect key="frame" x="16" y="1260" width="28" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="RZD-Ff-SDu"/>
                                                     <constraint firstAttribute="width" constant="28" id="f1V-u4-LFb"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <state key="normal" backgroundImage="square" catalog="system"/>
                                                 <connections>
                                                     <action selector="poveryCheckboxButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="223-tE-YZf"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgG-9x-ase">
-                                                <rect key="frame" x="16" y="1314" width="28" height="29"/>
+                                                <rect key="frame" x="16" y="1315" width="28" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="GqN-1u-zfb"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="R0f-or-etM"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="epR-5I-Oai"/>
                                                     <constraint firstAttribute="width" constant="28" id="vJg-ir-dud"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <state key="normal" backgroundImage="square" catalog="system"/>
                                                 <connections>
                                                     <action selector="religionCheckboxButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="4ib-TH-rnI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g9r-8v-dGe">
-                                                <rect key="frame" x="16" y="1369" width="28" height="29"/>
+                                                <rect key="frame" x="16" y="1370" width="28" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="28" id="C1v-vb-EWG"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="Yj1-Nw-ILE"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="vDC-Ri-ywJ"/>
                                                     <constraint firstAttribute="height" constant="29" id="wZn-Fy-TUm"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <state key="normal" backgroundImage="square" catalog="system"/>
                                                 <connections>
                                                     <action selector="technologyCheckboxButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="yWd-tf-ZHI"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQ5-do-ZCH">
-                                                <rect key="frame" x="16" y="1143" width="28" height="29"/>
+                                                <rect key="frame" x="16" y="1144" width="28" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="28" id="hD3-i6-bxV"/>
                                                     <constraint firstAttribute="height" constant="29" id="zqO-e7-aXS"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <state key="normal" backgroundImage="square" catalog="system"/>
                                                 <connections>
                                                     <action selector="homeCheckboxButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="40b-GM-bPJ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKr-7S-jyj">
-                                                <rect key="frame" x="16" y="1030" width="28" height="29"/>
+                                                <rect key="frame" x="16" y="1031" width="28" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="3ZG-h9-gRA"/>
                                                     <constraint firstAttribute="width" constant="28" id="C90-wT-tHK"/>
                                                     <constraint firstAttribute="height" constant="29" id="Dcw-WT-Dt0"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="MJZ-fq-gAk"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <state key="normal" backgroundImage="square" catalog="system"/>
                                                 <connections>
                                                     <action selector="elderlyCheckboxButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="XI9-9O-IY4"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKX-8h-Z6t">
-                                                <rect key="frame" x="16" y="1201" width="28" height="29"/>
+                                                <rect key="frame" x="16" y="1202" width="28" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="28" id="8rw-6e-bFU"/>
                                                     <constraint firstAttribute="height" constant="29" id="wXR-nX-coB"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <state key="normal" backgroundImage="square" catalog="system"/>
                                                 <connections>
                                                     <action selector="otherCheckboxButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="3Fe-wG-Smc"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lan-qK-8zh">
-                                                <rect key="frame" x="16" y="806" width="28" height="29"/>
+                                                <rect key="frame" x="16" y="807" width="28" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="5lX-qN-BBF"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="eCb-YO-4zx"/>
                                                     <constraint firstAttribute="height" constant="29" id="le5-ee-wZe"/>
                                                     <constraint firstAttribute="width" constant="28" id="zsN-0W-hVy"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <state key="normal">
+                                                    <imageReference key="backgroundImage" image="square" catalog="system" symbolScale="default"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="animalCheckboxButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="nLu-sc-pIN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y1M-Kn-WNt">
-                                                <rect key="frame" x="16" y="973" width="28" height="29"/>
+                                                <rect key="frame" x="16" y="974" width="28" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="Dxr-ES-x1f"/>
                                                     <constraint firstAttribute="height" constant="29" id="NXF-IY-DFg"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="VYE-Wl-q3K"/>
                                                     <constraint firstAttribute="width" constant="28" id="pOA-OY-Fvg"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <state key="normal" backgroundImage="square" catalog="system"/>
                                                 <connections>
                                                     <action selector="educationCheckboxButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="kki-1c-5Na"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOX-zd-lE9">
-                                                <rect key="frame" x="16" y="859" width="28" height="29"/>
+                                                <rect key="frame" x="16" y="860" width="28" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="0oh-CY-ttW"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="1en-Es-kVw"/>
                                                     <constraint firstAttribute="width" constant="28" id="6ei-p7-cqT"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="A2O-cP-Kn0"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <state key="normal" backgroundImage="square" catalog="system"/>
                                                 <connections>
                                                     <action selector="childCheckboxButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="lyN-2l-4ad"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ku-Lw-bh8">
-                                                <rect key="frame" x="16" y="916" width="28" height="29"/>
+                                                <rect key="frame" x="16" y="917" width="28" height="26.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="28" id="dbv-qC-IMM"/>
                                                     <constraint firstAttribute="height" constant="29" id="scf-l0-0bM"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="checkbox_unchecked"/>
+                                                <state key="normal" backgroundImage="square" catalog="system"/>
                                                 <connections>
                                                     <action selector="communityCheckboxButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="Mtk-cN-nuS"/>
                                                 </connections>
@@ -790,7 +792,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="updateUser:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="sr1-bR-2WS"/>
-                                                    <segue destination="VT2-yk-u93" kind="show" id="hYP-io-jI5"/>
                                                 </connections>
                                             </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nGd-pW-6jP">
@@ -1004,18 +1005,15 @@
             <point key="canvasLocation" x="4992.753623188406" y="1723.6607142857142"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="hYP-io-jI5"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.backward.circle" catalog="system" width="128" height="121"/>
-        <image name="checkbox_unchecked" width="202" height="206"/>
         <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="email icon" width="140" height="135"/>
         <image name="line.horizontal.3.circle" catalog="system" width="128" height="121"/>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="person.fill.badge.plus" catalog="system" width="128" height="124"/>
+        <image name="square" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

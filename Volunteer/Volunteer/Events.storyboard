@@ -1757,6 +1757,14 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.31374737703598077" green="0.50601781010242142" blue="0.82063238399544947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="8zK-XE-st7" kind="relationship" relationship="viewControllers" id="1nP-ft-2a5"/>
@@ -2290,6 +2298,12 @@
     <resources>
         <image name="+18" width="598" height="600"/>
         <image name="18+ Icon" width="674" height="674"/>
+        <image name="Button_Menu" width="168" height="104"/>
+        <image name="Difficulty_Easy" width="412" height="172"/>
+        <image name="Difficulty_Hard" width="460" height="180"/>
+        <image name="Difficulty_Medium" width="552" height="172"/>
+        <image name="Elder Care - We run Errands" width="734" height="340"/>
+        <image name="Hunger - Food Drive" width="452" height="193"/>
         <image name="OutReachLogo" width="256" height="256"/>
         <image name="arrow.left.circle" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
