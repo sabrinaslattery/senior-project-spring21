@@ -177,7 +177,9 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
           }
         }
 }
-    
+    @IBAction func handleDismissButton(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
             
         
 // Launching the camera to add a profile picture from camera or photo library
