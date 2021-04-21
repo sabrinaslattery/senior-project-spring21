@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="119" width="414" height="777"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyEventsCell" rowHeight="233" id="uzh-1Q-HpH" customClass="MyEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyEventsCell" rowHeight="233" id="uzh-1Q-HpH" customClass="MyEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="233"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uzh-1Q-HpH" id="GHA-cb-cAs">
@@ -140,7 +140,7 @@
                                 <rect key="frame" x="0.0" y="119" width="414" height="777"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OrganizerEventsCell" rowHeight="240" id="uKi-pZ-ld4" customClass="CreatedEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="OrganizerEventsCell" rowHeight="240" id="uKi-pZ-ld4" customClass="CreatedEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="240"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uKi-pZ-ld4" id="eHJ-rE-tqb">
@@ -515,7 +515,7 @@
                                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="CKQ-th-rT8" kind="show" id="lhb-Wt-wXy"/>
+                                                    <segue destination="aHo-rt-w9F" kind="show" id="3d0-3B-ZpB"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ji-5h-xcu">
@@ -527,6 +527,18 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="handleDismissButton:" destination="4uY-gz-35s" eventType="touchUpInside" id="b1o-uM-xFj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSf-Pt-cmy">
+                                                <rect key="frame" x="344" y="29" width="35" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="pencil.circle" catalog="system">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="light"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="ZoR-sj-XS3" kind="show" id="96L-Og-cwm"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -650,9 +662,6 @@
                                     <color key="titleColor" systemColor="linkColor"/>
                                 </state>
                             </button>
-                            <connections>
-                                <segue destination="ZoR-sj-XS3" kind="show" id="s1W-dI-Htf"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -801,7 +810,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTZ-1P-Vtr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5205.7971014492759" y="-1357.3660714285713"/>
+            <point key="canvasLocation" x="4135" y="-1362"/>
         </scene>
         <!--Edit Event View Controller-->
         <scene sceneID="ERN-zM-1Ps">
@@ -814,10 +823,10 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W37-Ei-4yS">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4rR-3J-B4T">
-                                        <rect key="frame" x="0.0" y="-80" width="414" height="1700"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4rR-3J-B4T">
+                                        <rect key="frame" x="0.0" y="-44" width="414" height="1700"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Create a New Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-fP-1Mw">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Edit Your Event" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L8G-fP-1Mw">
                                                 <rect key="frame" x="64" y="102" width="286" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                                 <nil key="textColor"/>
@@ -1033,6 +1042,26 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S85-Ml-hjQ">
+                                                <rect key="frame" x="45" y="49" width="35" height="34"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="arrow.left.circle" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="light"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="handleDismissButton:" destination="9Kb-wc-Hir" eventType="touchUpInside" id="OSO-xP-yRo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hn-DZ-Q2G">
+                                                <rect key="frame" x="334" y="49" width="35" height="34"/>
+                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" image="checkmark.circle" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" weight="light"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="updateEvent:" destination="9Kb-wc-Hir" eventType="touchUpInside" id="eQJ-qo-u2O"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -1058,6 +1087,8 @@
                                             <constraint firstItem="Pnp-lw-SsZ" firstAttribute="top" secondItem="3Ig-Up-Ctw" secondAttribute="bottom" constant="8" symbolic="YES" id="CjN-E6-Ihw"/>
                                             <constraint firstItem="96z-mo-Oxy" firstAttribute="leading" secondItem="4rR-3J-B4T" secondAttribute="leading" constant="59" id="D7k-sN-xny"/>
                                             <constraint firstAttribute="trailing" secondItem="few-EH-wQC" secondAttribute="trailing" constant="299" id="DPa-5y-Szb"/>
+                                            <constraint firstItem="L8G-fP-1Mw" firstAttribute="top" secondItem="S85-Ml-hjQ" secondAttribute="bottom" constant="19" id="DzL-K6-quZ"/>
+                                            <constraint firstItem="S85-Ml-hjQ" firstAttribute="top" secondItem="5Hn-DZ-Q2G" secondAttribute="top" id="GiO-eS-hDe"/>
                                             <constraint firstItem="DXh-JG-PHh" firstAttribute="leading" secondItem="nA3-22-awN" secondAttribute="trailing" constant="8" id="GoU-kf-q0p"/>
                                             <constraint firstItem="Lxu-2K-kLl" firstAttribute="top" secondItem="9yh-rA-hS0" secondAttribute="bottom" constant="31.5" id="IoR-mD-Kel"/>
                                             <constraint firstAttribute="trailing" secondItem="Pnp-lw-SsZ" secondAttribute="trailing" constant="58" id="J25-7A-rXz"/>
@@ -1070,6 +1101,8 @@
                                             <constraint firstItem="bVt-CS-fdI" firstAttribute="leading" secondItem="4rR-3J-B4T" secondAttribute="leading" constant="97" id="LVn-aP-dbP"/>
                                             <constraint firstItem="82B-hV-R8J" firstAttribute="leading" secondItem="4rR-3J-B4T" secondAttribute="leading" constant="59" id="Mef-cE-Quz"/>
                                             <constraint firstItem="Bec-gD-TDz" firstAttribute="top" secondItem="Gw5-1K-joH" secondAttribute="bottom" constant="8" symbolic="YES" id="Mg0-dz-Mx7"/>
+                                            <constraint firstItem="S85-Ml-hjQ" firstAttribute="top" secondItem="4rR-3J-B4T" secondAttribute="top" constant="49" id="NWy-jL-20H"/>
+                                            <constraint firstItem="S85-Ml-hjQ" firstAttribute="leading" secondItem="4rR-3J-B4T" secondAttribute="leading" constant="45" id="NlF-ZW-Cby"/>
                                             <constraint firstAttribute="trailing" secondItem="uTc-Br-9cE" secondAttribute="trailing" constant="58" id="Nx7-xi-Hhd"/>
                                             <constraint firstItem="3Ig-Up-Ctw" firstAttribute="leading" secondItem="4rR-3J-B4T" secondAttribute="leading" constant="59" id="Pto-zn-lXa"/>
                                             <constraint firstItem="uTc-Br-9cE" firstAttribute="top" secondItem="nA3-22-awN" secondAttribute="bottom" constant="135" id="QmO-aT-C78"/>
@@ -1119,6 +1152,7 @@
                                             <constraint firstItem="VUw-if-VNF" firstAttribute="leading" secondItem="4rR-3J-B4T" secondAttribute="leading" constant="59" id="riP-25-mQY"/>
                                             <constraint firstAttribute="trailing" secondItem="3Ig-Up-Ctw" secondAttribute="trailing" constant="236" id="rpa-J4-myB"/>
                                             <constraint firstItem="526-zk-ES0" firstAttribute="leading" secondItem="4rR-3J-B4T" secondAttribute="leading" constant="59" id="sDJ-6Z-9uk"/>
+                                            <constraint firstItem="S85-Ml-hjQ" firstAttribute="baseline" secondItem="5Hn-DZ-Q2G" secondAttribute="firstBaseline" id="sU8-z7-06I"/>
                                             <constraint firstAttribute="trailing" secondItem="9yh-rA-hS0" secondAttribute="trailing" constant="58" id="skg-1r-zFo"/>
                                             <constraint firstAttribute="trailing" secondItem="L8G-fP-1Mw" secondAttribute="trailing" constant="64" id="tHy-lg-Okt"/>
                                             <constraint firstItem="Lxu-2K-kLl" firstAttribute="leading" secondItem="4rR-3J-B4T" secondAttribute="leading" constant="59" id="uYv-0E-H65"/>
@@ -1148,28 +1182,7 @@
                             <constraint firstAttribute="bottom" secondItem="W37-Ei-4yS" secondAttribute="bottom" id="wVs-ym-dmQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="GAW-c7-ICP">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="JAe-5K-805">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Mca-Gc-Xo8">
-                                <rect key="frame" x="20" y="11" width="75" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="arrowshape.turn.up.backward.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="handleDismissButton:" destination="9Kb-wc-Hir" eventType="touchUpInside" id="TGv-fy-rir"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Y3k-s1-MPq">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ePI-2b-j3y">
-                                <rect key="frame" x="318" y="11" width="76" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="checkmark.seal.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="updateEvent:" destination="9Kb-wc-Hir" eventType="touchUpInside" id="fG8-0B-Fvn"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="GAW-c7-ICP"/>
                     <size key="freeformSize" width="414" height="1700"/>
                     <connections>
                         <outlet property="aboutEventField" destination="ngD-Tz-tlZ" id="za5-or-kCV"/>
@@ -1189,7 +1202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKC-Sy-t7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3017" y="-2392"/>
+            <point key="canvasLocation" x="3015.9420289855075" y="-2392.6339285714284"/>
         </scene>
         <!--All Events View Controller-->
         <scene sceneID="fef-5J-Yaf">
@@ -1202,8 +1215,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="984-z2-xZP">
                                 <rect key="frame" x="0.0" y="119" width="414" height="777"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllEventsCell" rowHeight="233" id="fEX-dq-5A3" userLabel="AllEventsCell" customClass="AllEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AllEventsCell" rowHeight="233" id="fEX-dq-5A3" userLabel="AllEventsCell" customClass="AllEventsTableViewCell" customModule="Volunteer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="233"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fEX-dq-5A3" id="d2H-LZ-aRc">
@@ -1248,6 +1262,7 @@
                                                     </constraints>
                                                 </datePicker>
                                             </subviews>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="NHE-Lc-LzW" firstAttribute="trailing" secondItem="ZC6-B9-ETY" secondAttribute="trailing" id="2Is-Wt-klK"/>
                                                 <constraint firstItem="NHE-Lc-LzW" firstAttribute="leading" secondItem="d2H-LZ-aRc" secondAttribute="leadingMargin" id="7Nk-q6-7cL"/>
@@ -2310,31 +2325,12 @@
             <point key="canvasLocation" x="1112" y="-1362"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="66T-mP-jV3">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="CKQ-th-rT8" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="Ewg-mc-1He"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qgO-zV-ago">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="aHo-rt-w9F" kind="relationship" relationship="rootViewController" id="xm6-Q7-EXz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XSS-H1-mSn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4128" y="-1357"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="hIZ-o6-vBB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZoR-sj-XS3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="ZoR-sj-XS3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="beS-45-Y7Y"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ii6-po-MuM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -2348,7 +2344,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZPh-c5-aop"/>
+        <segue reference="mfD-D7-Pwa"/>
         <segue reference="xLU-Kf-l4d"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -2359,7 +2355,7 @@
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="calendar.badge.plus" catalog="system" width="128" height="108"/>
-        <image name="checkmark.seal.fill" catalog="system" width="128" height="128"/>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
         <image name="clock" catalog="system" width="128" height="121"/>
         <image name="email icon" width="140" height="135"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
@@ -2367,6 +2363,7 @@
         <image name="line.horizontal.3.circle" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="mappin" catalog="system" width="105" height="128"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="phone" catalog="system" width="128" height="115"/>

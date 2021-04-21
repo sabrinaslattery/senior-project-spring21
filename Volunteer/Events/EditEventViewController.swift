@@ -175,9 +175,6 @@ class EditEventViewController:UIViewController, UITextFieldDelegate, UIImagePick
               }
             }
           }
-    @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
 
     // Launching the camera to add a profile picture from camera or photo library
     @IBAction func onCameraButton(_sender: Any) {
@@ -206,6 +203,10 @@ class EditEventViewController:UIViewController, UITextFieldDelegate, UIImagePick
         coverPhotoImageView.image = scaledImage
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func handleDismissButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
     }
 }
 extension EditEventViewController: UIPickerViewDataSource, UIPickerViewDelegate {
@@ -250,4 +251,5 @@ extension EditEventViewController: UIPickerViewDataSource, UIPickerViewDelegate 
             return
         }
     }
+    
 }

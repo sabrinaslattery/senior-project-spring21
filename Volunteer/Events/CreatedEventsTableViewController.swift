@@ -117,8 +117,8 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
         let indexPath = tableView.indexPath(for: cell)
         let event = Events[indexPath!.row]
         
-        let eventDetailsViewController = segue.destination as! EventDetailsViewController
+        let CreatorEventDetailsViewController = segue.destination as! CreatorEventDetailsViewController
         
-        eventDetailsViewController.event = event
+        CreatorEventDetailsViewController.event = event
     }
 }
