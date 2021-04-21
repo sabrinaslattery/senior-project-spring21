@@ -96,40 +96,52 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         }
 
     @IBAction func CompletedButton(_ sender: Any) {
+    
+        self.event["title"] = eventTitleField.text!
+        self.event["totalSpots"] = Int(totalSpotsField.text!) ?? Int(0)
+        //self.event["totalSpots"] = Int(totalSpotsField.text!)
+        self.event["description"] = aboutEventField.text!
+        self.event["expectations"] = volunteerExpectationField.text!
+        self.event["clothes"] = volunteerShouldWearField.text!
+        self.event["contactEmail"] = emailField.text!
+        self.event["contactPhone"] = phoneNumberField.text!
+               
+        //self.event ["difficulty"] = difficultyPicker
+        //self.event ["tag"] = tagsPicker
         
-        let title = eventTitleField.text!
-        let totalSpots = Int(totalSpotsField.text!)
-        let description = aboutEventField.text!
-        let expectations = volunteerExpectationField.text!
-        let clothes = volunteerShouldWearField.text!
-        let contactEmail = emailField.text!
-        let contactPhone = phoneNumberField.text!
         
-        //event ["difficulty"] = difficultyPicker
-        //event ["tag"] = tagsPicker
         datePicker.locale = .current
         toPicker.locale = .current
         fromPicker.locale = .current
-        let date = datePicker.date
-		let startTime = fromPicker.date
-		let endTime = toPicker.date
-        let attendes = NSArray()
-        
+        self.event["date"] = datePicker.date
+        self.event["startTime"] = fromPicker.date
+        self.event["endTime"] = toPicker.date
+        event["attendees"] = NSArray()
+         
+            
+               
         let imageData = coverPhotoImageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
-        
-        let image = file
-        
+               
+        event["image"] = file
+               
         _ = datePicker.date
-        
-        let diffPicker = difficultyPicker
-        let tagPicker = tagsPicker
+               
+        //let diffPicker = difficultyPicker
+        //let tagPicker = tagsPicker
 
+       
         
-        // MARK: - User must click fillout title and contact email
-        if title == "" && contactEmail == "" {
-            let alert = UIAlertController(title: "Oops!", message: "Please fill out title and contact email fields!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+        // MARK: - User must click fillout title, contact email, about event, volunteer expectation and wear,
+        // MARK: - phone # and total spots
+        if !eventTitleField.hasText || !emailField.hasText || !aboutEventField.hasText ||
+            !volunteerExpectationField.hasText ||
+            !volunteerShouldWearField.hasText ||
+            !phoneNumberField.hasText ||
+            !totalSpotsField.hasText
+        {
+            let alert = UIAlertController(title: "Oops!", message: "Please fill out the required infomation!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
                 print("Please fill out fields!")
             }))
             self.present(alert, animated: true)
@@ -152,8 +164,6 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
                     }))
                     self.present(alert, animated: true)
                 }
-            }
-        }
     }
  
     @IBAction func onCameraButton(_sender: Any) {
