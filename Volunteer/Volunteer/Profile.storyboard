@@ -830,8 +830,7 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="handledViewPop:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="sLB-ge-dW0"/>
-                                                    <segue destination="VT2-yk-u93" kind="show" id="2e7-92-XhE"/>
+                                                    <action selector="handleDismissButton:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="fhs-gP-2bL"/>
                                                 </connections>
                                             </button>
                                         </subviews>
