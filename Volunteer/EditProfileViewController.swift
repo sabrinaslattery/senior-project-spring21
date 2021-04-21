@@ -32,7 +32,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
 	let interestTags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
     
     var profile = PFObject(className: "Profile")
-
+    
+    var opener: MainProfileViewController!
 
     //Interest Checkboxes
     @IBOutlet weak var animalWelfareCheckbox: UIButton!
@@ -223,15 +224,32 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
               (success: Bool, error: Error?) in
               if (success) {
                 // The object has been saved.
-              } else {
+                let userMessage = "Profile details successfully updated"
+                let myAlert = UIAlertController(title:"Success", message:userMessage, preferredStyle: UIAlertController.Style.alert);
+                                
+                let okAction =  UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action:UIAlertAction!) -> Void in
+                                    
+                    self.dismiss(animated: true, completion: { () -> Void in
+                                        self.opener.loadUserDetails()
+                                    })
+
+                                })
+                                
+                                myAlert.addAction(okAction);
+                self.present(myAlert, animated:true, completion:nil);
+                                
+                            }
+                    else {
                 // There was a problem, check error.description
               }
             }
           }
           }
         }
+}
+    @IBAction func handleDismissButton(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
     }
-
             
         
 // Launching the camera to add a profile picture from camera or photo library
@@ -256,7 +274,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         let image = info[.editedImage] as! UIImage
         
         let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af_imageScaled(to:size)
+        let scaledImage = image.af.imageScaled(to:size)
         
         profileImageView.image = scaledImage
         

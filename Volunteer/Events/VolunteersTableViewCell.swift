@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Parse
 
 class VolunteersTableViewCell: UITableViewCell {
     
     @IBOutlet weak var volunteerName: UILabel!
     @IBOutlet weak var volunteerEmail: UILabel!
+    
+    var user = PFObject(className: "User")
     
     override func awakeFromNib() {
         super.awakeFromNib()

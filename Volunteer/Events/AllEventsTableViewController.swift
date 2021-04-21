@@ -5,26 +5,25 @@
 //  Created by Sabrina Slattery on 3/23/21.
 //
 
+import Foundation
 import UIKit
 import Parse
+import AlamofireImage
 
-class AllEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class AllEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
 	@IBOutlet weak var tableView: UITableView!
-	
-	//var eventsArray = [NSDictionary]()
-	
+    
 	let myRefreshControl = UIRefreshControl()
 	
 	var Events = [PFObject]()
 	var selectedEvent: PFObject!
-	
+    
 	var date :NSDate?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		loadEvents()
-		
 		
 		tableView.delegate = self
 		tableView.dataSource = self
@@ -36,13 +35,13 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		tableView.rowHeight = UITableView.automaticDimension
 		tableView.estimatedRowHeight = 150
-	}
-
+    }
+    
 	@objc func loadEvents() {
 		let query = PFQuery(className:"Events")
-        query.whereKey("date", greaterThan: Date()).addAscendingOrder("date")
+        query.whereKey("date", greaterThanOrEqualTo: Date()).addAscendingOrder("date")
 		//query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
-		query.limit = 20
+		//query.limit = 20
 		
 		query.findObjectsInBackground { (events, error) in
 			if let error = error {
@@ -59,36 +58,31 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 	}
 
 	func numberOfSections(in tableView: UITableView) -> Int {
-		// #warning Incomplete implementation, return the number of sections
 		return 1
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		//let post = posts[section]
-		
 		return self.Events.count
 	}
 	
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let event = Events[indexPath.row] as! PFObject
+        let event = Events[indexPath.row]
 		
 		let cell = self.tableView.dequeueReusableCell(withIdentifier: "AllEventsCell", for: indexPath) as! AllEventsTableViewCell
 		
-		
 		//Setting name and tag
-		cell.eventName.text = event["title"] as! String
-		cell.eventTags.text = event["tag"] as! String
+        cell.eventName.text = event["title"] as? String
+		cell.eventTags.text = event["tag"] as? String
 		
 		//Setting the date/time of the event
 		let date = event["date"] as! Date
 		let formatter = DateFormatter()
-		let eventDate = formatter.string(from: date) as! String
+        _ = formatter.string(from: date)
 		cell.eventDate.date = date
 		
-		//Setting the event's image
-		
-		let parseImage = event["image"] as! PFFileObject
+        //Setting the event's image?
+        let parseImage = event["image"] as! PFFileObject
 		parseImage.getDataInBackground { (imageData, error) in
 			if let error = error {
 				print(error.localizedDescription)
@@ -113,22 +107,17 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		return cell
 	}
-	
-    @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
 	//Pass the selected event to the details page
-	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		
-		let cell = sender as! UITableViewCell
+        let cell = sender as! UITableViewCell
 		let indexPath = tableView.indexPath(for: cell)
 		let event = Events[indexPath!.row]
+        
+        let eventDetailsViewController = segue.destination as! EventDetailsViewController
 		
-		let eventDetailsViewController = segue.destination as! EventDetailsViewController
-		
-		eventDetailsViewController.event = event
-		
+        eventDetailsViewController.event = event
 	}
-	
+
 }
