@@ -10,7 +10,7 @@
         <!--Search View Controller-->
         <scene sceneID="jey-yK-ubP">
             <objects>
-                <tableViewController title="Search View Controller" id="JCD-vD-6u4" customClass="SearchTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Search View Controller" modalPresentationStyle="fullScreen" id="JCD-vD-6u4" customClass="SearchTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xyd-nK-cap">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,18 @@
                             <outlet property="delegate" destination="JCD-vD-6u4" id="x1F-gP-FHx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Search Events" id="IiC-Ih-31R"/>
+                    <navigationItem key="navigationItem" title="Search Events" id="IiC-Ih-31R">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="XUg-q9-gIL">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLJ-7g-LvR">
+                                <rect key="frame" x="20" y="6" width="35" height="33"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrow.backward" catalog="system"/>
+                                <connections>
+                                    <action selector="backToHome:" destination="JCD-vD-6u4" eventType="touchUpInside" id="rkV-3P-XG5"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="w63-OE-Ov2" id="hRW-ok-fDX"/>
                         <outlet property="searchTableView" destination="Xyd-nK-cap" id="4GG-B0-6tz"/>
@@ -61,9 +72,8 @@
         <!--Navigation Controller-->
         <scene sceneID="5Gi-yW-8Em">
             <objects>
-                <navigationController id="OrV-Eg-wb7" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="OrV-Eg-wb7" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sXN-Cj-005">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -76,6 +86,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

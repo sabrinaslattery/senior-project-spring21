@@ -10,7 +10,6 @@ import Parse
 
 class CreatedEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     
-    
     @IBOutlet weak var tableView: UITableView!
     
     let myRefreshControl = UIRefreshControl()
@@ -39,8 +38,11 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
     @objc func loadEvents() {
         let user = PFUser.current()
         let query = PFQuery(className:"Events")
-        //query.whereKey("ToEvents", equalTo: user).addAscendingOrder("date")
-
+        //work on this line of code
+        //want to retun only events created by user
+        //query.whereKey("createdBy", equalTo: user?["objectId"]).addAscendingOrder("date")
+        query.whereKey("date", greaterThanOrEqualTo: Date()).addAscendingOrder("date")
+        
         query.findObjectsInBackground { (posts, error) in
             self.Events.removeAll()
             if let posts = posts {
@@ -54,7 +56,6 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -68,7 +69,7 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let event = Events[indexPath.row]
         
-        let cell = self.tableView.dequeueReusableCell(withIdentifier: "CreatedEventsCell", for: indexPath) as! CreatedEventsTableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "OrganizerEventsCell", for: indexPath) as! CreatedEventsTableViewCell
         
         
         //Setting name and tag
@@ -77,8 +78,8 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
         
         //Setting the date/time of the event
         let date = event["date"] as! Date
-        let formatter = DateFormatter()
-        let eventDate = formatter.string(from: date)
+//        let formatter = DateFormatter()
+//        let eventDate = formatter.string(from: date)
         cell.eventDate.date = date
         
         //Setting the event's image
@@ -109,10 +110,6 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
         return cell
     }
     
-    @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     //Pass the selected event to the details page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -120,10 +117,8 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
         let indexPath = tableView.indexPath(for: cell)
         let event = Events[indexPath!.row]
         
-        let eventDetailsViewController = segue.destination as! EventDetailsViewController
+        let CreatorEventDetailsViewController = segue.destination as! CreatorEventDetailsViewController
         
-        eventDetailsViewController.event = event
-        
+        CreatorEventDetailsViewController.event = event
     }
-
 }

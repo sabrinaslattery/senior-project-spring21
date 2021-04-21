@@ -68,3 +68,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
 
 }
 
+class SideMenuListController: UITableViewController {
+    var Users = [PFObject]()
+    
+    public var delegate: MenuControllerDelegate?
+    private let menuItems: [SideMenuItem]
+    private let sideBarColor = UIColor(red: 75/225.0, green: 75/225.0, blue: 75/225.0, alpha: 1)
+    
+    init(with menuItems: [SideMenuItem]) {
+        self.menuItems = menuItems
+        super.init(nibName: nil, bundle: nil)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.backgroundColor = sideBarColor
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return menuItems.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        100
+    }
+    
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 100))
+        view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        let userProfileImage = UIImageView(frame: CGRect(x: 40,y: 5,width: 60,height: 60))
+        userProfileImage.image = UIImage(named:"image var name from database")
+        view.addSubview(userProfileImage)
+        
+        return view
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = menuItems[indexPath.row].rawValue
+        cell.textLabel?.textColor = .white
+        cell.backgroundColor = sideBarColor
+        cell.contentView.backgroundColor = sideBarColor
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let selectedItem = menuItems[indexPath.row]
+        delegate?.didSelectMenuItem(named: selectedItem)
+    }
+}
+

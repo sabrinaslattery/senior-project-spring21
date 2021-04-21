@@ -32,7 +32,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
 	let interestTags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
     
     var profile = PFObject(className: "Profile")
-
+    
+    var opener: MainProfileViewController!
 
     //Interest Checkboxes
     @IBOutlet weak var animalWelfareCheckbox: UIButton!
@@ -152,7 +153,6 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
 //        
 //        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
 //        buttonEducationLevel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        
     }
     
     func showProfileImage () {
@@ -171,9 +171,6 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
                             self.profileImageView?.image = Image
                         }
                     }
-    //                        let output = list["image"] as? PFFileObject
-    //                        self.profileImage.image!.pngData() = output
-
                   }
                }
             }
@@ -203,35 +200,59 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
           }
       }
     
-    
-    
     @IBAction func updateUser(_ sender: Any) {
-        let currentUser = PFUser.current()
-            self.profile["jobTitle"] = jobTitleTextField.text!
-            self.profile["city"] = cityTextField.text!
-            self.profile["zipCode"] = zipCodeTextField.text!
-            self.profile["userBio"] = introTextField.text!
-            self.profile["workExperience"] = workExperienceTextField.text!
-            self.profile["user"] = currentUser
-            let eduLevelPicker = educationLevelPicker
+        let query = PFQuery(className: "Profile")
+        query.whereKey("user", equalTo: PFUser.current()!)
+        query.getFirstObjectInBackground { [self] (object, error) -> Void in
+            if error == nil {
+                if let result = object {
         
+            result["jobTitle"] = jobTitleTextField.text!
+            result["city"] = cityTextField.text!
+            result["zipCode"] = zipCodeTextField.text!
+            result["userBio"] = introTextField.text!
+            result["workExperience"] = workExperienceTextField.text!
+            result["educationLevel"] = educationLevelField.text!
+            
+            //let eduLevelPicker = educationLevelPicker
             // saving the profile image
             let imageData = profileImageView.image!.pngData()
             let file = PFFileObject(data: imageData!)
-            self.profile["image"] = file
-            
-            self.profile.saveInBackground {
+            result["image"] = file
+        
+            result.saveInBackground {
               (success: Bool, error: Error?) in
               if (success) {
-                //self.mainProfileViewController = UIViewController.reloadData()
                 // The object has been saved.
-              } else {
+                let userMessage = "Profile details successfully updated"
+                let myAlert = UIAlertController(title:"Success", message:userMessage, preferredStyle: UIAlertController.Style.alert);
+                                
+                let okAction =  UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action:UIAlertAction!) -> Void in
+                                    
+                    self.dismiss(animated: true, completion: { () -> Void in
+                                        self.opener.loadUserDetails()
+                                    })
+
+                                })
+                                
+                                myAlert.addAction(okAction);
+                self.present(myAlert, animated:true, completion:nil);
+                                
+                            }
+                    else {
                 // There was a problem, check error.description
               }
             }
           }
-
-    // Launching the camera to add a profile picture from camera or photo library
+          }
+        }
+}
+    @IBAction func handleDismissButton(_ sender: Any) {
+        self.dismiss(animated: false, completion: nil)
+    }
+            
+        
+// Launching the camera to add a profile picture from camera or photo library
     @IBAction func onCameraButton(_sender: Any) {
         let picker = UIImagePickerController()
         picker.delegate = self
@@ -253,7 +274,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         let image = info[.editedImage] as! UIImage
         
         let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af_imageScaled(to:size)
+        let scaledImage = image.af.imageScaled(to:size)
         
         profileImageView.image = scaledImage
         
@@ -440,6 +461,7 @@ extension EditProfileViewController: UIPickerViewDataSource, UIPickerViewDelegat
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         switch pickerView.tag {
         case 1:
+            
             self.profile["educationLevel"] = self.educationLevel[row]
             educationLevelField.text = educationLevel[row]
             educationLevelField.resignFirstResponder()

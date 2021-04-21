@@ -50,7 +50,11 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         }
     }
         
-// MARK: - Table view data source
+    @IBAction func backToHome(_ sender: Any) {
+        //screen dismisses itself
+                self.dismiss(animated: true, completion: nil)
+    }
+    // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchEventCell", for: indexPath) as! SearchEventCell
         cell.textLabel?.text = filteredData[indexPath.row]

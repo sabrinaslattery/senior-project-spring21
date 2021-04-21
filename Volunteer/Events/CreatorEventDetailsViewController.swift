@@ -88,9 +88,9 @@ class CreatorEventDetailsViewController: UIViewController {
     }
     
     
-//    @IBAction func handleDismissButton(_ sender: Any) {
-//        _ = navigationController?.popViewController(animated: true)
-//    }
+    @IBAction func handleDismissButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    }
     
     
 }
