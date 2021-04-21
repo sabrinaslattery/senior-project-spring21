@@ -93,7 +93,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         //volunteerShouldWearField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         emailField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         phoneNumberField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
-        }
+    }
 
     @IBAction func CompletedButton(_ sender: Any) {
     
@@ -164,6 +164,8 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
                     }))
                     self.present(alert, animated: true)
                 }
+            }
+        }
     }
  
     @IBAction func onCameraButton(_sender: Any) {

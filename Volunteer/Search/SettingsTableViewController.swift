@@ -8,7 +8,7 @@
 import UIKit
 import Parse
 
-class SettingsViewController: UIViewController {
+class SettingsTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class SettingsViewController: UIViewController {
         self.present(viewController, animated: true, completion: nil)
     }
     
-    @IBAction func logOutUser() {
+    @IBAction func logOut(_ sender: Any) {
         PFUser.logOutInBackground { (error: Error?) in
             if (error == nil){
                 self.loadLoginScreen()

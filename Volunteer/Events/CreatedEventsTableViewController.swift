@@ -41,7 +41,8 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
         //work on this line of code
         //want to retun only events created by user
         //query.whereKey("createdBy", equalTo: user?["objectId"]).addAscendingOrder("date")
-
+        query.whereKey("date", greaterThanOrEqualTo: Date()).addAscendingOrder("date")
+        
         query.findObjectsInBackground { (posts, error) in
             self.Events.removeAll()
             if let posts = posts {

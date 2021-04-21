@@ -39,7 +39,7 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
     
 	@objc func loadEvents() {
 		let query = PFQuery(className:"Events")
-        query.whereKey("date", greaterThan: Date()).addAscendingOrder("date")
+        query.whereKey("date", greaterThanOrEqualTo: Date()).addAscendingOrder("date")
 		//query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
 		//query.limit = 20
 		
@@ -70,7 +70,6 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
         let event = Events[indexPath.row]
 		
 		let cell = self.tableView.dequeueReusableCell(withIdentifier: "AllEventsCell", for: indexPath) as! AllEventsTableViewCell
-		
 		
 		//Setting name and tag
         cell.eventName.text = event["title"] as? String
