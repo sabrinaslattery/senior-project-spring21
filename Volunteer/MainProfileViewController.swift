@@ -45,7 +45,7 @@ class MainProfileViewController: UIViewController {
                 showWorkExperience()
                 showInterests()
 
-                //loadUserDetails()
+                loadUserDetails()
 
                 // Do any additional setup after loading the view.
                 super.viewDidLoad()
@@ -268,40 +268,40 @@ class MainProfileViewController: UIViewController {
         self.present(editProfileNav, animated: true, completion: nil)
       }
     
-//     func loadUserDetails() {
-//         let userFirstName = PFUser.current()?.object(forKey: "firstname") as! String
-//         self.firstName?.text = userFirstName
-//         let userLastName = PFUser.current()?.object(forKey: "lastname") as! String
-//         self.lastName?.text =  userLastName
-//         let query = PFQuery(className: "Profile")
-//         query.whereKey("user", equalTo: PFUser.current()!)
-//         query.includeKeys(["jobTitle","city","zipCode","educationLevel","userBio","workExperience","image"])
-//         query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
-//           if let result = result {
-//             for list in result{
-//               let userJobTitle = list["jobTitle"] as? String
-//               let userCity = list["city"] as? String
-//               let userZipCode = list["zipCode"] as? String
-//               let userIntro = list["userBio"] as? String
-//               let userWorkExperience = list["workExperience"] as? String
-//               let userEducationLevel = list["educationLevel"] as? String
-//               self.jobTitle?.text = userJobTitle
-//               self.city?.text = userCity
-//               self.zipCode?.text = userZipCode
-//               self.intro?.text = userIntro
-//               self.workExperience?.text = userWorkExperience
-//               self.educationLevel?.text = userEducationLevel
-//               let output:PFFileObject = list["image"] as! PFFileObject
-//                 output.getDataInBackground { (ImageData: Data?, error: Error?) in
-//                     if error == nil {
+     func loadUserDetails() {
+         let userFirstName = PFUser.current()?.object(forKey: "firstname") as! String
+         self.firstName?.text = userFirstName
+         let userLastName = PFUser.current()?.object(forKey: "lastname") as! String
+         self.lastName?.text =  userLastName
+         let query = PFQuery(className: "Profile")
+         query.whereKey("user", equalTo: PFUser.current()!)
+         query.includeKeys(["jobTitle","city","zipCode","educationLevel","userBio","workExperience","image"])
+         query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
+           if let result = result {
+             for list in result{
+               let userJobTitle = list["jobTitle"] as? String
+               let userCity = list["city"] as? String
+               let userZipCode = list["zipCode"] as? String
+               let userIntro = list["userBio"] as? String
+               let userWorkExperience = list["workExperience"] as? String
+               let userEducationLevel = list["educationLevel"] as? String
+               self.jobTitle?.text = userJobTitle
+               self.city?.text = userCity
+               self.zipCode?.text = userZipCode
+               self.intro?.text = userIntro
+               self.workExperience?.text = userWorkExperience
+               self.educationLevel?.text = userEducationLevel
+               let output:PFFileObject = list["image"] as! PFFileObject
+                 output.getDataInBackground { (ImageData: Data?, error: Error?) in
+                     if error == nil {
 
-//                         let Image: UIImage = UIImage (data: ImageData!)!
-//                         self.profileImage?.image = Image
-//                     }
-//                 }
-//     }
-//           }
-//         }
-//     }
+                         let Image: UIImage = UIImage (data: ImageData!)!
+                         self.profileImage?.image = Image
+                     }
+                 }
+     }
+           }
+         }
+     }
 
 }
