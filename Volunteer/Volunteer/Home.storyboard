@@ -17,7 +17,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jik-br-2L6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2946" y="1770"/>
+            <point key="canvasLocation" x="2793" y="1946"/>
         </scene>
         <!--Storyboard Reference-->
         <scene sceneID="u1K-2j-ArE">
@@ -35,7 +35,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9n-eV-94k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2721" y="1770"/>
+            <point key="canvasLocation" x="2647" y="1946"/>
         </scene>
         <!--Profile-->
         <scene sceneID="3ok-Rr-YO5">
@@ -45,7 +45,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlM-Oz-8bk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3365" y="1770"/>
+            <point key="canvasLocation" x="3372" y="1946"/>
         </scene>
         <!--Create Events Page-->
         <scene sceneID="fzc-bt-xDT">
@@ -55,7 +55,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSM-di-ztf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3168" y="1770"/>
+            <point key="canvasLocation" x="3155" y="1946"/>
         </scene>
         <!--About Us-->
         <scene sceneID="lfo-1z-cCk">
@@ -168,7 +168,7 @@ To learn more about advocacy for colorblind-friendly design through education an
         <!--Home Page View Controller-->
         <scene sceneID="BMA-j9-5tF">
             <objects>
-                <viewController title="Home Page View Controller" modalPresentationStyle="fullScreen" id="O0d-5z-Fxm" customClass="HomeViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeView" title="Home Page View Controller" modalPresentationStyle="fullScreen" id="O0d-5z-Fxm" customClass="HomeViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oFR-DI-4Vc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,6 +199,9 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 <state key="normal" title="My Events">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="pgy-e5-W3P" kind="show" id="MlF-sH-aIt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsM-lC-Yao">
                                 <rect key="frame" x="55" y="775" width="304" height="54"/>
@@ -286,6 +289,20 @@ To learn more about advocacy for colorblind-friendly design through education an
                                     <action selector="didTapMenu" destination="O0d-5z-Fxm" eventType="touchUpInside" id="ICU-We-hqx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXs-Sh-uf5">
+                                <rect key="frame" x="88" y="874" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3uE-Wk-G3f"/>
+                                    <constraint firstAttribute="width" constant="46" id="xx5-IG-Gmi"/>
+                                </constraints>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0z-xE-qKF">
+                                <rect key="frame" x="142" y="822" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="BlM-Hu-Bfz" kind="show" id="uX3-V1-DTD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KQO-rr-gxW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -297,12 +314,14 @@ To learn more about advocacy for colorblind-friendly design through education an
                             <constraint firstItem="rHD-tM-MZS" firstAttribute="top" secondItem="aO5-m0-Tku" secondAttribute="bottom" constant="8" symbolic="YES" id="9Rk-U7-0Dj"/>
                             <constraint firstItem="CcX-pJ-3Lw" firstAttribute="leading" secondItem="KQO-rr-gxW" secondAttribute="leading" constant="55" id="CQ6-5c-32f"/>
                             <constraint firstItem="bor-lk-MC2" firstAttribute="top" secondItem="vTO-u2-47z" secondAttribute="bottom" constant="46" id="KQL-X0-09P"/>
+                            <constraint firstItem="IXs-Sh-uf5" firstAttribute="top" secondItem="IsM-lC-Yao" secondAttribute="bottom" constant="45" id="N1k-N2-StH"/>
                             <constraint firstItem="utP-ep-HWe" firstAttribute="top" secondItem="IsM-lC-Yao" secondAttribute="bottom" constant="50" id="NUq-Ah-v4v"/>
                             <constraint firstItem="aO5-m0-Tku" firstAttribute="leading" secondItem="KQO-rr-gxW" secondAttribute="leading" constant="136" id="QAL-sw-HY0"/>
                             <constraint firstItem="h9H-7r-lKC" firstAttribute="top" secondItem="rHD-tM-MZS" secondAttribute="bottom" constant="31" id="Qwd-7t-lPn"/>
                             <constraint firstItem="KQO-rr-gxW" firstAttribute="trailing" secondItem="IsM-lC-Yao" secondAttribute="trailing" constant="55" id="RVE-AV-ZDM"/>
                             <constraint firstItem="KQO-rr-gxW" firstAttribute="trailing" secondItem="CcX-pJ-3Lw" secondAttribute="trailing" constant="55" id="RpK-0f-7iQ"/>
                             <constraint firstItem="rHD-tM-MZS" firstAttribute="top" secondItem="aO5-m0-Tku" secondAttribute="bottom" constant="8" symbolic="YES" id="SNG-cD-n4e"/>
+                            <constraint firstItem="KQO-rr-gxW" firstAttribute="trailing" secondItem="IXs-Sh-uf5" secondAttribute="trailing" constant="280" id="Tbp-7Y-YzX"/>
                             <constraint firstItem="IsM-lC-Yao" firstAttribute="top" secondItem="CcX-pJ-3Lw" secondAttribute="bottom" constant="46" id="VZM-DA-6W7"/>
                             <constraint firstItem="KQO-rr-gxW" firstAttribute="trailing" secondItem="utP-ep-HWe" secondAttribute="trailing" constant="95" id="WTA-vd-7HC"/>
                             <constraint firstItem="vTO-u2-47z" firstAttribute="top" secondItem="h9H-7r-lKC" secondAttribute="bottom" constant="46" id="WcD-GS-2J5"/>
@@ -312,6 +331,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                             <constraint firstItem="vTO-u2-47z" firstAttribute="top" secondItem="h9H-7r-lKC" secondAttribute="bottom" constant="46" id="Yj5-BQ-V5q"/>
                             <constraint firstItem="KQO-rr-gxW" firstAttribute="trailing" secondItem="bor-lk-MC2" secondAttribute="trailing" constant="55" id="Ztg-mt-B70"/>
                             <constraint firstItem="IsM-lC-Yao" firstAttribute="top" secondItem="CcX-pJ-3Lw" secondAttribute="bottom" constant="46" id="b8K-Rr-zOK"/>
+                            <constraint firstItem="KQO-rr-gxW" firstAttribute="bottom" secondItem="IXs-Sh-uf5" secondAttribute="bottom" constant="9" id="c5I-uv-XQQ"/>
                             <constraint firstItem="KQO-rr-gxW" firstAttribute="trailing" secondItem="aO5-m0-Tku" secondAttribute="trailing" constant="135" id="dEe-lu-f6e"/>
                             <constraint firstItem="rHD-tM-MZS" firstAttribute="leading" secondItem="KQO-rr-gxW" secondAttribute="leading" constant="142" id="dsO-OS-Gq4"/>
                             <constraint firstItem="aO5-m0-Tku" firstAttribute="top" secondItem="KQO-rr-gxW" secondAttribute="top" id="eq8-xy-MAk"/>
@@ -320,6 +340,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                             <constraint firstItem="CcX-pJ-3Lw" firstAttribute="top" secondItem="bor-lk-MC2" secondAttribute="bottom" constant="46" id="m2z-mY-aNA"/>
                             <constraint firstItem="bor-lk-MC2" firstAttribute="leading" secondItem="KQO-rr-gxW" secondAttribute="leading" constant="55" id="mPJ-RT-kji"/>
                             <constraint firstItem="utP-ep-HWe" firstAttribute="leading" secondItem="KQO-rr-gxW" secondAttribute="leading" constant="96" id="r30-Wo-Sus"/>
+                            <constraint firstItem="IXs-Sh-uf5" firstAttribute="leading" secondItem="KQO-rr-gxW" secondAttribute="leading" constant="88" id="tWe-bo-fzb"/>
                             <constraint firstItem="utP-ep-HWe" firstAttribute="top" secondItem="IsM-lC-Yao" secondAttribute="bottom" constant="50" id="ymn-PW-Uk3"/>
                         </constraints>
                     </view>
@@ -368,7 +389,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BlW-Za-CJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3537" y="1770"/>
+            <point key="canvasLocation" x="2951" y="1946"/>
         </scene>
         <!--Home-->
         <scene sceneID="kd9-9r-WIJ">
@@ -376,7 +397,27 @@ To learn more about advocacy for colorblind-friendly design through education an
                 <viewControllerPlaceholder storyboardName="Home" id="Qw9-qL-BJx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1B-sq-JZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3957" y="1823"/>
+            <point key="canvasLocation" x="3645" y="1946"/>
+        </scene>
+        <!--LegalDocs-->
+        <scene sceneID="AFT-Rx-V1e">
+            <objects>
+                <viewControllerPlaceholder storyboardName="LegalDocs" id="BlM-Hu-Bfz" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="dGe-47-yEP"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tDb-tR-dF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3999" y="1946"/>
+        </scene>
+        <!--My Events Page-->
+        <scene sceneID="KFH-gw-Inw">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Events" referencedIdentifier="My Events Page" id="pgy-e5-W3P" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="N4u-wb-u6E"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NKD-4d-aFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3798" y="1946"/>
         </scene>
         <!--Main-->
         <scene sceneID="3in-Iy-VtO">
@@ -386,7 +427,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMI-37-M20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3733" y="1770"/>
+            <point key="canvasLocation" x="3515" y="1946"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

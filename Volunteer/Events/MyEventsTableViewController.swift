@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import SideMenu
 
 class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -16,11 +17,15 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
     var selectedEvent: PFObject!
     
     var date :NSDate?
-        
+    
+//    private var sideMenu: SideMenuNavigationController?
+//
+//    private let profileController = MainProfileViewController()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadEvents()
-            
             
         tableView.delegate = self
         tableView.dataSource = self
@@ -38,11 +43,6 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
         super.viewDidAppear(true)
             loadEvents()
     }
-    
-    @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     
     @objc func loadEvents() {
         let user = PFUser.current()
@@ -113,6 +113,12 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
         return cell
     }
     
+    func prepare(for segue: UIStoryboardSegue, sender: UIButton) {
+        let button = sender
+        performSegue(withIdentifier: "homeSegue", sender: button)
+        
+    }
+    
     //Pass the selected event to the details page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -125,4 +131,72 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
         eventViewController.event = event
 
     }
+    
+    @IBAction func handleDismissButton(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    
+//    private func addChildControllers() {
+//        addChild(profileController)
+//                //add more children
+//
+//        view.addSubview(profileController.view)
+//
+//        profileController.view.frame = view.bounds
+//        profileController.didMove(toParent: self)
+//        profileController.view.isHidden = true
+//    }
+//
+//    @IBAction func didTapMenu() {
+//        present(sideMenu!, animated: true)
+//    }
+//
+//    func loadLoginScreen(){
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let viewController = storyBoard.instantiateViewController(withIdentifier:         "LoginViewController")
+//        self.present(viewController, animated: true, completion: nil)
+//    }
+//
+//    func didSelectMenuItem(named: SideMenuItem) {
+//        sideMenu?.dismiss(animated: true, completion: nil)
+//
+//        title = named.rawValue
+//        switch named {
+//        case .user:
+//            performSegue(withIdentifier: "eventToProfileSegue", sender: nil)
+//
+//        case .home:
+//            performSegue(withIdentifier: "eventToHomeSegue", sender: nil)
+//
+//        case .profile:
+//            performSegue(withIdentifier: "eventToProfileSegue", sender: nil)
+//
+//        case .events:
+//            performSegue(withIdentifier: "eventToEventsSegue", sender: nil)
+//
+//        case .create:
+//            performSegue(withIdentifier: "eventToCreateSegue", sender: nil)
+//
+//        case .search:
+//            performSegue(withIdentifier: "eventToSearchSegue", sender: nil)
+//
+//        case .settings:
+//            performSegue(withIdentifier: "eventToSettingsSegue", sender: nil)
+//
+//            case .logOut:
+//                PFUser.logOutInBackground { (error: Error?) in
+//                    if (error == nil){
+//                        self.loadLoginScreen()
+//                    }else{
+//                        let alert = UIAlertController(title: "Error Logging Out", message: error?.localizedDescription, preferredStyle: .alert)
+//                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action) in
+//                               print(error.debugDescription)
+//                    }))
+//                    self.present(alert, animated: true)
+//                }
+//
+//            }
+//            loadLoginScreen()
+//        }
+//    }
 }

@@ -520,10 +520,10 @@
             </objects>
             <point key="canvasLocation" x="3135" y="574"/>
         </scene>
-        <!--Home-->
+        <!--Events-->
         <scene sceneID="eeB-yt-uXj">
             <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="0RQ-LD-Xp2" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Events" id="0RQ-LD-Xp2" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="LEo-Vq-lYA"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i3u-o3-QSf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
