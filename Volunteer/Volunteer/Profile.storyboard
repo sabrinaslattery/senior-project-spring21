@@ -328,6 +328,7 @@
                         <outlet property="educationLevel" destination="PRC-Kt-EyA" id="EZ0-DJ-nVq"/>
                         <outlet property="emailAddress" destination="fJj-Oo-umD" id="yvH-8b-pYL"/>
                         <outlet property="firstName" destination="IEy-f1-7J1" id="8PS-Zf-zzk"/>
+                        <outlet property="interests" destination="Edh-u7-clW" id="VKl-Sp-TyM"/>
                         <outlet property="intro" destination="A9p-Qe-9pw" id="yZR-Zz-vfy"/>
                         <outlet property="jobTitle" destination="kDX-XI-nid" id="tT0-cp-Tex"/>
                         <outlet property="lastName" destination="7Wb-ww-H25" id="Jff-R3-Xwy"/>
