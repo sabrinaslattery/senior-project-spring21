@@ -37,18 +37,6 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
            
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 150
-        
-//        let menu = SideMenuListController(with: SideMenuItem.allCases)
-//
-//        menu.delegate = self
-//
-//        sideMenu = SideMenuNavigationController(rootViewController: menu)
-//        sideMenu?.leftSide = true
-//
-//        SideMenuManager.default.leftMenuNavigationController = sideMenu
-//        SideMenuManager.default.addPanGestureToPresent(toView: view)
-//
-//        addChildControllers()
     }
         
     override func viewDidAppear(_ animated: Bool) {

@@ -38,9 +38,9 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
     @objc func loadEvents() {
         let user = PFUser.current()
         let query = PFQuery(className:"Events")
-       //work on this line of code
+        //work on this line of code
         //want to retun only events created by user
-        query.whereKey("ToEvents", equalTo: user!).addAscendingOrder("date")
+        //query.whereKey("createdBy", equalTo: user?["objectId"]).addAscendingOrder("date")
 
         query.findObjectsInBackground { (posts, error) in
             self.Events.removeAll()
@@ -77,8 +77,8 @@ class CreatedEventsTableViewController: UIViewController, UITableViewDataSource,
         
         //Setting the date/time of the event
         let date = event["date"] as! Date
-        let formatter = DateFormatter()
-        let eventDate = formatter.string(from: date)
+//        let formatter = DateFormatter()
+//        let eventDate = formatter.string(from: date)
         cell.eventDate.date = date
         
         //Setting the event's image

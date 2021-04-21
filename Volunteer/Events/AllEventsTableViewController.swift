@@ -41,7 +41,7 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		let query = PFQuery(className:"Events")
         query.whereKey("date", greaterThan: Date()).addAscendingOrder("date")
 		//query.includeKeys(["eventName", "eventDate", "eventTag", "eventDiff"])
-		query.limit = 20
+		//query.limit = 20
 		
 		query.findObjectsInBackground { (events, error) in
 			if let error = error {
@@ -62,8 +62,6 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 	}
 
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		//let post = posts[section]
-		
 		return self.Events.count
 	}
 	
@@ -75,8 +73,8 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		
 		//Setting name and tag
-		cell.eventName.text = event["title"] as! String
-		cell.eventTags.text = event["tag"] as! String
+        cell.eventName.text = event["title"] as? String
+		cell.eventTags.text = event["tag"] as? String
 		
 		//Setting the date/time of the event
 		let date = event["date"] as! Date
@@ -84,9 +82,8 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
         _ = formatter.string(from: date)
 		cell.eventDate.date = date
 		
-		//Setting the event's image
-		
-		let parseImage = event["image"] as! PFFileObject
+        //Setting the event's image?
+        let parseImage = event["image"] as! PFFileObject
 		parseImage.getDataInBackground { (imageData, error) in
 			if let error = error {
 				print(error.localizedDescription)
@@ -125,55 +122,3 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 	}
 
 }
-//extension AllEventsTableViewController: UISearchBarDelegate  {
-//
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(true)
-//        let query = PFQuery(className: "Events")
-//        query.includeKey("title")
-//        query.limit = 100
-//
-//        query.findObjectsInBackground { (events, error) in
-//            self.events.removeAll()
-//            self.titles.removeAll()
-//            if let events = events {
-//                for event in events {
-//                    self.events.append(event)
-//                    print(events)
-//                    self.titles.append(event["title"] as! String)
-//                    print(self.titles)
-//                    self.tableView.reloadData()
-//                }
-//            } else if let error = error {
-//                    print(error.localizedDescription)
-//            }
-//        }
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchEventCell", for: indexPath) as! SearchEventCell
-//        cell.textLabel?.text = filteredData[indexPath.row]
-//        return cell
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.filteredData.count
-//    }
-//
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//         filteredData = searchText.isEmpty ? titles : titles.filter { (item: String) -> Bool in
-//             return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
-//         }
-//         tableView.reloadData()
-//    }
-//
-//    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
-//         self.searchBar.showsCancelButton = true
-//    }
-//
-//    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-//         searchBar.showsCancelButton = false
-//         searchBar.text = ""
-//         searchBar.resignFirstResponder()
-//    }
-//}
