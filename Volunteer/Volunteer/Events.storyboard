@@ -810,14 +810,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nTZ-1P-Vtr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4135" y="-1362"/>
+            <point key="canvasLocation" x="4188" y="-919"/>
         </scene>
         <!--Edit Event View Controller-->
         <scene sceneID="ERN-zM-1Ps">
             <objects>
                 <viewController storyboardIdentifier="EditEventViewController" id="9Kb-wc-Hir" customClass="EditEventViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Yy-Ft-asl">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W37-Ei-4yS">
@@ -1741,7 +1741,7 @@
         <!--Events Feed Tab Bar Controller-->
         <scene sceneID="oZi-gg-RXC">
             <objects>
-                <tabBarController title="Events Feed Tab Bar Controller" modalPresentationStyle="fullScreen" id="4Jy-FF-56J" sceneMemberID="viewController">
+                <tabBarController title="Events Feed Tab Bar Controller" modalPresentationStyle="fullScreen" id="4Jy-FF-56J" customClass="EventsTabBarController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" id="OCq-3a-aHk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1832,7 +1832,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="itu-np-q4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="2742"/>
+            <point key="canvasLocation" x="284" y="1977"/>
         </scene>
         <!--Settings-->
         <scene sceneID="v9o-k7-pgP">
@@ -1842,7 +1842,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bt8-R8-07R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098" y="2742"/>
+            <point key="canvasLocation" x="283" y="2462"/>
         </scene>
         <!--Profile-->
         <scene sceneID="qfl-f0-xec">
@@ -2243,7 +2243,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wZ-a1-0dJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2021.7391304347827" y="1116.2946428571429"/>
+            <point key="canvasLocation" x="2022" y="1055"/>
         </scene>
         <!--All Events-->
         <scene sceneID="Jm0-t0-bB2">
@@ -2304,7 +2304,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fb-TC-P8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1111.5942028985507" y="1116.2946428571429"/>
+            <point key="canvasLocation" x="1112" y="1000"/>
         </scene>
         <!--Manage My Events-->
         <scene sceneID="N4K-ms-yIa">

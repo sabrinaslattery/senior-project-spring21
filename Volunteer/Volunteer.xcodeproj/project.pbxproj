@@ -24,6 +24,7 @@
 		03A3741A260AEDA30011DC21 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37419260AEDA30011DC21 /* Settings.storyboard */; };
 		03BC13F625E5C6AD0001E2E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98CC89ED25DCFCA4008E4A7B /* Main.storyboard */; };
 		03BC13FB25E5DAD60001E2E9 /* PassResetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */; };
+		03F277CD2630FD8D009E3D61 /* EventsTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F277CC2630FD8D009E3D61 /* EventsTabBarController.swift */; };
 		03F2FBAF2602FD13008748E1 /* LegalDocs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03F2FBAE2602FD13008748E1 /* LegalDocs.storyboard */; };
 		03F2FBC52602FD7A008748E1 /* PrivacyPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC32602FD7A008748E1 /* PrivacyPolicyViewController.swift */; };
 		03F2FBC62602FD7A008748E1 /* ToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F2FBC42602FD7A008748E1 /* ToSViewController.swift */; };
@@ -101,6 +102,7 @@
 		03A37411260AED200011DC21 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		03A37419260AEDA30011DC21 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		03BC13FA25E5DAD60001E2E9 /* PassResetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassResetController.swift; sourceTree = "<group>"; };
+		03F277CC2630FD8D009E3D61 /* EventsTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTabBarController.swift; sourceTree = "<group>"; };
 		03F2FBAE2602FD13008748E1 /* LegalDocs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LegalDocs.storyboard; sourceTree = "<group>"; };
 		03F2FBC32602FD7A008748E1 /* PrivacyPolicyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyViewController.swift; sourceTree = "<group>"; };
 		03F2FBC42602FD7A008748E1 /* ToSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToSViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				B125CA8526290AF600E01AD5 /* EditEventViewController.swift */,
 				B125CA8A26290B3C00E01AD5 /* VolunteersTableViewCell.swift */,
 				B125CA8F2629317900E01AD5 /* VolunteersTableViewController.swift */,
+				03F277CC2630FD8D009E3D61 /* EventsTabBarController.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				B125CA7C2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift in Sources */,
 				035BEE6D2613D59800015ADC /* MainProfileViewController.swift in Sources */,
 				B125CA8B26290B3C00E01AD5 /* VolunteersTableViewCell.swift in Sources */,
+				03F277CD2630FD8D009E3D61 /* EventsTabBarController.swift in Sources */,
 				B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */,
 				0381BD03260A8E5500168C48 /* AllEventsTableViewController.swift in Sources */,
 				B152DC5B25E4416000A7DB17 /* CreateProfileViewController.swift in Sources */,
