@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		030E5D2F2613E3A900B928D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030E5D2E2613E3A900B928D8 /* HomeViewController.swift */; };
+		032AAB70263354F100CE0F91 /* UpdateEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032AAB6F263354F100CE0F91 /* UpdateEmailViewController.swift */; };
 		032E503A2621460B00A59F14 /* CreateProfileAllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032E50392621460B00A59F14 /* CreateProfileAllViewController.swift */; };
 		035BEE632613D3D400015ADC /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE622613D3D400015ADC /* AboutUsViewController.swift */; };
 		035BEE682613D58100015ADC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035BEE672613D58100015ADC /* EditProfileViewController.swift */; };
@@ -86,6 +87,7 @@
 
 /* Begin PBXFileReference section */
 		030E5D2E2613E3A900B928D8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		032AAB6F263354F100CE0F91 /* UpdateEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UpdateEmailViewController.swift; path = Events/UpdateEmailViewController.swift; sourceTree = SOURCE_ROOT; };
 		032E50392621460B00A59F14 /* CreateProfileAllViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateProfileAllViewController.swift; sourceTree = "<group>"; };
 		035BEE622613D3D400015ADC /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = SOURCE_ROOT; };
 		035BEE672613D58100015ADC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -225,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				03A25B96262F6E30008C509F /* SettingsTableViewController.swift */,
+				032AAB6F263354F100CE0F91 /* UpdateEmailViewController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -676,6 +679,7 @@
 				B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */,
 				0367F9F4262384A3000CBE37 /* BackButton.swift in Sources */,
 				B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */,
+				032AAB70263354F100CE0F91 /* UpdateEmailViewController.swift in Sources */,
 				98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */,
 				B1B328AC2617EB32003BCF34 /* EventDetailsViewController.swift in Sources */,
 				B125CA8126290ABB00E01AD5 /* CreatorEventDetailsViewController.swift in Sources */,
