@@ -219,8 +219,8 @@ class MainProfileViewController: UIViewController {
                   print(output as Any)
                 }
               }
-              }
-          }
+            }
+        }
 
             func showWorkExperience () {
                 let query = PFQuery(className: "Profile")
@@ -238,25 +238,39 @@ class MainProfileViewController: UIViewController {
 
                     }
 
-                    }
+                }
             }
 
-            func showInterests () {
-                let interestsQuery = PFQuery(className:"Profile")
-                interestsQuery.whereKey("user", equalTo:  PFUser.current()!)
-				interestsQuery.includeKey("selectedTags")
-				interestsQuery.findObjectsInBackground { (profiles, error) in
-					if let error = error {
-						print(error.localizedDescription)
-					} else if let profiles = profiles {
-						for profile in profiles {
-							let tagsList = profile.object(forKey: "selectedTags") as? NSArray
-							self.interests?.text = tagsList?.componentsJoined(by: ", ")
-						}
-					}
-				}
-                
+    
+            func showInterests() {
+                let query = PFQuery(className:"Profile")
+                query.whereKey("user", equalTo:  PFUser.current()!)
+                query.includeKey("selectedTags")
+                query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
+                    if let result = result {
+                        for list in result{
+                            let tagsList = list.object(forKey: "selectedTags") as? NSArray
+                            self.interests?.text = tagsList?.componentsJoined(by: ", ")
+                        }
+                    }
+                }
             }
+//            func showInterests () {
+//                let interestsQuery = PFQuery(className:"Profile")
+//                interestsQuery.whereKey("user", equalTo:  PFUser.current()!)
+//				interestsQuery.includeKey("selectedTags")
+//				interestsQuery.findObjectsInBackground { (profiles, error) in
+//					if let error = error {
+//						print(error.localizedDescription)
+//					} else if let profiles = profiles {
+//						for profile in profiles {
+//							let tagsList = profile.object(forKey: "selectedTags") as? NSArray
+//							self.interests?.text = tagsList?.componentsJoined(by: ", ")
+//						}
+//					}
+//				}
+//
+//            }
 
     @IBAction func editButtonTapped(sender: AnyObject) {
           
