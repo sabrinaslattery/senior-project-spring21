@@ -28,7 +28,10 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     var educationLevelPicker = UIPickerView()
     
+    var tagsList = [String]()
+    
     let educationLevel = ["High School Graduate", "Some College", "Associate Degree", "Bachelor's Degree", "Master's Degree", "Higher Degree"]
+    
 	let interestTags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
     
     var profile = PFObject(className: "Profile")
@@ -88,49 +91,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         educationLevelField.textAlignment = .center
 		
 		//The interest tags already chosen should already have the checkbox clicked image. Uncomment when ready
-		/*
-		let interestsQuery = PFQuery(className:"Profile")
-		interestsQuery.whereKey("user", equalTo:  PFUser.current()!)
-		interestsQuery.includeKey("selectedTags")
-		interestsQuery.findObjectsInBackground { (profiles, error) in
-			if let error = error {
-				print(error.localizedDescription)
-			} else if let profiles = profiles {
-				for profile in profiles {
-					let tagsList = profile.object(forKey: "selectedTags") as? NSArray
-					for tag in tagsList! {
-						if self.interestTags.contains(tag as! String) {
-							switch tag as! String {
-							case self.interestTags[0]:
-								self.flag1 = true
-							case self.interestTags[2]:
-								self.flag2 = true
-							case self.interestTags[1]:
-								self.flag3 = true
-							case self.interestTags[3]:
-								self.flag4 = true
-							case self.interestTags[4]:
-								self.flag5 = true
-							case self.interestTags[5]:
-								self.flag6 = true
-							case self.interestTags[6]:
-								self.flag7 = true
-							case self.interestTags[7]:
-								self.flag8 = true
-							case self.interestTags[8]:
-								self.flag9 = true
-							case self.interestTags[9]:
-								self.flag10 = true
-							case self.interestTags[10]:
-								self.flag11 = true
-							default:
-								continue
-							}
-						}
-					}
-				}
-			}
-		} */
+		
+
         
         
 //        let imageTap = UITapGestureRecognizer(target: self, action: #selector(openImagePicker))
@@ -179,7 +141,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     func showUserData() {
         let query = PFQuery(className: "Profile")
         query.whereKey("user", equalTo: PFUser.current()!)
-        query.includeKeys(["jobTitle","city","zipCode","educationLevel","userBio","workExperience"])
+        query.includeKeys(["jobTitle","city","zipCode","educationLevel","userBio","workExperience","selectedTags"])
         query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
           if let result = result {
             for list in result{
@@ -189,38 +151,92 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
               let userIntro = list["userBio"] as? String
               let userWorkExperience = list["workExperience"] as? String
               let userEducationLevel = list["educationLevel"] as? String
+                
               self.jobTitleTextField?.text = userJobTitle
               self.cityTextField?.text = userCity
               self.zipCodeTextField?.text = userZipCode
               self.introTextField?.text = userIntro
               self.workExperienceTextField?.text = userWorkExperience
               self.educationLevelField?.text = userEducationLevel
+
+//          if let error = error {
+//                print(error.localizedDescription)
+//            }
+//          else if let profiles = profiles {
+//                for profile in profiles {
+//                let tagsList = self.profile.object(forKey: "selectedTags") as? NSArray
+//                    for tag in tagsList {
+//                        if self.interestTags.contains(tag as! String) {
+//                            switch tag as! String {
+//                            case self.interestTags[0]:
+//                                self.flag1 = true
+//                            case self.interestTags[1]:
+//                                self.flag2 = true
+//                            case self.interestTags[2]:
+//                                self.flag3 = true
+//                            case self.interestTags[3]:
+//                                self.flag4 = true
+//                            case self.interestTags[4]:
+//                                self.flag5 = true
+//                            case self.interestTags[5]:
+//                                self.flag6 = true
+//                            case self.interestTags[6]:
+//                                self.flag7 = true
+//                            case self.interestTags[7]:
+//                                self.flag8 = true
+//                            case self.interestTags[8]:
+//                                self.flag9 = true
+//                            case self.interestTags[9]:
+//                                self.flag10 = true
+//                            case self.interestTags[10]:
+//                                self.flag11 = true
+//                            default:
+//                                continue
+//                            }
+//                        }
+//                    }
+               
             }
-          }
-          }
-      }
+        }
+        }
+}
+        
+
     
     @IBAction func updateUser(_ sender: Any) {
-        let query = PFQuery(className: "Profile")
-        query.whereKey("user", equalTo: PFUser.current()!)
-        query.getFirstObjectInBackground { [self] (object, error) -> Void in
-            if error == nil {
-                if let result = object {
+        let currentUser = PFUser.current()
+              self.profile["jobTitle"] = jobTitleTextField.text!
+              self.profile["city"] = cityTextField.text!
+              self.profile["zipCode"] = zipCodeTextField.text!
+              self.profile["userBio"] = introTextField.text!
+              self.profile["workExperience"] = workExperienceTextField.text!
+              //self.profile["educationLevel"] = educationLevelField.text!
+              self.profile["user"] = currentUser
+                
+            let eduLevelPicker = educationLevelPicker
         
-            result["jobTitle"] = jobTitleTextField.text!
-            result["city"] = cityTextField.text!
-            result["zipCode"] = zipCodeTextField.text!
-            result["userBio"] = introTextField.text!
-            result["workExperience"] = workExperienceTextField.text!
-            result["educationLevel"] = educationLevelField.text!
+//        let query = PFQuery(className: "Profile")
+//        query.whereKey("user", equalTo: PFUser.current()!)
+//        query.getFirstObjectInBackground { [self] (object, error) -> Void in
+//            if error == nil {
+//                if let result = object {
+//
+//            result["jobTitle"] = jobTitleTextField.text!
+//            result["city"] = cityTextField.text!
+//            result["zipCode"] = zipCodeTextField.text!
+//            result["userBio"] = introTextField.text!
+//            result["workExperience"] = workExperienceTextField.text!
+//            result["educationLevel"] = educationLevelField.text!
+//
             
-            //let eduLevelPicker = educationLevelPicker
             // saving the profile image
             let imageData = profileImageView.image!.pngData()
             let file = PFFileObject(data: imageData!)
-            result["image"] = file
-        
-                    result.saveInBackground(){
+
+            self.profile["image"] = file
+
+            self.profile.saveInBackground {
+
               (success: Bool, error: Error?) in
               if (success) {
                 // The object has been saved.
@@ -243,10 +259,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
                 // There was a problem, check error.description
               }
             }
-          }
-          }
-        }
-}
+    }
+        
     @IBAction func handleDismissButton(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
     }
@@ -301,12 +315,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag2 = true
-			self.profile.addUniqueObject(self.interestTags[2], forKey: "selectedTags")
+			self.profile.addUniqueObject(self.interestTags[1], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag2 = false
-			self.profile.remove(self.interestTags[2], forKey: "selectedTags")
+			self.profile.remove(self.interestTags[1], forKey: "selectedTags")
         }
     }
     
@@ -315,12 +329,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         {
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag3 = true
-			self.profile.addUniqueObject(self.interestTags[1], forKey: "selectedTags")
+			self.profile.addUniqueObject(self.interestTags[2], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag3 = false
-			self.profile.remove(self.interestTags[1], forKey: "selectedTags")
+			self.profile.remove(self.interestTags[2], forKey: "selectedTags")
         }
     }
     
