@@ -243,17 +243,19 @@ class MainProfileViewController: UIViewController {
 
     
             func showInterests() {
-                let query = PFQuery(className:"Profile")
-                query.whereKey("user", equalTo:  PFUser.current()!)
-                query.includeKey("selectedTags")
-                query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
-                    if let result = result {
-                        for list in result{
-                            let tagsList = list.object(forKey: "selectedTags") as? NSArray
-                            self.interests?.text = tagsList?.componentsJoined(by: ", ")
-                        }
-                    }
-                }
+				let interestsQuery = PFQuery(className:"Profile")
+			                  interestsQuery.whereKey("user", equalTo:  PFUser.current()!)
+			  				interestsQuery.includeKey("selectedTags")
+			  				interestsQuery.findObjectsInBackground { (profiles, error) in
+			  					if let error = error {
+			  						print(error.localizedDescription)
+			  					} else if let profiles = profiles {
+			  						for profile in profiles {
+			  							let tagsList = profile.object(forKey: "selectedTags") as? NSArray
+			  							self.interests?.text = tagsList?.componentsJoined(by: ", ")
+			  						}
+			  					}
+					}
             }
 //            func showInterests () {
 //                let interestsQuery = PFQuery(className:"Profile")
@@ -289,7 +291,7 @@ class MainProfileViewController: UIViewController {
          self.lastName?.text =  userLastName
          let query = PFQuery(className: "Profile")
          query.whereKey("user", equalTo: PFUser.current()!)
-         query.includeKeys(["jobTitle","city","zipCode","educationLevel","userBio","workExperience","image"])
+		query.includeKeys(["jobTitle","city","zipCode","educationLevel","userBio","workExperience","image","selectedTags"])
          query.findObjectsInBackground { (result: [PFObject]!, error: Error?) in
            if let result = result {
              for list in result{
@@ -299,12 +301,16 @@ class MainProfileViewController: UIViewController {
                let userIntro = list["userBio"] as? String
                let userWorkExperience = list["workExperience"] as? String
                let userEducationLevel = list["educationLevel"] as? String
+				//let interestTags = list.["selectedTags"] as? NSArray
+				self.showInterests()
+				
                self.jobTitle?.text = userJobTitle
                self.city?.text = userCity
                self.zipCode?.text = userZipCode
                self.intro?.text = userIntro
                self.workExperience?.text = userWorkExperience
                self.educationLevel?.text = userEducationLevel
+				//self.interests?.text = interestTags!.componentsJoined(by: ", ")
                let output:PFFileObject = list["image"] as! PFFileObject
                  output.getDataInBackground { (ImageData: Data?, error: Error?) in
                      if error == nil {

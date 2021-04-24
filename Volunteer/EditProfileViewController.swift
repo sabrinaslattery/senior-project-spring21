@@ -70,9 +70,12 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     override func viewDidLoad() {
         view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
+		
+		
         
         showUserData()
         showProfileImage()
+		configureButtons()
         
         introTextField!.layer.borderWidth = 1
         introTextField!.layer.borderColor = UIColor.black.cgColor
@@ -158,6 +161,8 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
               self.introTextField?.text = userIntro
               self.workExperienceTextField?.text = userWorkExperience
               self.educationLevelField?.text = userEducationLevel
+			
+				
 
 //          if let error = error {
 //                print(error.localizedDescription)
@@ -200,23 +205,139 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
         }
         }
 }
+	
+	
+	
+	func configureButtons() {
+		let interestsQuery = PFQuery(className:"Profile")
+		interestsQuery.whereKey("user", equalTo: PFUser.current()!)
+		interestsQuery.includeKey("selectedTags")
+		interestsQuery.findObjectsInBackground { (results, error) in
+			if let error = error {
+				print(error.localizedDescription)
+			} else if let results = results {
+				for result in results {
+					let tagsList = result.object(forKey: "selectedTags") as! NSArray
+					for tag in tagsList {
+						if self.interestTags.contains(tag as! String) {
+							switch tag as! String {
+							case self.interestTags[0]:
+								self.flag1 = true
+								self.animalWelfareCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
+								//self.interests.add(tag)
+							case self.interestTags[2]:
+								self.flag2 = true
+								self.childCareCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
+								//self.interests.add(tag)
+							case self.interestTags[1]:
+								self.flag3 = true
+								self.commDevCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
+								//self.interests.add(tag)
+							case self.interestTags[3]:
+								self.flag4 = true
+								self.educationCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
+								//self.interests.add(tag)
+							case self.interestTags[4]:
+								self.flag5 = true
+								self.elderlyCareCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
+								//self.interests.add(tag)
+							case self.interestTags[5]:
+								self.flag6 = true
+								self.healthCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
+								//self.interests.add(tag)								case self.interestTags[6]:
+								self.flag7 = true
+								self.homeImproveCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
+								//self.interests.add(tag)
+							case self.interestTags[7]:
+								self.flag8 = true
+								self.otherCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
+								//self.interests.add(tag)
+							case self.interestTags[8]:
+								self.flag9 = true
+								self.povertyCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
+								//self.interests.add(tag)
+							case self.interestTags[9]:
+								self.flag10 = true
+								self.religionCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
+								//self.interests.add(tag)
+							case self.interestTags[10]:
+								self.flag11 = true
+								self.technologyCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
+								//self.interests.add(tag)
+							default:
+								continue
+							}
+						}
+						//profile.removeObjects(in: tagsList as! [String], forKey: "selectedTags")
+						//profile.saveInBackground()
+					}
+				}
+				
+			}
+		}
+		}
         
 
     
     @IBAction func updateUser(_ sender: Any) {
-        let currentUser = PFUser.current()
-              self.profile["jobTitle"] = jobTitleTextField.text!
-              self.profile["city"] = cityTextField.text!
-              self.profile["zipCode"] = zipCodeTextField.text!
-              self.profile["userBio"] = introTextField.text!
-              self.profile["workExperience"] = workExperienceTextField.text!
+       // let currentUser = PFUser.current()
+            //  self.profile["jobTitle"] = jobTitleTextField.text!
+          //    self.profile["city"] = cityTextField.text!
+            //  self.profile["zipCode"] = zipCodeTextField.text!
+          //    self.profile["userBio"] = introTextField.text!
+              //self.profile["workExperience"] = workExperienceTextField.text!
               //self.profile["educationLevel"] = educationLevelField.text!
-              self.profile["user"] = currentUser
+              //self.profile["user"] = currentUser
                 
             let eduLevelPicker = educationLevelPicker
         
-//        let query = PFQuery(className: "Profile")
-//        query.whereKey("user", equalTo: PFUser.current()!)
+        let query = PFQuery(className: "Profile")
+        query.whereKey("user", equalTo: PFUser.current()!)
+		query.getFirstObjectInBackground { (profile, error) in
+			if let error = error {
+				print(error.localizedDescription)
+			} else if let profile = profile {
+				self.profile = profile
+				profile["jobTitle"] = self.jobTitleTextField.text!
+				profile["city"] = self.cityTextField.text!
+				profile["zipCode"] = self.zipCodeTextField.text!
+				profile["userBio"] = self.introTextField.text!
+				profile["workExperience"] = self.workExperienceTextField.text!
+				profile["educationLevel"] = self.educationLevelField.text!
+				let imageData = self.profileImageView.image!.pngData()
+				let file = PFFileObject(data: imageData!)
+
+				profile["image"] = file
+				
+				profile.saveInBackground { (success, error) in
+					if let error = error {
+						print(error.localizedDescription)
+					} else if success == true {
+						// The object has been saved.
+						let userMessage = "Profile details successfully updated"
+						let myAlert = UIAlertController(title:"Success", message:userMessage, preferredStyle: UIAlertController.Style.alert);
+										
+						let okAction =  UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: { (action:UIAlertAction!) -> Void in
+											
+							self.dismiss(animated: true, completion: { () -> Void in
+												self.opener.loadUserDetails()
+											})
+
+										})
+										
+										myAlert.addAction(okAction);
+						self.present(myAlert, animated:true, completion:nil);
+										
+									}
+							else {
+						// There was a problem, check error.description
+					  }
+						
+					}
+				}
+				
+			}
+		}
 //        query.getFirstObjectInBackground { [self] (object, error) -> Void in
 //            if error == nil {
 //                if let result = object {
@@ -228,9 +349,10 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
 //            result["workExperience"] = workExperienceTextField.text!
 //            result["educationLevel"] = educationLevelField.text!
 //
+		
             
             // saving the profile image
-            let imageData = profileImageView.image!.pngData()
+            /*let imageData = profileImageView.image!.pngData()
             let file = PFFileObject(data: imageData!)
 
             self.profile["image"] = file
@@ -259,7 +381,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
                 // There was a problem, check error.description
               }
             }
-    }
+    } */
         
     @IBAction func handleDismissButton(_ sender: Any) {
         self.dismiss(animated: false, completion: nil)
@@ -302,11 +424,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag1 = true
 			self.profile.addUniqueObject(self.interestTags[0], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag1 = false
 			self.profile.remove(self.interestTags[0], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
     }
     
@@ -316,11 +440,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag2 = true
 			self.profile.addUniqueObject(self.interestTags[1], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag2 = false
 			self.profile.remove(self.interestTags[1], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
     }
     
@@ -330,11 +456,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag3 = true
 			self.profile.addUniqueObject(self.interestTags[2], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag3 = false
 			self.profile.remove(self.interestTags[2], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
     }
     
@@ -344,11 +472,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag4 = true
 			self.profile.addUniqueObject(self.interestTags[3], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag4 = false
 			self.profile.remove(self.interestTags[3], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
     }
     
@@ -358,11 +488,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag5 = true
 			self.profile.addUniqueObject(self.interestTags[4], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag5 = false
 			self.profile.remove(self.interestTags[4], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
     }
     
@@ -372,11 +504,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag6 = true
 			self.profile.addUniqueObject(self.interestTags[5], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag6 = false
 			self.profile.remove(self.interestTags[5], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
     }
     
@@ -386,11 +520,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag7 = true
 			self.profile.addUniqueObject(self.interestTags[6], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag7 = false
 			self.profile.remove(self.interestTags[6], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
     }
     
@@ -400,11 +536,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag8 = true
 			self.profile.addUniqueObject(self.interestTags[7], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag8 = false
 			self.profile.remove(self.interestTags[7], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
     }
     
@@ -414,11 +552,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag9 = true
 			self.profile.addUniqueObject(self.interestTags[8], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag9 = false
 			self.profile.remove(self.interestTags[8], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
     }
     
@@ -428,11 +568,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag10 = true
 			self.profile.addUniqueObject(self.interestTags[9], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag10 = false
 			self.profile.remove(self.interestTags[9], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
     }
     
@@ -442,11 +584,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag11 = true
 			self.profile.addUniqueObject(self.interestTags[10], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag11 = false
 			self.profile.remove(self.interestTags[10], forKey: "selectedTags")
+			self.profile.saveInBackground()
         }
     }
     
