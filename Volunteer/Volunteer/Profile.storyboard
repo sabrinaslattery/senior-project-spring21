@@ -137,7 +137,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="interestTags" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edh-u7-clW">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="selectedTags" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Edh-u7-clW">
                                                 <rect key="frame" x="38" y="883" width="324" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="em9-86-EjX"/>
@@ -764,6 +764,7 @@
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="handledViewPop:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="yhq-kT-rGR"/>
                                                     <action selector="updateUser:" destination="uVb-Cm-2YZ" eventType="touchUpInside" id="sr1-bR-2WS"/>
                                                 </connections>
                                             </button>
