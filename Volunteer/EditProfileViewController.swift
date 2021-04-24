@@ -220,7 +220,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             let file = PFFileObject(data: imageData!)
             result["image"] = file
         
-            result.saveInBackground {
+                    result.saveInBackground(){
               (success: Bool, error: Error?) in
               if (success) {
                 // The object has been saved.

@@ -87,10 +87,8 @@ class CreatorEventDetailsViewController: UIViewController {
         phoneNumberLabel.text = (event["contactPhone"] as! String)
     }
     
-    
     @IBAction func handleDismissButton(_ sender: Any) {
         _ = navigationController?.popViewController(animated: true)
     }
-    
     
 }
