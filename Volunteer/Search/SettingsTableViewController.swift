@@ -37,6 +37,5 @@ class SettingsTableViewController: UITableViewController {
         }
         loadLoginScreen()
     }
-    
 
 }
