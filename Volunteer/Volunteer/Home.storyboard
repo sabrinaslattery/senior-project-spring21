@@ -57,114 +57,6 @@
             </objects>
             <point key="canvasLocation" x="3155" y="1946"/>
         </scene>
-        <!--About Us-->
-        <scene sceneID="lfo-1z-cCk">
-            <objects>
-                <viewController title="About Us" modalPresentationStyle="fullScreen" id="YQ1-Sg-dKO" customClass="AboutUsViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="14V-B9-r8W">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OutReachLogo" translatesAutoresizingMaskIntoConstraints="NO" id="M3W-Mw-cAa">
-                                <rect key="frame" x="123" y="21" width="169" height="256"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="169" id="vsh-hu-J9c"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OutReach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tCf-19-S8f">
-                                <rect key="frame" x="142" y="285" width="130" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="0fC-cR-lEO"/>
-                                    <constraint firstAttribute="width" constant="130" id="kGi-FJ-e0U"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GTq-Wh-mdS">
-                                <rect key="frame" x="20" y="368" width="374" height="475"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="475" id="DDo-Ef-ngW"/>
-                                    <constraint firstAttribute="width" constant="374" id="wnp-6h-dY8"/>
-                                </constraints>
-                                <string key="text">This app was created by the students at Notre Dame de Namur University, class of 2021, for our Senior Project. 
-
-Due to recent events in our community and around the globe, we were inspired to create and design a mobile app called "OutReach". This said app gives our community a way to collaborate with one another to provide help and support to those in need during these difficult times. 
-
-We are designers, programmers and engineers that wish to include all members of our community, including those who are not tech-savvy, speak a different language, and even individuals who are colorblind. We hope this app will be able to assist people in all aspects of life, no matter how far we have to reach. 
-
-To learn more about advocacy for colorblind-friendly design through education and awareness, go to: </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQZ-gg-5zN">
-                                <rect key="frame" x="160" y="803" width="217" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="Eun-WG-iFv"/>
-                                    <constraint firstAttribute="width" constant="217" id="jlY-pM-BAN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="https://wearecolorblind.com/"/>
-                                <connections>
-                                    <action selector="buttonTapped" destination="YQ1-Sg-dKO" eventType="touchUpInside" id="Qm2-dL-IhE"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgl-dy-7WC">
-                                <rect key="frame" x="20" y="344" width="107" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="107" id="VkK-7B-uEz"/>
-                                    <constraint firstAttribute="height" constant="30" id="qMT-6N-ayD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vG-NE-emY">
-                                <rect key="frame" x="20" y="44" width="77" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="arrow.left.circle" catalog="system">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30" scale="large"/>
-                                </state>
-                                <connections>
-                                    <action selector="backButton:" destination="YQ1-Sg-dKO" eventType="touchUpInside" id="Dbn-u0-OZQ"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="jwm-Ze-cRx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="OQZ-gg-5zN" firstAttribute="top" secondItem="tCf-19-S8f" secondAttribute="bottom" constant="482" id="3mu-Af-0dJ"/>
-                            <constraint firstItem="OQZ-gg-5zN" firstAttribute="leading" secondItem="jwm-Ze-cRx" secondAttribute="leading" constant="160" id="4bb-rd-99S"/>
-                            <constraint firstItem="GTq-Wh-mdS" firstAttribute="leading" secondItem="jwm-Ze-cRx" secondAttribute="leading" constant="20" id="9Lw-nj-4GM"/>
-                            <constraint firstItem="lgl-dy-7WC" firstAttribute="top" secondItem="M3W-Mw-cAa" secondAttribute="bottom" constant="67" id="BxO-IT-wTC"/>
-                            <constraint firstItem="tCf-19-S8f" firstAttribute="top" secondItem="M3W-Mw-cAa" secondAttribute="bottom" constant="8" symbolic="YES" id="EPc-KW-KFc"/>
-                            <constraint firstItem="GTq-Wh-mdS" firstAttribute="top" secondItem="tCf-19-S8f" secondAttribute="bottom" constant="47" id="IFf-Fl-qrt"/>
-                            <constraint firstItem="jwm-Ze-cRx" firstAttribute="bottom" secondItem="lgl-dy-7WC" secondAttribute="bottom" constant="488" id="T0Z-aJ-ihv"/>
-                            <constraint firstItem="lgl-dy-7WC" firstAttribute="leading" secondItem="jwm-Ze-cRx" secondAttribute="leading" constant="20" id="Uf4-ux-XHc"/>
-                            <constraint firstItem="jwm-Ze-cRx" firstAttribute="trailing" secondItem="tCf-19-S8f" secondAttribute="trailing" constant="142" id="XdE-8y-5CR"/>
-                            <constraint firstItem="tCf-19-S8f" firstAttribute="leading" secondItem="jwm-Ze-cRx" secondAttribute="leading" constant="142" id="YrR-mj-jrj"/>
-                            <constraint firstItem="jwm-Ze-cRx" firstAttribute="trailing" secondItem="OQZ-gg-5zN" secondAttribute="trailing" constant="37" id="b8x-4x-lFZ"/>
-                            <constraint firstItem="jwm-Ze-cRx" firstAttribute="trailing" secondItem="GTq-Wh-mdS" secondAttribute="trailing" constant="20" id="ejw-mu-ivt"/>
-                            <constraint firstItem="jwm-Ze-cRx" firstAttribute="trailing" secondItem="lgl-dy-7WC" secondAttribute="trailing" constant="287" id="j10-M6-tMe"/>
-                            <constraint firstItem="jwm-Ze-cRx" firstAttribute="bottom" secondItem="OQZ-gg-5zN" secondAttribute="bottom" constant="26" id="qlN-Lb-dTc"/>
-                            <constraint firstItem="jwm-Ze-cRx" firstAttribute="bottom" secondItem="GTq-Wh-mdS" secondAttribute="bottom" constant="19" id="rdM-Tr-WkM"/>
-                            <constraint firstItem="jwm-Ze-cRx" firstAttribute="trailing" secondItem="M3W-Mw-cAa" secondAttribute="trailing" constant="122" id="wmf-xt-Aza"/>
-                            <constraint firstItem="M3W-Mw-cAa" firstAttribute="leading" secondItem="jwm-Ze-cRx" secondAttribute="leading" constant="123" id="zqs-ge-2yu"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="About Us" id="WMI-wV-Ct8">
-                        <barButtonItem key="leftBarButtonItem" image="arrow.left.circle" catalog="system" id="5le-FB-nl8">
-                            <color key="tintColor" systemColor="labelColor"/>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yk4-0Z-7l0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4207.2463768115949" y="1334.5982142857142"/>
-        </scene>
         <!--Home Page View Controller-->
         <scene sceneID="BMA-j9-5tF">
             <objects>
@@ -174,7 +66,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bor-lk-MC2">
-                                <rect key="frame" x="55" y="575" width="304" height="54"/>
+                                <rect key="frame" x="55" y="524" width="304" height="54"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="304" id="6HV-Ky-s0k"/>
@@ -189,7 +81,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcX-pJ-3Lw">
-                                <rect key="frame" x="55" y="675" width="304" height="54"/>
+                                <rect key="frame" x="55" y="624" width="304" height="54"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="304" id="OXe-Ud-bKX"/>
@@ -204,7 +96,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsM-lC-Yao">
-                                <rect key="frame" x="55" y="775" width="304" height="54"/>
+                                <rect key="frame" x="55" y="724" width="304" height="54"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="Up2-0u-Ey8"/>
@@ -214,12 +106,9 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 <state key="normal" title="About Us">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="YQ1-Sg-dKO" kind="show" id="nYM-Nf-JCe"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vTO-u2-47z">
-                                <rect key="frame" x="55" y="475" width="304" height="54"/>
+                                <rect key="frame" x="55" y="424" width="304" height="54"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="5re-5F-aRs"/>
@@ -234,7 +123,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ || Privacy Policy || 2021©" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utP-ep-HWe">
-                                <rect key="frame" x="96" y="879" width="223" height="21"/>
+                                <rect key="frame" x="96" y="828" width="223" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="YNh-IM-CYh"/>
                                     <constraint firstAttribute="width" constant="223" id="jay-7r-E4I"/>
@@ -244,7 +133,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9H-7r-lKC">
-                                <rect key="frame" x="55" y="375" width="304" height="54"/>
+                                <rect key="frame" x="55" y="324" width="304" height="54"/>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="54" id="5Rg-aR-DcH"/>
@@ -259,7 +148,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OutReach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-tM-MZS">
-                                <rect key="frame" x="142" y="308" width="130" height="36"/>
+                                <rect key="frame" x="142" y="257" width="130" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="1KA-cb-5Ph"/>
                                     <constraint firstAttribute="width" constant="130" id="LAB-k6-KZM"/>
@@ -269,7 +158,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OutReachLogo" translatesAutoresizingMaskIntoConstraints="NO" id="aO5-m0-Tku">
-                                <rect key="frame" x="136" y="44" width="143" height="256"/>
+                                <rect key="frame" x="136" y="44" width="143" height="205"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="7e2-QJ-q1W"/>
                                     <constraint firstAttribute="height" constant="161" id="zaW-uz-jpO"/>
@@ -290,7 +179,7 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXs-Sh-uf5">
-                                <rect key="frame" x="88" y="874" width="46" height="30"/>
+                                <rect key="frame" x="88" y="823" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="3uE-Wk-G3f"/>
                                     <constraint firstAttribute="width" constant="46" id="xx5-IG-Gmi"/>
@@ -437,7 +326,6 @@ To learn more about advocacy for colorblind-friendly design through education an
     </inferredMetricsTieBreakers>
     <resources>
         <image name="OutReachLogo" width="256" height="256"/>
-        <image name="arrow.left.circle" catalog="system" width="128" height="121"/>
         <image name="line.horizontal.3.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

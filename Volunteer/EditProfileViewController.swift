@@ -232,9 +232,11 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
             // saving the profile image
             let imageData = profileImageView.image!.pngData()
             let file = PFFileObject(data: imageData!)
+
             self.profile["image"] = file
 
             self.profile.saveInBackground {
+
               (success: Bool, error: Error?) in
               if (success) {
                 // The object has been saved.
