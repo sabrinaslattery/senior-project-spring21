@@ -29,7 +29,7 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
     
     let educationLevel = ["High School Graduate", "Some College", "Associate Degree", "Bachelor's Degree", "Master's Degree", "Higher Degree"]
 	
-	let interestTags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
+	let interestTags = ["Animal Welfare", "Childcare", "Community Development", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
     
     var profile = PFObject(className: "Profile")
     
@@ -182,12 +182,12 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag2 = true
-			self.profile.addUniqueObject(self.interestTags[2], forKey: "selectedTags")
+			self.profile.addUniqueObject(self.interestTags[1], forKey: "selectedTags")
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag2 = false
-			self.profile.remove(self.interestTags[2], forKey: "selectedTags")
+			self.profile.remove(self.interestTags[1], forKey: "selectedTags")
         }
     }
     
@@ -196,13 +196,13 @@ class CreateProfileAllViewController: UIViewController, UITextFieldDelegate, UII
         {
             sender.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
             flag3 = true
-			self.profile.addUniqueObject(self.interestTags[1], forKey: "selectedTags")
+			self.profile.addUniqueObject(self.interestTags[2], forKey: "selectedTags")
 			
         }
         else {
             sender.setBackgroundImage((UIImage(systemName: "square")), for: UIControl.State.normal)
             flag3 = false
-			self.profile.remove(self.interestTags[1], forKey: "selectedTags")
+			self.profile.remove(self.interestTags[2], forKey: "selectedTags")
         }
     }
     
