@@ -32,7 +32,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
     
     let educationLevel = ["High School Graduate", "Some College", "Associate Degree", "Bachelor's Degree", "Master's Degree", "Higher Degree"]
     
-	let interestTags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
+	let interestTags = ["Animal Welfare", "Childcare", "Community Development", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
     
     var profile = PFObject(className: "Profile")
     
@@ -225,11 +225,11 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate, UIImageP
 								self.flag1 = true
 								self.animalWelfareCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
 								//self.interests.add(tag)
-							case self.interestTags[2]:
+							case self.interestTags[1]:
 								self.flag2 = true
 								self.childCareCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
 								//self.interests.add(tag)
-							case self.interestTags[1]:
+							case self.interestTags[2]:
 								self.flag3 = true
 								self.commDevCheckbox.setBackgroundImage((UIImage(systemName: "checkmark.square.fill")), for: UIControl.State.normal)
 								//self.interests.add(tag)
