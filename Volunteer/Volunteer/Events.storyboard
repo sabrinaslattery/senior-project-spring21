@@ -1300,6 +1300,16 @@
                                     <constraint firstAttribute="width" constant="60" id="wDz-FT-Zx6"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-TK-Hdd">
+                                <rect key="frame" x="34" y="64" width="20" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <action selector="Search:" destination="bxU-GJ-Dpb" eventType="touchUpInside" id="cuz-68-jpI"/>
+                                    <segue destination="6G6-IC-jcY" kind="show" identifier="toSearch" id="fdA-rb-cP5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ikz-pm-Se3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1773,23 +1783,6 @@
             <point key="canvasLocation" x="-291" y="14"/>
         </scene>
         <!--Search-->
-        <scene sceneID="wbq-25-27P">
-            <objects>
-                <navigationController id="sJF-ue-d2V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="bZT-yo-rx1"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L76-UY-qQ3">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="6G6-IC-jcY" kind="relationship" relationship="rootViewController" id="azK-aZ-rhc"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p4z-NN-WuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2001" y="581"/>
-        </scene>
-        <!--Search-->
         <scene sceneID="17d-sS-cnO">
             <objects>
                 <viewControllerPlaceholder storyboardName="Search" id="6G6-IC-jcY" sceneMemberID="viewController">
@@ -1797,7 +1790,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxd-kc-Qhv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2001" y="1055"/>
+            <point key="canvasLocation" x="2962" y="-12"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="Ab5-kS-26q">
@@ -2345,7 +2338,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mfD-D7-Pwa"/>
+        <segue reference="ZPh-c5-aop"/>
         <segue reference="xLU-Kf-l4d"/>
     </inferredMetricsTieBreakers>
     <resources>
