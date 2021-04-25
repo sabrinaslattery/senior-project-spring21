@@ -726,7 +726,7 @@ To learn more about advocacy for colorblind-friendly design through education an
         <!--Change Password View Controller-->
         <scene sceneID="emq-i6-RJs">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="VnX-Vv-C3p" userLabel="Change Password View Controller" customClass="ChangePassViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="VnX-Vv-C3p" userLabel="Change Password View Controller" customClass="ChangePasswordViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fBh-zY-zjM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -775,6 +775,9 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="nPassword:" destination="c32-Gg-1cB" eventType="editingDidEnd" id="Rpw-eM-83j"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S5u-C0-YJ6" userLabel="Confirm Password">
                                 <rect key="frame" x="60" y="470" width="294" height="34"/>
@@ -785,17 +788,6 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Gt-ky-J8Y">
-                                <rect key="frame" x="173" y="555" width="68" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="Wrl-8K-JkU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Submit"/>
-                                <connections>
-                                    <action selector="submitForm:" destination="4rk-CX-Hyu" eventType="touchUpInside" id="HTD-hV-oVb"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="idL-eb-xtO" userLabel="Current Password">
                                 <rect key="frame" x="60" y="308" width="294" height="34"/>
                                 <constraints>
@@ -805,17 +797,25 @@ To learn more about advocacy for colorblind-friendly design through education an
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="currPassword:" destination="c32-Gg-1cB" eventType="editingDidEnd" id="WaF-hS-KNn"/>
                                     <action selector="currentPassword:" destination="c32-Gg-1cB" eventType="editingDidEnd" id="wKS-LU-fM4"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhH-lI-pE5">
+                                <rect key="frame" x="176" y="561" width="71" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitForm:" destination="VnX-Vv-C3p" eventType="touchUpInside" id="3FH-Ak-4yi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZMB-BP-F36"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Y0q-Hm-JgS" firstAttribute="leading" secondItem="ZMB-BP-F36" secondAttribute="leading" constant="25" id="0IE-k6-EwO"/>
-                            <constraint firstItem="ZMB-BP-F36" firstAttribute="bottom" secondItem="2Gt-ky-J8Y" secondAttribute="bottom" constant="268" id="1Oz-TB-OO4"/>
                             <constraint firstItem="Y0q-Hm-JgS" firstAttribute="trailing" secondItem="KU3-2t-Dfj" secondAttribute="trailing" id="2ru-Ig-PQK"/>
-                            <constraint firstItem="Y0q-Hm-JgS" firstAttribute="centerX" secondItem="2Gt-ky-J8Y" secondAttribute="centerX" id="4xi-fL-TfD"/>
                             <constraint firstItem="S5u-C0-YJ6" firstAttribute="top" secondItem="KU3-2t-Dfj" secondAttribute="bottom" constant="8.5" id="8l4-qS-GET"/>
                             <constraint firstItem="cfQ-c3-V1a" firstAttribute="leading" secondItem="ZMB-BP-F36" secondAttribute="leading" constant="60" id="9r8-CB-Jrb"/>
                             <constraint firstItem="idL-eb-xtO" firstAttribute="leading" secondItem="ZMB-BP-F36" secondAttribute="leading" constant="60" id="ChL-fR-RpR"/>
@@ -836,12 +836,17 @@ To learn more about advocacy for colorblind-friendly design through education an
                             <constraint firstItem="cfQ-c3-V1a" firstAttribute="top" secondItem="Y0q-Hm-JgS" secondAttribute="bottom" constant="8.5" id="cob-Th-2Yz"/>
                             <constraint firstItem="icr-wZ-9kK" firstAttribute="leading" secondItem="ZMB-BP-F36" secondAttribute="leading" id="gDB-3w-tfw"/>
                             <constraint firstItem="Y0q-Hm-JgS" firstAttribute="centerX" secondItem="fBh-zY-zjM" secondAttribute="centerX" id="lZ9-kM-b5B"/>
-                            <constraint firstItem="2Gt-ky-J8Y" firstAttribute="top" secondItem="S5u-C0-YJ6" secondAttribute="bottom" constant="51" id="tqe-d8-sdM"/>
                             <constraint firstItem="ZMB-BP-F36" firstAttribute="trailing" secondItem="cfQ-c3-V1a" secondAttribute="trailing" constant="60" id="wAS-JX-cLS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KTE-gO-PFY"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="currentPassword" destination="idL-eb-xtO" id="j0o-Sy-7PS"/>
+                        <outlet property="newPassword" destination="cfQ-c3-V1a" id="fUg-IU-v83"/>
+                        <outlet property="newPasswordConfirm" destination="S5u-C0-YJ6" id="6ig-tN-vuw"/>
+                        <outlet property="submitButton" destination="FhH-lI-pE5" id="01u-TW-YYE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vSB-cZ-lDs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="c32-Gg-1cB" userLabel="Exit" sceneMemberID="exit"/>
