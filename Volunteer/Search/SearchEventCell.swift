@@ -2,7 +2,7 @@
 //  SearchEventCell.swift
 //  Volunteer
 //
-//  Created by Gabriel Rivera on 4/7/21.
+//  Created by Jonah Rivera on 4/7/21.
 //
 
 import UIKit
