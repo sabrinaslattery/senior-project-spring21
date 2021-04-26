@@ -8,8 +8,8 @@
 import UIKit
 import Parse
 
-let primaryColor = UIColor(red: 255/255, green: 254/255, blue: 253/255, alpha: 1)
-let secondaryColor = UIColor(red: 150/255, green: 211/255, blue: 242/255, alpha: 1)
+let primaryColor = UIColor(red: 191/255, green: 238/255, blue: 255/255, alpha: 1)
+let secondaryColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
