@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "Logo_YBK.png",
       "idiom" : "universal",
+      "filename" : "OutReachLogo.png",
       "scale" : "1x"
     },
     {
@@ -15,7 +15,7 @@
     }
   ],
   "info" : {
-    "author" : "xcode",
-    "version" : 1
+    "version" : 1,
+    "author" : "xcode"
   }
 }
