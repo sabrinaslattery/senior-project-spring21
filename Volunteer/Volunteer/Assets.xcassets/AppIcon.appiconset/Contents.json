@@ -1,55 +1,55 @@
 {
   "images" : [
     {
-      "filename" : "OutReach_40x40-1.png",
+      "filename" : "OutReach_20x20-2.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "20x20"
     },
     {
-      "filename" : "OutReach_60x60.png",
+      "filename" : "OutReach_20x20-1.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "20x20"
     },
     {
-      "filename" : "OutReach_29x29.png",
+      "filename" : "OutReach_29x29-2.png",
       "idiom" : "iphone",
       "scale" : "1x",
       "size" : "29x29"
     },
     {
-      "filename" : "OutReach_58x58-1.png",
+      "filename" : "OutReach_29x29-3.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "29x29"
     },
     {
-      "filename" : "OutReach_87x87.png",
+      "filename" : "OutReach_29x29-4.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "29x29"
     },
     {
-      "filename" : "OutReach_80x80-1.png",
+      "filename" : "OutReach_40x40-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "40x40"
     },
     {
-      "filename" : "OutReach_120x120-1.png",
+      "filename" : "OutReach_40x40-3.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "40x40"
     },
     {
-      "filename" : "OutReach_120x120.png",
+      "filename" : "OutReach_60x60-1.png",
       "idiom" : "iphone",
       "scale" : "2x",
       "size" : "60x60"
     },
     {
-      "filename" : "OutReach_180x180.png",
+      "filename" : "OutReach_60x60-2.png",
       "idiom" : "iphone",
       "scale" : "3x",
       "size" : "60x60"
@@ -92,14 +92,12 @@
     },
     {
       "filename" : "OutReach_76x76.png",
-
       "idiom" : "ipad",
       "scale" : "1x",
       "size" : "76x76"
     },
     {
       "filename" : "OutReach_152x152.png",
-
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
@@ -115,6 +113,56 @@
       "idiom" : "ios-marketing",
       "scale" : "1x",
       "size" : "1024x1024"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "16x16"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "16x16"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "32x32"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "32x32"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "128x128"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "128x128"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "256x256"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "256x256"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "1x",
+      "size" : "512x512"
+    },
+    {
+      "idiom" : "mac",
+      "scale" : "2x",
+      "size" : "512x512"
     }
   ],
   "info" : {
