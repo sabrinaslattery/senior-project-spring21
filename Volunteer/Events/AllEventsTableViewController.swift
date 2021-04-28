@@ -32,7 +32,6 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		tableView.refreshControl = UIRefreshControl()
 		tableView.refreshControl?.addTarget(self, action: #selector(loadEvents), for: .valueChanged)
-		
     }
     
 	@objc func loadEvents() {
@@ -108,8 +107,8 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		return cell
 	}
-    /*
-	//Pass the selected event to the details page
+
+//	Pass the selected event to the details page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		
         let cell = sender as! UITableViewCell
@@ -120,5 +119,5 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
         eventDetailsViewController.event = event
 	}
-    */
+
 }

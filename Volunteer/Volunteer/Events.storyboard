@@ -1300,16 +1300,6 @@
                                     <constraint firstAttribute="width" constant="60" id="wDz-FT-Zx6"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-TK-Hdd">
-                                <rect key="frame" x="34" y="64" width="20" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" image="magnifyingglass" catalog="system"/>
-                                <connections>
-                                    <action selector="Search:" destination="bxU-GJ-Dpb" eventType="touchUpInside" id="cuz-68-jpI"/>
-                                    <segue destination="6G6-IC-jcY" kind="show" identifier="toSearch" id="fdA-rb-cP5"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ikz-pm-Se3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1776,6 +1766,7 @@
                         <segue destination="b2w-Iq-1lP" kind="relationship" relationship="viewControllers" id="Gqb-CM-kAn"/>
                         <segue destination="VlK-Yf-3zh" kind="relationship" relationship="viewControllers" id="DDt-L9-lgw"/>
                         <segue destination="Mh8-0G-6pg" kind="relationship" relationship="viewControllers" id="QfY-7u-tLo"/>
+                        <segue destination="gEd-Um-o0u" kind="relationship" relationship="viewControllers" id="JYp-JK-FPh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4J-QQ-GTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1790,7 +1781,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxd-kc-Qhv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2962" y="-12"/>
+            <point key="canvasLocation" x="-499" y="1629"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="Ab5-kS-26q">
@@ -2237,7 +2228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wZ-a1-0dJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2022" y="1055"/>
+            <point key="canvasLocation" x="2020" y="1124"/>
         </scene>
         <!--All Events-->
         <scene sceneID="Jm0-t0-bB2">
@@ -2298,7 +2289,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fb-TC-P8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="1000"/>
+            <point key="canvasLocation" x="1112" y="893"/>
         </scene>
         <!--Manage My Events-->
         <scene sceneID="N4K-ms-yIa">
@@ -2335,6 +2326,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRA-6d-YpG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4187" y="-1690"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="XiI-LH-xuD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gEd-Um-o0u" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="xtR-Kb-tJU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EPc-OU-YGm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6G6-IC-jcY" kind="relationship" relationship="rootViewController" id="jrU-oF-t1j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9iA-hD-Vze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500" y="1063"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
