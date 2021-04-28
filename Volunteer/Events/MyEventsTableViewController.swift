@@ -7,6 +7,7 @@
 
 import UIKit
 import Parse
+import SideMenu
 
 class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -16,6 +17,11 @@ class MyEventsTableViewController: UIViewController, UITableViewDataSource, UITa
     var selectedEvent: PFObject!
     
     var date :NSDate?
+    
+//    private var sideMenu: SideMenuNavigationController?
+//
+//    private let profileController = MainProfileViewController()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

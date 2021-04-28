@@ -32,6 +32,9 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		tableView.refreshControl = UIRefreshControl()
 		tableView.refreshControl?.addTarget(self, action: #selector(loadEvents), for: .valueChanged)
+		
+		tableView.rowHeight = UITableView.automaticDimension
+		tableView.estimatedRowHeight = 150
     }
     
 	@objc func loadEvents() {
@@ -53,11 +56,8 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 			self.tableView.refreshControl?.endRefreshing()
 		}
 	}
-        
-    @IBAction func Search(_ sender: Any) {
-        self.performSegue(withIdentifier: "toSearch", sender: self)
-    }
-    func numberOfSections(in tableView: UITableView) -> Int {
+
+	func numberOfSections(in tableView: UITableView) -> Int {
 		return 1
 	}
 
@@ -119,4 +119,5 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
         eventDetailsViewController.event = event
 	}
+
 }

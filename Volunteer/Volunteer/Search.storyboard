@@ -10,7 +10,7 @@
         <!--Search View Controller-->
         <scene sceneID="jey-yK-ubP">
             <objects>
-                <tableViewController title="Search View Controller" id="JCD-vD-6u4" customClass="SearchTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Search View Controller" modalPresentationStyle="fullScreen" id="JCD-vD-6u4" customClass="SearchTableViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xyd-nK-cap">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,11 +21,11 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchEventCell" rowHeight="114" id="hal-UZ-l0h" customClass="SearchEventCell" customModule="Volunteer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="414" height="114"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchEventCell" rowHeight="72" id="hal-UZ-l0h" customClass="SearchEventCell" customModule="Volunteer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hal-UZ-l0h" id="9cO-ED-MtL">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwV-lO-Zu3">
@@ -61,13 +61,13 @@
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="w63-OE-Ov2" id="hRW-ok-fDX"/>
-                        <outlet property="searchTableView" destination="Xyd-nK-cap" id="Lqj-KZ-yvL"/>
+                        <outlet property="searchTableView" destination="Xyd-nK-cap" id="4GG-B0-6tz"/>
                         <outlet property="tableView" destination="Xyd-nK-cap" id="lam-kB-sUx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ctb-LC-fLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5439" y="1608"/>
+            <point key="canvasLocation" x="5508.6956521739139" y="1607.8125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Gi-yW-8Em">
