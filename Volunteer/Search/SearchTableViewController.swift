@@ -11,9 +11,6 @@ import Parse
 import AlamofireImage
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate {
-    
-    
-    
 
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet var searchTableView: UITableView!
@@ -23,22 +20,13 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         
     var filteredData: [String]!
         
-
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewDidAppear(true)
-        
-        searchTableView.delegate = self
-        searchTableView.dataSource = self
+        tableView.dataSource = self
         searchBar.delegate = self
         filteredData = titles
-        
-       
     }
-   
-    
+
     override func viewDidAppear(_ animated: Bool) {
         // super.viewDidAppear(true)
         let query = PFQuery(className: "Events")
@@ -46,23 +34,19 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         query.limit = 100
                
         query.findObjectsInBackground { (events, error) in
-            //self.events.removeAll()
-            //self.titles.removeAll()
+            self.events.removeAll()
+            self.titles.removeAll()
             if let events = events {
-                self.events.removeAll()
-                self.titles.removeAll()
                 for event in events {
                     self.events.append(event)
                     print(events)
                     self.titles.append(event["title"] as! String)
                     print(self.titles)
-                    
+                    self.tableView.reloadData()
                 }
             } else if let error = error {
                     print(error.localizedDescription)
             }
-            self.tableView.reloadData()
-            self.tableView.refreshControl?.endRefreshing()
         }
     }
         
@@ -82,7 +66,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     }
         
 //MARK: - Search Functions
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             filteredData = searchText.isEmpty ? titles : titles.filter { (item: String) -> Bool in
                 return item.range(of: searchText, options: .caseInsensitive, range: nil, locale: nil) != nil
