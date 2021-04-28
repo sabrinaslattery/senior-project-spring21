@@ -108,7 +108,7 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		return cell
 	}
-    /*
+    
 	//Pass the selected event to the details page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 		
@@ -120,5 +120,5 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
         eventDetailsViewController.event = event
 	}
-    */
+    
 }
