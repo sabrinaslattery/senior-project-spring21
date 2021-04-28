@@ -1596,7 +1596,7 @@ Find events near you!</string>
                                                     <action selector="onCameraButtonWith_sender:" destination="mmb-wf-ywY" eventType="touchUpInside" id="gp5-cf-SVZ"/>
                                                 </connections>
                                             </button>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E74-tc-bF6">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="E74-tc-bF6">
                                                 <rect key="frame" x="48" y="698" width="324" height="110"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1647,7 +1647,7 @@ Find events near you!</string>
     <inferredMetricsTieBreakers>
         <segue reference="Q0T-yz-7kp"/>
         <segue reference="Bhm-Fy-f0a"/>
-        <segue reference="TAb-5o-Ac7"/>
+        <segue reference="RKr-ec-ojO"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="+18" width="598" height="600"/>
