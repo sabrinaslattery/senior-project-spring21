@@ -5,9 +5,6 @@
 2. [Product Spec](#Product-Spec)
 3. [Wireframes/Sprint](#Wireframes/Sprint)
 4. [App Walkthrough](#App-Walkthrough)
-5. [App Presentation](#App-Presentation)
-6. [Authors](#Authors)
-7. [Future Implementations](#Future-Implementations)
 
 ## Overview
 ### Description
@@ -43,106 +40,37 @@ Building a network of community volunteers.
 ### 2. Screen Archetypes
 
 * Login
-   * User can log in using username, email, and password.
-   * User can reset his/her password if forgotten.
+   * User can use email and password to login into the app.
 * Sign Up
-    * User has to be 18 years or older to sign up.
-    * User can sign up using first name, last name, email, and password.
-    * User has the option to create a profile or skip.
-    * User will have to very their email in order to log in.
+    * User can sign up with username, email, and password.
 * Home/feed
-   * User can create an event.
-   * User can view all the created events.
-   * User can view his/her created events.
-   * User can sign up for any event.
-   * User can view their signed up events. 
-* More
-   * User can edit their profile.
-   * User can update their email.
-   * User can change their password.
-   * User can log out.
-   * User can view the "About Us" page.
-   * User can read our legal document.
+   * User...
+
+### 3. Navigation
+
+**Tab Navigation** (Tab to Screen)
+
+* Home
+
+**Flow Navigation** (Screen to Screen)
+
+* Landing Page
+   * Login Screen
+   * Sign Up
+* Home
+   * Profile
+   * Feed
+   * Notifications
    
  ## Wireframes/Sprint
  [//]: <> (<img src="" width=600>)
 
 ## App Walkthrough
 
-### Sign-Up
+### Sign-Up/Login
 
 #### Walkthrough of the following user stories:
-  - [x] User has to be 18 years or older to sign up.
-  - [x] User can sign up using first name, last name, email, and password.
-  - [x] User has the option to create a profile or skip.
-  - [x] User will have to very their email in order to log in.
+  - [] User can log in using username, email, and password.
+  - [] User can sign up using email, password and upload photo.
   
-<img src='http://g.recordit.co/N9YGqh6k4S.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-### Login
-
-#### Walkthrough of the following user stories:
-  - [x] User can log in using username, email, and password.
-  - [x] User can reset his/her password if forgotten.
-  
-<div class="row">
-    <img src='http://g.recordit.co/pmlmaXza4B.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-    <img src='http://g.recordit.co/pPExC8BWn3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-</div>
- 
- ### Create An Event
- 
- #### Walkthrough of the following user stories:
- - [x] User can create an event.
- 
- <img src='http://g.recordit.co/9VLNn7AMqV.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-### Events Feed/Signing Up For An Event
-
-#### Walkthrough of the following user stories:
-- [x] User can view all the created events.
-- [x] User can view his/her created events.
-- [x] User can sign up for any event.
-- [x] User can view their signed up events. 
-
-<div class="row">
-    <img src='http://g.recordit.co/gRpNKLKswe.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-    <img src='http://g.recordit.co/HRT1LAwYT6.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-</div>
-
-### Edit Profile
-
-#### Walkthrough of the following user stories:
- - [x] User can edit their profile.
- 
- <img src='http://g.recordit.co/ivvYtSssgL.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-### Settings
-
-#### Walkthrough of the following user stories:
-- [x] User can update their email.
-- [x] User can change their password.
-- [x] User can log out.
-- [x] User can view the "About Us" page.
-- [x] User can read our legal document.
-
-<img src='http://g.recordit.co/CAIKTbGRhe.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-## App Presentation
-Link to our slideshow: <a href="https://drive.google.com/file/d/1LAf4cZmgDbLtd7AMxZ0IfVHZyDPrs4nF/view?usp=sharing" target="_blank">OutReach</a>  
-
-## Authors
-
-* James A Gary - <a href="https://github.com/BallisticBall" target="_blank">BallisticBall</a>
-* Sabrina Slattery - <a href="https://github.com/sabrinaslattery" target="_blank">sabrinaslattery</a>
-* Karina Naranjo - <a href="https://github.com/karinan974" target="_blank">karinan974</a>
-* Josh Freedman - <a href="https://github.com/cyber49er" target="_blank">cyber49er</a>
-* Jessica Alvarez - <a href="https://github.com/Jessieann42" target="_blank">Jessieann42</a>
-* Wiliams Ordaz - <a href="https://github.com/weordaz" target="_blank">weordaz</a>
-* Stephen Baity - <a href="https://github.com/StephenBaity" target="_blank">StephenBaity</a>
-* Roberto Sandoval - <a href="https://github.com/sandovro" target="_blank">sandovro</a>
-* Jonah Rivera - <a href="https://github.com/BobFisherman18" target="_blank">BobFisherman18</a>
-
-
-## Future Implementations
-* ...
+[//]: <> (<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />)
