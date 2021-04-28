@@ -100,5 +100,15 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
             searchBar.resignFirstResponder()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)
+        let event = events[indexPath!.row]
+        
+        let eventDetailsViewController = segue.destination as! EventDetailsViewController
+        
+        eventDetailsViewController.event = event
+    }
     
 }
