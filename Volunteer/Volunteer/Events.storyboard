@@ -2345,13 +2345,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mfD-D7-Pwa"/>
-        <segue reference="xLU-Kf-l4d"/>
+        <segue reference="ZPh-c5-aop"/>
+        <segue reference="boT-Ab-1vo"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="+18" width="598" height="600"/>
         <image name="18+ Icon" width="674" height="674"/>
-        <image name="OutReachLogo" width="256" height="256"/>
+        <image name="OutReachLogo" width="500" height="500"/>
         <image name="arrow.left.circle" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
