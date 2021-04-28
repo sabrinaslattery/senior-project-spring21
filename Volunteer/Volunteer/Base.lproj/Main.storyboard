@@ -1397,7 +1397,7 @@ Find events near you!</string>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCG-rd-RJR">
-                                                <rect key="frame" x="101" y="1169" width="30" height="27.5"/>
+                                                <rect key="frame" x="100.5" y="1169" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="ty4-J5-H8Q"/>
                                                 </constraints>
@@ -1409,13 +1409,13 @@ Find events near you!</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Improvement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ok-c8-saD">
-                                                <rect key="frame" x="141" y="1168" width="150" height="30"/>
+                                                <rect key="frame" x="140.5" y="1168" width="150" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBz-yY-Vcq">
-                                                <rect key="frame" x="101" y="1119" width="30" height="27.5"/>
+                                                <rect key="frame" x="100.5" y="1119" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Qix-1h-aiJ"/>
                                                 </constraints>
@@ -1427,13 +1427,13 @@ Find events near you!</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health/Welness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5u-xr-gfq">
-                                                <rect key="frame" x="141" y="1118" width="119" height="30"/>
+                                                <rect key="frame" x="140.5" y="1118" width="119" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBK-zi-2lh">
-                                                <rect key="frame" x="101" y="1219" width="30" height="27.5"/>
+                                                <rect key="frame" x="100.5" y="1219" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="e0j-2B-C1R"/>
                                                 </constraints>
@@ -1445,13 +1445,13 @@ Find events near you!</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proverty/Hunger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IS-m9-A5R">
-                                                <rect key="frame" x="141" y="1218" width="150" height="30"/>
+                                                <rect key="frame" x="140.5" y="1218" width="150" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBK-ht-jk0">
-                                                <rect key="frame" x="101" y="1269" width="30" height="27.5"/>
+                                                <rect key="frame" x="100.5" y="1269" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="hFc-F8-1nv"/>
                                                 </constraints>
@@ -1463,13 +1463,13 @@ Find events near you!</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Religion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arl-wc-KAp">
-                                                <rect key="frame" x="141" y="1268" width="61" height="30"/>
+                                                <rect key="frame" x="140.5" y="1268" width="61" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzE-b8-AFD">
-                                                <rect key="frame" x="101" y="1319" width="30" height="27.5"/>
+                                                <rect key="frame" x="100.5" y="1319" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="yCw-mM-82d"/>
                                                 </constraints>
@@ -1481,13 +1481,13 @@ Find events near you!</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BS4-b8-vst">
-                                                <rect key="frame" x="141" y="1318" width="88" height="30"/>
+                                                <rect key="frame" x="140.5" y="1318" width="88" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvq-p9-a9X">
-                                                <rect key="frame" x="101" y="1069" width="30" height="27.5"/>
+                                                <rect key="frame" x="100.5" y="1069" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="KJK-28-G9J"/>
                                                 </constraints>
@@ -1499,7 +1499,7 @@ Find events near you!</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elderly Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk1-pn-RLb">
-                                                <rect key="frame" x="141" y="1068" width="101" height="30"/>
+                                                <rect key="frame" x="140.5" y="1068" width="101" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="101" id="Y06-XB-7Xo"/>
                                                 </constraints>
@@ -1508,7 +1508,7 @@ Find events near you!</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRX-yT-p8G">
-                                                <rect key="frame" x="101" y="869" width="30" height="27.5"/>
+                                                <rect key="frame" x="100.5" y="869" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Az8-TU-xHj"/>
                                                     <constraint firstAttribute="height" constant="30" id="zpp-es-NdQ"/>
@@ -1521,13 +1521,13 @@ Find events near you!</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Welfare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YS-f1-ywJ">
-                                                <rect key="frame" x="141" y="868" width="114" height="30"/>
+                                                <rect key="frame" x="140.5" y="868" width="114" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGS-cu-WNA">
-                                                <rect key="frame" x="101" y="919" width="30" height="27.5"/>
+                                                <rect key="frame" x="100.5" y="919" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="Agi-hR-KV0"/>
                                                 </constraints>
@@ -1540,13 +1540,13 @@ Find events near you!</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xea-Hm-4Rq">
-                                                <rect key="frame" x="141" y="918" width="80" height="30"/>
+                                                <rect key="frame" x="140.5" y="918" width="80" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WG-ou-aES">
-                                                <rect key="frame" x="101" y="1019" width="30" height="27.5"/>
+                                                <rect key="frame" x="100.5" y="1019" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="xg2-rN-BtQ"/>
                                                 </constraints>
@@ -1558,13 +1558,13 @@ Find events near you!</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxS-GH-EW3">
-                                                <rect key="frame" x="141" y="1018" width="76" height="30"/>
+                                                <rect key="frame" x="140.5" y="1018" width="76" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN8-Jk-gaK">
-                                                <rect key="frame" x="101" y="969" width="30" height="27.5"/>
+                                                <rect key="frame" x="100.5" y="969" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="paU-jP-GA9"/>
                                                 </constraints>
@@ -1576,13 +1576,13 @@ Find events near you!</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Community Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wK-HM-XtA">
-                                                <rect key="frame" x="141" y="968" width="193" height="30"/>
+                                                <rect key="frame" x="140.5" y="968" width="193.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Y3-6f-rAp">
-                                                <rect key="frame" x="101" y="1369" width="30" height="27.5"/>
+                                                <rect key="frame" x="100.5" y="1369" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="o4g-l7-ADO"/>
                                                 </constraints>
@@ -1594,7 +1594,7 @@ Find events near you!</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V21-oP-Kog">
-                                                <rect key="frame" x="141" y="1368" width="88" height="30"/>
+                                                <rect key="frame" x="140.5" y="1368" width="88" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>

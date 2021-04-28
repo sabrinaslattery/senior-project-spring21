@@ -16,31 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="OutReachLogo" translatesAutoresizingMaskIntoConstraints="NO" id="gVX-BA-N4C">
-                                <rect key="frame" x="114" y="234" width="186" height="186"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                                </userDefinedRuntimeAttributes>
+                                <rect key="frame" x="113" y="234" width="186" height="186"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Logo_OutReach" translatesAutoresizingMaskIntoConstraints="NO" id="D08-fu-SLt">
                                 <rect key="frame" x="57" y="448" width="300" height="66"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="66" id="utm-h9-16t"/>
+                                    <constraint firstAttribute="height" constant="66" id="L96-AV-L1H"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gVX-BA-N4C" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="UV4-8m-eNA"/>
-                            <constraint firstItem="D08-fu-SLt" firstAttribute="top" secondItem="gVX-BA-N4C" secondAttribute="bottom" constant="28" id="ZFI-4i-9wo"/>
-                            <constraint firstItem="gVX-BA-N4C" firstAttribute="centerX" secondItem="D08-fu-SLt" secondAttribute="centerX" id="h6o-ZM-vfj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D08-fu-SLt" secondAttribute="bottom" constant="348" id="jOL-RP-fve"/>
-                            <constraint firstItem="gVX-BA-N4C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="114" id="nwm-TC-sQa"/>
-                            <constraint firstItem="gVX-BA-N4C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="190" id="sUu-YA-c4K"/>
-                            <constraint firstItem="D08-fu-SLt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="skS-3i-dvL"/>
+                            <constraint firstItem="gVX-BA-N4C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="0pk-FJ-Oq4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D08-fu-SLt" secondAttribute="bottom" constant="348" id="PAF-zb-ADU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gVX-BA-N4C" secondAttribute="trailing" constant="115" id="Zf2-6r-mzl"/>
+                            <constraint firstItem="D08-fu-SLt" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="j2l-gQ-aqY"/>
+                            <constraint firstItem="D08-fu-SLt" firstAttribute="top" secondItem="gVX-BA-N4C" secondAttribute="bottom" constant="28" id="mUa-ID-bYr"/>
+                            <constraint firstItem="gVX-BA-N4C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="190" id="pf7-GA-AkV"/>
+                            <constraint firstItem="D08-fu-SLt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="57" id="uYg-kh-YEw"/>
                         </constraints>
                     </view>
                 </viewController>
