@@ -152,7 +152,7 @@
                                     <segue destination="9fr-RJ-Pme" kind="show" id="Bhm-Fy-f0a"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 8 to 20 characters  - At least 1 uppercase &amp; lowercase letters - At least 1 number " lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWJ-WU-m0t">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- 8 to 20 characters - At least 1 uppercase &amp; lowercase letters- At least 1 number " lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pWJ-WU-m0t">
                                 <rect key="frame" x="38" y="600" width="315" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="QKn-r6-KGd"/>
@@ -1220,8 +1220,26 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCG-rd-RJR">
+                                                <rect key="frame" x="100.5" y="1169" width="30" height="27.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="ty4-J5-H8Q"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <imageReference key="backgroundImage" image="square" catalog="system" symbolScale="default"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="homeCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="6Ch-hV-aYP"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Improvement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ok-c8-saD">
+                                                <rect key="frame" x="140.5" y="1168" width="150" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBz-yY-Vcq">
-                                                <rect key="frame" x="16" y="1086" width="28" height="26.5"/>
+                                                <rect key="frame" x="100.5" y="1119" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="28" id="B3n-Sq-bpY"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="Kq2-uz-Wl9"/>
@@ -1235,8 +1253,14 @@
                                                     <action selector="healthCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="PVI-pR-K0V"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health/Welness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5u-xr-gfq">
+                                                <rect key="frame" x="140.5" y="1118" width="119" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBK-zi-2lh">
-                                                <rect key="frame" x="16" y="1260" width="28" height="26.5"/>
+                                                <rect key="frame" x="100.5" y="1219" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="MvZ-DS-e0K"/>
                                                     <constraint firstAttribute="width" constant="28" id="R3H-Uq-3Kl"/>
@@ -1248,8 +1272,14 @@
                                                     <action selector="poveryCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="X87-71-oLc"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proverty/Hunger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IS-m9-A5R">
+                                                <rect key="frame" x="140.5" y="1218" width="150" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBK-ht-jk0">
-                                                <rect key="frame" x="16" y="1315" width="28" height="26.5"/>
+                                                <rect key="frame" x="100.5" y="1269" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="1w0-Xv-xxF"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="MUq-Zf-NYS"/>
@@ -1263,8 +1293,14 @@
                                                     <action selector="religionCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="G90-kV-KGh"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Religion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arl-wc-KAp">
+                                                <rect key="frame" x="140.5" y="1268" width="61" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzE-b8-AFD">
-                                                <rect key="frame" x="16" y="1370" width="28" height="26.5"/>
+                                                <rect key="frame" x="100.5" y="1319" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="9hh-aZ-m47"/>
                                                     <constraint firstAttribute="width" constant="28" id="H9Q-of-YXE"/>
@@ -1278,8 +1314,14 @@
                                                     <action selector="technologyCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="mlv-RA-sft"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BS4-b8-vst">
+                                                <rect key="frame" x="140.5" y="1318" width="88" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvq-p9-a9X">
-                                                <rect key="frame" x="16" y="1031" width="28" height="26.5"/>
+                                                <rect key="frame" x="100.5" y="1069" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="A2D-ql-y3H"/>
                                                     <constraint firstAttribute="height" constant="29" id="DbJ-rk-I0f"/>
@@ -1293,8 +1335,8 @@
                                                     <action selector="elderlyCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="gDP-nU-9EQ"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Y3-6f-rAp">
-                                                <rect key="frame" x="16" y="1202" width="28" height="26.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elderly Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk1-pn-RLb">
+                                                <rect key="frame" x="140.5" y="1068" width="101" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="HFy-qm-50m"/>
                                                     <constraint firstAttribute="width" constant="28" id="Ykp-ke-ovk"/>
@@ -1307,7 +1349,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRX-yT-p8G">
-                                                <rect key="frame" x="16" y="807" width="28" height="26.5"/>
+                                                <rect key="frame" x="100.5" y="869" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="28" id="Mnm-ns-GJO"/>
                                                     <constraint firstAttribute="height" constant="29" id="cxY-mw-kXg"/>
@@ -1321,14 +1363,13 @@
                                                     <action selector="animalCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="bVE-ke-tGp"/>
                                                 </connections>
                                             </button>
+                                            <!-- <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animal Welfare" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YS-f1-ywJ">
+                                                <rect key="frame" x="140.5" y="868" width="114" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label> -->
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WG-ou-aES">
-                                                <rect key="frame" x="16" y="974" width="28" height="26.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="29" id="3ml-Tk-MYk"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="NOm-TM-c91"/>
-                                                    <constraint firstAttribute="width" constant="28" id="X97-sk-OGR"/>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="fng-JW-zub"/>
-                                                </constraints>
                                                 <state key="normal">
                                                     <imageReference key="backgroundImage" image="square" catalog="system" symbolScale="default"/>
                                                 </state>
@@ -1337,7 +1378,8 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGS-cu-WNA">
-                                                <rect key="frame" x="16" y="860" width="28" height="26.5"/>
+                                                <rect key="frame" x="100.5" y="919" width="30" height="27.5"/>
+                                            
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="28" id="823-cA-qd0"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="29" id="BEA-sH-m17"/>
@@ -1352,8 +1394,14 @@
                                                     <action selector="childCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="A7h-Cz-Tzx"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN8-Jk-gaK">
-                                                <rect key="frame" x="16" y="917" width="28" height="26.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xea-Hm-4Rq">
+                                                <rect key="frame" x="140.5" y="918" width="80" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WG-ou-aES">
+                                                <rect key="frame" x="100.5" y="1019" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="28" id="DGB-L9-w5E"/>
                                                     <constraint firstAttribute="height" constant="29" id="rG7-70-ioe"/>
@@ -1442,17 +1490,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Education" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PxS-GH-EW3">
-                                                <rect key="frame" x="52" y="977" width="76" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="L4b-ma-FJL"/>
-                                                    <constraint firstAttribute="width" constant="76" id="wra-la-kF6"/>
-                                                </constraints>
+                                                <rect key="frame" x="140.5" y="1018" width="76" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Community Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wK-HM-XtA">
-                                                <rect key="frame" x="52" y="920" width="193" height="21"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aN8-Jk-gaK">
+                                                <rect key="frame" x="100.5" y="969" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="193" id="3AL-KA-TkU"/>
                                                     <constraint firstAttribute="height" constant="21" id="XnK-Rw-Z6m"/>
@@ -1472,12 +1516,8 @@
                                                     <action selector="onCameraButtonWith_sender:" destination="mmb-wf-ywY" eventType="touchUpInside" id="gp5-cf-SVZ"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Technology" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BS4-b8-vst">
-                                                <rect key="frame" x="52" y="1373" width="88" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="88" id="Axo-PT-JsH"/>
-                                                    <constraint firstAttribute="height" constant="21" id="Yzk-Qh-G3J"/>
-                                                </constraints>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Community Development" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wK-HM-XtA">
+                                                <rect key="frame" x="140.5" y="968" width="193.5" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1491,8 +1531,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HV8-m1-KSe">
-                                                <rect key="frame" x="344" y="16.5" width="43" height="42.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Y3-6f-rAp">
+                                                <rect key="frame" x="100.5" y="1369" width="30" height="27.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="42.5" id="WDP-mx-q0F"/>
                                                     <constraint firstAttribute="width" constant="43" id="mcD-Mq-ORB"/>
@@ -1507,13 +1547,9 @@
                                                     <segue destination="XcS-dL-aq2" kind="show" id="Q0T-yz-7kp"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gof-uv-kJy">
-                                                <rect key="frame" x="119" y="42" width="176" height="36"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="36" id="M3Y-bO-l5B"/>
-                                                    <constraint firstAttribute="width" constant="176" id="zNz-3f-4Lz"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V21-oP-Kog">
+                                                <rect key="frame" x="140.5" y="1368" width="88" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
