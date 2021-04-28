@@ -1766,6 +1766,7 @@
                         <segue destination="b2w-Iq-1lP" kind="relationship" relationship="viewControllers" id="Gqb-CM-kAn"/>
                         <segue destination="VlK-Yf-3zh" kind="relationship" relationship="viewControllers" id="DDt-L9-lgw"/>
                         <segue destination="Mh8-0G-6pg" kind="relationship" relationship="viewControllers" id="QfY-7u-tLo"/>
+                        <segue destination="sJF-ue-d2V" kind="relationship" relationship="viewControllers" id="duX-FT-6ot"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H4J-QQ-GTf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1787,7 +1788,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p4z-NN-WuU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2001" y="581"/>
+            <point key="canvasLocation" x="-543" y="1977"/>
         </scene>
         <!--Search-->
         <scene sceneID="17d-sS-cnO">
@@ -1797,7 +1798,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxd-kc-Qhv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2001" y="1055"/>
+            <point key="canvasLocation" x="-544" y="2451"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="Ab5-kS-26q">
@@ -2351,7 +2352,7 @@
     <resources>
         <image name="+18" width="598" height="600"/>
         <image name="18+ Icon" width="674" height="674"/>
-        <image name="OutReachLogo" width="256" height="256"/>
+        <image name="OutReachLogo" width="500" height="500"/>
         <image name="arrow.left.circle" catalog="system" width="128" height="121"/>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
