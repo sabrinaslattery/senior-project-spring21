@@ -67,12 +67,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ctb-LC-fLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5508.6956521739139" y="1607.8125"/>
+            <point key="canvasLocation" x="5439" y="1608"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Gi-yW-8Em">
             <objects>
-                <navigationController navigationBarHidden="YES" id="OrV-Eg-wb7" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" navigationBarHidden="YES" id="OrV-Eg-wb7" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sXN-Cj-005">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

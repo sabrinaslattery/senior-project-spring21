@@ -32,7 +32,6 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
 		tableView.refreshControl = UIRefreshControl()
 		tableView.refreshControl?.addTarget(self, action: #selector(loadEvents), for: .valueChanged)
-		
     }
     
 	@objc func loadEvents() {
@@ -120,5 +119,4 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
         eventDetailsViewController.event = event
 	}
-    
 }

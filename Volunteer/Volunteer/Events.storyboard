@@ -815,7 +815,7 @@
         <!--Edit Event View Controller-->
         <scene sceneID="ERN-zM-1Ps">
             <objects>
-                <viewController storyboardIdentifier="EditEventViewController" id="9Kb-wc-Hir" customClass="EditEventViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditEventViewController" modalPresentationStyle="fullScreen" id="9Kb-wc-Hir" customClass="EditEventViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Yy-Ft-asl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1202,7 +1202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lKC-Sy-t7y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5184" y="-1748"/>
+            <point key="canvasLocation" x="5270" y="-1422"/>
         </scene>
         <!--All Events View Controller-->
         <scene sceneID="fef-5J-Yaf">
@@ -1300,16 +1300,6 @@
                                     <constraint firstAttribute="width" constant="60" id="wDz-FT-Zx6"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBy-TK-Hdd">
-                                <rect key="frame" x="34" y="64" width="20" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                <state key="normal" image="magnifyingglass" catalog="system"/>
-                                <connections>
-                                    <action selector="Search:" destination="bxU-GJ-Dpb" eventType="touchUpInside" id="cuz-68-jpI"/>
-                                    <segue destination="6G6-IC-jcY" kind="show" identifier="toSearch" id="fdA-rb-cP5"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ikz-pm-Se3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1476,7 +1466,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This food drive will take place at the main parking lot at NDNU, infront of the Gellert Library." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdW-7Y-cTT">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This food drive will take place at the main parking lot at NDNU, infront of the Gellert Library." textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdW-7Y-cTT">
                                                 <rect key="frame" x="47" y="541.5" width="310" height="63"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="310" id="5Va-M9-S6q"/>
@@ -1565,7 +1555,7 @@
                                                     <action selector="signMeUpButton:" destination="Wb0-3w-IQa" eventType="touchUpInside" id="Yxw-Ra-Jug"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILi-AA-LkA">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILi-AA-LkA">
                                                 <rect key="frame" x="47" y="701.5" width="317" height="119"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="119" id="JlW-4T-j6f"/>
@@ -1773,6 +1763,7 @@
                         <segue destination="8zK-XE-st7" kind="relationship" relationship="viewControllers" id="1nP-ft-2a5"/>
                         <segue destination="Eew-dU-H51" kind="relationship" relationship="viewControllers" id="bUZ-2E-NJJ"/>
                         <segue destination="zw9-jF-bHW" kind="relationship" relationship="viewControllers" id="JJQ-X0-O31"/>
+                        <segue destination="gEd-Um-o0u" kind="relationship" relationship="viewControllers" id="JYp-JK-FPh"/>
                         <segue destination="b2w-Iq-1lP" kind="relationship" relationship="viewControllers" id="Gqb-CM-kAn"/>
                         <segue destination="VlK-Yf-3zh" kind="relationship" relationship="viewControllers" id="DDt-L9-lgw"/>
                         <segue destination="Mh8-0G-6pg" kind="relationship" relationship="viewControllers" id="QfY-7u-tLo"/>
@@ -1790,7 +1781,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxd-kc-Qhv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2962" y="-12"/>
+            <point key="canvasLocation" x="-612" y="2462"/>
         </scene>
         <!--My Profile-->
         <scene sceneID="Ab5-kS-26q">
@@ -2237,7 +2228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wZ-a1-0dJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2022" y="1055"/>
+            <point key="canvasLocation" x="2020" y="1124"/>
         </scene>
         <!--All Events-->
         <scene sceneID="Jm0-t0-bB2">
@@ -2298,7 +2289,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Fb-TC-P8f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="1000"/>
+            <point key="canvasLocation" x="1112" y="893"/>
         </scene>
         <!--Manage My Events-->
         <scene sceneID="N4K-ms-yIa">
@@ -2335,6 +2326,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRA-6d-YpG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4187" y="-1690"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="XiI-LH-xuD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="gEd-Um-o0u" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="xtR-Kb-tJU"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EPc-OU-YGm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6G6-IC-jcY" kind="relationship" relationship="rootViewController" id="jrU-oF-t1j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9iA-hD-Vze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-612" y="1977"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
