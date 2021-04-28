@@ -39,6 +39,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="eventTitleLabel" destination="EwV-lO-Zu3" id="V6Y-Is-IoJ"/>
+                                    <segue destination="n4f-6u-ehW" kind="show" id="k48-mT-rgg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -68,6 +69,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ctb-LC-fLv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5508.6956521739139" y="1607.8125"/>
+        </scene>
+        <!--EventsDetails-->
+        <scene sceneID="PWN-Za-Dxz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Events" referencedIdentifier="EventsDetails" id="n4f-6u-ehW" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="n1p-dg-424"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3GV-gc-sq1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6605" y="1608"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Gi-yW-8Em">

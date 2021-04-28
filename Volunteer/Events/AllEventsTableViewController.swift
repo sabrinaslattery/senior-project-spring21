@@ -119,5 +119,5 @@ class AllEventsTableViewController: UIViewController, UITableViewDataSource, UIT
 		
         eventDetailsViewController.event = event
 	}
-
+    
 }
