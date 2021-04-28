@@ -1220,24 +1220,24 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCG-rd-RJR">
-                                                <rect key="frame" x="100.5" y="1169" width="30" height="27.5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="ty4-J5-H8Q"/>
-                                                </constraints>
-                                                <state key="normal">
-                                                    <imageReference key="backgroundImage" image="square" catalog="system" symbolScale="default"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="homeCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="6Ch-hV-aYP"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Improvement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ok-c8-saD">
-                                                <rect key="frame" x="140.5" y="1168" width="150" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+<!--                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCG-rd-RJR">-->
+<!--                                                <rect key="frame" x="100.5" y="1169" width="30" height="27.5"/>-->
+<!--                                                <constraints>-->
+<!--                                                    <constraint firstAttribute="height" constant="30" id="ty4-J5-H8Q"/>-->
+<!--                                                </constraints>-->
+<!--                                                <state key="normal">-->
+<!--                                                    <imageReference key="backgroundImage" image="square" catalog="system" symbolScale="default"/>-->
+<!--                                                </state>-->
+<!--                                                <connections>-->
+<!--                                                    <action selector="homeCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="6Ch-hV-aYP"/>-->
+<!--                                                </connections>-->
+<!--                                            </button>-->
+<!--                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Improvement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ok-c8-saD">-->
+<!--                                                <rect key="frame" x="140.5" y="1168" width="150" height="30"/>-->
+<!--                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>-->
+<!--                                                <nil key="textColor"/>-->
+<!--                                                <nil key="highlightedColor"/>-->
+<!--                                            </label>-->
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBz-yY-Vcq">
                                                 <rect key="frame" x="100.5" y="1119" width="30" height="27.5"/>
                                                 <constraints>
@@ -1253,12 +1253,12 @@
                                                     <action selector="healthCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="PVI-pR-K0V"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health/Welness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5u-xr-gfq">
-                                                <rect key="frame" x="140.5" y="1118" width="119" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+<!--                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Health/Welness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5u-xr-gfq">-->
+<!--                                                <rect key="frame" x="140.5" y="1118" width="119" height="30"/>-->
+<!--                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>-->
+<!--                                                <nil key="textColor"/>-->
+<!--                                                <nil key="highlightedColor"/>-->
+<!--                                            </label>-->
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBK-zi-2lh">
                                                 <rect key="frame" x="100.5" y="1219" width="30" height="27.5"/>
                                                 <constraints>
@@ -1272,12 +1272,12 @@
                                                     <action selector="poveryCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="X87-71-oLc"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proverty/Hunger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IS-m9-A5R">
-                                                <rect key="frame" x="140.5" y="1218" width="150" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+<!--                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proverty/Hunger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IS-m9-A5R">-->
+<!--                                                <rect key="frame" x="140.5" y="1218" width="150" height="30"/>-->
+<!--                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>-->
+<!--                                                <nil key="textColor"/>-->
+<!--                                                <nil key="highlightedColor"/>-->
+<!--                                            </label>-->
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBK-ht-jk0">
                                                 <rect key="frame" x="100.5" y="1269" width="30" height="27.5"/>
                                                 <constraints>
@@ -1293,12 +1293,12 @@
                                                     <action selector="religionCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="G90-kV-KGh"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Religion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arl-wc-KAp">
-                                                <rect key="frame" x="140.5" y="1268" width="61" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+<!--                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Religion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="arl-wc-KAp">-->
+<!--                                                <rect key="frame" x="140.5" y="1268" width="61" height="30"/>-->
+<!--                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>-->
+<!--                                                <nil key="textColor"/>-->
+<!--                                                <nil key="highlightedColor"/>-->
+<!--                                            </label>-->
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzE-b8-AFD">
                                                 <rect key="frame" x="100.5" y="1319" width="30" height="27.5"/>
                                                 <constraints>
@@ -1347,7 +1347,7 @@
                                                 <connections>
                                                     <action selector="otherCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="HbG-F9-MCZ"/>
                                                 </connections>
-                                            </button>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRX-yT-p8G">
                                                 <rect key="frame" x="100.5" y="869" width="30" height="27.5"/>
                                                 <constraints>
@@ -1369,14 +1369,14 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label> -->
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WG-ou-aES">
-                                                <state key="normal">
-                                                    <imageReference key="backgroundImage" image="square" catalog="system" symbolScale="default"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="educationCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="QJi-Jh-Fom"/>
-                                                </connections>
-                                            </button>
+<!--                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WG-ou-aES">-->
+<!--                                                <state key="normal">-->
+<!--                                                    <imageReference key="backgroundImage" image="square" catalog="system" symbolScale="default"/>-->
+<!--                                                </state>-->
+<!--                                                <connections>-->
+<!--                                                    <action selector="educationCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="QJi-Jh-Fom"/>-->
+<!--                                                </connections>-->
+<!--                                            </button>-->
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yGS-cu-WNA">
                                                 <rect key="frame" x="100.5" y="919" width="30" height="27.5"/>
                                             
@@ -1394,12 +1394,12 @@
                                                     <action selector="childCheckboxButton:" destination="mmb-wf-ywY" eventType="touchUpInside" id="A7h-Cz-Tzx"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xea-Hm-4Rq">
-                                                <rect key="frame" x="140.5" y="918" width="80" height="30"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+<!--                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Child Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xea-Hm-4Rq">-->
+<!--                                                <rect key="frame" x="140.5" y="918" width="80" height="30"/>-->
+<!--                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>-->
+<!--                                                <nil key="textColor"/>-->
+<!--                                                <nil key="highlightedColor"/>-->
+<!--                                            </label>-->
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8WG-ou-aES">
                                                 <rect key="frame" x="100.5" y="1019" width="30" height="27.5"/>
                                                 <constraints>
@@ -1429,16 +1429,16 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elderly Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk1-pn-RLb">
-                                                <rect key="frame" x="52" y="1034" width="101" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="101" id="1hm-p1-ney"/>
-                                                    <constraint firstAttribute="height" constant="21" id="c93-KJ-q13"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+<!--                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elderly Care" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk1-pn-RLb">-->
+<!--                                                <rect key="frame" x="52" y="1034" width="101" height="21"/>-->
+<!--                                                <constraints>-->
+<!--                                                    <constraint firstAttribute="width" constant="101" id="1hm-p1-ney"/>-->
+<!--                                                    <constraint firstAttribute="height" constant="21" id="c93-KJ-q13"/>-->
+<!--                                                </constraints>-->
+<!--                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>-->
+<!--                                                <nil key="textColor"/>-->
+<!--                                                <nil key="highlightedColor"/>-->
+<!--                                            </label>-->
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home Improvement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ok-c8-saD">
                                                 <rect key="frame" x="52" y="1147" width="150" height="21"/>
                                                 <constraints>
@@ -1459,16 +1459,16 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V21-oP-Kog">
-                                                <rect key="frame" x="52" y="1205" width="44" height="21"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="44" id="R2Y-JH-zMi"/>
-                                                    <constraint firstAttribute="height" constant="21" id="xFj-vv-6NH"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+<!--                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Other" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V21-oP-Kog">-->
+<!--                                                <rect key="frame" x="52" y="1205" width="44" height="21"/>-->
+<!--                                                <constraints>-->
+<!--                                                    <constraint firstAttribute="width" constant="44" id="R2Y-JH-zMi"/>-->
+<!--                                                    <constraint firstAttribute="height" constant="21" id="xFj-vv-6NH"/>-->
+<!--                                                </constraints>-->
+<!--                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>-->
+<!--                                                <nil key="textColor"/>-->
+<!--                                                <nil key="highlightedColor"/>-->
+<!--                                            </label>-->
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proverty/Hunger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IS-m9-A5R">
                                                 <rect key="frame" x="52" y="1263" width="125" height="21"/>
                                                 <constraints>
@@ -1504,7 +1504,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
-                                            </label>
+                                            </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="756" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhK-TO-xXc">
                                                 <rect key="frame" x="95" y="187" width="228" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
