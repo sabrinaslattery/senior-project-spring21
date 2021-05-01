@@ -1410,7 +1410,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="1700"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="80m-MS-cZv">
-                                        <rect key="frame" x="0.0" y="14" width="414" height="1700"/>
+                                        <rect key="frame" x="0.0" y="83" width="414" height="1832"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Create a New Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQe-bo-91l">
                                                 <rect key="frame" x="64" y="102" width="286" height="41"/>
