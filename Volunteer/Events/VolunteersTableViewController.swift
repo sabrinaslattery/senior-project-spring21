@@ -21,7 +21,7 @@ class VolunteersTableViewController: UITableViewController {
     }
     
     @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        _ = navigationController?.popViewController(animated: true)
     }
 
     // MARK: - Table view data source
