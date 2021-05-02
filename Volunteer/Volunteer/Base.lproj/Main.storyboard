@@ -32,9 +32,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="EOB-hc-3Fg"/>
                                 </constraints>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" secureTextEntry="YES" textContentType="password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>
@@ -246,7 +246,7 @@ Find events near you!</string>
                         <outlet property="emailField" destination="OTw-dl-f90" id="q4Q-g9-PkD"/>
                         <outlet property="firstnameField" destination="kkS-6h-0TJ" id="xmU-la-AAI"/>
                         <outlet property="lastnameField" destination="4Xg-4E-GI3" id="bel-MX-0GZ"/>
-                        <outlet property="passwordField" destination="MOv-Fr-jMT" id="Gw3-Jp-YOj"/>
+                        <outlet property="passwordField" destination="MOv-Fr-jMT" id="LSp-MN-JvY"/>
                         <outlet property="phonenumberField" destination="OTw-dl-f90" id="Wsw-rm-mWf"/>
                         <segue destination="K6L-EE-RJc" kind="presentation" identifier="ToSetupProfile" id="TAb-5o-Ac7"/>
                     </connections>
@@ -1840,8 +1840,8 @@ Find events near you!</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yId-VA-fAr"/>
-        <segue reference="v0p-LL-aQP"/>
-        <segue reference="wxA-GY-xmg"/>
+        <segue reference="Bhm-Fy-f0a"/>
+        <segue reference="TAb-5o-Ac7"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="+18" width="598" height="600"/>
