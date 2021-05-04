@@ -8,7 +8,6 @@ import Foundation
 import UIKit
 import Parse
 import AlamofireImage
-import SideMenu
 
 class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     
@@ -24,6 +23,11 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
     @IBOutlet weak var volunteerExpectationField: UITextView!
     @IBOutlet weak var volunteerShouldWearField: UITextView!
     
+    @IBOutlet weak var streetField: UITextField!
+    @IBOutlet weak var cityField: UITextField!
+    @IBOutlet weak var zipCodeField: UITextField!
+    
+    @IBOutlet weak var organizerNameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var phoneNumberField: UITextField!
     
@@ -32,34 +36,20 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
 
     var difficultyPicker = UIPickerView()
     var tagsPicker = UIPickerView()
-    
+    var difficultyData: [String] = [String]()
+    var tagsData: [String] = [String]()
     let difficulty = ["Easy", "Medium", "Hard"]
     
     let tags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
     
-    //let tags = ["Animal Rescue Shelters", "Food Pantries", "Habitat for Humanity", "Local Libraries", "Museums", "YMCA", "Retirement Homes", "Red Cross", "Volunteering Abroad", "Church/Volunteers of America", "National Parks", "Hospital", "Homeless Shelter", "Park Clean Up/Preservation Efforts", "After School Tutoring"]
+//    let tags = ["Animal Rescue Shelters", "Food Pantries", "Habitat for Humanity", "Local Libraries", "Museums", "YMCA", "Retirement Homes", "Red Cross", "Volunteering Abroad", "Church/Volunteers of America", "National Parks", "Hospital", "Homeless Shelter", "Park Clean Up/Preservation Efforts", "After School Tutoring"]
     
     var activityView:UIActivityIndicatorView!
-    
     var imagePicker:UIImagePickerController!
-    
     var event = PFObject(className: "Events")
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addVerticalGradientLayer(topColor: primaryColor, bottomColor: secondaryColor)
-        
-        difficultyField.inputView = difficultyPicker
-        tagField.inputView = tagsPicker
-        
-        difficultyPicker.dataSource = self
-        difficultyPicker.delegate = self
-        
-        tagsPicker.dataSource = self
-        tagsPicker.delegate = self
-        
-        difficultyPicker.tag = 1
-        tagsPicker.tag = 2
         
         difficultyField.placeholder = "Select difficulty"
         tagField.placeholder = "Select Corresponding Tag"
@@ -85,12 +75,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         volunteerShouldWearField!.layer.borderColor = UIColor.black.cgColor
         
         eventTitleField.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-       // fromField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
-        //toField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         totalSpotsField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
-        //aboutEventField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
-        //volunteerExpectationField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
-        //volunteerShouldWearField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         emailField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
         phoneNumberField.addTarget(self, action: #selector(textFieldChanged(_:)), for: .editingChanged)
     }
@@ -188,7 +173,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         let image = info[.editedImage] as! UIImage
         
         let size = CGSize(width: 300, height: 300)
-        let scaledImage = image.af_imageScaled(to:size)
+        let scaledImage = image.af.imageScaled(to:size)
         
         coverPhotoImageView.image = scaledImage
         

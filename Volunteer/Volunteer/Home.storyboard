@@ -1,62 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gTW-Ux-ULN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gTW-Ux-ULN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search-->
-        <scene sceneID="vcF-db-b2t">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Search" id="HM6-XS-VfA" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="yBF-IJ-Dqi"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jik-br-2L6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2793" y="1946"/>
-        </scene>
-        <!--Storyboard Reference-->
-        <scene sceneID="u1K-2j-ArE">
-            <objects>
-                <viewControllerPlaceholder id="8xz-aZ-7uT" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7QY-b5-dqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2527" y="1764"/>
-        </scene>
-        <!--Events-->
-        <scene sceneID="cZj-Zb-bcP">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Events" id="Ths-VJ-A0U" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="eWj-Cl-Uoh"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v9n-eV-94k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2647" y="1946"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="3ok-Rr-YO5">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Profile" id="uJu-ey-hRs" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="GoT-uS-Tni"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nlM-Oz-8bk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3372" y="1946"/>
-        </scene>
-        <!--Create Events Page-->
-        <scene sceneID="fzc-bt-xDT">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Events" referencedIdentifier="Create Events Page" id="BJQ-5m-jMQ" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="4Zd-44-z8a"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cSM-di-ztf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3155" y="1946"/>
-        </scene>
         <!--Home Page View Controller-->
         <scene sceneID="BMA-j9-5tF">
             <objects>
@@ -76,9 +28,6 @@
                                 <state key="normal" title="Create an Event">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="BJQ-5m-jMQ" kind="show" id="GZW-8Z-9cp"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CcX-pJ-3Lw">
                                 <rect key="frame" x="55" y="624" width="304" height="54"/>
@@ -91,9 +40,6 @@
                                 <state key="normal" title="My Events">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="pgy-e5-W3P" kind="show" id="MlF-sH-aIt"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IsM-lC-Yao">
                                 <rect key="frame" x="55" y="724" width="304" height="54"/>
@@ -118,9 +64,6 @@
                                 <state key="normal" title="Search Events">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="HM6-XS-VfA" kind="show" id="ree-36-Zjy"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ || Privacy Policy || 2021©" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utP-ep-HWe">
                                 <rect key="frame" x="96" y="828" width="223" height="21"/>
@@ -143,9 +86,6 @@
                                 <state key="normal" title="All Events">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Ths-VJ-A0U" kind="show" id="Diw-iR-XBn"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OutReach" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-tM-MZS">
                                 <rect key="frame" x="142" y="257" width="130" height="36"/>
@@ -188,9 +128,6 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J0z-xE-qKF">
                                 <rect key="frame" x="142" y="822" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <segue destination="BlM-Hu-Bfz" kind="show" id="uX3-V1-DTD"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KQO-rr-gxW"/>
@@ -238,15 +175,6 @@
                             <color key="tintColor" systemColor="labelColor"/>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <segue destination="uJu-ey-hRs" kind="presentation" identifier="profileSegue" id="drR-yh-6Tq"/>
-                        <segue destination="BJQ-5m-jMQ" kind="presentation" identifier="createSegue" id="0wH-Im-OXc"/>
-                        <segue destination="HM6-XS-VfA" kind="presentation" identifier="searchSegue" id="7eY-7L-Lq8"/>
-                        <segue destination="Ths-VJ-A0U" kind="presentation" identifier="eventsSegue" id="DRL-VA-Kcp"/>
-                        <segue destination="CC1-Rv-7DM" kind="show" identifier="settingsSegue" id="a13-Ft-sW5"/>
-                        <segue destination="wxF-vK-qem" kind="show" identifier="logOutSegue" id="5OU-Zb-Lcf"/>
-                        <segue destination="Qw9-qL-BJx" kind="presentation" identifier="homeSegue" id="OJW-eD-a61"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IHW-Dd-gjU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -270,62 +198,9 @@
             </objects>
             <point key="canvasLocation" x="2284" y="1335"/>
         </scene>
-        <!--Settings-->
-        <scene sceneID="LlO-PG-8sk">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Settings" id="CC1-Rv-7DM" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="L6K-vs-8eD"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BlW-Za-CJi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2951" y="1946"/>
-        </scene>
-        <!--Home-->
-        <scene sceneID="kd9-9r-WIJ">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Home" id="Qw9-qL-BJx" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p1B-sq-JZC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3645" y="1946"/>
-        </scene>
-        <!--LegalDocs-->
-        <scene sceneID="AFT-Rx-V1e">
-            <objects>
-                <viewControllerPlaceholder storyboardName="LegalDocs" id="BlM-Hu-Bfz" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="dGe-47-yEP"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tDb-tR-dF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3999" y="1946"/>
-        </scene>
-        <!--My Events Page-->
-        <scene sceneID="KFH-gw-Inw">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Events" referencedIdentifier="My Events Page" id="pgy-e5-W3P" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="N4u-wb-u6E"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NKD-4d-aFu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3798" y="1946"/>
-        </scene>
-        <!--Main-->
-        <scene sceneID="3in-Iy-VtO">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Main" id="wxF-vK-qem" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="l3g-SF-HmB"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fMI-37-M20" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3515" y="1946"/>
-        </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="0wH-Im-OXc"/>
-        <segue reference="DRL-VA-Kcp"/>
-        <segue reference="7eY-7L-Lq8"/>
-    </inferredMetricsTieBreakers>
     <resources>
-        <image name="OutReachLogo" width="256" height="256"/>
+        <image name="OutReachLogo" width="500" height="500"/>
         <image name="line.horizontal.3.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
