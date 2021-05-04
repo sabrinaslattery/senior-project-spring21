@@ -1408,10 +1408,10 @@
             </objects>
             <point key="canvasLocation" x="1112" y="2462"/>
         </scene>
-        <!--New Event View Controller-->
+        <!--Create New Event View Controller-->
         <scene sceneID="nlR-uR-M07">
             <objects>
-                <viewController title="New Event View Controller" id="cre-3r-roc" customClass="CreateNewEventViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Create New Event View Controller" id="cre-3r-roc" customClass="CreateNewEventViewController" customModule="Volunteer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ad4-2W-rY3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -36,10 +36,8 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
 
     var difficultyPicker = UIPickerView()
     var tagsPicker = UIPickerView()
-    var difficultyData: [String] = [String]()
-    var tagsData: [String] = [String]()
+
     let difficulty = ["Easy", "Medium", "Hard"]
-    
     let tags = ["Animal Welfare", "Community Development", "Childcare", "Education", "Elderly care", "Health/Wellness", "Home Improvement", "Other", "Poverty/Hunger", "Religion", "Technology"]
     
 //    let tags = ["Animal Rescue Shelters", "Food Pantries", "Habitat for Humanity", "Local Libraries", "Museums", "YMCA", "Retirement Homes", "Red Cross", "Volunteering Abroad", "Church/Volunteers of America", "National Parks", "Hospital", "Homeless Shelter", "Park Clean Up/Preservation Efforts", "After School Tutoring"]
@@ -91,9 +89,8 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         self.event["contactEmail"] = emailField.text!
         self.event["contactPhone"] = phoneNumberField.text!
                
-        //self.event ["difficulty"] = difficultyPicker
-        //self.event ["tag"] = tagsPicker
-        
+        self.event ["difficulty"] = difficultyPicker
+        self.event ["tag"] = tagsPicker
         
         datePicker.locale = .current
         toPicker.locale = .current
@@ -102,8 +99,6 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         self.event["startTime"] = fromPicker.date
         self.event["endTime"] = toPicker.date
         event["attendees"] = NSArray()
-         
-            
                
         let imageData = coverPhotoImageView.image!.pngData()
         let file = PFFileObject(data: imageData!)
@@ -115,10 +110,7 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         //let diffPicker = difficultyPicker
         //let tagPicker = tagsPicker
 
-       
-        
-        // MARK: - User must click fillout title, contact email, about event, volunteer expectation and wear,
-        // MARK: - phone # and total spots
+        // MARK: - User must click fillout title, contact email, about event, volunteer expectation and wear, phone # and total spots
         if !eventTitleField.hasText || !emailField.hasText || !aboutEventField.hasText ||
             !volunteerExpectationField.hasText ||
             !volunteerShouldWearField.hasText ||
@@ -161,11 +153,9 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         if UIImagePickerController.isSourceTypeAvailable(.camera){
             picker.sourceType = .camera
         }
-        
         else{
             picker.sourceType = .photoLibrary
         }
-        
         present(picker, animated: true, completion: nil)
     }
     
