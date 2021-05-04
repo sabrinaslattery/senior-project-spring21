@@ -108,7 +108,7 @@ class EventDetailsViewController:UIViewController {
         let totalSpots = self.event["totalSpots"] as! Int
         
         if attendees.count < totalSpots {
-            self.event.addUniqueObject(PFUser.current(), forKey: "attendees")
+            self.event.addUniqueObject(PFUser.current()!, forKey: "attendees")
             self.event.saveInBackground { (ok, error) in
                 if ok{
                     self.displaySignUpSuccessMessage(signUpSuccessMessage: "This event has been added to your events.")
