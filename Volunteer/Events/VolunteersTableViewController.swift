@@ -9,32 +9,59 @@ import UIKit
 import Parse
 
 class VolunteersTableViewController: UITableViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
-    
-    @IBAction func handleDismissButton(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
+    @IBOutlet weak var VolunteersTable: UITableView!
+    //    var volunteer = [PFObject]()
+//
+//
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//
+//
+//        // Uncomment the following line to preserve selection between presentations
+//        // self.clearsSelectionOnViewWillAppear = false
+//
+//        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+//        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+//    }
+//
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//
+//        let query = PFQuery(className: "Events")
+//        query.includeKey("attendees")
+//        query.limit = 20
+//
+//        query.findObjectsInBackground { (volunteer,error) in
+//            if volunteer != nil {
+//                self.volunteer = volunteer!
+//                self.tableView.reloadData()
+//            }
+//        }
+//
+//    }
+//
+//    @IBAction func handleDismissButton(_ sender: Any) {
+//        self.dismiss(animated: true, completion: nil)
+//    }
+//
+//    // MARK: - Table view data source
+//
+//    func tableView (_tableView: UITableView, numberofRowsInSection section: Int) -> Int {
+//        return volunteer.count
+//    }
+//
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "volunteerCell") as! VolunteersTableViewCell
+//
+//        let volunteerPost = volunteer[indexPath.row]
+//
+//
+//        return cell
+//}
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

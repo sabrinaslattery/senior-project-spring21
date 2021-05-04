@@ -8,6 +8,8 @@ import Foundation
 import UIKit
 import Parse
 
+
+
 class EventDetailsViewController:UIViewController {
     
     @IBOutlet weak var eventTitleLabel: UILabel!
@@ -84,6 +86,9 @@ class EventDetailsViewController:UIViewController {
         //Set contact email and phone
         contactEmailLabel.text = (event["contactEmail"] as! String)
         phoneNumberLabel.text = (event["contactPhone"] as! String)
+        
+        //var objectidvalue = event["objectId"]
+       
     }
     
     func displaySignUpSuccessMessage (signUpSuccessMessage:String) {
@@ -106,15 +111,21 @@ class EventDetailsViewController:UIViewController {
         
         let attendees = self.event["attendees"] as! NSArray
         let totalSpots = self.event["totalSpots"] as! Int
+        let userEmail = PFUser.current()?.object(forKey: "email") as! String
+        let userName =  PFUser.current()?.object(forKey: "firstname") as! String
         
         if attendees.count < totalSpots {
-            self.event.addUniqueObject(PFUser.current(), forKey: "attendees")
+            var array = [userName, userEmail]
+            
+            self.event.addUniqueObject(array, forKey: "attendees")
+//            self.event.addUniqueObject(userEmail, forKey: "attendees")
+            //self.event.addUniqueObject(PFUser.current(), forKey: "attendees")
             self.event.saveInBackground { (ok, error) in
                 if ok{
                     self.displaySignUpSuccessMessage(signUpSuccessMessage: "This event has been added to your events.")
                     print("Signed up for an event")
                 } else {
-                    print(error?.localizedDescription)
+                    print(error?.localizedDescription as Any)
                 }
         }
         } else {

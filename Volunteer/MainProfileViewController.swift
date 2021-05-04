@@ -244,7 +244,7 @@ class MainProfileViewController: UIViewController {
     
             func showInterests() {
 				let interestsQuery = PFQuery(className:"Profile")
-			                  interestsQuery.whereKey("user", equalTo:  PFUser.current()!)
+                            interestsQuery.whereKey("user", equalTo:  PFUser.current()!)
 			  				interestsQuery.includeKey("selectedTags")
 			  				interestsQuery.findObjectsInBackground { (profiles, error) in
 			  					if let error = error {

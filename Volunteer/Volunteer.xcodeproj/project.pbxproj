@@ -34,6 +34,8 @@
 		5F96A54866D548882CF2E6E7 /* Pods_Volunteer_VolunteerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B13A518CCA7D53725E1CFA0C /* Pods_Volunteer_VolunteerUITests.framework */; };
 		7A893BB9262BA33C006EC6EC /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A37411260AED200011DC21 /* Profile.storyboard */; };
 		7A98C719261E83C200798493 /* SearchEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A98C718261E83C200798493 /* SearchEventCell.swift */; };
+		98283D762635140E00FF2D8B /* VolunteersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98283D752635140E00FF2D8B /* VolunteersViewController.swift */; };
+		98283D7B2635145E00FF2D8B /* VolunteerInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98283D7A2635145E00FF2D8B /* VolunteerInfoTableViewCell.swift */; };
 		98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC89E725DCFCA4008E4A7B /* AppDelegate.swift */; };
 		98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98CC89E925DCFCA4008E4A7B /* SceneDelegate.swift */; };
 		98CC89F125DCFCA5008E4A7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98CC89F025DCFCA5008E4A7B /* Assets.xcassets */; };
@@ -44,8 +46,6 @@
 		B125CA7C2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA7B2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift */; };
 		B125CA8126290ABB00E01AD5 /* CreatorEventDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA8026290ABB00E01AD5 /* CreatorEventDetailsViewController.swift */; };
 		B125CA8626290AF600E01AD5 /* EditEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA8526290AF600E01AD5 /* EditEventViewController.swift */; };
-		B125CA8B26290B3C00E01AD5 /* VolunteersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA8A26290B3C00E01AD5 /* VolunteersTableViewCell.swift */; };
-		B125CA902629317A00E01AD5 /* VolunteersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B125CA8F2629317900E01AD5 /* VolunteersTableViewController.swift */; };
 		B152DC0325E37C6B00A7DB17 /* HelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */; };
 		B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0725E37C7E00A7DB17 /* ImageService.swift */; };
 		B152DC0D25E37C9100A7DB17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B152DC0C25E37C9100A7DB17 /* LoginViewController.swift */; };
@@ -117,6 +117,8 @@
 		86369C264968F68EBBF8058C /* Pods-Volunteer-VolunteerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Volunteer-VolunteerUITests.debug.xcconfig"; path = "Target Support Files/Pods-Volunteer-VolunteerUITests/Pods-Volunteer-VolunteerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		924C0482176AF7C1832AC450 /* Pods-VolunteerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VolunteerTests.debug.xcconfig"; path = "Target Support Files/Pods-VolunteerTests/Pods-VolunteerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		925FE17E549E5DEACAABA95C /* Pods_VolunteerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VolunteerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98283D752635140E00FF2D8B /* VolunteersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteersViewController.swift; sourceTree = "<group>"; };
+		98283D7A2635145E00FF2D8B /* VolunteerInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteerInfoTableViewCell.swift; sourceTree = "<group>"; };
 		98CC89E425DCFCA4008E4A7B /* Volunteer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Volunteer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98CC89E725DCFCA4008E4A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98CC89E925DCFCA4008E4A7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,8 +137,6 @@
 		B125CA7B2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedEventsTableViewController.swift; sourceTree = "<group>"; };
 		B125CA8026290ABB00E01AD5 /* CreatorEventDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatorEventDetailsViewController.swift; sourceTree = "<group>"; };
 		B125CA8526290AF600E01AD5 /* EditEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditEventViewController.swift; sourceTree = "<group>"; };
-		B125CA8A26290B3C00E01AD5 /* VolunteersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteersTableViewCell.swift; sourceTree = "<group>"; };
-		B125CA8F2629317900E01AD5 /* VolunteersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolunteersTableViewController.swift; sourceTree = "<group>"; };
 		B13A518CCA7D53725E1CFA0C /* Pods_Volunteer_VolunteerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Volunteer_VolunteerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B152DC0225E37C6B00A7DB17 /* HelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperExtensions.swift; sourceTree = "<group>"; };
 		B152DC0725E37C7E00A7DB17 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
@@ -254,9 +254,9 @@
 				B125CA7B2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift */,
 				B125CA8026290ABB00E01AD5 /* CreatorEventDetailsViewController.swift */,
 				B125CA8526290AF600E01AD5 /* EditEventViewController.swift */,
-				B125CA8A26290B3C00E01AD5 /* VolunteersTableViewCell.swift */,
-				B125CA8F2629317900E01AD5 /* VolunteersTableViewController.swift */,
 				03F277CC2630FD8D009E3D61 /* EventsTabBarController.swift */,
+				98283D752635140E00FF2D8B /* VolunteersViewController.swift */,
+				98283D7A2635145E00FF2D8B /* VolunteerInfoTableViewCell.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -649,6 +649,7 @@
 				035BEE682613D58100015ADC /* EditProfileViewController.swift in Sources */,
 				B152DC5625E4411200A7DB17 /* PrivacySettingViewController.swift in Sources */,
 				B152DC2925E43F6400A7DB17 /* CheckEmailViewController.swift in Sources */,
+				98283D7B2635145E00FF2D8B /* VolunteerInfoTableViewCell.swift in Sources */,
 				B152DC0325E37C6B00A7DB17 /* HelperExtensions.swift in Sources */,
 				B152DC3825E4403100A7DB17 /* GreatViewController.swift in Sources */,
 				98CC89E825DCFCA4008E4A7B /* AppDelegate.swift in Sources */,
@@ -660,12 +661,10 @@
 				B152DC2425E43EEA00A7DB17 /* ResetPassViewController.swift in Sources */,
 				0367FA082623EAFE000CBE37 /* SearchTableViewController.swift in Sources */,
 				0381BCF1260A8DA900168C48 /* AllEventsTableViewCell.swift in Sources */,
-				B125CA902629317A00E01AD5 /* VolunteersTableViewController.swift in Sources */,
 				035BEE632613D3D400015ADC /* AboutUsViewController.swift in Sources */,
 				032E503A2621460B00A59F14 /* CreateProfileAllViewController.swift in Sources */,
 				B125CA7C2628E9DA00E01AD5 /* CreatedEventsTableViewController.swift in Sources */,
 				035BEE6D2613D59800015ADC /* MainProfileViewController.swift in Sources */,
-				B125CA8B26290B3C00E01AD5 /* VolunteersTableViewCell.swift in Sources */,
 				03F277CD2630FD8D009E3D61 /* EventsTabBarController.swift in Sources */,
 				B152DC6025E4417E00A7DB17 /* CreateProfileContinueViewController.swift in Sources */,
 				0381BD03260A8E5500168C48 /* AllEventsTableViewController.swift in Sources */,
@@ -679,6 +678,7 @@
 				B152DC0825E37C7E00A7DB17 /* ImageService.swift in Sources */,
 				0367F9F4262384A3000CBE37 /* BackButton.swift in Sources */,
 				B152DC5125E440F800A7DB17 /* SetupProfileViewController.swift in Sources */,
+				98283D762635140E00FF2D8B /* VolunteersViewController.swift in Sources */,
 				032AAB70263354F100CE0F91 /* UpdateEmailViewController.swift in Sources */,
 				98CC89EA25DCFCA4008E4A7B /* SceneDelegate.swift in Sources */,
 				B1B328AC2617EB32003BCF34 /* EventDetailsViewController.swift in Sources */,
