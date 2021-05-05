@@ -36,8 +36,6 @@ class EventDetailsViewController:UIViewController {
     var event = PFObject(className: "Events")
     
     override func viewDidLoad() {
-        print(event)
-        
         //Load data passed from segue into fields
         eventTitleLabel.text = (event["title"] as! String)
         //Load image
@@ -74,10 +72,10 @@ class EventDetailsViewController:UIViewController {
         print(formatter.string(from: date))
         
         //Set spots filled
-        
         let attendees = event.object(forKey: "attendees") as! NSArray
         let totalSpots = event["totalSpots"] as! Int
         spotsFilledLabel.text =  "\(attendees.count)/\(totalSpots)"
+        
         //Set time from and time to
         let dateFrom = event["startTime"] as! Date
         let dateTo = event["endTime"] as! Date
