@@ -69,9 +69,13 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
 
         eventTitleField.delegate = self
         totalSpotsField.delegate = self
+        streetField.delegate = self
+        cityField.delegate = self
+        zipCodeField.delegate = self
         aboutEventField.delegate = self
         volunteerExpectationField.delegate = self
         volunteerShouldWearField.delegate = self
+        organizerNameField.delegate = self
         emailField.delegate = self
         phoneNumberField.delegate = self
         
@@ -100,12 +104,12 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         self.event["contactEmail"] = emailField.text!
         self.event["contactPhone"] = phoneNumberField.text!
                
-        self.event ["difficulty"] = difficultyPicker
-        self.event ["tag"] = tagsPicker
+//        self.event["difficulty"] = difficultyPicker
+//        self.event["tag"] = tagsPicker
         
-        self.event ["streetLocation"] = streetField.text! + String(", CA")
-        self.event ["cityLocation"] = cityField.text!
-        self.event ["zipCodeLocation"] = zipCodeField.text!
+        self.event["streetLocation"] = streetField.text! + String(", CA")
+        self.event["cityLocation"] = cityField.text!
+        self.event["zipCodeLocation"] = zipCodeField.text!
         
         datePicker.locale = .current
         toPicker.locale = .current
@@ -193,10 +197,14 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         eventTitleField.resignFirstResponder()
         fromPicker.resignFirstResponder()
         toPicker.resignFirstResponder()
+        streetField.resignFirstResponder()
+        cityField.resignFirstResponder()
+        zipCodeField.resignFirstResponder()
         totalSpotsField.resignFirstResponder()
         aboutEventField.resignFirstResponder()
         volunteerExpectationField.resignFirstResponder()
         volunteerShouldWearField.resignFirstResponder()
+        organizerNameField.resignFirstResponder()
         emailField.resignFirstResponder()
         phoneNumberField.resignFirstResponder()
         
@@ -213,11 +221,15 @@ class CreateNewEventViewController:UIViewController, UITextFieldDelegate, UIImag
         let title = eventTitleField.text
         let total = totalSpotsField.text
         let about = aboutEventField.text
+        let street = streetField.text
+        let city = cityField.text
+        let zip = zipCodeField.text
         let expectation = volunteerExpectationField.text
+        let name = organizerNameField.text
         let email = emailField.text
         let number = phoneNumberField.text
         
-        _ = title != nil && title != "" && total != nil && total != "" && about != nil && about != "" && expectation != nil && expectation != "" && email != nil && email != "" && number != nil && number != ""
+        _ = title != nil && title != "" && total != nil && total != "" && about != nil && about != "" && expectation != nil && expectation != "" && email != nil && email != "" && number != nil && number != "" && name != nil && name != "" && street != nil && street != "" && city != nil && city != "" && zip != nil && zip != ""
     }
     
 }
