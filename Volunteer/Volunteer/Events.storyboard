@@ -1660,7 +1660,8 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Complete"/>
                                                 <connections>
-                                                    <action selector="CompletedButton:" destination="cre-3r-roc" eventType="touchUpInside" id="Mn8-e2-dHb"/>
+                                                    <action selector="CompletedButton:" destination="cre-3r-roc" eventType="touchUpInside" id="dJh-kR-3Lt"/>
+                                                    <segue destination="cre-3r-roc" kind="show" identifier="reloadPage" id="jVa-FS-Iwc"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spots Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tTb-Lh-qvK">
