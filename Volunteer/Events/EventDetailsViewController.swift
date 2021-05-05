@@ -13,22 +13,29 @@ class EventDetailsViewController:UIViewController {
     @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var difficultyImage: UIImageView!
+    @IBOutlet weak var spotsFilledLabel: UILabel!
+    
     @IBOutlet weak var eventDateLabel: UILabel!
     @IBOutlet weak var dateFromLabel: UILabel!
     @IBOutlet weak var dateToLabel: UILabel!
-    @IBOutlet weak var eventLocationLabel: UILabel!
-    @IBOutlet weak var spotsFilledLabel: UILabel!
+    
+    @IBOutlet weak var streetLocation: UILabel!
+    @IBOutlet weak var cityLocation: UILabel!
+    @IBOutlet weak var zipCodeLocation: UILabel!
+    
     @IBOutlet weak var aboutEventLabel: UILabel!
     @IBOutlet weak var eventExpectationLabel: UILabel!
     @IBOutlet weak var shouldWearLabel: UILabel!
+    
     @IBOutlet weak var contactEmailLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var organizerName: UILabel!
+    
+    @IBOutlet weak var eventBorder: UILabel!
     
     var event = PFObject(className: "Events")
     
     override func viewDidLoad() {
-        print(event)
-        
         //Load data passed from segue into fields
         eventTitleLabel.text = (event["title"] as! String)
         //Load image
@@ -68,6 +75,7 @@ class EventDetailsViewController:UIViewController {
         let attendees = event.object(forKey: "attendees") as! NSArray
         let totalSpots = event["totalSpots"] as! Int
         spotsFilledLabel.text =  "\(attendees.count)/\(totalSpots)"
+        
         //Set time from and time to
         let dateFrom = event["startTime"] as! Date
         let dateTo = event["endTime"] as! Date
@@ -76,14 +84,28 @@ class EventDetailsViewController:UIViewController {
         dateFromLabel.text = formatter.string(from: dateFrom)
         dateToLabel.text = formatter.string(from: dateTo)
         
+        //set location
+        streetLocation.text = (event["streetLocation"] as! String)
+        cityLocation.text = (event["cityLocation"] as! String)
+        zipCodeLocation.text = (event["zipCodeLocation"] as! String)
+    
         //Set "About This Event", "Volunteers expectations", and appropriate clothing
         aboutEventLabel.text = (event["description"] as! String)
         eventExpectationLabel.text = (event["expectations"] as! String)
         shouldWearLabel.text = (event["clothes"] as! String)
         
         //Set contact email and phone
+        organizerName.text = (event["contactName"] as! String)
         contactEmailLabel.text = (event["contactEmail"] as! String)
         phoneNumberLabel.text = (event["contactPhone"] as! String)
+        
+        //cosmetics
+        eventBorder.layer.borderColor = #colorLiteral(red: 0.1019607857, green: 0.2784313858, blue: 0.400000006, alpha: 1)
+        eventBorder.layer.borderWidth = 2.0
+        eventBorder.layer.cornerRadius = 5
+        
+//        eventImage.layer.masksToBounds = true
+//        eventImage.layer.borderWidth = 1.0
     }
     
     func displaySignUpSuccessMessage (signUpSuccessMessage:String) {
