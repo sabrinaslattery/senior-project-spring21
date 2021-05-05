@@ -18,7 +18,7 @@ class AboutUsViewController: UIViewController {
     
     @IBAction func buttonTapped() {
         
-        let vc = SFSafariViewController(url: URL(string: "https://wearecolorblind.com/")!)
+        let vc = SFSafariViewController(url: URL(string: "https://wearecolorblind.com/resources/collection/resources-for-designing-for-the-colorblind/")!)
         
         present(vc, animated:true)
     }
